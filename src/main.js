@@ -21,37 +21,37 @@
         name: "Universidad Siglo 21",
         logo: "US21",
         type: "Privada",
-        city: ["ConcepciÃ³n", "Monteros", "Aguilares"],
+        city: ["Concepción", "Monteros", "Aguilares"],
         plan: "Premium",
-        slogan: "EstudiÃ¡ con flexibilidad y proyectÃ¡ tu carrera desde TucumÃ¡n.",
-        desc: "EducaciÃ³n innovadora, profesional y conectada con el mundo.",
-        address: "San MartÃ­n 124, ConcepciÃ³n",
+        slogan: "Estudiá con flexibilidad y proyectá tu carrera desde Tucumán.",
+        desc: "Educación innovadora, profesional y conectada con el mundo.",
+        address: "San Martín 124, Concepción",
         whatsapp: "3865 41 2020",
         image: imageBank.siglo,
         media: "Video institucional",
         careers: [
-          ["AbogacÃ­a", "FormaciÃ³n jurÃ­dica con modalidad flexible y acompaÃ±amiento tutorial.", imageBank.classroom],
-          ["Contador PÃºblico", "Herramientas contables, impositivas y financieras para empresas.", imageBank.students],
-          ["Lic. en AdministraciÃ³n", "GestiÃ³n, liderazgo y estrategia para organizaciones actuales.", imageBank.design],
-          ["Higiene y Seguridad", "PrevenciÃ³n, normativa y seguridad aplicada al trabajo.", imageBank.lab]
+          ["Abogacía", "Formación jurídica con modalidad flexible y acompañamiento tutorial.", imageBank.classroom],
+          ["Contador Público", "Herramientas contables, impositivas y financieras para empresas.", imageBank.students],
+          ["Lic. en Administración", "Gestión, liderazgo y estrategia para organizaciones actuales.", imageBank.design],
+          ["Higiene y Seguridad", "Prevención, normativa y seguridad aplicada al trabajo.", imageBank.lab]
         ]
       },
       {
-        name: "Instituto Santa BÃ¡rbara",
+        name: "Instituto Santa Bárbara",
         logo: "ISB",
         type: "Terciario Privado",
-        city: ["ConcepciÃ³n", "Aguilares"],
+        city: ["Concepción", "Aguilares"],
         plan: "Premium",
-        slogan: "FormaciÃ³n tÃ©cnica para integrarte rÃ¡pido al mundo laboral.",
-        desc: "FormaciÃ³n terciaria con valores, prÃ¡cticas y salida laboral.",
+        slogan: "Formación técnica para integrarte rápido al mundo laboral.",
+        desc: "Formación terciaria con valores, prácticas y salida laboral.",
         address: "Belgrano 810, Aguilares",
         whatsapp: "3865 55 1188",
         image: imageBank.santa,
         media: "Video institucional",
         careers: [
-          ["InstrumentaciÃ³n QuirÃºrgica", "CapacitaciÃ³n para asistir procedimientos en Ã¡mbitos de salud.", imageBank.lab],
-          ["Laboratorio de AnÃ¡lisis ClÃ­nicos", "TÃ©cnicas de laboratorio, muestras y protocolos de calidad.", imageBank.classroom],
-          ["DiagnÃ³stico por ImÃ¡genes", "FormaciÃ³n en tecnologÃ­a aplicada a estudios mÃ©dicos.", imageBank.students]
+          ["Instrumentación Quirúrgica", "Capacitación para asistir procedimientos en ámbitos de salud.", imageBank.lab],
+          ["Laboratorio de Análisis Clínicos", "Técnicas de laboratorio, muestras y protocolos de calidad.", imageBank.classroom],
+          ["Diagnóstico por Imágenes", "Formación en tecnología aplicada a estudios médicos.", imageBank.students]
         ]
       },
       {
@@ -61,32 +61,32 @@
         city: ["Monteros"],
         plan: "Profesional",
         slogan: "Tecnicaturas orientadas a una salida laboral concreta.",
-        desc: "FormaciÃ³n tÃ©cnica y profesional en Ã¡reas comerciales, administrativas y digitales.",
-        address: "Av. Mitre 420, ConcepciÃ³n",
+        desc: "Formación técnica y profesional en áreas comerciales, administrativas y digitales.",
+        address: "Av. Mitre 420, Concepción",
         whatsapp: "3865 44 8712",
         image: imageBank.students,
         media: "Video de carreras",
         careers: [
-          ["Marketing", "PlanificaciÃ³n comercial, comunicaciÃ³n y campaÃ±as digitales.", imageBank.design],
-          ["Recursos Humanos", "SelecciÃ³n, capacitaciÃ³n y gestiÃ³n de equipos.", imageBank.fair],
-          ["AdministraciÃ³n de Empresas", "OrganizaciÃ³n, procesos y gestiÃ³n operativa.", imageBank.classroom]
+          ["Marketing", "Planificación comercial, comunicación y campañas digitales.", imageBank.design],
+          ["Recursos Humanos", "Selección, capacitación y gestión de equipos.", imageBank.fair],
+          ["Administración de Empresas", "Organización, procesos y gestión operativa.", imageBank.classroom]
         ]
       },
       {
-        name: "Centro de FormaciÃ³n TucumÃ¡n",
+        name: "Centro de Formación Tucumán",
         logo: "CFT",
-        type: "CapacitaciÃ³n",
+        type: "Capacitación",
         city: ["Monteros", "Aguilares"],
-        plan: "BÃ¡sico",
+        plan: "Básico",
         slogan: "Cursos cortos para fortalecer tu perfil laboral.",
-        desc: "Capacitaciones prÃ¡cticas para jÃ³venes y adultos que buscan ampliar oportunidades.",
+        desc: "Capacitaciones prácticas para jóvenes y adultos que buscan ampliar oportunidades.",
         address: "Rivadavia 295, Monteros",
         whatsapp: "3863 40 2100",
         image: imageBank.fair,
         media: "Imagen superior",
         careers: [
-          ["Auxiliar Administrativo", "Tareas de oficina, atenciÃ³n y documentaciÃ³n comercial.", imageBank.classroom],
-          ["Secretariado", "OrganizaciÃ³n, comunicaciÃ³n y soporte administrativo.", imageBank.students],
+          ["Auxiliar Administrativo", "Tareas de oficina, atención y documentación comercial.", imageBank.classroom],
+          ["Secretariado", "Organización, comunicación y soporte administrativo.", imageBank.students],
           ["Operador de PC", "Herramientas digitales esenciales para el trabajo.", imageBank.design]
         ]
       },
@@ -96,16 +96,16 @@
         type: "Instituto",
         city: ["Monteros"],
         plan: "Profesional",
-        slogan: "EducaciÃ³n cercana para acompaÃ±ar vocaciones de servicio.",
-        desc: "Propuestas presenciales y a distancia vinculadas a educaciÃ³n, salud y comunidad.",
+        slogan: "Educación cercana para acompañar vocaciones de servicio.",
+        desc: "Propuestas presenciales y a distancia vinculadas a educación, salud y comunidad.",
         address: "Laprida 660, Monteros",
         whatsapp: "3863 47 6400",
         image: imageBank.classroom,
         media: "Imagen superior",
         careers: [
-          ["Profesorado", "FormaciÃ³n pedagÃ³gica con prÃ¡cticas y acompaÃ±amiento.", imageBank.classroom],
-          ["GestiÃ³n Educativa", "Herramientas para coordinar proyectos institucionales.", imageBank.students],
-          ["AcompaÃ±ante TerapÃ©utico", "IntervenciÃ³n, apoyo y seguimiento en contextos de cuidado.", imageBank.lab]
+          ["Profesorado", "Formación pedagógica con prácticas y acompañamiento.", imageBank.classroom],
+          ["Gestión Educativa", "Herramientas para coordinar proyectos institucionales.", imageBank.students],
+          ["Acompañante Terapéutico", "Intervención, apoyo y seguimiento en contextos de cuidado.", imageBank.lab]
         ]
       },
       {
@@ -113,35 +113,35 @@
         logo: "APN",
         type: "Academia",
         city: ["Aguilares"],
-        plan: "BÃ¡sico",
+        plan: "Básico",
         slogan: "Capacitaciones digitales para empezar a trabajar.",
-        desc: "Cursos prÃ¡cticos de diseÃ±o, redes sociales, ventas y herramientas digitales.",
+        desc: "Cursos prácticos de diseño, redes sociales, ventas y herramientas digitales.",
         address: "Moreno 575, Aguilares",
         whatsapp: "3865 60 7711",
         image: imageBank.design,
         media: "Video de alumnos",
         careers: [
-          ["DiseÃ±o GrÃ¡fico", "Piezas visuales, identidad y herramientas de diseÃ±o.", imageBank.design],
-          ["Community Manager", "PlanificaciÃ³n de contenido, redes y mÃ©tricas.", imageBank.video],
-          ["Ventas Digitales", "Embudo comercial, atenciÃ³n online y cierre de ventas.", imageBank.fair]
+          ["Diseño Gráfico", "Piezas visuales, identidad y herramientas de diseño.", imageBank.design],
+          ["Community Manager", "Planificación de contenido, redes y métricas.", imageBank.video],
+          ["Ventas Digitales", "Embudo comercial, atención online y cierre de ventas.", imageBank.fair]
         ]
       },
       {
-        name: "IES ConcepciÃ³n",
+        name: "IES Concepción",
         logo: "IES",
-        type: "PÃºblico",
-        city: ["ConcepciÃ³n"],
-        plan: "BÃ¡sico",
-        slogan: "EducaciÃ³n pÃºblica, gratuita y de calidad para todos.",
-        desc: "EducaciÃ³n pÃºblica, gratuita y de calidad para todos.",
-        address: "EspaÃ±a 320, ConcepciÃ³n",
+        type: "Público",
+        city: ["Concepción"],
+        plan: "Básico",
+        slogan: "Educación pública, gratuita y de calidad para todos.",
+        desc: "Educación pública, gratuita y de calidad para todos.",
+        address: "España 320, Concepción",
         whatsapp: "3865 50 3300",
         image: imageBank.ies,
         media: "Imagen superior",
         careers: [
-          ["Profesorado de EducaciÃ³n Primaria", "FormaciÃ³n docente para nivel primario.", imageBank.classroom],
-          ["Tecnicatura en AdministraciÃ³n", "GestiÃ³n administrativa para organizaciones pÃºblicas y privadas.", imageBank.students],
-          ["Profesorado de InglÃ©s", "FormaciÃ³n pedagÃ³gica y prÃ¡ctica del idioma.", imageBank.fair]
+          ["Profesorado de Educación Primaria", "Formación docente para nivel primario.", imageBank.classroom],
+          ["Tecnicatura en Administración", "Gestión administrativa para organizaciones públicas y privadas.", imageBank.students],
+          ["Profesorado de Inglés", "Formación pedagógica y práctica del idioma.", imageBank.fair]
         ]
       }
     ];
@@ -188,20 +188,20 @@
         description: description || "",
         image,
         publicId: (legacy ? career[3] : career.publicId) || "",
-        duration: legacy ? "3 aÃ±os" : (career.duration || "3 aÃ±os"),
+        duration: legacy ? "3 años" : (career.duration || "3 años"),
         modality: legacy ? "Presencial" : (career.modality || "Presencial"),
         campus: legacy ? (inst.address || "Sede principal") : (career.campus || inst.address || "Sede principal"),
         shifts: legacy ? "Consultar" : (career.shifts || "Consultar"),
         degree: legacy ? (name || "") : (career.degree || name || ""),
-        nationalValidity: legacy ? "SÃ­" : (career.nationalValidity || "SÃ­"),
+        nationalValidity: legacy ? "Sí" : (career.nationalValidity || "Sí"),
         about: legacy ? (description || "") : (career.about || description || ""),
-        workField: legacy ? "Ãmbitos pÃºblicos y privados relacionados con la formaciÃ³n profesional." : (career.workField || ""),
-        graduateProfile: legacy ? "Profesional preparado para aplicar conocimientos y desarrollarse en su Ã¡rea." : (career.graduateProfile || ""),
-        studyPlan: legacy ? ["Primer aÃ±o", "Segundo aÃ±o", "Tercer aÃ±o"] : (Array.isArray(career.studyPlan) ? career.studyPlan : splitLines(career.studyPlan)),
-        requirements: legacy ? ["DNI", "TÃ­tulo secundario", "Formulario de inscripciÃ³n"] : (Array.isArray(career.requirements) ? career.requirements : splitLines(career.requirements)),
+        workField: legacy ? "Ámbitos públicos y privados relacionados con la formación profesional." : (career.workField || ""),
+        graduateProfile: legacy ? "Profesional preparado para aplicar conocimientos y desarrollarse en su área." : (career.graduateProfile || ""),
+        studyPlan: legacy ? ["Primer año", "Segundo año", "Tercer año"] : (Array.isArray(career.studyPlan) ? career.studyPlan : splitLines(career.studyPlan)),
+        requirements: legacy ? ["DNI", "Título secundario", "Formulario de inscripción"] : (Array.isArray(career.requirements) ? career.requirements : splitLines(career.requirements)),
         faq: legacy ? [
-          { question: "Â¿CuÃ¡ndo comienzan las inscripciones?", answer: "ConsultÃ¡ con la instituciÃ³n para conocer las prÃ³ximas fechas." },
-          { question: "Â¿CÃ³mo solicito mÃ¡s informaciÃ³n?", answer: "PodÃ©s utilizar WhatsApp o el formulario de esta pÃ¡gina." }
+          { question: "¿Cuándo comienzan las inscripciones?", answer: "Consultá con la institución para conocer las próximas fechas." },
+          { question: "¿Cómo solicito más información?", answer: "Podés utilizar WhatsApp o el formulario de esta página." }
         ] : (Array.isArray(career.faq) ? career.faq : []),
         whatsapp: legacy ? (inst.whatsapp || "") : (career.whatsapp || inst.whatsapp || ""),
         formEnabled: legacy ? true : career.formEnabled !== false
@@ -229,12 +229,12 @@
 
     const newsTemplates = [
       ["Evento", "Jornada abierta para conocer carreras, docentes y modalidades de cursado.", imageBank.fair, "Imagen"],
-      ["Feria", "ParticipaciÃ³n en expo educativa con asesoramiento para estudiantes.", imageBank.students, "Video"],
-      ["GraduaciÃ³n", "Nueva promociÃ³n de egresados celebrada junto a familias y docentes.", imageBank.graduation, "Imagen"],
-      ["Noticias", "Inscripciones abiertas, beneficios vigentes y novedades acadÃ©micas.", imageBank.video, "Video"]
+      ["Feria", "Participación en expo educativa con asesoramiento para estudiantes.", imageBank.students, "Video"],
+      ["Graduación", "Nueva promoción de egresados celebrada junto a familias y docentes.", imageBank.graduation, "Imagen"],
+      ["Noticias", "Inscripciones abiertas, beneficios vigentes y novedades académicas.", imageBank.video, "Video"]
     ];
 
-    let currentCity = "ConcepciÃ³n";
+    let currentCity = "Concepción";
     let currentInstitution = institutions[0];
     let currentCareer = null;
     let featuredIndex = 0;
@@ -245,7 +245,7 @@
     let institutionSearchResults = null;
     let adminInstitutionIndex = 0;
     let currentAdminView = "dashboard";
-    let adminCities = readStoredData("guiaEducativaCities", ["ConcepciÃ³n", "Monteros", "Aguilares"]);
+    let adminCities = readStoredData("guiaEducativaCities", ["Concepción", "Monteros", "Aguilares"]);
 
     const pages = ["cityPage", "detailPage", "careerPage", "coursesPage", "aboutPage", "eventsPage", "contactPage", "loginPage", "adminPage"];
 
@@ -286,7 +286,7 @@
     }
 
     function footerComingSoon(item) {
-      alert(item + " estarÃ¡ disponible prÃ³ximamente.");
+      alert(item + " estará disponible próximamente.");
     }
 
     function hidePages() {
@@ -337,7 +337,7 @@
 
         localInstitutions.forEach(inst => {
           const quantity = (inst.careers || []).length;
-          if (/academia|capacitaci[oÃ³]n|curso/i.test(inst.type || "")) {
+          if (/academia|capacitaci[oó]n|curso/i.test(inst.type || "")) {
             courses += quantity;
           } else {
             careers += quantity;
@@ -395,10 +395,10 @@
     function institutionAreas(inst) {
       const text = (inst.careers || []).map(career => career.name).join(" ").toLowerCase();
       const areas = [];
-      if (/salud|quir|laboratorio|diagnÃ³stico|terapÃ©utico|higiene/.test(text)) areas.push("salud");
+      if (/salud|quir|laboratorio|diagnóstico|terapéutico|higiene/.test(text)) areas.push("salud");
       if (/administr|contador|marketing|recursos humanos|ventas|secretariado/.test(text)) areas.push("administracion");
-      if (/profesor|educaciÃ³n|inglÃ©s|gestiÃ³n educativa/.test(text)) areas.push("educacion");
-      if (/diseÃ±o|community|pc|digital|program/.test(text)) areas.push("tecnologia");
+      if (/profesor|educación|inglés|gestión educativa/.test(text)) areas.push("educacion");
+      if (/diseño|community|pc|digital|program/.test(text)) areas.push("tecnologia");
       if (/abogac|derecho/.test(text)) areas.push("derecho");
       return areas;
     }
@@ -441,11 +441,11 @@
         slide.innerHTML = `
           <div class="featured-copy">
             <div class="featured-brand">
-              <span class="featured-plan">â˜… InstituciÃ³n destacada</span>
+              <span class="featured-plan">★ Institución destacada</span>
             </div>
             <h3>${inst.name}</h3>
             <p>${inst.desc}</p>
-            <button class="btn" type="button">Ver instituciÃ³n</button>
+            <button class="btn" type="button">Ver institución</button>
           </div>
           <div class="featured-media">
             <img src="${cloudinaryImage(inst.featuredImage || inst.image, 1600)}" alt="${inst.name}" />
@@ -565,7 +565,7 @@
         card.className = "card";
         card.tabIndex = 0;
         card.setAttribute("role", "link");
-        card.setAttribute("aria-label", `Ver instituciÃ³n ${inst.name}`);
+        card.setAttribute("aria-label", `Ver institución ${inst.name}`);
         card.onclick = () => showDetail(inst.name);
         card.onkeydown = event => {
           if (event.key === "Enter" || event.key === " ") {
@@ -583,7 +583,7 @@
             <h3>${inst.name}</h3>
             <p>${inst.desc}</p>
             <button class="card-cta" type="button">
-              Ver instituciÃ³n
+              Ver institución
               <svg viewBox="0 0 22 15" fill="none" aria-hidden="true">
                 <path d="M4.583 7.5h12.834M11 3.125 17.417 7.5 11 11.875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
@@ -645,21 +645,21 @@
         card.className = "career-summary-card";
         const badge = careerCardBadge(career, index);
         const degree = career.degree && normalizeCityText(career.degree) !== normalizeCityText(career.name)
-          ? `<p class="career-summary-degree">TÃ­tulo: ${escapeHtml(career.degree)}</p>`
-          : `<p class="career-summary-degree">Propuesta acadÃ©mica con ficha completa disponible.</p>`;
+          ? `<p class="career-summary-degree">Título: ${escapeHtml(career.degree)}</p>`
+          : `<p class="career-summary-degree">Propuesta académica con ficha completa disponible.</p>`;
         card.innerHTML = `
           <div class="career-summary-image-wrap">
             <img src="${cloudinaryImage(career.image, 700)}" alt="${escapeHtml(career.name)}" />
             <span class="career-summary-badge">${escapeHtml(badge)}</span>
           </div>
           <div class="career-summary-body">
-            <p class="career-summary-overline">${escapeHtml(inst.name)} Â· ${escapeHtml(currentCity)}</p>
+            <p class="career-summary-overline">${escapeHtml(inst.name)} · ${escapeHtml(currentCity)}</p>
             <h3>${escapeHtml(career.name)}</h3>
             <div class="career-summary-meta">
               <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>${escapeHtml(career.duration)}</span>
               <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h16v12H4z"></path><path d="M9 21h6"></path></svg>${escapeHtml(career.modality)}</span>
               <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"></path></svg>${escapeHtml(currentCity)}</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m12 3 8 4-8 4-8-4 8-4Z"></path><path d="M6 10v5c3 2 9 2 12 0v-5"></path></svg>${escapeHtml(inst.type || "InstituciÃ³n")}</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m12 3 8 4-8 4-8-4 8-4Z"></path><path d="M6 10v5c3 2 9 2 12 0v-5"></path></svg>${escapeHtml(inst.type || "Institución")}</span>
             </div>
             ${degree}
             <div class="career-summary-actions">
@@ -676,7 +676,7 @@
 
     function careerCardBadge(career, index) {
       if (career.status) return career.status;
-      const badges = ["Inscripciones abiertas", "Nueva carrera", "PrÃ³ximo ingreso"];
+      const badges = ["Inscripciones abiertas", "Nueva carrera", "Próximo ingreso"];
       return badges[index % badges.length];
     }
 
@@ -699,15 +699,15 @@
       setActiveNav("");
       document.getElementById("careerPage").classList.add("active");
       setFooterVisible(true);
-      document.getElementById("careerPageInstitution").textContent = currentInstitution.name + " Â· " + currentCity;
+      document.getElementById("careerPageInstitution").textContent = currentInstitution.name + " · " + currentCity;
       document.getElementById("careerPageName").textContent = career.name;
       document.getElementById("careerPageTitle").textContent = career.degree;
       document.getElementById("careerPageImage").src = cloudinaryImage(career.image, 1400);
       document.getElementById("careerPageImage").alt = career.name;
       document.getElementById("careerFacts").innerHTML = [
-        ["DuraciÃ³n", career.duration],
+        ["Duración", career.duration],
         ["Sede", career.campus],
-        ["TÃ­tulo", career.degree],
+        ["Título", career.degree],
         ["Validez", career.nationalValidity],
         ["Turnos", career.shifts],
         ["Modalidad", career.modality]
@@ -717,7 +717,7 @@
       document.getElementById("careerField").textContent = career.workField;
       document.getElementById("careerProfile").textContent = career.graduateProfile;
       document.getElementById("careerFieldChips").innerHTML = careerFieldOptions(career).map(item => `<span class="career-field-chip">${escapeHtml(item)}</span>`).join("");
-      document.getElementById("careerStudyPlan").innerHTML = career.studyPlan.map((item, index) => `<li><strong>${index + 1}Â° AÃ±o</strong>${escapeHtml(item)}</li>`).join("");
+      document.getElementById("careerStudyPlan").innerHTML = career.studyPlan.map((item, index) => `<li><strong>${index + 1}° Año</strong>${escapeHtml(item)}</li>`).join("");
       document.getElementById("careerRequirements").innerHTML = career.requirements.map(item => `<li>${escapeHtml(item)}</li>`).join("");
       document.getElementById("careerFaq").innerHTML = career.faq.map(item => `<div class="career-faq-item"><strong>${escapeHtml(item.question)}</strong><p>${escapeHtml(item.answer)}</p></div>`).join("");
       document.getElementById("careerQuickInstitution").textContent = currentInstitution.name;
@@ -726,7 +726,7 @@
       document.getElementById("careerQuickValidity").textContent = career.nationalValidity;
       const number = (career.whatsapp || currentInstitution.whatsapp).replace(/\D/g, "");
       const international = number.startsWith("54") ? number : "54" + number;
-      document.getElementById("careerWhatsappButton").href = "https://wa.me/" + international + "?text=" + encodeURIComponent("Hola, quiero informaciÃ³n sobre " + career.name);
+      document.getElementById("careerWhatsappButton").href = "https://wa.me/" + international + "?text=" + encodeURIComponent("Hola, quiero información sobre " + career.name);
       document.getElementById("careerLeadForm").classList.toggle("hidden", !career.formEnabled);
       document.getElementById("careerFormMessage").classList.add("hidden");
       window.scrollTo(0, 0);
@@ -735,9 +735,9 @@
     function careerFieldOptions(career) {
       const items = String(career.workField || "").split(/[.;]/).map(item => item.trim()).filter(item => item.length > 8);
       return items.length > 1 ? items.slice(0, 5) : [
-        "Instituciones pÃºblicas y privadas",
+        "Instituciones públicas y privadas",
         "Organizaciones vinculadas al sector",
-        "Ejercicio profesional y consultorÃ­a"
+        "Ejercicio profesional y consultoría"
       ];
     }
 
@@ -797,11 +797,11 @@
       const imageTypes = ["image/jpeg", "image/png", "image/webp", "image/gif"];
       if (resourceType === "video") {
         if (file.type !== "video/mp4") throw new Error("El video debe estar en formato MP4.");
-        if (file.size > 100 * 1024 * 1024) throw new Error("El video supera el lÃ­mite de 100 MB.");
+        if (file.size > 100 * 1024 * 1024) throw new Error("El video supera el límite de 100 MB.");
         return;
       }
-      if (!imageTypes.includes(file.type)) throw new Error("UsÃ¡ una imagen JPG, PNG, WebP o GIF.");
-      if (file.size > 10 * 1024 * 1024) throw new Error("La imagen supera el lÃ­mite de 10 MB.");
+      if (!imageTypes.includes(file.type)) throw new Error("Usá una imagen JPG, PNG, WebP o GIF.");
+      if (file.size > 10 * 1024 * 1024) throw new Error("La imagen supera el límite de 10 MB.");
     }
 
     function uploadToCloudinary(file, resourceType = "image", onProgress = () => {}) {
@@ -821,7 +821,7 @@
           try {
             const response = JSON.parse(request.responseText);
             if (request.status < 200 || request.status >= 300) {
-              throw new Error(response.error?.message || "Cloudinary rechazÃ³ el archivo.");
+              throw new Error(response.error?.message || "Cloudinary rechazó el archivo.");
             }
             resolve({
               url: response.secure_url,
@@ -880,8 +880,8 @@
         const url = mediaItemUrl(item);
         return `
           <div class="gallery-editor-item" data-url="${escapeHtml(url)}" data-public-id="${escapeHtml(mediaItemPublicId(item))}">
-            <img src="${escapeHtml(cloudinaryImage(url, 500))}" alt="Imagen ${index + 1} de la galerÃ­a" />
-            <button class="gallery-remove" type="button" onclick="this.parentElement.remove()" aria-label="Eliminar imagen">Ã—</button>
+            <img src="${escapeHtml(cloudinaryImage(url, 500))}" alt="Imagen ${index + 1} de la galería" />
+            <button class="gallery-remove" type="button" onclick="this.parentElement.remove()" aria-label="Eliminar imagen">×</button>
           </div>
         `;
       }).join("");
@@ -900,13 +900,13 @@
           const list = document.getElementById("adminGalleryList");
           list.insertAdjacentHTML("beforeend", `
             <div class="gallery-editor-item" data-url="${escapeHtml(uploaded.url)}" data-public-id="${escapeHtml(uploaded.publicId)}">
-              <img src="${escapeHtml(cloudinaryImage(uploaded.url, 500))}" alt="Nueva imagen de la galerÃ­a" />
-              <button class="gallery-remove" type="button" onclick="this.parentElement.remove()" aria-label="Eliminar imagen">Ã—</button>
+              <img src="${escapeHtml(cloudinaryImage(uploaded.url, 500))}" alt="Nueva imagen de la galería" />
+              <button class="gallery-remove" type="button" onclick="this.parentElement.remove()" aria-label="Eliminar imagen">×</button>
             </div>
           `);
         }
         status.className = "upload-status success";
-        status.textContent = "GalerÃ­a actualizada. GuardÃ¡ los cambios para confirmar.";
+        status.textContent = "Galería actualizada. Guardá los cambios para confirmar.";
       } catch (error) {
         status.className = "upload-status error";
         status.textContent = error.message;
@@ -984,7 +984,7 @@
         return;
       }
 
-      error.textContent = "Usuario o contraseÃ±a incorrectos.";
+      error.textContent = "Usuario o contraseña incorrectos.";
     }
 
     function toggleAdminPassword(visible) {
@@ -1095,8 +1095,8 @@
       const target = document.getElementById("adminSelectedSummary");
       if (!target) return;
       target.innerHTML = inst
-        ? `<span class="mini-logo">${institutionLogoMarkup(inst, "detail-logo-image")}</span><span><strong>${escapeHtml(inst.name)}</strong><small>${escapeHtml(inst.type)} Â· ${escapeHtml((inst.city || []).join(", "))}</small></span>`
-        : "<span><strong>Sin instituciones en esta ciudad</strong><small>AgregÃ¡ una instituciÃ³n desde el menÃº lateral.</small></span>";
+        ? `<span class="mini-logo">${institutionLogoMarkup(inst, "detail-logo-image")}</span><span><strong>${escapeHtml(inst.name)}</strong><small>${escapeHtml(inst.type)} · ${escapeHtml((inst.city || []).join(", "))}</small></span>`
+        : "<span><strong>Sin instituciones en esta ciudad</strong><small>Agregá una institución desde el menú lateral.</small></span>";
     }
 
     function openInstitutionModule(module) {
@@ -1113,8 +1113,8 @@
       };
       if (module === "courses" || module === "events") {
         document.getElementById("adminStatus").textContent = module === "courses"
-          ? "MÃ³dulo de cursos docentes seleccionado para " + inst.name + "."
-          : "MÃ³dulo de eventos seleccionado para " + inst.name + ".";
+          ? "Módulo de cursos docentes seleccionado para " + inst.name + "."
+          : "Módulo de eventos seleccionado para " + inst.name + ".";
         document.getElementById("adminForm").scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
@@ -1134,8 +1134,8 @@
         <div class="admin-simple-row">
           <span><strong>${escapeHtml(city)}</strong><small>${institutions.filter(inst => (inst.city || []).includes(city)).length} instituciones</small></span>
           <span class="admin-simple-actions">
-            <button class="btn light" type="button" onclick="moveAdminCity(${index}, -1)" aria-label="Subir ciudad">â†‘</button>
-            <button class="btn light" type="button" onclick="moveAdminCity(${index}, 1)" aria-label="Bajar ciudad">â†“</button>
+            <button class="btn light" type="button" onclick="moveAdminCity(${index}, -1)" aria-label="Subir ciudad">←‘</button>
+            <button class="btn light" type="button" onclick="moveAdminCity(${index}, 1)" aria-label="Bajar ciudad">←“</button>
             <button class="btn light" type="button" onclick="editAdminCity(${index})">Editar</button>
             <button class="btn secondary" type="button" onclick="deleteAdminCity(${index})">Eliminar</button>
           </span>
@@ -1162,7 +1162,7 @@
 
     function deleteAdminCity(index) {
       const city = adminCities[index];
-      if (!confirm("Â¿Eliminar " + city + "?")) return;
+      if (!confirm("¿Eliminar " + city + "?")) return;
       adminCities.splice(index, 1);
       institutions.forEach(inst => inst.city = (inst.city || []).filter(item => item !== city));
       persistInstitutions();
@@ -1211,7 +1211,7 @@
       const list = document.getElementById("adminRecentLeads");
       if (!list) return;
       if (!leads.length) {
-        list.innerHTML = '<div class="empty-state">TodavÃ­a no se recibieron consultas.</div>';
+        list.innerHTML = '<div class="empty-state">Todavía no se recibieron consultas.</div>';
         return;
       }
       list.innerHTML = leads.slice().reverse().slice(0, 5).map(lead => {
@@ -1219,7 +1219,7 @@
         return `
           <div class="admin-recent-item">
             <span class="admin-recent-initials">${escapeHtml(initials)}</span>
-            <span><strong>${escapeHtml(lead.name)}</strong><small>${escapeHtml(lead.career)} Â· ${escapeHtml(lead.institution)}</small></span>
+            <span><strong>${escapeHtml(lead.name)}</strong><small>${escapeHtml(lead.career)} · ${escapeHtml(lead.institution)}</small></span>
             <span class="admin-recent-date">${escapeHtml(new Date(lead.date).toLocaleDateString("es-AR"))}</span>
           </div>
         `;
@@ -1229,7 +1229,7 @@
     function renderAdminInstitutionList() {
       const list = document.getElementById("adminInstitutionList");
       if (!institutions.length) {
-        list.innerHTML = '<div class="empty-state">TodavÃ­a no hay instituciones.</div>';
+        list.innerHTML = '<div class="empty-state">Todavía no hay instituciones.</div>';
         return;
       }
 
@@ -1238,7 +1238,7 @@
           <span class="mini-logo">${institutionLogoMarkup(inst, "detail-logo-image")}</span>
           <span>
             <strong>${escapeHtml(inst.name)}</strong>
-            <small>${escapeHtml(inst.plan)} Â· ${escapeHtml((inst.city || []).join(", "))}</small>
+            <small>${escapeHtml(inst.plan)} · ${escapeHtml((inst.city || []).join(", "))}</small>
           </span>
         </button>
       `).join("");
@@ -1301,10 +1301,10 @@
       list.innerHTML = careers.length ? careers.map(career => `
         <button class="career-admin-item" type="button" onclick="editAdminCareer('${escapeHtml(career.id)}')">
           <img src="${escapeHtml(cloudinaryImage(career.image, 200))}" alt="${escapeHtml(career.name)}" />
-          <span><strong>${escapeHtml(career.name)}</strong><small>${escapeHtml(career.duration)} Â· ${escapeHtml(career.modality)}</small></span>
+          <span><strong>${escapeHtml(career.name)}</strong><small>${escapeHtml(career.duration)} · ${escapeHtml(career.modality)}</small></span>
           <span>Editar</span>
         </button>
-      `).join("") : '<div class="empty-state">TodavÃ­a no hay carreras para esta instituciÃ³n.</div>';
+      `).join("") : '<div class="empty-state">Todavía no hay carreras para esta institución.</div>';
       editor.classList.add("hidden");
     }
 
@@ -1384,7 +1384,7 @@
 
     function deleteAdminCareer() {
       const id = document.getElementById("adminCareerId").value;
-      if (!confirm("Â¿Eliminar esta carrera?")) return;
+      if (!confirm("¿Eliminar esta carrera?")) return;
       institutions[adminInstitutionIndex].careers = institutions[adminInstitutionIndex].careers.filter(item => item.id !== id);
       persistInstitutions();
       renderAdminCareerList();
@@ -1393,7 +1393,7 @@
     function saveInstitution() {
       const selectedCities = [...document.querySelectorAll('input[name="adminCity"]:checked')].map(input => input.value);
       if (!selectedCities.length) {
-        document.getElementById("adminStatus").textContent = "ElegÃ­ al menos una ciudad.";
+        document.getElementById("adminStatus").textContent = "Elegí al menos una ciudad.";
         return;
       }
 
@@ -1433,14 +1433,14 @@
 
     function addInstitution() {
       institutions.push({
-        name: "Nueva instituciÃ³n",
+        name: "Nueva institución",
         logo: "NI",
         type: "Instituto",
-        city: ["ConcepciÃ³n"],
-        plan: "BÃ¡sico",
-        slogan: "Una nueva propuesta educativa en TucumÃ¡n.",
-        desc: "CompletÃ¡ aquÃ­ una descripciÃ³n breve de la instituciÃ³n.",
-        address: "TucumÃ¡n",
+        city: ["Concepción"],
+        plan: "Básico",
+        slogan: "Una nueva propuesta educativa en Tucumán.",
+        desc: "Completá aquí una descripción breve de la institución.",
+        address: "Tucumán",
         whatsapp: "381 000 0000",
         image: imageBank.campus,
         imagePublicId: "",
@@ -1452,7 +1452,7 @@
         videoPublicId: "",
         gallery: [imageBank.campus, imageBank.students, imageBank.classroom],
         media: "Imagen superior",
-        careers: [normalizeCareer({ name: "Nueva carrera", description: "DescripciÃ³n breve de la carrera.", image: imageBank.classroom })]
+        careers: [normalizeCareer({ name: "Nueva carrera", description: "Descripción breve de la carrera.", image: imageBank.classroom })]
       });
       adminInstitutionIndex = institutions.length - 1;
       persistInstitutions();
@@ -1462,7 +1462,7 @@
 
     function deleteInstitution() {
       if (!institutions.length) return;
-      if (!confirm("Â¿Eliminar esta instituciÃ³n? Esta acciÃ³n se puede revertir restaurando la demo.")) return;
+      if (!confirm("¿Eliminar esta institución? Esta acción se puede revertir restaurando la demo.")) return;
       institutions.splice(adminInstitutionIndex, 1);
       adminInstitutionIndex = Math.max(0, adminInstitutionIndex - 1);
       persistInstitutions();
@@ -1472,20 +1472,20 @@
     function previewAdminInstitution() {
       const inst = institutions[adminInstitutionIndex];
       if (!inst) return;
-      currentCity = inst.city[0] || "ConcepciÃ³n";
+      currentCity = inst.city[0] || "Concepción";
       showDetail(inst.name);
     }
 
     function renderLeads() {
       const wrap = document.getElementById("leadTableWrap");
       if (!leads.length) {
-        wrap.innerHTML = '<div class="empty-state">Las consultas enviadas desde las fichas aparecerÃ¡n acÃ¡.</div>';
+        wrap.innerHTML = '<div class="empty-state">Las consultas enviadas desde las fichas aparecerán acá.</div>';
         return;
       }
 
       wrap.innerHTML = `
         <table class="lead-table">
-          <thead><tr><th>Fecha</th><th>Estudiante</th><th>InstituciÃ³n</th><th>Carrera</th><th>Contacto</th></tr></thead>
+          <thead><tr><th>Fecha</th><th>Estudiante</th><th>Institución</th><th>Carrera</th><th>Contacto</th></tr></thead>
           <tbody>
             ${leads.map(lead => `
               <tr>
@@ -1502,7 +1502,7 @@
     }
 
     function clearLeads() {
-      if (!leads.length || !confirm("Â¿Vaciar todas las consultas registradas?")) return;
+      if (!leads.length || !confirm("¿Vaciar todas las consultas registradas?")) return;
       leads = [];
       localStorage.setItem("guiaEducativaLeads", "[]");
       renderAdminMetrics();
@@ -1530,7 +1530,7 @@
       reader.onload = () => {
         try {
           const data = JSON.parse(reader.result);
-          if (!Array.isArray(data.institutions)) throw new Error("Formato invÃ¡lido");
+          if (!Array.isArray(data.institutions)) throw new Error("Formato inválido");
           institutions = data.institutions.map(normalizeInstitution);
           leads = Array.isArray(data.leads) ? data.leads : leads;
           persistInstitutions();
@@ -1539,7 +1539,7 @@
           renderAdmin();
           document.getElementById("adminStatus").textContent = "Respaldo importado correctamente.";
         } catch (error) {
-          alert("No se pudo importar el archivo. VerificÃ¡ que sea un respaldo vÃ¡lido.");
+          alert("No se pudo importar el archivo. Verificá que sea un respaldo válido.");
         }
         event.target.value = "";
       };
@@ -1547,7 +1547,7 @@
     }
 
     function resetDemoData() {
-      if (!confirm("Â¿Restaurar todas las instituciones originales de la demo?")) return;
+      if (!confirm("¿Restaurar todas las instituciones originales de la demo?")) return;
       institutions = JSON.parse(JSON.stringify(defaultInstitutions)).map(normalizeInstitution);
       persistInstitutions();
       adminInstitutionIndex = 0;
@@ -1601,20 +1601,20 @@
     }
 
     function viewEvent(name) {
-      alert("La ficha de â€œ" + name + "â€ estarÃ¡ disponible prÃ³ximamente.");
+      alert("La ficha de “" + name + "” estará disponible próximamente.");
     }
 
     const teacherCourses = [
-      { name: "Inteligencia artificial aplicada al aula", institution: "Universidad Siglo 21", city: "ConcepciÃ³n", modality: "Mixta", score: 40, weeks: 6, start: "2026-06-26", status: "Ãšltimos cupos", badge: "Destacado", urgency: "Inicia maÃ±ana", image: imageBank.design, featured: true },
-      { name: "EvaluaciÃ³n formativa y nuevas estrategias", institution: "IES ConcepciÃ³n", city: "ConcepciÃ³n", modality: "Presencial", score: 30, weeks: 4, start: "2026-06-28", status: "Inscripciones abiertas", badge: "Recomendado", urgency: "Inicia en 3 dÃ­as", image: imageBank.classroom, featured: true },
-      { name: "Herramientas digitales para docentes", institution: "Centro de FormaciÃ³n TucumÃ¡n", city: "Monteros", modality: "Virtual", score: 25, weeks: 5, start: "2026-07-02", status: "Inscripciones abiertas", badge: "Nuevo", urgency: "Inicia la prÃ³xima semana", image: imageBank.video, featured: true },
-      { name: "EducaciÃ³n emocional y convivencia escolar", institution: "Instituto San Miguel", city: "Monteros", modality: "Presencial", score: 35, weeks: 8, start: "2026-07-06", status: "Inscripciones abiertas", badge: "Recomendado", urgency: "Inicia la prÃ³xima semana", image: imageBank.students, featured: true },
-      { name: "DiseÃ±o de proyectos interdisciplinarios", institution: "Instituto Santa BÃ¡rbara", city: "Aguilares", modality: "Mixta", score: 45, weeks: 10, start: "2026-07-13", status: "Ãšltimos cupos", badge: "Destacado", urgency: "Inicia en 18 dÃ­as", image: imageBank.fair, featured: false },
-      { name: "InclusiÃ³n educativa y trayectorias escolares", institution: "IES ConcepciÃ³n", city: "ConcepciÃ³n", modality: "Virtual", score: 40, weeks: 7, start: "2026-07-20", status: "Inscripciones abiertas", badge: "Nuevo", urgency: "Inicia en julio", image: imageBank.campus, featured: false },
-      { name: "AlfabetizaciÃ³n inicial: enfoques actuales", institution: "Instituto San Miguel", city: "Monteros", modality: "Presencial", score: 30, weeks: 6, start: "2026-08-03", status: "PrÃ³ximamente", badge: "Nuevo", urgency: "Inicia en agosto", image: imageBank.classroom, featured: false },
-      { name: "GamificaciÃ³n y aprendizaje basado en retos", institution: "Academia Profesional Norte", city: "Aguilares", modality: "Virtual", score: 20, weeks: 4, start: "2026-08-10", status: "Inscripciones abiertas", badge: "Recomendado", urgency: "Inicia en agosto", image: imageBank.design, featured: false },
-      { name: "GestiÃ³n institucional y liderazgo pedagÃ³gico", institution: "Universidad Siglo 21", city: "TucumÃ¡n", modality: "Mixta", score: 50, weeks: 12, start: "2026-08-17", status: "PrÃ³ximamente", badge: "Destacado", urgency: "Inicia en agosto", image: imageBank.siglo, featured: false },
-      { name: "Estrategias para la enseÃ±anza de matemÃ¡tica", institution: "Centro de FormaciÃ³n TucumÃ¡n", city: "Aguilares", modality: "Presencial", score: 25, weeks: 5, start: "2026-09-01", status: "PrÃ³ximamente", badge: "Nuevo", urgency: "Inicia en septiembre", image: imageBank.lab, featured: false }
+      { name: "Inteligencia artificial aplicada al aula", institution: "Universidad Siglo 21", city: "Concepción", modality: "Mixta", score: 40, weeks: 6, start: "2026-06-26", status: "Últimos cupos", badge: "Destacado", urgency: "Inicia mañana", image: imageBank.design, featured: true },
+      { name: "Evaluación formativa y nuevas estrategias", institution: "IES Concepción", city: "Concepción", modality: "Presencial", score: 30, weeks: 4, start: "2026-06-28", status: "Inscripciones abiertas", badge: "Recomendado", urgency: "Inicia en 3 días", image: imageBank.classroom, featured: true },
+      { name: "Herramientas digitales para docentes", institution: "Centro de Formación Tucumán", city: "Monteros", modality: "Virtual", score: 25, weeks: 5, start: "2026-07-02", status: "Inscripciones abiertas", badge: "Nuevo", urgency: "Inicia la próxima semana", image: imageBank.video, featured: true },
+      { name: "Educación emocional y convivencia escolar", institution: "Instituto San Miguel", city: "Monteros", modality: "Presencial", score: 35, weeks: 8, start: "2026-07-06", status: "Inscripciones abiertas", badge: "Recomendado", urgency: "Inicia la próxima semana", image: imageBank.students, featured: true },
+      { name: "Diseño de proyectos interdisciplinarios", institution: "Instituto Santa Bárbara", city: "Aguilares", modality: "Mixta", score: 45, weeks: 10, start: "2026-07-13", status: "Últimos cupos", badge: "Destacado", urgency: "Inicia en 18 días", image: imageBank.fair, featured: false },
+      { name: "Inclusión educativa y trayectorias escolares", institution: "IES Concepción", city: "Concepción", modality: "Virtual", score: 40, weeks: 7, start: "2026-07-20", status: "Inscripciones abiertas", badge: "Nuevo", urgency: "Inicia en julio", image: imageBank.campus, featured: false },
+      { name: "Alfabetización inicial: enfoques actuales", institution: "Instituto San Miguel", city: "Monteros", modality: "Presencial", score: 30, weeks: 6, start: "2026-08-03", status: "Próximamente", badge: "Nuevo", urgency: "Inicia en agosto", image: imageBank.classroom, featured: false },
+      { name: "Gamificación y aprendizaje basado en retos", institution: "Academia Profesional Norte", city: "Aguilares", modality: "Virtual", score: 20, weeks: 4, start: "2026-08-10", status: "Inscripciones abiertas", badge: "Recomendado", urgency: "Inicia en agosto", image: imageBank.design, featured: false },
+      { name: "Gestión institucional y liderazgo pedagógico", institution: "Universidad Siglo 21", city: "Tucumán", modality: "Mixta", score: 50, weeks: 12, start: "2026-08-17", status: "Próximamente", badge: "Destacado", urgency: "Inicia en agosto", image: imageBank.siglo, featured: false },
+      { name: "Estrategias para la enseñanza de matemática", institution: "Centro de Formación Tucumán", city: "Aguilares", modality: "Presencial", score: 25, weeks: 5, start: "2026-09-01", status: "Próximamente", badge: "Nuevo", urgency: "Inicia en septiembre", image: imageBank.lab, featured: false }
     ];
 
     let courseVisibleLimit = 5;
@@ -1641,7 +1641,7 @@
           </div>
           <div class="teacher-course-card-body">
             <h3>${escapeHtml(course.name)}</h3>
-            <p class="course-institution">${escapeHtml(course.institution)} Â· ${escapeHtml(course.city)}</p>
+            <p class="course-institution">${escapeHtml(course.institution)} · ${escapeHtml(course.city)}</p>
             <div class="course-detail-grid">${courseDetailIcons(course)}</div>
             <div class="course-card-actions">
               <button class="btn light" type="button" onclick="viewTeacherCourse('${escapeHtml(course.name).replace(/'/g, "\\'")}')">Ver curso</button>
@@ -1653,21 +1653,21 @@
     }
 
     function courseStatusClass(status) {
-      return status === "Ãšltimos cupos" ? "warning" : status === "PrÃ³ximamente" ? "soon" : "";
+      return status === "Últimos cupos" ? "warning" : status === "Próximamente" ? "soon" : "";
     }
 
     function teacherCourseListCard(course) {
       return `
         <article class="course-list-card">
           <img src="${course.image}" alt="${escapeHtml(course.name)}" />
-          <div class="course-list-title"><h3>${escapeHtml(course.name)}</h3><p>${escapeHtml(course.institution)} Â· ${escapeHtml(course.city)}</p></div>
+          <div class="course-list-title"><h3>${escapeHtml(course.name)}</h3><p>${escapeHtml(course.institution)} · ${escapeHtml(course.city)}</p></div>
           <div class="course-list-meta">
             <span><strong>Modalidad</strong>${escapeHtml(course.modality)}</span>
             <span><strong>Puntaje</strong>${course.score ? course.score + " puntos" : "Sin puntaje"}</span>
-            <span><strong>DuraciÃ³n</strong>${course.weeks} semanas</span>
+            <span><strong>Duración</strong>${course.weeks} semanas</span>
             <span><strong>Inicio</strong>${courseDateLabel(course.start)}</span>
             <span><strong>Ciudad</strong>${escapeHtml(course.city)}</span>
-            <span><strong>InstituciÃ³n</strong>${escapeHtml(course.institution)}</span>
+            <span><strong>Institución</strong>${escapeHtml(course.institution)}</span>
           </div>
           <div><span class="course-status ${courseStatusClass(course.status)}">${escapeHtml(course.status)}</span><button class="btn light" type="button" onclick="viewTeacherCourse('${escapeHtml(course.name).replace(/'/g, "\\'")}')">Ver curso</button></div>
         </article>
@@ -1678,7 +1678,7 @@
       const select = document.getElementById("courseInstitutionFilter");
       const current = select.value;
       const names = [...new Set(teacherCourses.map(course => course.institution))].sort();
-      select.innerHTML = '<option value="">InstituciÃ³n</option>' + names.map(name => `<option>${escapeHtml(name)}</option>`).join("");
+      select.innerHTML = '<option value="">Institución</option>' + names.map(name => `<option>${escapeHtml(name)}</option>`).join("");
       select.value = current;
     }
 
@@ -1738,7 +1738,7 @@
     }
 
     function viewTeacherCourse(name) {
-      alert("La ficha de â€œ" + name + "â€ estarÃ¡ disponible prÃ³ximamente.");
+      alert("La ficha de “" + name + "” estará disponible próximamente.");
     }
 
     function consultTeacherCourse(name) {

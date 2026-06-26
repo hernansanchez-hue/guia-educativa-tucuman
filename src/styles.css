@@ -518,7 +518,7 @@
     }
 
     .city-stat:not(:last-child)::after {
-      content: "Â·";
+      content: "·";
       margin-left: 5px;
       color: #94a3b8;
     }
@@ -2239,7 +2239,7 @@
     }
 
     .career-fact::before {
-      content: "âœ“";
+      content: "✓";
       position: absolute;
       left: 0;
       top: 1px;
@@ -2364,7 +2364,7 @@
 
     .career-feature-list span::before,
     .career-field-chip::before {
-      content: "âœ“";
+      content: "✓";
       width: 19px;
       height: 19px;
       display: grid;

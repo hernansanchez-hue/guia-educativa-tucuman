@@ -10,18 +10,18 @@
 <body>
 <div class="app-shell">
     <header id="homeHeader" class="home-header">
-      <div class="logo"><span class="logo-mark">GE</span> GuÃ­a Educativa <span>TucumÃ¡n</span></div>
+      <div class="logo"><span class="logo-mark">GE</span> Guía Educativa <span>Tucumán</span></div>
     </header>
 
     <header id="siteHeader" class="site-header">
-      <button class="logo" onclick="goHome(); closeSiteMenu()" aria-label="Volver al inicio"><span class="logo-mark">GE</span> GuÃ­a Educativa <span>TucumÃ¡n</span></button>
+      <button class="logo" onclick="goHome(); closeSiteMenu()" aria-label="Volver al inicio"><span class="logo-mark">GE</span> Guía Educativa <span>Tucumán</span></button>
 
-      <nav id="siteMenu" class="site-nav" aria-label="NavegaciÃ³n principal">
+      <nav id="siteMenu" class="site-nav" aria-label="Navegación principal">
         <button data-nav="inicio" onclick="goHome(); closeSiteMenu()">Inicio</button>
         <button data-nav="eventos" onclick="showInfoPage('events'); closeSiteMenu()">Eventos</button>
         <button data-nav="nosotros" onclick="showInfoPage('about'); closeSiteMenu()">Nosotros</button>
         <button class="mobile-course-link" onclick="showCoursesPage(); closeSiteMenu()">Cursos Docentes</button>
-        <button class="mobile-menu-close" type="button" onclick="closeSiteMenu()" aria-label="Cerrar menÃº" title="Cerrar menÃº">
+        <button class="mobile-menu-close" type="button" onclick="closeSiteMenu()" aria-label="Cerrar menú" title="Cerrar menú">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
             <path d="M6 6l12 12M18 6 6 18"></path>
           </svg>
@@ -47,7 +47,7 @@
           Cursos Docentes
         </button>
 
-        <button class="mobile-menu-toggle" type="button" onclick="openSiteMenu()" aria-label="Abrir menÃº" title="Abrir menÃº">
+        <button class="mobile-menu-toggle" type="button" onclick="openSiteMenu()" aria-label="Abrir menú" title="Abrir menú">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
             <path d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -61,10 +61,10 @@
       </video>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="home-inner">
-        <h1>Toda la oferta educativa de <span>TucumÃ¡n</span> en un solo lugar</h1>
+        <h1>Toda la oferta educativa de <span>Tucumán</span> en un solo lugar</h1>
 
         <div class="city-box" aria-label="Selector de ciudades">
-          <h2>ElegÃ­ tu ciudad</h2>
+          <h2>Elegí tu ciudad</h2>
           <div class="city-search" role="search">
             <svg viewBox="0 0 30 30" aria-hidden="true">
               <path d="M13 3C7.489 3 3 7.489 3 13s4.489 10 10 10a9.95 9.95 0 0 0 6.322-2.264l5.971 5.971a1 1 0 1 0 1.414-1.414l-5.97-5.97A9.95 9.95 0 0 0 23 13c0-5.511-4.489-10-10-10m0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8-8-3.57-8-8 3.57-8 8-8"></path>
@@ -77,20 +77,20 @@
               </svg>
             </button>
             <span class="city-search-divider" aria-hidden="true"></span>
-            <button type="button" onclick="clearCitySearch()" aria-label="Limpiar bÃºsqueda" title="Limpiar bÃºsqueda">
+            <button type="button" onclick="clearCitySearch()" aria-label="Limpiar búsqueda" title="Limpiar búsqueda">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                 <path d="M6 6l12 12M18 6 6 18"></path>
               </svg>
             </button>
           </div>
           <div class="cities">
-            <button class="city-card" data-city="ConcepciÃ³n" onclick="showCity('ConcepciÃ³n')">
+            <button class="city-card" data-city="Concepción" onclick="showCity('Concepción')">
               <span class="city-card-head">
                 <svg class="city-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                   <path d="M12 21s7-5.2 7-12a7 7 0 1 0-14 0c0 6.8 7 12 7 12Z"></path>
                   <circle cx="12" cy="9" r="2.4"></circle>
                 </svg>
-                <strong>ConcepciÃ³n</strong>
+                <strong>Concepción</strong>
               </span>
             </button>
             <button class="city-card" data-city="Monteros" onclick="showCity('Monteros')">
@@ -126,8 +126,8 @@
           </div>
           <div class="featured-controls">
             <span class="featured-count" id="featuredCount">1 / 3</span>
-            <button class="featured-arrow-button" type="button" onclick="changeFeatured(-1)" aria-label="InstituciÃ³n destacada anterior">â†</button>
-            <button class="featured-arrow-button" type="button" onclick="changeFeatured(1)" aria-label="Siguiente instituciÃ³n destacada">â†’</button>
+            <button class="featured-arrow-button" type="button" onclick="changeFeatured(-1)" aria-label="Institución destacada anterior">←</button>
+            <button class="featured-arrow-button" type="button" onclick="changeFeatured(1)" aria-label="Siguiente institución destacada">→</button>
           </div>
         </div>
       </section>
@@ -138,7 +138,7 @@
             <circle cx="11" cy="11" r="7"></circle>
             <path d="m20 20-4-4"></path>
           </svg>
-          <input id="institutionSearchInput" type="search" placeholder="Buscar instituciÃ³n o carrera..." autocomplete="off" />
+          <input id="institutionSearchInput" type="search" placeholder="Buscar institución o carrera..." autocomplete="off" />
         </label>
         <select id="institutionModalityFilter" aria-label="Modalidad">
           <option value="">Modalidad</option>
@@ -157,7 +157,7 @@
 
       <div class="institutions-section">
         <div class="city-hero">
-          <h2 id="cityTitle">Instituciones de ConcepciÃ³n</h2>
+          <h2 id="cityTitle">Instituciones de Concepción</h2>
         </div>
         <div class="cards" id="institutionCards"></div>
         <div id="institutionSearchEmpty" class="featured-search-empty hidden">No encontramos instituciones con esos filtros.</div>
@@ -171,16 +171,16 @@
           <div>
             <div class="brand-row">
               <span class="mini-logo" id="detailLogo">GE</span>
-              <span class="eyebrow" style="color: #c8f5df; margin: 0;" id="detailType">InstituciÃ³n</span>
+              <span class="eyebrow" style="color: #c8f5df; margin: 0;" id="detailType">Institución</span>
             </div>
-            <h1 id="instName">InstituciÃ³n</h1>
+            <h1 id="instName">Institución</h1>
             <p id="instSlogan">Tu futuro comienza hoy.</p>
           </div>
         </div>
       </article>
 
       <section class="panel" style="margin-top:22px;">
-        <h2 class="detail-section-title">GalerÃ­a de fotos</h2>
+        <h2 class="detail-section-title">Galería de fotos</h2>
         <div class="creation-gallery" id="institutionGallery"></div>
       </section>
 
@@ -192,14 +192,14 @@
 
     <section id="careerPage" class="page" aria-live="polite">
       <div class="career-page-shell">
-        <button class="btn light" type="button" onclick="backToInstitution()">Volver a la instituciÃ³n</button>
+        <button class="btn light" type="button" onclick="backToInstitution()">Volver a la institución</button>
         <div class="career-detail-layout">
           <main class="career-detail-main">
             <section class="career-page-hero">
               <div class="career-page-copy">
-                <span id="careerPageInstitution" class="eyebrow">InstituciÃ³n</span>
+                <span id="careerPageInstitution" class="eyebrow">Institución</span>
                 <h1 id="careerPageName">Carrera</h1>
-                <p id="careerPageTitle">TÃ­tulo que otorga</p>
+                <p id="careerPageTitle">Título que otorga</p>
                 <div id="careerFacts" class="career-facts"></div>
               </div>
               <img id="careerPageImage" class="career-page-image" src="" alt="" />
@@ -211,13 +211,13 @@
               <button type="button" onclick="scrollCareerSection('careerPlanSection')">Plan de estudios</button>
               <button type="button" onclick="scrollCareerSection('careerFieldSection')">Campo laboral</button>
               <button type="button" onclick="scrollCareerSection('careerRequirementsSection')">Requisitos e ingreso</button>
-              <button type="button" onclick="scrollCareerSection('careerFaqSection')">MÃ¡s informaciÃ³n</button>
+              <button type="button" onclick="scrollCareerSection('careerFaqSection')">Más información</button>
             </nav>
 
             <section id="careerAboutSection" class="career-info-section">
               <div class="career-about-layout">
                 <div><h2>Sobre la carrera</h2><p id="careerAbout"></p><h2 style="margin-top:20px;">Perfil del egresado</h2><p id="careerProfile"></p></div>
-                <div class="career-feature-list"><span>FormaciÃ³n prÃ¡ctica en entornos reales</span><span>Docentes especializados</span><span>Herramientas profesionales actuales</span></div>
+                <div class="career-feature-list"><span>Formación práctica en entornos reales</span><span>Docentes especializados</span><span>Herramientas profesionales actuales</span></div>
               </div>
             </section>
 
@@ -229,37 +229,37 @@
               <div id="careerFieldChips" class="career-field-chips"></div>
             </section>
 
-            <section id="careerPlanSection" class="career-info-section"><h2>Plan de estudios</h2><p style="margin-bottom:15px;">ConocÃ© la organizaciÃ³n general de la carrera.</p><ol id="careerStudyPlan" class="career-study-plan"></ol></section>
+            <section id="careerPlanSection" class="career-info-section"><h2>Plan de estudios</h2><p style="margin-bottom:15px;">Conocé la organización general de la carrera.</p><ol id="careerStudyPlan" class="career-study-plan"></ol></section>
             <section id="careerRequirementsSection" class="career-info-section"><h2>Requisitos de ingreso</h2><ul id="careerRequirements"></ul></section>
             <section id="careerFaqSection" class="career-info-section"><h2>Preguntas frecuentes</h2><div id="careerFaq"></div></section>
           </main>
 
           <aside class="career-contact-sidebar">
             <section class="career-info-section career-interest-card">
-              <h2>Â¿Te interesa esta carrera?</h2>
-              <p>Dejanos tus datos y la instituciÃ³n se contactarÃ¡.</p>
+              <h2>¿Te interesa esta carrera?</h2>
+              <p>Dejanos tus datos y la institución se contactará.</p>
               <form id="careerLeadForm" class="form-grid" onsubmit="event.preventDefault(); saveCareerLead();">
                 <input id="careerLeadName" required placeholder="Nombre y Apellido" />
-                <input id="careerLeadPhone" required placeholder="TelÃ©fono / WhatsApp" inputmode="tel" />
+                <input id="careerLeadPhone" required placeholder="Teléfono / WhatsApp" inputmode="tel" />
                 <input id="careerLeadEmail" required placeholder="Email" type="email" />
-                <select id="careerLeadShift"><option value="">Â¿En quÃ© turno te interesa?</option><option>MaÃ±ana</option><option>Tarde</option><option>Noche</option></select>
-                <textarea id="careerLeadQuery" placeholder="EscribÃ­ tu consulta (opcional)"></textarea>
+                <select id="careerLeadShift"><option value="">¿En qué turno te interesa?</option><option>Mañana</option><option>Tarde</option><option>Noche</option></select>
+                <textarea id="careerLeadQuery" placeholder="Escribí tu consulta (opcional)"></textarea>
                 <a id="careerWhatsappButton" class="btn career-whatsapp" href="#" target="_blank" rel="noopener">Hablar por WhatsApp</a>
-                <div class="career-form-divider">o completÃ¡ el formulario</div>
+                <div class="career-form-divider">o completá el formulario</div>
                 <button class="btn light" type="submit">Enviar consulta</button>
                 <p id="careerFormMessage" class="hidden" style="color:var(--verde);font-weight:800;">Consulta enviada correctamente.</p>
               </form>
             </section>
 
             <section class="career-info-section">
-              <h2>InformaciÃ³n rÃ¡pida</h2>
+              <h2>Información rápida</h2>
               <div class="career-quick-info">
-                <div class="career-quick-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 21h18M5 21V9l7-4 7 4v12"></path></svg><span><small>InstituciÃ³n</small><strong id="careerQuickInstitution"></strong></span></div>
+                <div class="career-quick-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 21h18M5 21V9l7-4 7 4v12"></path></svg><span><small>Institución</small><strong id="careerQuickInstitution"></strong></span></div>
                 <div class="career-quick-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"></path></svg><span><small>Sede</small><strong id="careerQuickCampus"></strong></span></div>
-                <div class="career-quick-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m12 3 7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7Z"></path></svg><span><small>TÃ­tulo que otorga</small><strong id="careerQuickDegree"></strong></span></div>
+                <div class="career-quick-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m12 3 7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7Z"></path></svg><span><small>Título que otorga</small><strong id="careerQuickDegree"></strong></span></div>
                 <div class="career-quick-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 2.5 2.5L16 9"></path></svg><span><small>Validez</small><strong id="careerQuickValidity"></strong></span></div>
               </div>
-              <button class="btn light" type="button" style="width:100%;margin-top:18px;" onclick="backToInstitution()">Ver mÃ¡s carreras de esta instituciÃ³n</button>
+              <button class="btn light" type="button" style="width:100%;margin-top:18px;" onclick="backToInstitution()">Ver más carreras de esta institución</button>
             </section>
           </aside>
         </div>
@@ -270,9 +270,9 @@
       <div class="courses-page">
         <section class="courses-hero about-reveal">
           <div class="courses-hero-copy">
-            <span class="eyebrow">FormaciÃ³n docente</span>
+            <span class="eyebrow">Formación docente</span>
             <h1>Cursos Docentes de toda la provincia</h1>
-            <p>EncontrÃ¡ capacitaciones, trayectos formativos y propuestas de actualizaciÃ³n docente organizadas por instituciones educativas de TucumÃ¡n.</p>
+            <p>Encontrá capacitaciones, trayectos formativos y propuestas de actualización docente organizadas por instituciones educativas de Tucumán.</p>
             <div class="course-trust-list">
               <span class="course-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 2.5 2.5L16 9"></path></svg>Cursos actualizados permanentemente</span>
               <span class="course-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 2.5 2.5L16 9"></path></svg>Instituciones reconocidas</span>
@@ -280,10 +280,10 @@
             </div>
           </div>
           <div class="courses-hero-visual">
-            <img class="courses-hero-image" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=82" alt="Docente participando de una capacitaciÃ³n educativa" />
+            <img class="courses-hero-image" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=82" alt="Docente participando de una capacitación educativa" />
             <div class="courses-visual-card">
               <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v14H4z"></path><path d="M8 9h8M8 13h5"></path></svg></span>
-              <strong>FormaciÃ³n continua</strong>
+              <strong>Formación continua</strong>
               <small>Propuestas para actualizar conocimientos y sumar puntaje.</small>
             </div>
           </div>
@@ -294,41 +294,41 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
             <input id="courseSearch" type="search" placeholder="Buscar cursos..." autocomplete="off" oninput="filterTeacherCourses()" />
           </label>
-          <select id="courseInstitutionFilter" onchange="filterTeacherCourses()" aria-label="Filtrar por instituciÃ³n"><option value="">InstituciÃ³n</option></select>
+          <select id="courseInstitutionFilter" onchange="filterTeacherCourses()" aria-label="Filtrar por institución"><option value="">Institución</option></select>
           <select id="courseModalityFilter" onchange="filterTeacherCourses()" aria-label="Filtrar por modalidad"><option value="">Modalidad</option><option>Presencial</option><option>Virtual</option><option>Mixta</option></select>
-          <select id="courseScoreFilter" onchange="filterTeacherCourses()" aria-label="Filtrar por puntaje"><option value="">Puntaje</option><option value="0">Sin puntaje</option><option value="20">20 puntos o mÃ¡s</option><option value="40">40 puntos o mÃ¡s</option></select>
+          <select id="courseScoreFilter" onchange="filterTeacherCourses()" aria-label="Filtrar por puntaje"><option value="">Puntaje</option><option value="0">Sin puntaje</option><option value="20">20 puntos o más</option><option value="40">40 puntos o más</option></select>
           <input id="courseDateFilter" type="date" onchange="filterTeacherCourses()" aria-label="Filtrar por fecha de inicio" />
-          <select id="courseDurationFilter" onchange="filterTeacherCourses()" aria-label="Filtrar por duraciÃ³n"><option value="">DuraciÃ³n</option><option value="short">Hasta 4 semanas</option><option value="medium">5 a 8 semanas</option><option value="long">MÃ¡s de 8 semanas</option></select>
+          <select id="courseDurationFilter" onchange="filterTeacherCourses()" aria-label="Filtrar por duración"><option value="">Duración</option><option value="short">Hasta 4 semanas</option><option value="medium">5 a 8 semanas</option><option value="long">Más de 8 semanas</option></select>
           <button class="course-clear-button" type="button" onclick="clearCourseFilters()">Limpiar filtros</button>
         </form>
 
         <section class="course-section about-reveal">
           <div class="course-section-head">
             <div><h2>Cursos destacados</h2><p>Propuestas seleccionadas por su calidad y relevancia.</p></div>
-            <div class="course-carousel-controls"><button class="course-carousel-button" type="button" onclick="scrollCourseCarousel('featuredCourses', -1)" aria-label="Anterior">â†</button><button class="course-carousel-button" type="button" onclick="scrollCourseCarousel('featuredCourses', 1)" aria-label="Siguiente">â†’</button></div>
+            <div class="course-carousel-controls"><button class="course-carousel-button" type="button" onclick="scrollCourseCarousel('featuredCourses', -1)" aria-label="Anterior">←</button><button class="course-carousel-button" type="button" onclick="scrollCourseCarousel('featuredCourses', 1)" aria-label="Siguiente">→</button></div>
           </div>
           <div id="featuredCourses" class="course-carousel"></div>
         </section>
 
         <section class="course-section about-reveal">
           <div class="course-section-head">
-            <div><h2>PrÃ³ximos a iniciar</h2><p>Inscripciones abiertas para propuestas que comienzan pronto.</p></div>
-            <div class="course-carousel-controls"><button class="course-carousel-button" type="button" onclick="scrollCourseCarousel('upcomingCourses', -1)" aria-label="Anterior">â†</button><button class="course-carousel-button" type="button" onclick="scrollCourseCarousel('upcomingCourses', 1)" aria-label="Siguiente">â†’</button></div>
+            <div><h2>Próximos a iniciar</h2><p>Inscripciones abiertas para propuestas que comienzan pronto.</p></div>
+            <div class="course-carousel-controls"><button class="course-carousel-button" type="button" onclick="scrollCourseCarousel('upcomingCourses', -1)" aria-label="Anterior">←</button><button class="course-carousel-button" type="button" onclick="scrollCourseCarousel('upcomingCourses', 1)" aria-label="Siguiente">→</button></div>
           </div>
           <div id="upcomingCourses" class="course-carousel"></div>
         </section>
 
         <section class="course-section about-reveal">
           <div class="course-section-head">
-            <div><h2>Todos los cursos docentes</h2><p id="courseResultsText">CatÃ¡logo provincial de formaciÃ³n docente.</p></div>
+            <div><h2>Todos los cursos docentes</h2><p id="courseResultsText">Catálogo provincial de formación docente.</p></div>
           </div>
           <div id="courseCatalog" class="course-catalog"></div>
           <div id="courseEmpty" class="course-empty hidden">No encontramos cursos con esos filtros.</div>
-          <button id="courseLoadMore" class="btn light course-load-more" type="button" onclick="loadMoreCourses()">Cargar mÃ¡s</button>
+          <button id="courseLoadMore" class="btn light course-load-more" type="button" onclick="loadMoreCourses()">Cargar más</button>
         </section>
 
         <section class="teacher-course-cta about-reveal">
-          <div><h2>Â¿Sos una instituciÃ³n educativa?</h2><p>PublicÃ¡ tus cursos docentes en GuÃ­a Educativa TucumÃ¡n y llegÃ¡ a docentes de toda la provincia.</p></div>
+          <div><h2>¿Sos una institución educativa?</h2><p>Publicá tus cursos docentes en Guía Educativa Tucumán y llegá a docentes de toda la provincia.</p></div>
           <button class="btn" type="button" onclick="showInfoPage('contact')">Publicar curso</button>
         </section>
       </div>
@@ -338,19 +338,19 @@
       <div class="about-page">
         <section class="about-hero about-block about-reveal">
           <div>
-            <span class="eyebrow">Nuestro propÃ³sito</span>
-            <h1>Todo gran futuro comienza con una decisiÃ³n.</h1>
+            <span class="eyebrow">Nuestro propósito</span>
+            <h1>Todo gran futuro comienza con una decisión.</h1>
             <div class="about-hero-text">
-              <p>Miles de personas buscan todos los dÃ­as una oportunidad para estudiar, cambiar de carrera o aprender algo nuevo. Sin embargo, encontrar la informaciÃ³n correcta muchas veces no es fÃ¡cil.</p>
-              <p>GuÃ­a Educativa TucumÃ¡n naciÃ³ para reunir en un solo lugar toda la oferta educativa de la provincia y acercar a cada persona a su prÃ³ximo paso.</p>
+              <p>Miles de personas buscan todos los días una oportunidad para estudiar, cambiar de carrera o aprender algo nuevo. Sin embargo, encontrar la información correcta muchas veces no es fácil.</p>
+              <p>Guía Educativa Tucumán nació para reunir en un solo lugar toda la oferta educativa de la provincia y acercar a cada persona a su próximo paso.</p>
             </div>
           </div>
           <div class="about-hero-visual">
             <img class="about-hero-image" src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1000&q=82" alt="Estudiantes compartiendo ideas en un entorno educativo" />
             <div class="about-future-card">
               <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m4 10 8-4 8 4-8 4Z"></path><path d="M7 12v5c3 2 7 2 10 0v-5"></path></svg></span>
-              <strong>Tu prÃ³ximo paso</strong>
-              <small>InformaciÃ³n clara para elegir con mÃ¡s confianza.</small>
+              <strong>Tu próximo paso</strong>
+              <small>Información clara para elegir con más confianza.</small>
             </div>
           </div>
         </section>
@@ -365,7 +365,7 @@
               <span class="about-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"></circle><path d="M5 21a7 7 0 0 1 14 0"></path><path d="M19 4v5M16.5 6.5h5"></path></svg></span>
               <span class="about-step-number">Paso 1</span>
               <h3>Todo empieza con una idea.</h3>
-              <p>Una persona quiere estudiar. No sabe dÃ³nde hacerlo ni quÃ© opciones existen.</p>
+              <p>Una persona quiere estudiar. No sabe dónde hacerlo ni qué opciones existen.</p>
             </article>
             <article class="about-step">
               <span class="about-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h16"></path><circle cx="18" cy="12" r="2"></circle></svg></span>
@@ -376,8 +376,8 @@
             <article class="about-step">
               <span class="about-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 19 19 5"></path><path d="M10 5h9v9"></path><path d="M5 8v11h11"></path></svg></span>
               <span class="about-step-number">Paso 3</span>
-              <h3>Vos elegÃ­s tu futuro.</h3>
-              <p>Cuando encontrar informaciÃ³n deja de ser un problema, tomar una decisiÃ³n se vuelve mucho mÃ¡s fÃ¡cil.</p>
+              <h3>Vos elegís tu futuro.</h3>
+              <p>Cuando encontrar información deja de ser un problema, tomar una decisión se vuelve mucho más fácil.</p>
             </article>
           </div>
         </section>
@@ -385,7 +385,7 @@
         <section class="about-block about-reveal">
           <div class="about-heading">
             <span class="eyebrow">GET para vos</span>
-            <h2>Â¿Por quÃ© existe GET?</h2>
+            <h2>¿Por qué existe GET?</h2>
           </div>
           <div class="about-benefits">
             <article class="about-benefit">
@@ -395,8 +395,8 @@
             </article>
             <article class="about-benefit">
               <span class="about-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 2.5 2.5L16 9"></path></svg></span>
-              <h3>ElegÃ­ con confianza</h3>
-              <p>ComparÃ¡ instituciones y encontrÃ¡ la opciÃ³n que mejor se adapte a vos.</p>
+              <h3>Elegí con confianza</h3>
+              <p>Compará instituciones y encontrá la opción que mejor se adapte a vos.</p>
             </article>
             <article class="about-benefit">
               <span class="about-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 10h18"></path><path d="m9 15 2 2 4-4"></path></svg></span>
@@ -406,13 +406,13 @@
             <article class="about-benefit">
               <span class="about-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21a9 9 0 1 0-9-9"></path><path d="M3 16v5h5"></path><path d="M8 12h8M12 8v8"></path></svg></span>
               <h3>Pensada para las personas</h3>
-              <p>Una plataforma simple, rÃ¡pida y gratuita para quienes quieren seguir creciendo.</p>
+              <p>Una plataforma simple, rápida y gratuita para quienes quieren seguir creciendo.</p>
             </article>
           </div>
         </section>
 
         <section class="about-mission about-block about-reveal">
-          <span class="about-mission-mark">â€œ</span>
+          <span class="about-mission-mark">“</span>
           <blockquote>No creemos que las oportunidades deban encontrarse por casualidad.<br><br>Creemos que deben estar al alcance de cualquier persona.</blockquote>
         </section>
 
@@ -420,7 +420,7 @@
           <img class="about-closing-image" src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1800&q=85" alt="Estudiantes avanzando juntos hacia una nueva etapa" />
           <div class="about-closing-overlay" aria-hidden="true"></div>
           <div class="about-closing-content">
-            <h2>Hoy buscÃ¡s una carrera.<br>MaÃ±ana puede ser el comienzo de una nueva vida.</h2>
+            <h2>Hoy buscás una carrera.<br>Mañana puede ser el comienzo de una nueva vida.</h2>
             <button class="btn" type="button" onclick="goHome()">Comenzar a explorar</button>
           </div>
         </section>
@@ -432,8 +432,8 @@
         <section class="events-hero">
           <div class="events-hero-copy">
             <span class="eyebrow">Eventos</span>
-            <h1>Agenda educativa de TucumÃ¡n</h1>
-            <p>DescubrÃ­ cursos, exposiciones, capacitaciones, ferias y actividades organizadas por instituciones educativas de la provincia.</p>
+            <h1>Agenda educativa de Tucumán</h1>
+            <p>Descubrí cursos, exposiciones, capacitaciones, ferias y actividades organizadas por instituciones educativas de la provincia.</p>
           </div>
           <div class="events-visual" aria-hidden="true">
             <div class="events-calendar">
@@ -449,7 +449,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                 <path d="m4 10 8-4 8 4-8 4Z"></path><path d="M7 12v5c3 2 7 2 10 0v-5"></path>
               </svg>
-              EducaciÃ³n que conecta
+              Educación que conecta
             </div>
           </div>
         </section>
@@ -461,13 +461,13 @@
           </label>
           <select id="eventCityFilter" aria-label="Filtrar por ciudad" onchange="filterEvents()">
             <option value="">Todas las ciudades</option>
-            <option>ConcepciÃ³n</option>
+            <option>Concepción</option>
             <option>Monteros</option>
             <option>Aguilares</option>
             <option>Virtual</option>
           </select>
-          <select id="eventCategoryFilter" aria-label="Filtrar por categorÃ­a" onchange="filterEvents()">
-            <option value="">Todas las categorÃ­as</option>
+          <select id="eventCategoryFilter" aria-label="Filtrar por categoría" onchange="filterEvents()">
+            <option value="">Todas las categorías</option>
             <option>Cursos Docentes</option>
             <option>Expo Carreras</option>
             <option>Ferias Educativas</option>
@@ -488,8 +488,8 @@
 
         <section class="events-section" aria-labelledby="eventCategoriesTitle">
           <div class="events-section-head">
-            <h2 id="eventCategoriesTitle">CategorÃ­as</h2>
-            <p>ExplorÃ¡ actividades segÃºn tus intereses.</p>
+            <h2 id="eventCategoriesTitle">Categorías</h2>
+            <p>Explorá actividades según tus intereses.</p>
           </div>
           <div class="event-categories">
             <button class="event-category" type="button" data-event-category="Cursos Docentes" onclick="setEventCategory('Cursos Docentes', this)"><span class="event-category-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v14H4z"></path><path d="M8 9h8M8 13h5"></path></svg></span>Cursos Docentes</button>
@@ -505,33 +505,33 @@
 
         <section class="events-section" aria-labelledby="upcomingEventsTitle">
           <div class="events-section-head">
-            <h2 id="upcomingEventsTitle">PrÃ³ximos eventos</h2>
-            <p id="eventResultsText">Actividades educativas disponibles en TucumÃ¡n.</p>
+            <h2 id="upcomingEventsTitle">Próximos eventos</h2>
+            <p id="eventResultsText">Actividades educativas disponibles en Tucumán.</p>
           </div>
           <div id="eventCardGrid" class="event-card-grid">
-            <article class="event-card" data-title="Expo Carreras del Sur" data-category="Expo Carreras" data-city="ConcepciÃ³n" data-modality="Presencial" data-date="2026-06-26">
-              <img class="event-card-image" src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=900&q=80" alt="Estudiantes participando de una exposiciÃ³n educativa" />
-              <div class="event-card-body"><span class="event-card-category">Expo Carreras</span><h3>Expo Carreras del Sur</h3><p class="event-organizer">Organiza Universidad Siglo 21</p><div class="event-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"></path></svg>ConcepciÃ³n</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4"></path></svg>26 Jun 2026</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 20h16M6 16h12V7H6z"></path></svg>Presencial</span></div><button class="btn" type="button" onclick="viewEvent('Expo Carreras del Sur')">Ver evento</button></div>
+            <article class="event-card" data-title="Expo Carreras del Sur" data-category="Expo Carreras" data-city="Concepción" data-modality="Presencial" data-date="2026-06-26">
+              <img class="event-card-image" src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=900&q=80" alt="Estudiantes participando de una exposición educativa" />
+              <div class="event-card-body"><span class="event-card-category">Expo Carreras</span><h3>Expo Carreras del Sur</h3><p class="event-organizer">Organiza Universidad Siglo 21</p><div class="event-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"></path></svg>Concepción</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4"></path></svg>26 Jun 2026</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 20h16M6 16h12V7H6z"></path></svg>Presencial</span></div><button class="btn" type="button" onclick="viewEvent('Expo Carreras del Sur')">Ver evento</button></div>
             </article>
             <article class="event-card" data-title="Herramientas digitales para docentes" data-category="Cursos Docentes" data-city="Virtual" data-modality="Virtual" data-date="2026-06-27">
-              <img class="event-card-image" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Docente realizando una capacitaciÃ³n" />
-              <div class="event-card-body"><span class="event-card-category">Cursos Docentes</span><h3>Herramientas digitales para docentes</h3><p class="event-organizer">Organiza Centro de FormaciÃ³n TucumÃ¡n</p><div class="event-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"></path></svg>Virtual</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4"></path></svg>27 Jun 2026</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h16v12H4zM9 21h6"></path></svg>Virtual</span></div><button class="btn" type="button" onclick="viewEvent('Herramientas digitales para docentes')">Ver evento</button></div>
+              <img class="event-card-image" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Docente realizando una capacitación" />
+              <div class="event-card-body"><span class="event-card-category">Cursos Docentes</span><h3>Herramientas digitales para docentes</h3><p class="event-organizer">Organiza Centro de Formación Tucumán</p><div class="event-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"></path></svg>Virtual</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4"></path></svg>27 Jun 2026</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h16v12H4zM9 21h6"></path></svg>Virtual</span></div><button class="btn" type="button" onclick="viewEvent('Herramientas digitales para docentes')">Ver evento</button></div>
             </article>
             <article class="event-card" data-title="Jornada de Salud Comunitaria" data-category="Jornadas" data-city="Monteros" data-modality="Presencial" data-date="2026-06-28">
               <img class="event-card-image" src="https://images.unsplash.com/photo-1581093458791-9f3c3900df7b?auto=format&fit=crop&w=900&q=80" alt="Jornada educativa vinculada a la salud" />
               <div class="event-card-body"><span class="event-card-category">Jornadas</span><h3>Jornada de Salud Comunitaria</h3><p class="event-organizer">Organiza Instituto San Miguel</p><div class="event-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"></path></svg>Monteros</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4"></path></svg>28 Jun 2026</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 20h16M6 16h12V7H6z"></path></svg>Presencial</span></div><button class="btn" type="button" onclick="viewEvent('Jornada de Salud Comunitaria')">Ver evento</button></div>
             </article>
-            <article class="event-card" data-title="Charla de OrientaciÃ³n Vocacional" data-category="Charlas" data-city="Aguilares" data-modality="Mixta" data-date="2026-06-30">
+            <article class="event-card" data-title="Charla de Orientación Vocacional" data-category="Charlas" data-city="Aguilares" data-modality="Mixta" data-date="2026-06-30">
               <img class="event-card-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80" alt="Charla vocacional para estudiantes" />
-              <div class="event-card-body"><span class="event-card-category">Charlas</span><h3>Charla de OrientaciÃ³n Vocacional</h3><p class="event-organizer">Organiza Instituto Santa BÃ¡rbara</p><div class="event-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"></path></svg>Aguilares</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4"></path></svg>30 Jun 2026</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h16v12H4zM9 21h6"></path></svg>Mixta</span></div><button class="btn" type="button" onclick="viewEvent('Charla de OrientaciÃ³n Vocacional')">Ver evento</button></div>
+              <div class="event-card-body"><span class="event-card-category">Charlas</span><h3>Charla de Orientación Vocacional</h3><p class="event-organizer">Organiza Instituto Santa Bárbara</p><div class="event-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"></path></svg>Aguilares</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4"></path></svg>30 Jun 2026</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h16v12H4zM9 21h6"></path></svg>Mixta</span></div><button class="btn" type="button" onclick="viewEvent('Charla de Orientación Vocacional')">Ver evento</button></div>
             </article>
-            <article class="event-card" data-title="Taller de Empleo y CurrÃ­culum" data-category="Talleres" data-city="ConcepciÃ³n" data-modality="Presencial" data-date="2026-07-03">
+            <article class="event-card" data-title="Taller de Empleo y Currículum" data-category="Talleres" data-city="Concepción" data-modality="Presencial" data-date="2026-07-03">
               <img class="event-card-image" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Taller de herramientas laborales" />
-              <div class="event-card-body"><span class="event-card-category">Talleres</span><h3>Taller de Empleo y CurrÃ­culum</h3><p class="event-organizer">Organiza IES ConcepciÃ³n</p><div class="event-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"></path></svg>ConcepciÃ³n</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4"></path></svg>03 Jul 2026</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 20h16M6 16h12V7H6z"></path></svg>Presencial</span></div><button class="btn" type="button" onclick="viewEvent('Taller de Empleo y CurrÃ­culum')">Ver evento</button></div>
+              <div class="event-card-body"><span class="event-card-category">Talleres</span><h3>Taller de Empleo y Currículum</h3><p class="event-organizer">Organiza IES Concepción</p><div class="event-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"></path></svg>Concepción</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4"></path></svg>03 Jul 2026</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 20h16M6 16h12V7H6z"></path></svg>Presencial</span></div><button class="btn" type="button" onclick="viewEvent('Taller de Empleo y Currículum')">Ver evento</button></div>
             </article>
-            <article class="event-card" data-title="Acto de GraduaciÃ³n 2026" data-category="Actos y Graduaciones" data-city="Monteros" data-modality="Presencial" data-date="2026-07-10">
-              <img class="event-card-image" src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=900&q=80" alt="Estudiantes celebrando una graduaciÃ³n" />
-              <div class="event-card-body"><span class="event-card-category">Actos y Graduaciones</span><h3>Acto de GraduaciÃ³n 2026</h3><p class="event-organizer">Organiza Instituto del Sur</p><div class="event-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"></path></svg>Monteros</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4"></path></svg>10 Jul 2026</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 20h16M6 16h12V7H6z"></path></svg>Presencial</span></div><button class="btn" type="button" onclick="viewEvent('Acto de GraduaciÃ³n 2026')">Ver evento</button></div>
+            <article class="event-card" data-title="Acto de Graduación 2026" data-category="Actos y Graduaciones" data-city="Monteros" data-modality="Presencial" data-date="2026-07-10">
+              <img class="event-card-image" src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=900&q=80" alt="Estudiantes celebrando una graduación" />
+              <div class="event-card-body"><span class="event-card-category">Actos y Graduaciones</span><h3>Acto de Graduación 2026</h3><p class="event-organizer">Organiza Instituto del Sur</p><div class="event-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"></path></svg>Monteros</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4"></path></svg>10 Jul 2026</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 20h16M6 16h12V7H6z"></path></svg>Presencial</span></div><button class="btn" type="button" onclick="viewEvent('Acto de Graduación 2026')">Ver evento</button></div>
             </article>
           </div>
           <div id="eventEmpty" class="event-empty hidden">No encontramos eventos con esos filtros.</div>
@@ -541,7 +541,7 @@
           <div class="events-section-head"><h2 id="agendaTitle">Agenda mensual</h2><p>Fechas destacadas para organizar tu mes.</p></div>
           <div class="event-agenda">
             <div class="event-agenda-month">Junio 2026</div>
-            <div class="event-agenda-row"><span class="event-agenda-day">26</span><strong>Expo Carreras - ConcepciÃ³n</strong><small>Presencial</small></div>
+            <div class="event-agenda-row"><span class="event-agenda-day">26</span><strong>Expo Carreras - Concepción</strong><small>Presencial</small></div>
             <div class="event-agenda-row"><span class="event-agenda-day">27</span><strong>Curso Docente - Virtual</strong><small>Virtual</small></div>
             <div class="event-agenda-row"><span class="event-agenda-day">28</span><strong>Jornada de Salud - Monteros</strong><small>Presencial</small></div>
             <div class="event-agenda-row"><span class="event-agenda-day">30</span><strong>Charla Vocacional - Aguilares</strong><small>Mixta</small></div>
@@ -549,7 +549,7 @@
         </section>
 
         <section class="event-cta">
-          <div><h2>Â¿OrganizÃ¡s un evento educativo?</h2><p>PublicÃ¡ tu curso, charla, feria o actividad en GuÃ­a Educativa TucumÃ¡n y llegÃ¡ a mÃ¡s estudiantes.</p></div>
+          <div><h2>¿Organizás un evento educativo?</h2><p>Publicá tu curso, charla, feria o actividad en Guía Educativa Tucumán y llegá a más estudiantes.</p></div>
           <button class="btn" type="button" onclick="showInfoPage('contact')">Publicar evento</button>
         </section>
       </div>
@@ -558,21 +558,21 @@
     <section id="contactPage" class="page">
       <div class="section-title">
         <span class="eyebrow">Contacto</span>
-        <h2>SumÃ¡ tu instituciÃ³n a GuÃ­a Educativa TucumÃ¡n</h2>
-        <p>Este formulario representa el canal comercial para instituciones interesadas en planes, espacios premium y futuras campaÃ±as por ciudad.</p>
+        <h2>Sumá tu institución a Guía Educativa Tucumán</h2>
+        <p>Este formulario representa el canal comercial para instituciones interesadas en planes, espacios premium y futuras campañas por ciudad.</p>
       </div>
 
       <div class="detail-content" style="margin-top: 24px;">
         <section class="panel">
           <h2>Consulta comercial</h2>
           <form class="form-grid" onsubmit="event.preventDefault(); alert('Mensaje listo para seguimiento comercial.');">
-            <input required placeholder="Nombre de la instituciÃ³n" />
+            <input required placeholder="Nombre de la institución" />
             <input required placeholder="Persona de contacto" />
             <input required placeholder="WhatsApp" inputmode="tel" />
             <input required placeholder="Email" type="email" />
             <select required>
-              <option value="">Plan de interÃ©s</option>
-              <option>BÃ¡sico</option>
+              <option value="">Plan de interés</option>
+              <option>Básico</option>
               <option>Profesional</option>
               <option>Premium</option>
             </select>
@@ -605,7 +605,7 @@
       <form class="login-card" onsubmit="event.preventDefault(); submitAdminLogin();">
         <span class="logo-mark">GE</span>
         <h1>Ingreso al panel de control</h1>
-        <p>IngresÃ¡ tus datos para administrar instituciones y consultas.</p>
+        <p>Ingresá tus datos para administrar instituciones y consultas.</p>
 
         <div class="login-form">
           <label class="login-field" for="adminLoginUser">
@@ -621,12 +621,12 @@
               <rect width="18" height="11" x="3" y="11" rx="2"></rect>
               <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
             </svg>
-            <input id="adminLoginPassword" name="password" type="password" placeholder="ContraseÃ±a" autocomplete="current-password" required />
+            <input id="adminLoginPassword" name="password" type="password" placeholder="Contraseña" autocomplete="current-password" required />
           </label>
 
           <label class="login-password-toggle">
             <input type="checkbox" onchange="toggleAdminPassword(this.checked)" />
-            Mostrar contraseÃ±a
+            Mostrar contraseña
           </label>
 
           <p id="adminLoginError" class="login-error" aria-live="polite"></p>
@@ -641,7 +641,7 @@
         <aside class="admin-nav">
           <div class="admin-brand">
             <span class="logo-mark">GE</span>
-            <span>GuÃ­a Educativa <span>TucumÃ¡n</span></span>
+            <span>Guía Educativa <span>Tucumán</span></span>
           </div>
 
           <div class="admin-nav-menu">
@@ -667,20 +667,20 @@
             </button>
             <button class="admin-nav-button" type="button" data-admin-view="settings" onclick="switchAdminView('settings')">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l-2.8 2.8a1.7 1.7 0 0 0-1.9-.3A1.7 1.7 0 0 0 14 21v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-2.8-2.8a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L7.1 4.3a1.7 1.7 0 0 0 1.9.3A1.7 1.7 0 0 0 10 3V2.8h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l2.8 2.8a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1Z"></path></svg>
-              ConfiguraciÃ³n
+              Configuración
             </button>
           </div>
 
           <div class="admin-nav-spacer"></div>
           <button class="admin-nav-button" type="button" onclick="logoutAdmin()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 17l5-5-5-5"></path><path d="M15 12H3"></path><path d="M14 3h5a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-5"></path></svg>
-            Cerrar sesiÃ³n
+            Cerrar sesión
           </button>
         </aside>
 
         <div class="admin-workspace">
           <header class="admin-workspace-header">
-            <span class="admin-workspace-name">GuÃ­a Educativa TucumÃ¡n</span>
+            <span class="admin-workspace-name">Guía Educativa Tucumán</span>
             <div class="admin-user">
               <span class="admin-avatar">HS</span>
               <span><strong>Hernan Sanchez</strong><small>Administrador</small></span>
@@ -692,7 +692,7 @@
               <div class="admin-view-head">
                 <div>
                   <h1>Panel de control</h1>
-                  <p>ElegÃ­ una ciudad y una instituciÃ³n para administrar su contenido.</p>
+                  <p>Elegí una ciudad y una institución para administrar su contenido.</p>
                 </div>
               </div>
 
@@ -702,7 +702,7 @@
                   <select id="adminCitySelector" onchange="updateAdminInstitutionSelector()"></select>
                 </div>
                 <div class="admin-hierarchy-field">
-                  <label for="adminInstitutionSelector"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"></path><path d="M5 21V9l7-4 7 4v12"></path></svg>InstituciÃ³n</label>
+                  <label for="adminInstitutionSelector"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"></path><path d="M5 21V9l7-4 7 4v12"></path></svg>Institución</label>
                   <select id="adminInstitutionSelector" onchange="selectAdminHierarchyInstitution()"></select>
                 </div>
               </div>
@@ -710,19 +710,19 @@
               <div id="adminSelectedSummary" class="admin-selected-summary"></div>
 
               <div class="admin-module-grid">
-                <button class="admin-module-card" type="button" onclick="openInstitutionModule('general')"><span class="admin-module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h9l3 3v15H6z"></path><path d="M9 11h6M9 15h6"></path></svg></span><strong>Datos generales</strong><small>Nombre, logo, descripciÃ³n, contacto, ubicaciÃ³n y redes.</small></button>
-                <button class="admin-module-card" type="button" onclick="openInstitutionModule('careers')"><span class="admin-module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 10 8-4 8 4-8 4Z"></path><path d="M7 12v5c3 2 7 2 10 0v-5"></path></svg></span><strong>Carreras</strong><small>Administrar Ãºnicamente las carreras de esta instituciÃ³n.</small></button>
-                <button class="admin-module-card" type="button" onclick="openInstitutionModule('courses')"><span class="admin-module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v14H4z"></path><path d="M8 9h8M8 13h5"></path></svg></span><strong>Cursos docentes</strong><small>Gestionar las capacitaciones docentes de la instituciÃ³n.</small></button>
-                <button class="admin-module-card" type="button" onclick="openInstitutionModule('events')"><span class="admin-module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg></span><strong>Eventos</strong><small>Crear y editar actividades organizadas por esta instituciÃ³n.</small></button>
+                <button class="admin-module-card" type="button" onclick="openInstitutionModule('general')"><span class="admin-module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h9l3 3v15H6z"></path><path d="M9 11h6M9 15h6"></path></svg></span><strong>Datos generales</strong><small>Nombre, logo, descripción, contacto, ubicación y redes.</small></button>
+                <button class="admin-module-card" type="button" onclick="openInstitutionModule('careers')"><span class="admin-module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 10 8-4 8 4-8 4Z"></path><path d="M7 12v5c3 2 7 2 10 0v-5"></path></svg></span><strong>Carreras</strong><small>Administrar únicamente las carreras de esta institución.</small></button>
+                <button class="admin-module-card" type="button" onclick="openInstitutionModule('courses')"><span class="admin-module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v14H4z"></path><path d="M8 9h8M8 13h5"></path></svg></span><strong>Cursos docentes</strong><small>Gestionar las capacitaciones docentes de la institución.</small></button>
+                <button class="admin-module-card" type="button" onclick="openInstitutionModule('events')"><span class="admin-module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg></span><strong>Eventos</strong><small>Crear y editar actividades organizadas por esta institución.</small></button>
                 <button class="admin-module-card" type="button" onclick="openInstitutionModule('featured')"><span class="admin-module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z"></path></svg></span><strong>Slider / Destacados</strong><small>Elegir la imagen premium y la visibilidad destacada.</small></button>
-                <button class="admin-module-card" type="button" onclick="openInstitutionModule('gallery')"><span class="admin-module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="m7 15 3-3 2 2 3-4 3 5"></path></svg></span><strong>GalerÃ­a</strong><small>Administrar fotos y videos institucionales.</small></button>
+                <button class="admin-module-card" type="button" onclick="openInstitutionModule('gallery')"><span class="admin-module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="m7 15 3-3 2 2 3-4 3 5"></path></svg></span><strong>Galería</strong><small>Administrar fotos y videos institucionales.</small></button>
                 <button class="admin-module-card" type="button" onclick="openInstitutionModule('contact')"><span class="admin-module-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3v-7"></path></svg></span><strong>Formularios y contacto</strong><small>WhatsApp, formularios y medios de contacto.</small></button>
               </div>
             </section>
 
             <section id="adminViewCities" class="admin-view">
               <div class="admin-view-head">
-                <div><h1>Ciudades</h1><p>AgregÃ¡, editÃ¡, eliminÃ¡ o cambiÃ¡ el orden de las ciudades.</p></div>
+                <div><h1>Ciudades</h1><p>Agregá, editá, eliminá o cambiá el orden de las ciudades.</p></div>
                 <button class="btn" type="button" onclick="addAdminCity()">Agregar ciudad</button>
               </div>
               <div id="adminCityList" class="admin-simple-list"></div>
@@ -730,18 +730,18 @@
 
             <section id="adminViewSlider" class="admin-view">
               <div class="admin-view-head">
-                <div><h1>Slider Principal</h1><p>AdministrÃ¡ Ãºnicamente las piezas destacadas de cada ciudad.</p></div>
+                <div><h1>Slider Principal</h1><p>Administrá únicamente las piezas destacadas de cada ciudad.</p></div>
               </div>
               <div class="admin-placeholder-card">
                 <h2>Contenido del slider</h2>
-                <p>SeleccionÃ¡ una instituciÃ³n destacada y editÃ¡ su imagen, tÃ­tulo, texto, botÃ³n, enlace, ciudad, orden y estado.</p>
+                <p>Seleccioná una institución destacada y editá su imagen, título, texto, botón, enlace, ciudad, orden y estado.</p>
                 <div class="admin-placeholder-fields">
-                  <div class="admin-field"><label for="adminSliderInstitution">InstituciÃ³n</label><select id="adminSliderInstitution" onchange="loadSliderEditor()"></select></div>
-                  <div class="admin-field"><label for="adminSliderCity">Ciudad donde aparece</label><select id="adminSliderCity"><option>ConcepciÃ³n</option><option>Monteros</option><option>Aguilares</option></select></div>
-                  <div class="admin-field full"><label for="adminSliderTitle">TÃ­tulo</label><input id="adminSliderTitle" /></div>
+                  <div class="admin-field"><label for="adminSliderInstitution">Institución</label><select id="adminSliderInstitution" onchange="loadSliderEditor()"></select></div>
+                  <div class="admin-field"><label for="adminSliderCity">Ciudad donde aparece</label><select id="adminSliderCity"><option>Concepción</option><option>Monteros</option><option>Aguilares</option></select></div>
+                  <div class="admin-field full"><label for="adminSliderTitle">Título</label><input id="adminSliderTitle" /></div>
                   <div class="admin-field full"><label for="adminSliderText">Texto</label><textarea id="adminSliderText" rows="3"></textarea></div>
-                  <div class="admin-field"><label for="adminSliderButton">BotÃ³n</label><input id="adminSliderButton" value="Ver instituciÃ³n" /></div>
-                  <div class="admin-field"><label for="adminSliderLink">Enlace</label><input id="adminSliderLink" placeholder="#instituciÃ³n" /></div>
+                  <div class="admin-field"><label for="adminSliderButton">Botón</label><input id="adminSliderButton" value="Ver institución" /></div>
+                  <div class="admin-field"><label for="adminSliderLink">Enlace</label><input id="adminSliderLink" placeholder="#institución" /></div>
                   <div class="admin-field"><label for="adminSliderOrder">Orden</label><input id="adminSliderOrder" type="number" min="1" value="1" /></div>
                   <label class="admin-check"><input id="adminSliderActive" type="checkbox" checked /> Activo</label>
                 </div>
@@ -751,10 +751,10 @@
 
             <section id="adminViewInstitutions" class="admin-view">
               <div class="admin-view-head">
-                <div><h1>Instituciones</h1><p>AgregÃ¡, editÃ¡, eliminÃ¡ o asignÃ¡ ciudades. El contenido se administra desde el Dashboard.</p></div>
+                <div><h1>Instituciones</h1><p>Agregá, editá, eliminá o asigná ciudades. El contenido se administra desde el Dashboard.</p></div>
                 <div class="admin-actions">
                   <button class="btn light" type="button" onclick="previewAdminInstitution()">Ver ficha</button>
-                  <button class="btn" type="button" onclick="addInstitution()">Nueva instituciÃ³n</button>
+                  <button class="btn" type="button" onclick="addInstitution()">Nueva institución</button>
                 </div>
               </div>
 
@@ -766,31 +766,31 @@
 
                 <section class="admin-editor">
                   <div class="admin-editor-head">
-                    <h2 id="adminEditorTitle">Editar instituciÃ³n</h2>
-                    <button class="icon-btn danger" type="button" onclick="deleteInstitution()" title="Eliminar instituciÃ³n" aria-label="Eliminar instituciÃ³n">Ã—</button>
+                    <h2 id="adminEditorTitle">Editar institución</h2>
+                    <button class="icon-btn danger" type="button" onclick="deleteInstitution()" title="Eliminar institución" aria-label="Eliminar institución">×</button>
                   </div>
                   <div class="admin-editor-body">
                     <form id="adminForm" class="admin-form-grid" onsubmit="event.preventDefault(); saveInstitution();">
                       <div class="admin-field"><label for="adminName">Nombre</label><input id="adminName" required /></div>
                       <div class="admin-field"><label for="adminLogo">Sigla de respaldo</label><input id="adminLogo" required maxlength="8" /></div>
                       <div class="admin-field"><label for="adminType">Tipo</label><input id="adminType" required placeholder="Universidad, terciario..." /></div>
-                      <div class="admin-field"><label for="adminPlan">Plan</label><select id="adminPlan"><option>BÃ¡sico</option><option>Profesional</option><option>Premium</option></select></div>
+                      <div class="admin-field"><label for="adminPlan">Plan</label><select id="adminPlan"><option>Básico</option><option>Profesional</option><option>Premium</option></select></div>
                       <div id="adminFeaturedModule" class="admin-field full">
                         <span class="admin-group-label">Ciudades donde aparece</span>
                         <div class="admin-checks">
-                          <label class="admin-check"><input type="checkbox" name="adminCity" value="ConcepciÃ³n" /> ConcepciÃ³n</label>
+                          <label class="admin-check"><input type="checkbox" name="adminCity" value="Concepción" /> Concepción</label>
                           <label class="admin-check"><input type="checkbox" name="adminCity" value="Monteros" /> Monteros</label>
                           <label class="admin-check"><input type="checkbox" name="adminCity" value="Aguilares" /> Aguilares</label>
                         </div>
                       </div>
                       <div class="admin-field full">
-                        <span class="admin-group-label">Logo de la instituciÃ³n</span>
+                        <span class="admin-group-label">Logo de la institución</span>
                         <input id="adminLogoImage" type="hidden" />
                         <div class="media-upload">
                           <div id="adminLogoPreview" class="media-preview logo-preview">Sin logo cargado</div>
                           <div class="media-upload-copy">
                             <strong>Logo institucional</strong>
-                            <small>PNG, JPG o WebP. Se optimiza automÃ¡ticamente al mostrarlo.</small>
+                            <small>PNG, JPG o WebP. Se optimiza automáticamente al mostrarlo.</small>
                             <label class="upload-button">Seleccionar logo<input type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden onchange="handleAdminUpload(event, 'adminLogoImage', 'adminLogoPreview', 'image')" /></label>
                             <div id="adminLogoImageStatus" class="upload-status"></div>
                           </div>
@@ -802,7 +802,7 @@
                         <div class="media-upload">
                           <div id="adminImagePreview" class="media-preview">Sin imagen cargada</div>
                           <div class="media-upload-copy">
-                            <strong>Portada de la instituciÃ³n</strong>
+                            <strong>Portada de la institución</strong>
                             <small>Se utiliza en el listado y en la cabecera de la ficha.</small>
                             <label class="upload-button">Seleccionar imagen<input type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden onchange="handleAdminUpload(event, 'adminImage', 'adminImagePreview', 'image')" /></label>
                             <div id="adminImageStatus" class="upload-status"></div>
@@ -816,7 +816,7 @@
                           <div id="adminFeaturedPreview" class="media-preview">Sin imagen cargada</div>
                           <div class="media-upload-copy">
                             <strong>Imagen premium destacada</strong>
-                            <small>Se muestra en el slider cuando la instituciÃ³n tiene plan Premium.</small>
+                            <small>Se muestra en el slider cuando la institución tiene plan Premium.</small>
                             <label class="upload-button">Seleccionar imagen<input type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden onchange="handleAdminUpload(event, 'adminFeaturedImage', 'adminFeaturedPreview', 'image')" /></label>
                             <div id="adminFeaturedImageStatus" class="upload-status"></div>
                           </div>
@@ -838,12 +838,12 @@
                       <div class="admin-field"><label for="adminMedia">Tipo de contenido</label><select id="adminMedia"><option>Imagen superior</option><option>Video institucional</option><option>Video de carreras</option><option>Video de alumnos</option></select></div>
                       <div id="adminContactModule" class="admin-field"><label for="adminWhatsapp">WhatsApp</label><input id="adminWhatsapp" required /></div>
                       <div class="admin-field full"><label for="adminSlogan">Slogan</label><input id="adminSlogan" required /></div>
-                      <div class="admin-field full"><label for="adminDesc">DescripciÃ³n breve</label><textarea id="adminDesc" rows="3" required></textarea></div>
-                      <div class="admin-field full"><label for="adminAddress">DirecciÃ³n</label><input id="adminAddress" required /></div>
+                      <div class="admin-field full"><label for="adminDesc">Descripción breve</label><textarea id="adminDesc" rows="3" required></textarea></div>
+                      <div class="admin-field full"><label for="adminAddress">Dirección</label><input id="adminAddress" required /></div>
                       <div id="adminGalleryModule" class="admin-section">
                         <div class="admin-section-title">
-                          <h3>GalerÃ­a de imÃ¡genes</h3>
-                          <label class="btn light" style="cursor:pointer;">Agregar imÃ¡genes<input type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple hidden onchange="handleGalleryUpload(event)" /></label>
+                          <h3>Galería de imágenes</h3>
+                          <label class="btn light" style="cursor:pointer;">Agregar imágenes<input type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple hidden onchange="handleGalleryUpload(event)" /></label>
                         </div>
                         <div class="gallery-editor">
                           <div id="adminGalleryStatus" class="upload-status"></div>
@@ -856,20 +856,20 @@
                         <div id="adminCareerEditor" class="career-full-editor hidden">
                           <input id="adminCareerId" type="hidden" />
                           <div class="admin-field"><label for="adminCareerName">Nombre</label><input id="adminCareerName" /></div>
-                          <div class="admin-field"><label for="adminCareerDuration">DuraciÃ³n</label><input id="adminCareerDuration" placeholder="3 aÃ±os" /></div>
+                          <div class="admin-field"><label for="adminCareerDuration">Duración</label><input id="adminCareerDuration" placeholder="3 años" /></div>
                           <div class="admin-field"><label for="adminCareerModality">Modalidad</label><select id="adminCareerModality"><option>Presencial</option><option>Virtual</option><option>Mixta</option></select></div>
                           <div class="admin-field"><label for="adminCareerCampus">Sede</label><input id="adminCareerCampus" /></div>
-                          <div class="admin-field"><label for="adminCareerShifts">Turnos</label><input id="adminCareerShifts" placeholder="MaÃ±ana y noche" /></div>
-                          <div class="admin-field"><label for="adminCareerDegree">TÃ­tulo que otorga</label><input id="adminCareerDegree" /></div>
-                          <div class="admin-field"><label for="adminCareerValidity">Validez nacional</label><select id="adminCareerValidity"><option>SÃ­</option><option>No</option><option>En trÃ¡mite</option></select></div>
+                          <div class="admin-field"><label for="adminCareerShifts">Turnos</label><input id="adminCareerShifts" placeholder="Mañana y noche" /></div>
+                          <div class="admin-field"><label for="adminCareerDegree">Título que otorga</label><input id="adminCareerDegree" /></div>
+                          <div class="admin-field"><label for="adminCareerValidity">Validez nacional</label><select id="adminCareerValidity"><option>Sí</option><option>No</option><option>En trámite</option></select></div>
                           <div class="admin-field"><label for="adminCareerWhatsapp">WhatsApp</label><input id="adminCareerWhatsapp" /></div>
-                          <div class="admin-field full"><label for="adminCareerDescription">DescripciÃ³n breve</label><textarea id="adminCareerDescription" rows="2"></textarea></div>
+                          <div class="admin-field full"><label for="adminCareerDescription">Descripción breve</label><textarea id="adminCareerDescription" rows="2"></textarea></div>
                           <div class="admin-field full"><label for="adminCareerAbout">Sobre la carrera</label><textarea id="adminCareerAbout" rows="4"></textarea></div>
                           <div class="admin-field full"><label for="adminCareerField">Campo laboral</label><textarea id="adminCareerField" rows="3"></textarea></div>
                           <div class="admin-field full"><label for="adminCareerProfile">Perfil del egresado</label><textarea id="adminCareerProfile" rows="3"></textarea></div>
-                          <div class="admin-field full"><label for="adminCareerStudyPlan">Plan de estudios (una lÃ­nea por aÃ±o o mÃ³dulo)</label><textarea id="adminCareerStudyPlan" rows="5"></textarea></div>
-                          <div class="admin-field full"><label for="adminCareerRequirements">Requisitos de ingreso (uno por lÃ­nea)</label><textarea id="adminCareerRequirements" rows="4"></textarea></div>
-                          <div class="admin-field full"><label for="adminCareerFaq">Preguntas frecuentes (Pregunta | Respuesta, una por lÃ­nea)</label><textarea id="adminCareerFaq" rows="5"></textarea></div>
+                          <div class="admin-field full"><label for="adminCareerStudyPlan">Plan de estudios (una línea por año o módulo)</label><textarea id="adminCareerStudyPlan" rows="5"></textarea></div>
+                          <div class="admin-field full"><label for="adminCareerRequirements">Requisitos de ingreso (uno por línea)</label><textarea id="adminCareerRequirements" rows="4"></textarea></div>
+                          <div class="admin-field full"><label for="adminCareerFaq">Preguntas frecuentes (Pregunta | Respuesta, una por línea)</label><textarea id="adminCareerFaq" rows="5"></textarea></div>
                           <div class="admin-field full">
                             <label>Imagen principal</label>
                             <input id="adminCareerImage" type="hidden" />
@@ -899,18 +899,18 @@
 
             <section id="adminViewSettings" class="admin-view">
               <div class="admin-view-head">
-                <div><h1>ConfiguraciÃ³n</h1><p>Datos generales, identidad, integraciones, usuarios y copias de seguridad.</p></div>
+                <div><h1>Configuración</h1><p>Datos generales, identidad, integraciones, usuarios y copias de seguridad.</p></div>
               </div>
               <div class="admin-settings-grid">
-                <section class="admin-settings-card"><h2>Logo</h2><p>Identidad principal de GuÃ­a Educativa TucumÃ¡n.</p><button class="btn light" type="button" onclick="alert('Editor de logo preparado para la prÃ³xima conexiÃ³n.')">Editar logo</button></section>
-                <section class="admin-settings-card"><h2>Datos generales</h2><p>Nombre de la plataforma, telÃ©fono, direcciÃ³n y correo.</p><button class="btn light" type="button" onclick="alert('Datos generales preparados para ediciÃ³n.')">Editar datos</button></section>
-                <section class="admin-settings-card"><h2>Footer</h2><p>Enlaces, redes sociales, descargas y datos de contacto.</p><button class="btn light" type="button" onclick="alert('Editor de footer preparado para la prÃ³xima conexiÃ³n.')">Editar footer</button></section>
-                <section class="admin-settings-card"><h2>SEO</h2><p>TÃ­tulo, descripciÃ³n y datos para buscadores.</p><button class="btn light" type="button" onclick="alert('ConfiguraciÃ³n SEO preparada.')">Configurar SEO</button></section>
-                <section class="admin-settings-card"><h2>Google Analytics</h2><p>Identificador de mediciÃ³n y seguimiento de visitas.</p><button class="btn light" type="button" onclick="alert('IntegraciÃ³n de Analytics preparada.')">Configurar</button></section>
+                <section class="admin-settings-card"><h2>Logo</h2><p>Identidad principal de Guía Educativa Tucumán.</p><button class="btn light" type="button" onclick="alert('Editor de logo preparado para la próxima conexión.')">Editar logo</button></section>
+                <section class="admin-settings-card"><h2>Datos generales</h2><p>Nombre de la plataforma, teléfono, dirección y correo.</p><button class="btn light" type="button" onclick="alert('Datos generales preparados para edición.')">Editar datos</button></section>
+                <section class="admin-settings-card"><h2>Footer</h2><p>Enlaces, redes sociales, descargas y datos de contacto.</p><button class="btn light" type="button" onclick="alert('Editor de footer preparado para la próxima conexión.')">Editar footer</button></section>
+                <section class="admin-settings-card"><h2>SEO</h2><p>Título, descripción y datos para buscadores.</p><button class="btn light" type="button" onclick="alert('Configuración SEO preparada.')">Configurar SEO</button></section>
+                <section class="admin-settings-card"><h2>Google Analytics</h2><p>Identificador de medición y seguimiento de visitas.</p><button class="btn light" type="button" onclick="alert('Integración de Analytics preparada.')">Configurar</button></section>
                 <section class="admin-settings-card"><h2>Usuarios</h2><p>Accesos habilitados para administrar GET.</p><button class="btn light" type="button" onclick="alert('Actualmente solo Hernan Sanchez tiene acceso.')">Ver usuarios</button></section>
                 <section class="admin-settings-card">
                   <h2>Copias de seguridad</h2>
-                  <p>DescargÃ¡ instituciones y consultas en un archivo JSON, o importÃ¡ una copia guardada anteriormente.</p>
+                  <p>Descargá instituciones y consultas en un archivo JSON, o importá una copia guardada anteriormente.</p>
                   <div class="admin-settings-actions">
                     <button class="btn" type="button" onclick="exportData()">Descargar respaldo</button>
                     <label class="btn light" style="cursor:pointer;">Importar respaldo<input id="importDataInput" type="file" accept=".json,application/json" hidden onchange="importData(event)" /></label>
@@ -918,18 +918,18 @@
                 </section>
                 <section class="admin-settings-card">
                   <h2>Restaurar contenido</h2>
-                  <p>VolvÃ© a cargar las instituciones originales. Esta opciÃ³n reemplaza los cambios realizados en la demo.</p>
+                  <p>Volvé a cargar las instituciones originales. Esta opción reemplaza los cambios realizados en la demo.</p>
                   <button class="btn secondary" type="button" onclick="resetDemoData()">Restaurar demo</button>
                 </section>
                 <section class="admin-settings-card">
-                  <h2>Vista pÃºblica</h2>
-                  <p>RegresÃ¡ al sitio para comprobar cÃ³mo se muestra el contenido cargado.</p>
+                  <h2>Vista pública</h2>
+                  <p>Regresá al sitio para comprobar cómo se muestra el contenido cargado.</p>
                   <button class="btn light" type="button" onclick="goHome()">Ir al sitio</button>
                 </section>
                 <section class="admin-settings-card">
-                  <h2>SesiÃ³n administrativa</h2>
-                  <p>CerrÃ¡ el acceso al panel cuando termines de administrar la plataforma.</p>
-                  <button class="btn light" type="button" onclick="logoutAdmin()">Cerrar sesiÃ³n</button>
+                  <h2>Sesión administrativa</h2>
+                  <p>Cerrá el acceso al panel cuando termines de administrar la plataforma.</p>
+                  <button class="btn light" type="button" onclick="logoutAdmin()">Cerrar sesión</button>
                 </section>
               </div>
             </section>
@@ -950,7 +950,7 @@
         <div class="footer-column">
           <button class="footer-logo" type="button" onclick="goHome()">
             <span class="logo-mark">GE</span>
-            GuÃ­a Educativa TucumÃ¡n
+            Guía Educativa Tucumán
           </button>
           <p class="footer-brand-copy">Instituciones, carreras y cursos de toda la provincia reunidos en un solo lugar.</p>
         </div>
@@ -960,8 +960,8 @@
           <div class="footer-link-list">
             <button type="button" onclick="footerComingSoon('Preguntas frecuentes')">Preguntas frecuentes</button>
             <button type="button" onclick="showCoursesPage()">Cursos docentes</button>
-            <button type="button" onclick="showInfoPage('about')">Lo PrÃ³ximo</button>
-            <button type="button" onclick="showInfoPage('about')">QuiÃ©nes somos</button>
+            <button type="button" onclick="showInfoPage('about')">Lo Próximo</button>
+            <button type="button" onclick="showInfoPage('about')">Quiénes somos</button>
           </div>
         </div>
 
@@ -973,7 +973,7 @@
                 <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
                 <circle cx="12" cy="10" r="2.5"></circle>
               </svg>
-              <span>Dall Asta 2469, ConcepciÃ³n, TucumÃ¡n</span>
+              <span>Dall Asta 2469, Concepción, Tucumán</span>
             </a>
             <a class="footer-contact-link" href="https://wa.me/5493865751273" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
@@ -986,19 +986,19 @@
         </div>
 
         <div class="footer-column">
-          <h3 class="footer-heading">DescargÃ¡ la app</h3>
+          <h3 class="footer-heading">Descargá la app</h3>
           <div class="footer-app-buttons">
-            <button class="footer-app-button" type="button" onclick="footerComingSoon('La aplicaciÃ³n para Android')">
+            <button class="footer-app-button" type="button" onclick="footerComingSoon('La aplicación para Android')">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M3.6 3.1 14.9 12 3.6 20.9c-.4-.4-.6-.9-.6-1.5V4.6c0-.6.2-1.1.6-1.5Zm12.3 9.7 2.7 2.1-11.9 6.7 9.2-8.8Zm3.8-3c.8.5.8 1.4 0 1.9l-2.3 1.3-2.9-2.3 2.9-2.3 2.3 1.4ZM6.7 2.4l11.9 6.7-2.7 2.1-9.2-8.8Z"></path>
               </svg>
-              <span><small>DISPONIBLE PRÃ“XIMAMENTE EN</small><strong>Google Play</strong></span>
+              <span><small>DISPONIBLE PRÓXIMAMENTE EN</small><strong>Google Play</strong></span>
             </button>
-            <button class="footer-app-button" type="button" onclick="footerComingSoon('La aplicaciÃ³n para iPhone')">
+            <button class="footer-app-button" type="button" onclick="footerComingSoon('La aplicación para iPhone')">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M16.8 12.8c0-2.5 2.1-3.7 2.2-3.8-1.2-1.7-3-1.9-3.7-1.9-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.8 1.3 10.3.9 1.2 1.9 2.6 3.3 2.5 1.3-.1 1.8-.8 3.4-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.2 3.2-2.5 1-1.4 1.4-2.8 1.5-2.9-.1 0-3.2-1.2-3.2-4.2ZM14.3 5.5c.7-.9 1.2-2.1 1.1-3.3-1.1 0-2.4.7-3.2 1.6-.7.8-1.3 2-1.2 3.2 1.2.1 2.5-.6 3.3-1.5Z"></path>
               </svg>
-              <span><small>DESCARGAR PRÃ“XIMAMENTE EN</small><strong>App Store</strong></span>
+              <span><small>DESCARGAR PRÓXIMAMENTE EN</small><strong>App Store</strong></span>
             </button>
           </div>
         </div>
@@ -1016,7 +1016,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>Copyright Â© 2026 GuÃ­a Educativa TucumÃ¡n. Todos los derechos reservados.</p>
+        <p>Copyright © 2026 Guía Educativa Tucumán. Todos los derechos reservados.</p>
         <button class="footer-contact-link" type="button" onclick="goHome()">Volver al inicio</button>
       </div>
     </footer>
