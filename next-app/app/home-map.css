@@ -1,0 +1,142 @@
+.home-map-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 4vw 32px;
+  background: #0d1b3d;
+  color: #fff;
+}
+
+.home-map-backdrop {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(7, 21, 47, .83), rgba(7, 21, 47, .72)), url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2200&q=82") center / cover;
+}
+
+.home-map-content {
+  width: min(1390px, 100%);
+  margin: 0 auto;
+}
+
+.home-map-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 55px;
+  font-size: clamp(18px, 2vw, 29px);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.home-map-brand .home-brand-logo { width: 58px; height: 38px; overflow: hidden; }
+.home-map-brand .home-brand-logo img { width: 90px; top: -22px; left: -11px; }
+
+.home-map-brand em { color: #c9971a; font-style: normal; }
+
+.home-map-hero h1 {
+  max-width: 850px;
+  margin: 42px auto 30px;
+  color: #fff;
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 800;
+  line-height: 1.08;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.home-map-hero h1 span { color: #c9971a; }
+
+.home-map-search-wrap { position: relative; z-index: 2; width: min(590px, 100%); margin: 0 auto; }
+.home-map-search {
+  height: 57px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 19px;
+  border: 1px solid rgba(255,255,255,.36);
+  border-radius: 13px;
+  background: rgba(11, 34, 70, .7);
+  box-shadow: 0 14px 32px rgba(0, 9, 25, .16);
+  backdrop-filter: blur(14px);
+}
+.home-map-search:focus-within { outline: 2px solid #c9971a; outline-offset: 2px; }
+.home-map-search svg { width: 20px; height: 20px; flex: 0 0 auto; }
+.home-map-search input { min-width: 0; width: 100%; height: 100%; border: 0; outline: 0; background: transparent; color: #fff; font: inherit; font-size: 15px; }
+.home-map-search input::placeholder { color: #d9e2f0; }
+.home-map-search button { width: 34px; height: 34px; border: 0; border-left: 1px solid rgba(255,255,255,.35); background: transparent; color: #fff; font-size: 24px; cursor: pointer; }
+.home-map-results { position: absolute; top: calc(100% + 8px); width: 100%; max-height: 300px; overflow-y: auto; border: 1px solid rgba(255,255,255,.3); border-radius: 12px; background: #122749; box-shadow: 0 20px 40px rgba(0,0,0,.3); }
+.home-map-results a { display: flex; flex-wrap: wrap; gap: 4px 8px; padding: 10px 15px; color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.12); }
+.home-map-results a:hover, .home-map-results a:focus-visible { background: #26456e; }
+.home-map-results small { color: #e2b94e; text-transform: uppercase; width: 100%; font-size: 10px; letter-spacing: .12em; }
+.home-map-results strong { font-size: 14px; }
+.home-map-results span { font-size: 12px; color: #bdcbe0; }
+.home-map-results p { padding: 15px; margin: 0; color: #fff; }
+
+.home-map-explorer {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, .85fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 95px);
+  margin: 26px auto 0;
+}
+
+.home-map-graphic { position: relative; min-width: 0; height: min(56vh, 570px); min-height: 390px; display: grid; place-items: center; }
+.home-map-graphic svg { width: 100%; height: 100%; max-width: 590px; filter: drop-shadow(0 20px 25px rgba(0, 9, 25, .3)); }
+.home-map-attribution { position: absolute; bottom: 0; left: 8px; color: rgba(255,255,255,.76); font-size: 10px; }
+.home-map-department { fill: rgba(123, 151, 184, .46); stroke: rgba(255,255,255,.9); stroke-width: 1.25; vector-effect: non-scaling-stroke; transition: fill .18s ease, opacity .18s ease; cursor: default; }
+.home-map-department.has-city { cursor: pointer; }
+.home-map-department:hover, .home-map-department.is-active { fill: #c9971a; }
+.home-map-department:focus-visible { outline: none; fill: #d4a83d; stroke: #fff; stroke-width: 3; }
+.home-map-fallback { max-width: 360px; color: #fff; text-align: center; }
+
+.home-map-panel {
+  width: 100%;
+  min-height: 295px;
+  padding: clamp(25px, 3vw, 43px);
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 22px;
+  background: rgba(12, 32, 64, .72);
+  box-shadow: 0 24px 52px rgba(0, 9, 25, .22);
+  backdrop-filter: blur(12px);
+}
+.home-map-eyebrow { color: #e2b94e; font-size: 11px; font-weight: 800; letter-spacing: .17em; }
+.home-map-panel h2 { margin: 10px 0 6px; color: #fff; font-size: clamp(30px, 3.3vw, 45px); line-height: 1.1; }
+.home-map-panel > p { margin: 0; color: #e2e9f4; font-size: 17px; }
+.home-map-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin: 22px 0; }
+.home-map-stats > div { display: flex; flex-direction: column; gap: 4px; padding: 15px 17px; border: 1px solid rgba(255,255,255,.3); border-radius: 13px; background: rgba(5, 24, 54, .4); }
+.home-map-stats strong { color: #fff; font-size: 32px; line-height: 1; }
+.home-map-stats span { color: #d9e2f0; font-size: 14px; }
+.home-map-panel .home-map-hint, .home-map-panel .home-map-coming { color: #d9e2f0; font-size: 14px; line-height: 1.45; }
+.home-map-cities h3 { margin: 0 0 10px; color: #fff; font-size: 15px; }
+.home-map-cities a { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 8px; padding: 10px 15px; border: 1px solid rgba(201,151,26,.7); border-radius: 11px; color: #fff; background: rgba(201,151,26,.14); text-decoration: none; font-weight: 700; }
+.home-map-cities a:hover, .home-map-cities a:focus-visible { background: #c9971a; color: #0d1b3d; }
+
+@media (min-width: 761px) and (max-height: 800px) {
+  .home-map-hero { padding-top: 14px; padding-bottom: 18px; }
+  .home-map-hero h1 { margin-top: 24px; margin-bottom: 18px; }
+  .home-map-explorer { margin-top: 12px; }
+  .home-map-graphic { height: min(51vh, 425px); min-height: 0; }
+  .home-map-panel { padding: 24px; }
+}
+
+@media (max-width: 760px) {
+  .home-map-hero { display: block; min-height: 100svh; padding: 24px 18px 45px; }
+  .home-map-brand { font-size: 18px; gap: 8px; }
+  .home-map-brand .home-brand-logo { width: 52px; height: 34px; }
+  .home-map-brand .home-brand-logo img { width: 81px; top: -20px; left: -10px; }
+  .home-map-hero h1 { margin: 32px auto 23px; font-size: clamp(31px, 8vw, 42px); }
+  .home-map-search { height: 52px; padding: 0 12px; gap: 9px; }
+  .home-map-search input { font-size: 13px; }
+  .home-map-explorer { grid-template-columns: 1fr; gap: 9px; margin-top: 18px; }
+  .home-map-graphic { height: min(78vw, 390px); min-height: 285px; }
+  .home-map-panel { min-height: 0; padding: 20px; border-radius: 17px; }
+  .home-map-panel h2 { font-size: 29px; }
+  .home-map-stats { margin: 15px 0; }
+  .home-map-stats strong { font-size: 26px; }
+}

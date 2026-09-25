@@ -1,26 +1,27 @@
 # Guía Educativa Tucumán
 
-Proyecto fuente de Guía Educativa Tucumán preparado para seguir desarrollando y publicar en Netlify.
+La aplicación pública está en `next-app/` y utiliza Next.js App Router. Este candidato de producción parte del historial del sitio Vite existente en Netlify, pero ya no construye la demo de la raíz.
 
-## Requisitos
-
-- Node.js 18 o superior.
-- npm.
-
-## Comandos
+## Desarrollo local
 
 ```bash
-npm install
+cd next-app
+npm ci
 npm run dev
-npm run build
 ```
 
 ## Publicación en Netlify
 
-1. Subir esta carpeta a GitHub.
-2. Crear un sitio nuevo en Netlify desde ese repositorio.
-3. Usar:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
+El `netlify.toml` de la raíz establece:
 
-La configuración también está incluida en `netlify.toml`.
+- Base directory: `next-app`
+- Build command: `npm run build`
+- Publish directory: `.next` (relativo a `next-app`)
+
+Antes de publicar, configurar en el mismo sitio de Netlify y para el contexto de producción:
+
+- `PUBLIC_CATALOG_SOURCE=supabase`
+- `SUPABASE_URL`
+- `SUPABASE_PUBLISHABLE_KEY`
+
+No guardar las claves en Git ni usar una clave `service_role` en el catálogo público.

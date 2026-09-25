@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+
+:root {
+  --azul: #0d1b3d;
+  --azul-2: #163369;
+  --verde: #c9971a;
+  --amarillo: #c9971a;
+  --exito: #19a974;
+  --coral: #ef6f6c;
+  --gris: #f5f7fa;
+  --linea: #dfe7f2;
+  --texto: #172033;
+  --muted: #667085;
+  --blanco: #ffffff;
+  --sombra: 0 16px 36px rgba(15, 23, 42, 0.13);
+  --radio: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background:
+    radial-gradient(circle at 50% 18%, rgba(229, 237, 250, 0.72), rgba(255, 255, 255, 0) 34%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 48%, #ffffff 100%);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+body.dark-theme {
+  --gris: #0b1423;
+  --linea: #2c3a4f;
+  --texto: #e8eef8;
+  --muted: #a5b3c7;
+  --blanco: #111c2e;
+  color: var(--texto);
+  background: #08111f;
+}
+
+.public-logo-compact,
+.home-brand-logo {
+  position: relative;
+  width: 104px;
+  display: block;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.public-logo-compact {
+  height: 40px;
+}
+
+.home-brand-logo {
+  height: 52px;
+}
+
+.public-logo-compact img,
+.home-brand-logo img {
+  position: absolute;
+  max-width: none;
+  height: auto;
+}
+
+.public-logo-light {
+  top: -31px;
+  left: -21px;
+  width: 144px;
+}
+
+.home-brand-logo img {
+  top: -35px;
+  left: -20px;
+  width: 142px;
+}
+
+.public-logo-dark {
+  top: -32px;
+  left: -19px;
+  width: 132px;
+}
+
+.public-logo-dark {
+  display: none;
+}
+
+body.dark-theme .public-logo-light {
+  display: none;
+}
+
+body.dark-theme .public-logo-dark {
+  display: block;
+}
+
+body.dark-theme .public-logo-compact {
+  height: 50px;
+}
+
+body.dark-theme .about-page :is(h1, h2, h3, blockquote, .about-future-card strong),
+body.dark-theme .courses-page :is(h1, h2, h3, .courses-visual-card strong),
+body.dark-theme .contact-detail-content :is(h2, strong) {
+  color: #edf4ff;
+}

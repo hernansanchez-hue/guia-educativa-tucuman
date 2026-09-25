@@ -1,6 +1,17 @@
 node_modules/
 dist/
+.next/
+coverage/
 .env
+.env.*
+!.env.example
 .env.local
+*.log
+*.tmp
+*.temp
+.cache/
 .DS_Store
 Thumbs.db
+
+# Artefactos temporales de capturas y análisis visuales
+docs/comparaciones/**/.__*

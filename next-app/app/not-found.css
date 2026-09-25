@@ -1,0 +1,32 @@
+.not-found-page {
+  min-height: 62vh;
+  display: grid;
+  place-items: center;
+  padding: 56px 20px;
+}
+
+.not-found-panel {
+  width: min(620px, 100%);
+  padding: 42px 30px;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
+  background: var(--blanco);
+  box-shadow: 0 12px 30px rgba(31, 49, 84, 0.09);
+  text-align: center;
+}
+
+.not-found-panel h1 {
+  margin: 10px 0 12px;
+  color: var(--azul);
+  font-size: clamp(32px, 5vw, 48px);
+}
+
+.not-found-panel p {
+  margin: 0 auto 24px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.not-found-panel .btn {
+  display: inline-flex;
+}
