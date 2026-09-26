@@ -99,6 +99,17 @@ export default function HomeMapClient({ catalog }) {
         <h1>Toda la oferta educativa de <span>Tucumán</span> en un solo lugar</h1>
 
         <div className="home-map-explorer">
+          <div className="home-map-search-wrap">
+            <form className="home-map-search" role="search" onSubmit={submitSearch}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m16 16 5 5" /></svg>
+              <input aria-label="Buscar ciudad, institución o carrera" type="search" autoComplete="off" placeholder="Buscar ciudad, institución o carrera..." value={query} onChange={(event) => { setQuery(event.target.value); setShowResults(true); }} onFocus={() => setShowResults(true)} />
+              {query && <button type="button" onClick={() => { setQuery(""); setShowResults(false); }} aria-label="Limpiar búsqueda">×</button>}
+            </form>
+            {showResults && query && <div className="home-map-results" role="listbox" aria-label="Resultados de búsqueda">
+              {results.length ? results.map((entry, index) => <a key={`${entry.href}-${index}`} href={entry.href} role="option" aria-selected="false"><small>{entry.type}</small><strong>{entry.label}</strong>{entry.context && <span>{entry.context}</span>}</a>) : <p>No encontramos resultados.</p>}
+            </div>}
+          </div>
+
           <div className="home-map-graphic" aria-label="Mapa interactivo de los 17 departamentos de Tucumán">
             {mapError ? <p className="home-map-fallback">No se pudo cargar el mapa. Usá el buscador para explorar GET.</p> : shapes.length ? <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} role="group" aria-label="Departamentos de Tucumán">
               {shapes.map((shape) => {
@@ -110,17 +121,6 @@ export default function HomeMapClient({ catalog }) {
           </div>
 
           <div className="home-map-details">
-            <div className="home-map-search-wrap">
-              <form className="home-map-search" role="search" onSubmit={submitSearch}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m16 16 5 5" /></svg>
-                <input aria-label="Buscar ciudad, institución o carrera" type="search" autoComplete="off" placeholder="Buscar ciudad, institución o carrera..." value={query} onChange={(event) => { setQuery(event.target.value); setShowResults(true); }} onFocus={() => setShowResults(true)} />
-                {query && <button type="button" onClick={() => { setQuery(""); setShowResults(false); }} aria-label="Limpiar búsqueda">×</button>}
-              </form>
-              {showResults && query && <div className="home-map-results" role="listbox" aria-label="Resultados de búsqueda">
-                {results.length ? results.map((entry, index) => <a key={`${entry.href}-${index}`} href={entry.href} role="option" aria-selected="false"><small>{entry.type}</small><strong>{entry.label}</strong>{entry.context && <span>{entry.context}</span>}</a>) : <p>No encontramos resultados.</p>}
-              </div>}
-            </div>
-
             <section className="home-map-panel" aria-live="polite" aria-atomic="true">
               <span className="home-map-eyebrow">{activeShape ? "DEPARTAMENTO" : "PROVINCIA"}</span>
               <h2>{activeShape?.name ?? "Tucumán"}</h2>

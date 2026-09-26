@@ -133,6 +133,12 @@
 .home-map-cities a { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 8px; padding: 10px 15px; border: 1px solid rgba(201,151,26,.7); border-radius: 11px; color: #fff; background: rgba(201,151,26,.14); text-decoration: none; font-weight: 700; }
 .home-map-cities a:hover, .home-map-cities a:focus-visible { background: #c9971a; color: #0d1b3d; }
 
+@media (min-width: 761px) {
+  .home-map-search-wrap { grid-column: 2; grid-row: 1; }
+  .home-map-graphic { grid-column: 1; grid-row: 1 / span 2; }
+  .home-map-details { grid-column: 2; grid-row: 2; }
+}
+
 @media (min-width: 761px) and (max-height: 800px) {
   .home-map-hero { padding-top: 10px; padding-bottom: 10px; }
   .home-map-hero-logo { width: 140px; margin: -45px 0 -31px; transform: translateY(-22px); }
@@ -147,8 +153,9 @@
 
 @media (max-width: 760px) {
   .home-map-hero { display: block; height: auto; min-height: 100svh; padding: 24px 18px 45px; }
+  .home-map-content, .home-map-search-wrap, .home-map-graphic, .home-map-details { min-width: 0; max-width: 100%; }
   .home-map-hero-logo { width: 160px; margin: -52px 0 -36px; transform: none; }
-  .home-map-hero h1 { margin: 32px auto 23px; font-size: clamp(31px, 8vw, 42px); }
+  .home-map-hero h1 { max-width: 100%; margin: 32px auto 23px; font-size: clamp(31px, 8vw, 42px); overflow-wrap: anywhere; }
   .home-map-search { height: 52px; padding: 0 12px; gap: 9px; }
   .home-map-search input { font-size: 13px; }
   .home-map-explorer { grid-template-columns: 1fr; gap: 14px; margin-top: 18px; }
