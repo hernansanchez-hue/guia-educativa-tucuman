@@ -67,7 +67,7 @@ export default function PublicHeader({ variant = "default", citySearch = null })
     <header className={variant === "city-hero" ? "site-header city-hero-header visible" : "site-header visible"}>
       <button className="logo" onClick={goHome} aria-label="Volver al inicio">
         {variant === "city-hero" ? (
-          <span className="city-hero-logo" aria-hidden="true"><img src="/assets/get-logo-oficial.png" alt="" /></span>
+          <span className="city-hero-logo" aria-hidden="true"><img src="/assets/get-logo-city-square.png" alt="" /></span>
         ) : (
           <span className="public-logo-compact" aria-hidden="true">
             <img className="public-logo-light" src="/assets/get-logo-oficial.png" alt="" />
