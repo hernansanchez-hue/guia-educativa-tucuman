@@ -1,12 +1,11 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-
 import { useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import PublicFooter from "../components/PublicFooter";
 import PublicHeader from "../components/PublicHeader";
 import CityFeaturedCareers from "./CityFeaturedCareers";
+import CityInstitutionSections from "./CityInstitutionSections";
 
 function normalizeText(value) {
   return value
@@ -111,51 +110,13 @@ export default function CityPageClient({ city }) {
           />
         </div>
 
-        <div className="institutions-section">
-          <div className="city-hero"><h2 id="cityTitle">{city.title}</h2></div>
-          <div className="cards" id="institutionCards" ref={cardsRef}>
-            {filteredInstitutions.map((institution) => (
-              <article
-                className="card"
-                tabIndex="0"
-                role="link"
-                aria-label={`Ver institución ${institution.name}`}
-                key={institution.id}
-                onClick={() => openInstitution(institution)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") {
-                    event.preventDefault();
-                    openInstitution(institution);
-                  }
-                }}
-              >
-                <div className="card-media">
-                  <img src={institution.image} alt={institution.name} />
-                  <span>{institution.media}</span>
-                </div>
-                <div className="card-body">
-                  <span className="badge">{institution.type}</span>
-                  <h3>{institution.name}</h3>
-                  <p>{institution.description}</p>
-                  <button
-                    className="card-cta"
-                    type="button"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      openInstitution(institution);
-                    }}
-                  >
-                    Ver institución
-                    <svg viewBox="0 0 22 15" fill="none" aria-hidden="true">
-                      <path d="M4.583 7.5h12.834M11 3.125 17.417 7.5 11 11.875" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </button>
-                </div>
-              </article>
-            ))}
-          </div>
-          <div id="institutionSearchEmpty" className={filteredInstitutions.length ? "featured-search-empty hidden" : "featured-search-empty"}>No encontramos instituciones con esos filtros.</div>
-        </div>
+        <CityInstitutionSections
+          city={city}
+          institutions={filteredInstitutions}
+          cardsRef={cardsRef}
+          onOpenInstitution={openInstitution}
+          showEmpty={!filteredInstitutions.length}
+        />
       </section>
 
       <button className="admin-fab hidden" type="button" title="Abrir panel de control" aria-label="Abrir panel de control">

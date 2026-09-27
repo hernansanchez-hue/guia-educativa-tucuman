@@ -2479,3 +2479,292 @@ body.dark-theme #cityPage .city-featured-institution-copy button {
     transition: none;
   }
 }
+
+/* Institution hierarchy: premium featured cards and compact catalog cards. */
+.city-institution-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+#cityPage.city-page-redesign > .institutions-section {
+  padding-right: clamp(28px, 3vw, 48px);
+  padding-left: clamp(28px, 3vw, 48px);
+}
+
+.city-institution-block {
+  width: min(1760px, 100%);
+  margin: 0 auto;
+}
+
+.city-institution-heading {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.city-institution-heading .city-hero h2 {
+  margin: 0;
+  color: var(--azul);
+  font-size: clamp(26px, 3vw, 38px);
+}
+
+.city-featured-institutions-grid,
+.city-all-institutions-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.city-featured-institutions-grid {
+  width: min(1230px, 70%);
+  margin-right: auto;
+  margin-left: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.city-all-institutions-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  scroll-margin-top: 24px;
+}
+
+.city-institution-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #dde4ee;
+  border-radius: 14px;
+  background: var(--blanco);
+  box-shadow: 0 8px 22px rgba(31, 49, 84, 0.07);
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.city-institution-card:hover,
+.city-institution-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: #cbd7e8;
+  outline: none;
+  box-shadow: 0 16px 30px rgba(31, 49, 84, 0.14);
+}
+
+.city-institution-card-media {
+  width: 100%;
+  height: 148px;
+  overflow: hidden;
+  background: #dfe7f2;
+}
+
+.city-institution-card-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.city-institution-card-body {
+  min-width: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+}
+
+.city-institution-card-category {
+  margin-bottom: 8px;
+  color: #b17d08;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.city-institution-card h3 {
+  margin: 0;
+  color: var(--azul);
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.city-institution-card p {
+  display: -webkit-box;
+  margin: 10px 0 16px;
+  overflow: hidden;
+  color: #586784;
+  font-size: 13px;
+  line-height: 1.45;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.city-institution-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  color: var(--azul);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.city-institution-card-cta svg {
+  width: 20px;
+  height: 14px;
+}
+
+.city-all-institutions .city-institution-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(31, 49, 84, 0.05);
+}
+
+.city-all-institutions .city-institution-card-media {
+  height: 112px;
+}
+
+.city-all-institutions .city-institution-card-body {
+  padding: 13px;
+}
+
+.city-all-institutions .city-institution-card h3 {
+  font-size: 15px;
+}
+
+body.dark-theme .city-institution-card {
+  border-color: #2c3a4f;
+  background: #111c2e;
+}
+
+body.dark-theme .city-institution-heading .city-hero h2,
+body.dark-theme .city-institution-card h3 {
+  color: #edf4ff;
+}
+
+body.dark-theme .city-institution-card p {
+  color: #a8b6ca;
+}
+
+body.dark-theme .city-institution-card-cta {
+  color: #dce7f7;
+}
+
+@media (max-width: 1100px) {
+  .city-featured-institutions-grid {
+    width: min(900px, 82%);
+  }
+
+  .city-all-institutions-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  #cityPage.city-page-redesign > .institutions-section {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .city-institution-sections {
+    gap: 34px;
+  }
+
+  .city-institution-heading {
+    margin-bottom: 15px;
+  }
+
+  .city-institution-heading .city-hero h2 {
+    font-size: 25px;
+  }
+
+  .city-featured-institutions-grid {
+    width: 100%;
+    margin-right: -5%;
+    margin-left: 0;
+    display: flex;
+    gap: 8px;
+    margin-right: -5%;
+    padding-right: 5%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+  }
+
+  .city-featured-institutions-grid .city-institution-card {
+    flex: 0 0 calc((100% - 16px) / 3);
+    scroll-snap-align: start;
+  }
+
+  .city-featured-institutions-grid .city-institution-card-media {
+    height: 78px;
+  }
+
+  .city-featured-institutions-grid .city-institution-card-body {
+    min-height: 124px;
+    padding: 9px;
+  }
+
+  .city-featured-institutions-grid .city-institution-card-category {
+    margin-bottom: 5px;
+    font-size: 8px;
+  }
+
+  .city-featured-institutions-grid .city-institution-card h3 {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+
+  .city-featured-institutions-grid .city-institution-card p {
+    display: none;
+  }
+
+  .city-featured-institutions-grid .city-institution-card-cta {
+    gap: 3px;
+    font-size: 8px;
+  }
+
+  .city-featured-institutions-grid .city-institution-card-cta svg {
+    width: 14px;
+    height: 10px;
+  }
+
+  .city-all-institutions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .city-all-institutions .city-institution-card-media {
+    height: 104px;
+  }
+
+  .city-all-institutions .city-institution-card-body {
+    min-height: 92px;
+    padding: 10px;
+  }
+
+  .city-all-institutions .city-institution-card-category {
+    margin-bottom: 5px;
+    font-size: 8px;
+  }
+
+  .city-all-institutions .city-institution-card h3 {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .city-all-institutions .city-institution-card-cta {
+    gap: 3px;
+    font-size: 8px;
+  }
+
+  .city-all-institutions .city-institution-card-cta svg {
+    width: 14px;
+    height: 10px;
+  }
+}
