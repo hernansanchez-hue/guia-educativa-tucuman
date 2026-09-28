@@ -900,6 +900,29 @@ nav button:focus-visible {
   border-top: 1px solid #e4e9f0;
 }
 
+/* City pages share the hero's wider useful area in the footer only. */
+#cityPage ~ .site-footer {
+  padding-right: clamp(28px, 3vw, 48px);
+  padding-left: clamp(28px, 3vw, 48px);
+}
+
+#cityPage ~ .site-footer .footer-inner,
+#cityPage ~ .site-footer .footer-social-box,
+#cityPage ~ .site-footer .footer-bottom {
+  width: min(1760px, 100%);
+}
+
+#cityPage ~ .site-footer .city-footer-logo {
+  width: min(250px, 100%);
+  display: block;
+}
+
+#cityPage ~ .site-footer .city-footer-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .site-footer .footer-bottom p {
   margin: 0;
   text-align: left;
@@ -1306,6 +1329,15 @@ body.dark-theme .footer-bottom {
   .site-footer {
     padding-top: 34px;
     padding-bottom: 30px;
+  }
+
+  #cityPage ~ .site-footer {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  #cityPage ~ .site-footer .city-footer-logo {
+    width: min(220px, 100%);
   }
 
   .footer-inner {

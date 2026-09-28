@@ -126,7 +126,7 @@ export default function CityPageClient({ city }) {
         </svg>
       </button>
 
-      <PublicFooter />
+      <PublicFooter cityFooter />
     </div>
   );
 }
