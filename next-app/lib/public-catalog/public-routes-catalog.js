@@ -18,6 +18,8 @@ export const STATIC_PUBLIC_PATHS = Object.freeze([
   "/cursos-docentes",
   "/nosotros",
   "/contacto",
+  "/carreras",
+  "/instituciones",
 ]);
 
 const VALID_SOURCES = new Set(["local", "supabase"]);
@@ -54,11 +56,16 @@ export function createPublicRoutePaths(snapshot) {
   const paths = new Set(STATIC_PUBLIC_PATHS);
 
   for (const city of activeCities) paths.add(`/${city.slug}`);
+  for (const career of careerById.values()) {
+    const hasOffering = snapshot.academicOfferings.some((offering) => offering.career_master_id === career.id && isPublishedOffering(offering));
+    if (hasOffering) paths.add(`/carreras/${career.slug}`);
+  }
 
   for (const institution of activeInstitutions) {
     const city = activeCityById.get(institution.city_id);
     paths.add(`/${city.slug}/${institution.slug}`);
   }
+  for (const slug of new Set(activeInstitutions.map((institution) => institution.slug))) paths.add(`/instituciones/${slug}`);
 
   for (const offering of snapshot.academicOfferings.filter(isPublishedOffering)) {
     const institution = institutionById.get(offering.institution_id);

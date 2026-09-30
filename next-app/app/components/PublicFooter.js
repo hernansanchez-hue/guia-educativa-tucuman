@@ -19,6 +19,14 @@ export default function PublicFooter({ cityFooter = false }) {
     router.push("/cursos-docentes");
   }
 
+  function goCareers() {
+    router.push("/carreras");
+  }
+
+  function goInstitutions() {
+    router.push("/instituciones");
+  }
+
   function footerComingSoon(item) {
     window.alert(`${item} estará disponible próximamente.`);
   }
@@ -45,6 +53,8 @@ export default function PublicFooter({ cityFooter = false }) {
         <div className="footer-column">
           <h3 className="footer-heading">Explorar</h3>
           <div className="footer-link-list">
+            <button type="button" onClick={goInstitutions}>Instituciones</button>
+            <button type="button" onClick={goCareers}>Carreras</button>
             <button type="button" onClick={() => footerComingSoon("Preguntas frecuentes")}>Preguntas frecuentes</button>
             <button type="button" onClick={goCourses}>Cursos docentes</button>
             <button type="button" onClick={goAbout}>Lo Próximo</button>
