@@ -6,21 +6,13 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import PublicFooter from "../../../../components/PublicFooter";
 import PublicHeader from "../../../../components/PublicHeader";
+import { savePublicLead } from "../../../../../lib/public-leads";
 
 const FIELD_CHIPS = [
   "Instituciones públicas y privadas",
   "Organizaciones vinculadas al sector",
   "Ejercicio profesional y consultoría",
 ];
-
-function readLeads() {
-  try {
-    const storedLeads = localStorage.getItem("guiaEducativaLeads");
-    return storedLeads ? JSON.parse(storedLeads) : [];
-  } catch {
-    return [];
-  }
-}
 
 export default function CareerPageClient({
   city,
@@ -63,11 +55,9 @@ export default function CareerPageClient({
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
-    const leads = readLeads();
-
-    leads.unshift({
-      date: new Date().toISOString(),
+    savePublicLead({
       institution: institution.name,
+      city: city.name,
       name: String(formData.get("name") || "").trim(),
       phone: String(formData.get("phone") || "").trim(),
       email: String(formData.get("email") || "").trim(),
@@ -75,8 +65,6 @@ export default function CareerPageClient({
       shift: String(formData.get("shift") || ""),
       query: String(formData.get("query") || "").trim(),
     });
-
-    localStorage.setItem("guiaEducativaLeads", JSON.stringify(leads));
     setFormSent(true);
     form.reset();
   }

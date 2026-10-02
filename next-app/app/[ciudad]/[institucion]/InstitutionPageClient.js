@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import PublicFooter from "../../components/PublicFooter";
 import PublicHeader from "../../components/PublicHeader";
+import { savePublicLead } from "../../../lib/public-leads";
 
 function CareerMetaIcon({ type }) {
   if (type === "duration") {
@@ -42,14 +43,67 @@ function CareerMetaIcon({ type }) {
   );
 }
 
+function LocationIcon({ type }) {
+  if (type === "pin") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z" />
+        <circle cx="12" cy="9" r="2.5" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7v5l3 2" />
+    </svg>
+  );
+}
+
 export default function InstitutionPageClient({ city, institution }) {
   const router = useRouter();
   const [allCareersExpanded, setAllCareersExpanded] = useState(false);
+  const [contactModalOpen, setContactModalOpen] = useState(false);
+  const [contactFormSent, setContactFormSent] = useState(false);
   const galleryItems = [...institution.gallery, ...institution.gallery];
   const initialCareerCount = 3;
   const primaryCareers = institution.careers.slice(0, initialCareerCount);
   const remainingCareers = institution.careers.slice(initialCareerCount);
   const hasMoreCareers = remainingCareers.length > 0;
+  const whatsappDigits = (institution.whatsapp || "").replace(/\D/g, "");
+  const whatsappNumber = whatsappDigits.startsWith("54")
+    ? whatsappDigits
+    : `54${whatsappDigits}`;
+  const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    `Hola, quiero información sobre ${institution.name} en ${city.name}.`,
+  )}`;
+  const locationAddressLabel = institution.address
+    ? (institution.address.toLowerCase().includes("tucumán") ? institution.address : `${institution.address}, Tucumán`)
+    : "";
+  const locationQuery = [institution.name, locationAddressLabel].filter(Boolean).join(", ");
+  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(locationQuery)}`;
+  const mapsEmbedHref = `https://www.google.com/maps?q=${encodeURIComponent(locationQuery)}&output=embed`;
+
+  function saveInstitutionLead(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    savePublicLead({
+      institution: institution.name,
+      city: city.name,
+      name: String(formData.get("name") || "").trim(),
+      phone: String(formData.get("phone") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      career: "Consulta general por institución",
+      shift: "",
+      query: String(formData.get("query") || "").trim(),
+    });
+
+    setContactFormSent(true);
+    form.reset();
+  }
   const pageClassName = institution.id === "instituto-santa-barbara-concepcion"
     ? "app-shell institution-santa-barbara"
     : "app-shell";
@@ -93,6 +147,37 @@ export default function InstitutionPageClient({ city, institution }) {
             </div>
           </div>
         </article>
+
+        <section className="institution-location panel" aria-labelledby="institutionLocationTitle">
+          <div className="institution-location-details">
+            <h2 id="institutionLocationTitle" className="detail-section-title">Nuestra ubicación</h2>
+            <p className="institution-location-intro">Conocé cómo llegar a esta institución.</p>
+
+            {institution.address ? (
+              <a className="institution-location-address" href={mapsHref} target="_blank" rel="noopener">
+                <span className="institution-location-icon"><LocationIcon type="pin" /></span>
+                <span>
+                  <strong>{locationAddressLabel}</strong>
+                </span>
+              </a>
+            ) : null}
+          </div>
+
+          {institution.address ? (
+            <div className="institution-location-map">
+              <iframe
+                title={`Mapa de ${institution.name}`}
+                src={mapsEmbedHref}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                tabIndex="-1"
+              />
+              <a className="institution-location-map-label" href={mapsHref} target="_blank" rel="noopener">
+                Ver en Google Maps
+              </a>
+            </div>
+          ) : null}
+        </section>
 
         <section className="panel">
           <h2 className="detail-section-title">Nuestras Carreras</h2>
@@ -230,6 +315,47 @@ export default function InstitutionPageClient({ city, institution }) {
             </div>
           </div>
         </section>
+
+        <section className="institution-contact-actions" aria-labelledby="institutionContactTitle">
+          <div>
+            <h2 id="institutionContactTitle">¿Necesitás más información?</h2>
+            <p>Contactá a {institution.name} o dejá tu consulta para recibir asesoramiento.</p>
+          </div>
+          <div className="institution-contact-actions-buttons">
+            {whatsappDigits ? (
+              <a className="btn institution-contact-whatsapp" href={whatsappHref} target="_blank" rel="noopener">
+                WhatsApp
+              </a>
+            ) : null}
+            <button className="btn light institution-contact-consult" type="button" onClick={() => setContactModalOpen(true)}>
+              Dejar una consulta
+            </button>
+          </div>
+        </section>
+
+        {contactModalOpen ? (
+          <div className="institution-contact-modal-backdrop" role="presentation" onMouseDown={() => setContactModalOpen(false)}>
+            <section
+              className="institution-contact-modal"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="institutionContactModalTitle"
+              onMouseDown={(event) => event.stopPropagation()}
+            >
+              <button className="institution-contact-modal-close" type="button" aria-label="Cerrar consulta" onClick={() => setContactModalOpen(false)}>×</button>
+              <h2 id="institutionContactModalTitle">Dejá tu consulta</h2>
+              <p>{institution.name} · {city.name}</p>
+              <form className="institution-contact-form" onSubmit={saveInstitutionLead}>
+                <input name="name" required placeholder="Nombre y Apellido" />
+                <input name="phone" required placeholder="Teléfono / WhatsApp" inputMode="tel" />
+                <input name="email" required placeholder="Email" type="email" />
+                <textarea name="query" placeholder="Escribí tu consulta (opcional)" />
+                <button className="btn" type="submit">Enviar consulta</button>
+                {contactFormSent ? <p className="institution-contact-form-success">Consulta enviada correctamente.</p> : null}
+              </form>
+            </section>
+          </div>
+        ) : null}
       </section>
 
       <button
