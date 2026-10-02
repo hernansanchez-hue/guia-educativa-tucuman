@@ -53,11 +53,43 @@ function LocationIcon({ type }) {
     );
   }
 
+  if (type === "validity") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M12 3 19 6v5c0 4.6-2.9 7.9-7 10-4.1-2.1-7-5.4-7-10V6l7-3Z" />
+        <path d="m9 12 2 2 4-4" />
+      </svg>
+    );
+  }
+
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
       <circle cx="12" cy="12" r="8.5" />
       <path d="M12 7v5l3 2" />
     </svg>
+  );
+}
+
+function CareerMedia({ career }) {
+  const [videoUnavailable, setVideoUnavailable] = useState(false);
+  const videoSource = career.video || "https://media.w3.org/2010/05/sintel/trailer.mp4";
+
+  if (!videoSource || videoUnavailable) {
+    return <img src={career.image} alt={career.name} />;
+  }
+
+  return (
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      poster={career.image}
+      preload="metadata"
+      onError={() => setVideoUnavailable(true)}
+    >
+      <source src={videoSource} type="video/mp4" />
+    </video>
   );
 }
 
@@ -180,31 +212,36 @@ export default function InstitutionPageClient({ city, institution }) {
         </section>
 
         <section className="panel">
-          <h2 className="detail-section-title">Nuestras Carreras</h2>
+          <h2 className="detail-section-title">Carreras destacadas</h2>
           <p className="detail-section-subtitle">¿Cuál vas a elegir?</p>
           <div id="careerGrid" className="career-grid">
             {institution.careers.map((career) => {
-              const careerPath = career.routePath || null;
+            const careerPath = career.routePath || null;
+            const isNewCareer = career.isNew ?? career.badge === "Nueva carrera";
+            const validityLabel = career.nationalValidity === "Sí"
+              ? "Validez Nacional"
+              : career.nationalValidity === "No"
+                ? "Validez Provincial"
+                : null;
 
               return (
               <article className="career-summary-card" key={career.id}>
                 <div className="career-summary-image-wrap">
-                  <img src={career.image} alt={career.name} />
-                  <span className="career-summary-badge">{career.badge}</span>
+                  <CareerMedia career={career} />
+                  <div className="career-summary-badges">
+                    <span className="career-summary-badge">{career.startLabel || "Inicia en Octubre"}</span>
+                    {isNewCareer ? <span className="career-summary-badge is-new">Nueva carrera</span> : null}
+                  </div>
                 </div>
                 <div className="career-summary-body">
-                  <p className="career-summary-overline">
-                    {institution.name} · {city.name}
-                  </p>
                   <h3>{career.name}</h3>
                   <div className="career-summary-meta">
                     <span><CareerMetaIcon type="duration" />{career.duration}</span>
                     <span><CareerMetaIcon type="modality" />{career.modality}</span>
-                    <span><CareerMetaIcon type="city" />{city.name}</span>
-                    <span><CareerMetaIcon type="institution" />{institution.type}</span>
+                    {validityLabel ? <span><CareerMetaIcon type="validity" />{validityLabel}</span> : null}
                   </div>
                   <p className="career-summary-degree">
-                    Propuesta académica con ficha completa disponible.
+                    {career.description}
                   </p>
                   <div className="career-summary-actions">
                     <button

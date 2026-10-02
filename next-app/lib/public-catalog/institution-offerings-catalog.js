@@ -42,6 +42,8 @@ export function adaptAcademicOffering(offering, career, routePath) {
     badge: offering.badge,
     duration: offering.duration,
     modality: offering.modality,
+    nationalValidity: offering.national_validity,
+    video: offering.video_url ?? null,
   }, routePath);
 }
 
@@ -55,6 +57,8 @@ export function adaptTrainingOffering(offering, program, routePath) {
     badge: offering.badge,
     duration: offering.duration,
     modality: offering.modality,
+    nationalValidity: offering.national_validity,
+    video: offering.video_url ?? null,
   }, routePath);
 }
 
@@ -71,7 +75,12 @@ export function getLocalInstitutionOfferingsCatalog(citySlug, institutionSlug) {
       && offering.visible
     );
     if (academic) {
-      return { ...career, routePath: `/${citySlug}/${institutionSlug}/carreras/${careerId}` };
+      return {
+        ...career,
+        routePath: `/${citySlug}/${institutionSlug}/carreras/${careerId}`,
+        nationalValidity: academic.nationalValidity,
+        video: academic.video ?? null,
+      };
     }
 
     const training = trainingOfferings.find((offering) =>
@@ -82,7 +91,12 @@ export function getLocalInstitutionOfferingsCatalog(citySlug, institutionSlug) {
       && offering.publicationStatus === "published"
     );
     return training
-      ? { ...career, routePath: `/${citySlug}/${institutionSlug}/capacitaciones/${career.slug}` }
+      ? {
+        ...career,
+        routePath: `/${citySlug}/${institutionSlug}/capacitaciones/${career.slug}`,
+        nationalValidity: training.nationalValidity,
+        video: training.video ?? null,
+      }
       : { ...career };
   });
 }
