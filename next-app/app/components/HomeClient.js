@@ -4,6 +4,7 @@
 
 import { useEffect } from "react";
 import CitySelector from "./CitySelector";
+import PublicFooter from "./PublicFooter";
 
 export default function HomeClient({ cities }) {
   useEffect(() => {
@@ -31,6 +32,8 @@ export default function HomeClient({ cities }) {
           <CitySelector cities={cities} />
         </div>
       </main>
+
+      <PublicFooter />
 
       <button className="admin-fab" type="button" title="Abrir panel de control" aria-label="Abrir panel de control">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">

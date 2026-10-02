@@ -465,7 +465,7 @@ nav button:focus-visible {
   color: var(--verde);
 }
 
-.institution-search-bar {
+#cityPage .institution-search-bar:not(.city-header-search) {
   width: min(1240px, 100%);
   display: grid;
   grid-template-columns: minmax(300px, 2fr) repeat(2, minmax(155px, 0.8fr)) auto;
@@ -478,7 +478,7 @@ nav button:focus-visible {
   box-shadow: 0 8px 22px rgba(31, 49, 84, 0.07);
 }
 
-.institution-search-field {
+#cityPage .institution-search-bar:not(.city-header-search) .institution-search-field {
   min-width: 0;
   min-height: 44px;
   display: flex;
@@ -490,20 +490,20 @@ nav button:focus-visible {
   background: #fff;
 }
 
-.institution-search-field:focus-within {
+#cityPage .institution-search-bar:not(.city-header-search) .institution-search-field:focus-within {
   border-color: rgba(201, 151, 26, 0.65);
   box-shadow: 0 0 0 3px rgba(201, 151, 26, 0.09);
 }
 
-.institution-search-field svg {
+#cityPage .institution-search-bar:not(.city-header-search) .institution-search-field svg {
   width: 19px;
   height: 19px;
   flex: 0 0 auto;
   color: #71809a;
 }
 
-.institution-search-field input,
-.institution-search-bar select {
+#cityPage .institution-search-bar:not(.city-header-search) .institution-search-field input,
+#cityPage .institution-search-bar:not(.city-header-search) select {
   width: 100%;
   min-width: 0;
   height: 42px;
@@ -516,13 +516,13 @@ nav button:focus-visible {
   font-size: 13px;
 }
 
-.institution-search-field input {
+#cityPage .institution-search-bar:not(.city-header-search) .institution-search-field input {
   height: 100%;
   padding: 0;
   border: 0;
 }
 
-.institution-search-submit {
+#cityPage .institution-search-bar:not(.city-header-search) .institution-search-submit {
   min-width: 102px;
   min-height: 44px;
   border: 0;
@@ -533,7 +533,7 @@ nav button:focus-visible {
   cursor: pointer;
 }
 
-.institution-search-submit:hover {
+#cityPage .institution-search-bar:not(.city-header-search) .institution-search-submit:hover {
   background: #a97c15;
 }
 
@@ -900,29 +900,6 @@ nav button:focus-visible {
   border-top: 1px solid #e4e9f0;
 }
 
-/* City pages share the hero's wider useful area in the footer only. */
-#cityPage ~ .site-footer {
-  padding-right: clamp(28px, 3vw, 48px);
-  padding-left: clamp(28px, 3vw, 48px);
-}
-
-#cityPage ~ .site-footer .footer-inner,
-#cityPage ~ .site-footer .footer-social-box,
-#cityPage ~ .site-footer .footer-bottom {
-  width: min(1760px, 100%);
-}
-
-#cityPage ~ .site-footer .city-footer-logo {
-  width: min(250px, 100%);
-  display: block;
-}
-
-#cityPage ~ .site-footer .city-footer-logo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 .site-footer .footer-bottom p {
   margin: 0;
   text-align: left;
@@ -970,7 +947,7 @@ body.dark-theme .site-footer {
 }
 
 body.dark-theme .card,
-body.dark-theme .institution-search-bar,
+body.dark-theme #cityPage .institution-search-bar:not(.city-header-search),
 body.dark-theme .featured-block,
 body.dark-theme .featured-copy,
 body.dark-theme .featured-facts {
@@ -1069,12 +1046,12 @@ body.dark-theme .footer-bottom {
 }
 
 @media (max-width: 980px) {
-  .institution-search-bar {
+  #cityPage .institution-search-bar:not(.city-header-search) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .institution-search-field,
-  .institution-search-submit {
+  #cityPage .institution-search-bar:not(.city-header-search) .institution-search-field,
+  #cityPage .institution-search-bar:not(.city-header-search) .institution-search-submit {
     grid-column: 1 / -1;
   }
 
@@ -1248,20 +1225,20 @@ body.dark-theme .footer-bottom {
     margin-bottom: 18px;
   }
 
-  .institution-search-bar {
+  #cityPage .institution-search-bar:not(.city-header-search) {
     grid-template-columns: 1fr 1fr;
     gap: 9px;
     padding: 10px;
   }
 
-  .institution-search-field,
-  .institution-search-submit {
+  #cityPage .institution-search-bar:not(.city-header-search) .institution-search-field,
+  #cityPage .institution-search-bar:not(.city-header-search) .institution-search-submit {
     grid-column: 1 / -1;
   }
 
-  .institution-search-bar input,
-  .institution-search-bar select,
-  .institution-search-submit {
+  #cityPage .institution-search-bar:not(.city-header-search) input,
+  #cityPage .institution-search-bar:not(.city-header-search) select,
+  #cityPage .institution-search-bar:not(.city-header-search) .institution-search-submit {
     min-height: 46px;
   }
 
@@ -1329,15 +1306,6 @@ body.dark-theme .footer-bottom {
   .site-footer {
     padding-top: 34px;
     padding-bottom: 30px;
-  }
-
-  #cityPage ~ .site-footer {
-    padding-right: 5%;
-    padding-left: 5%;
-  }
-
-  #cityPage ~ .site-footer .city-footer-logo {
-    width: min(220px, 100%);
   }
 
   .footer-inner {
@@ -1673,7 +1641,7 @@ body.dark-theme .footer-bottom {
 .city-featured-controls p strong { color: #fff; }
 .city-featured-controls p span { margin: 0 4px; color: #c9971a; }
 
-#cityPage.city-page-redesign .institution-search-bar {
+#cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) {
   position: relative;
   z-index: 2;
   width: min(860px, calc(100% - 32px));
@@ -1687,26 +1655,26 @@ body.dark-theme .footer-bottom {
   box-shadow: 0 18px 40px rgba(13, 27, 61, 0.16);
 }
 
-#cityPage.city-page-redesign .institution-search-field {
+#cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) .institution-search-field {
   min-height: 58px;
   border: 1px solid #d9e1ef;
   border-radius: 20px;
   background: #fff;
 }
 
-#cityPage.city-page-redesign .institution-search-field input,
-#cityPage.city-page-redesign .institution-search-bar select { color: #0d1b3d; font-size: 15px; }
-#cityPage.city-page-redesign .institution-search-bar select { min-height: 58px; border-color: #d9e1ef; border-radius: 18px; background-color: #fff; }
-#cityPage.city-page-redesign .institution-search-submit { min-height: 58px; padding: 0 28px; border-radius: 18px; background: #0d1b3d; font-size: 16px; }
+#cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) .institution-search-field input,
+#cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) select { color: #0d1b3d; font-size: 15px; }
+#cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) select { min-height: 58px; border-color: #d9e1ef; border-radius: 18px; background-color: #fff; }
+#cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) .institution-search-submit { min-height: 58px; padding: 0 28px; border-radius: 18px; background: #0d1b3d; font-size: 16px; }
 
 body.dark-theme .site-header.city-hero-header { border-color: rgba(255, 255, 255, 0.23); background: rgba(8, 19, 39, 0.48); }
-body.dark-theme #cityPage.city-page-redesign .institution-search-bar,
-body.dark-theme #cityPage.city-page-redesign .institution-search-field,
-body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { background: #0d1b3d; }
-body.dark-theme #cityPage.city-page-redesign .institution-search-field,
-body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { border-color: #34445b; }
-body.dark-theme #cityPage.city-page-redesign .institution-search-field input,
-body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { color: #fff; }
+body.dark-theme #cityPage.city-page-redesign .institution-search-bar:not(.city-header-search),
+body.dark-theme #cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) .institution-search-field,
+body.dark-theme #cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) select { background: #0d1b3d; }
+body.dark-theme #cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) .institution-search-field,
+body.dark-theme #cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) select { border-color: #34445b; }
+body.dark-theme #cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) .institution-search-field input,
+body.dark-theme #cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) select { color: #fff; }
 
 @media (max-width: 1020px) {
   .city-featured { min-height: 730px; }
@@ -1771,10 +1739,10 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { co
   .city-featured-arrows { gap: 10px; }
   .city-featured-arrows button { width: 46px; height: 46px; }
 
-  #cityPage.city-page-redesign .institution-search-bar { width: 90%; grid-template-columns: 1fr 1fr; gap: 8px; margin: -38px auto 22px; padding: 12px; border-radius: 26px; }
-  #cityPage.city-page-redesign .institution-search-field { grid-column: 1 / -1; min-height: 54px; }
-  #cityPage.city-page-redesign .institution-search-bar select { min-height: 50px; font-size: 14px; }
-  #cityPage.city-page-redesign .institution-search-submit { grid-column: 1 / -1; min-height: 52px; }
+  #cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) { width: 90%; grid-template-columns: 1fr 1fr; gap: 8px; margin: -38px auto 22px; padding: 12px; border-radius: 26px; }
+  #cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) .institution-search-field { grid-column: 1 / -1; min-height: 54px; }
+  #cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) select { min-height: 50px; font-size: 14px; }
+  #cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) .institution-search-submit { grid-column: 1 / -1; min-height: 52px; }
 }
 
 @media (max-width: 430px) {
@@ -1810,7 +1778,7 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { co
   transform: translateX(-50%);
 }
 
-#cityPage .site-header.city-hero-header {
+.site-header.city-hero-header {
   position: relative;
   top: auto;
   left: auto;
@@ -1829,12 +1797,12 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { co
   backdrop-filter: none;
 }
 
-#cityPage .site-header.city-hero-header .logo {
+.site-header.city-hero-header .logo {
   min-width: 164px;
   color: #0d1b3d;
 }
 
-#cityPage .city-hero-logo {
+.site-header.city-hero-header .city-hero-logo {
   position: relative;
   width: 150px;
   height: 72px;
@@ -1846,7 +1814,7 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { co
   transform-origin: left center;
 }
 
-#cityPage .city-hero-logo img {
+.site-header.city-hero-header .city-hero-logo img {
   position: static;
   left: 0;
   width: 100%;
@@ -1856,20 +1824,20 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { co
   object-position: center;
 }
 
-#cityPage .site-header.city-hero-header .site-nav button {
+.site-header.city-hero-header .site-nav button {
   color: #0d1b3d;
   font-size: 14px;
   font-weight: 600;
 }
 
-#cityPage .site-header.city-hero-header .site-nav button:hover,
-#cityPage .site-header.city-hero-header .site-nav button.active,
-#cityPage .site-header.city-hero-header .site-nav button[data-nav="inicio"] {
+.site-header.city-hero-header .site-nav button:hover,
+.site-header.city-hero-header .site-nav button.active,
+.site-header.city-hero-header .site-nav button[data-nav="inicio"] {
   color: #0d1b3d;
   background: transparent;
 }
 
-#cityPage .site-header.city-hero-header .site-nav button[data-nav="inicio"]::after {
+.site-header.city-hero-header .site-nav button[data-nav="inicio"]::after {
   right: 12px;
   bottom: 0;
   left: 12px;
@@ -1877,8 +1845,8 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { co
   background: #c9971a;
 }
 
-#cityPage .site-header.city-hero-header .theme-toggle,
-#cityPage .site-header.city-hero-header .mobile-menu-toggle {
+.site-header.city-hero-header .theme-toggle,
+.site-header.city-hero-header .mobile-menu-toggle {
   width: 44px;
   height: 44px;
   border-color: #dce3ee;
@@ -1886,14 +1854,14 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { co
   color: #0d1b3d;
 }
 
-#cityPage .site-header.city-hero-header .theme-toggle:hover,
-#cityPage .site-header.city-hero-header .mobile-menu-toggle:hover {
+.site-header.city-hero-header .theme-toggle:hover,
+.site-header.city-hero-header .mobile-menu-toggle:hover {
   border-color: rgba(201, 151, 26, 0.48);
   background: #faf4e4;
   color: #0d1b3d;
 }
 
-#cityPage .site-header.city-hero-header .course-cta {
+.site-header.city-hero-header .course-cta {
   min-height: 44px;
   padding: 9px 20px;
   border: 0;
@@ -1904,7 +1872,7 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { co
   font-weight: 600;
 }
 
-#cityPage .site-header.city-hero-header .course-cta:hover {
+.site-header.city-hero-header .course-cta:hover {
   background: #b98813;
   box-shadow: none;
 }
@@ -2127,13 +2095,13 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { co
   background: #fff;
 }
 
-#cityPage.city-page-redesign .city-header-search-slot {
+.site-header.city-hero-header .city-header-search-slot {
   width: 100%;
   min-width: 0;
   justify-self: end;
 }
 
-#cityPage.city-page-redesign .city-header-search {
+.site-header.city-hero-header .city-header-search {
   width: min(285px, 100%);
   min-width: 0;
   display: flex;
@@ -2147,9 +2115,11 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { co
   box-shadow: none;
 }
 
-#cityPage.city-page-redesign .city-header-search .institution-search-field {
+.site-header.city-hero-header .city-header-search .institution-search-field {
   min-height: 38px;
   flex: 1 1 auto;
+  display: flex;
+  align-items: center;
   gap: 8px;
   padding: 0 10px;
   border: 0;
@@ -2158,38 +2128,39 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar select { co
   box-shadow: none;
 }
 
-#cityPage.city-page-redesign .city-header-search .institution-search-field:focus-within {
+.site-header.city-hero-header .city-header-search .institution-search-field:focus-within {
   box-shadow: none;
 }
 
-#cityPage.city-page-redesign .city-header-search .institution-search-field input {
+.site-header.city-hero-header .city-header-search .institution-search-field input {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: auto;
   color: #33415c;
   font-size: 12px;
+  line-height: 1.2;
   border: 0;
   background: transparent;
   box-shadow: none;
 }
 
-#cityPage.city-page-redesign .city-header-search > select {
+.site-header.city-hero-header .city-header-search > select {
   display: none;
 }
 
-#cityPage.city-page-redesign .city-header-search .institution-search-submit {
+.site-header.city-hero-header .city-header-search .city-header-search-icon {
   width: 36px;
   min-width: 36px;
   min-height: 36px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
   padding: 0;
-  border-radius: 999px;
-  background: transparent;
   color: #52617a;
 }
 
-#cityPage.city-page-redesign .city-header-search .institution-search-submit:hover {
-  background: #e9edf4;
-  color: #0d1b3d;
-}
-
-#cityPage.city-page-redesign .city-header-search .institution-search-submit svg {
+.site-header.city-hero-header .city-header-search .city-header-search-icon svg {
   width: 17px;
   height: 17px;
 }
@@ -2218,25 +2189,25 @@ body.dark-theme #cityPage .site-header.city-hero-header .mobile-menu-toggle {
   color: #0d1b3d;
 }
 
-body.dark-theme #cityPage.city-page-redesign .city-header-search {
+body.dark-theme .site-header.city-hero-header .city-header-search {
   background: #f5f7fb;
 }
 
-body.dark-theme #cityPage.city-page-redesign .city-header-search .institution-search-field {
+body.dark-theme .site-header.city-hero-header .city-header-search .institution-search-field {
   border: 0;
   background: transparent;
 }
 
-body.dark-theme #cityPage.city-page-redesign .city-header-search .institution-search-field input {
+body.dark-theme .site-header.city-hero-header .city-header-search .institution-search-field input {
   color: #0d1b3d;
 }
 
-body.dark-theme #cityPage.city-page-redesign .city-header-search .institution-search-field input {
+body.dark-theme .site-header.city-hero-header .city-header-search .institution-search-field input {
   border: 0;
   background: transparent;
 }
 
-body.dark-theme #cityPage.city-page-redesign .city-header-search .institution-search-field input::placeholder {
+body.dark-theme .site-header.city-hero-header .city-header-search .institution-search-field input::placeholder {
   color: #71809a;
 }
 
@@ -2271,16 +2242,16 @@ body.dark-theme #cityPage .city-featured-institution-copy button {
 }
 
 @media (min-width: 901px) and (max-width: 1180px) {
-  #cityPage .site-header.city-hero-header {
+  .site-header.city-hero-header {
     grid-template-columns: auto minmax(190px, 1fr) minmax(220px, 280px) auto;
     gap: 8px;
   }
 
-  #cityPage.city-page-redesign .city-header-search .institution-search-submit { width: 34px; min-width: 34px; }
+  .site-header.city-hero-header .city-header-search .city-header-search-icon { width: 34px; min-width: 34px; }
 }
 
 @media (max-width: 900px) {
-  #cityPage .site-header.city-hero-header {
+  .site-header.city-hero-header {
     grid-template-columns: auto minmax(0, 1fr) auto;
   }
 }
@@ -2310,31 +2281,31 @@ body.dark-theme #cityPage .city-featured-institution-copy button {
     border-radius: 20px;
   }
 
-  #cityPage .site-header.city-hero-header .logo {
+  .site-header.city-hero-header .logo {
     grid-column: 1;
     grid-row: 1;
   }
 
-  #cityPage.city-page-redesign .city-header-search-slot {
+  .site-header.city-hero-header .city-header-search-slot {
     grid-column: 1 / -1;
     grid-row: 2;
   }
 
-  #cityPage .site-header.city-hero-header .site-header-actions {
+  .site-header.city-hero-header .site-header-actions {
     grid-column: 3;
     grid-row: 1;
   }
 
-  #cityPage .site-header.city-hero-header .logo {
+  .site-header.city-hero-header .logo {
     min-width: 120px;
   }
 
-  #cityPage .city-hero-logo {
+  .site-header.city-hero-header .city-hero-logo {
     width: 112px;
     height: 54px;
   }
 
-  #cityPage .city-hero-logo img {
+  .site-header.city-hero-header .city-hero-logo img {
     position: static;
     left: 0;
     width: 100%;
@@ -2344,27 +2315,27 @@ body.dark-theme #cityPage .city-featured-institution-copy button {
     object-position: center;
   }
 
-  #cityPage .site-header.city-hero-header .site-header-actions {
+  .site-header.city-hero-header .site-header-actions {
     gap: 6px;
   }
 
-  #cityPage .site-header.city-hero-header .mobile-menu-toggle {
+  .site-header.city-hero-header .mobile-menu-toggle {
     width: 38px;
     height: 38px;
   }
 
-  #cityPage .site-header.city-hero-header .course-cta {
+  .site-header.city-hero-header .course-cta {
     width: auto;
     min-height: 38px;
     padding: 7px 10px;
     font-size: 12px;
   }
 
-  #cityPage .site-header.city-hero-header .course-cta svg {
+  .site-header.city-hero-header .course-cta svg {
     width: 17px;
   }
 
-  #cityPage .site-header.city-hero-header .site-nav {
+  .site-header.city-hero-header .site-nav {
     top: 0;
   }
 
@@ -2465,7 +2436,7 @@ body.dark-theme #cityPage .city-featured-institution-copy button {
     width: 22px;
   }
 
-  #cityPage.city-page-redesign .city-header-search {
+  .site-header.city-hero-header .city-header-search {
     width: 100%;
     max-width: none;
     display: flex;
@@ -2475,25 +2446,26 @@ body.dark-theme #cityPage .city-featured-institution-copy button {
     border-radius: 999px;
   }
 
-  #cityPage.city-page-redesign .city-header-search .institution-search-field {
+  .site-header.city-hero-header .city-header-search .institution-search-field {
     grid-column: auto;
     min-height: 38px;
   }
 
-  #cityPage.city-page-redesign .city-header-search > select {
+  .site-header.city-hero-header .city-header-search > select {
     display: none;
   }
 
-  #cityPage.city-page-redesign .city-header-search .institution-search-submit {
+  .site-header.city-hero-header .city-header-search .city-header-search-icon {
     grid-column: auto;
     width: 36px;
     min-width: 36px;
     min-height: 36px;
+    flex-basis: 36px;
   }
 }
 
 @media (max-width: 400px) {
-  #cityPage .site-header.city-hero-header .course-cta {
+  .site-header.city-hero-header .course-cta {
     width: 132px;
     max-width: none;
     padding-right: 7px;

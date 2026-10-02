@@ -20,7 +20,7 @@ function getThemeSnapshot() {
   return localStorage.getItem("guiaEducativaTheme") === "dark";
 }
 
-export default function PublicHeader({ variant = "default", citySearch = null }) {
+export default function PublicHeader({ variant = "default", citySearch = null, homeHref = "/" }) {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const darkMode = useSyncExternalStore(
@@ -48,7 +48,7 @@ export default function PublicHeader({ variant = "default", citySearch = null })
 
   function goHome() {
     setMenuOpen(false);
-    router.push("/");
+    router.push(homeHref);
   }
 
   function goAbout() {

@@ -71,12 +71,12 @@ export default function CityPageClient({ city }) {
 
   const cityHeaderSearch = (
     <form className="institution-search-bar city-header-search" onSubmit={applyInstitutionSearch}>
-      <button className="institution-search-submit city-header-search-icon" type="submit" aria-label="Buscar" title="Buscar">
+      <span className="city-header-search-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <circle cx="11" cy="11" r="7" />
           <path d="m20 20-4-4" />
         </svg>
-      </button>
+      </span>
       <label className="institution-search-field">
         <input id="institutionSearchInput" type="search" placeholder="Buscar carreras, instituciones..." autoComplete="off" value={query} onChange={(event) => setQuery(event.target.value)} />
       </label>
@@ -126,7 +126,7 @@ export default function CityPageClient({ city }) {
         </svg>
       </button>
 
-      <PublicFooter cityFooter />
+      <PublicFooter />
     </div>
   );
 }

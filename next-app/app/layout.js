@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./components/public-footer.css";
 import Script from "next/script";
 
 import {

@@ -2,6 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import PublicFooter from "../../components/PublicFooter";
 import PublicHeader from "../../components/PublicHeader";
@@ -43,24 +44,31 @@ function CareerMetaIcon({ type }) {
 
 export default function InstitutionPageClient({ city, institution }) {
   const router = useRouter();
+  const [allCareersExpanded, setAllCareersExpanded] = useState(false);
   const galleryItems = [...institution.gallery, ...institution.gallery];
+  const initialCareerCount = 3;
+  const primaryCareers = institution.careers.slice(0, initialCareerCount);
+  const remainingCareers = institution.careers.slice(initialCareerCount);
+  const hasMoreCareers = remainingCareers.length > 0;
   const pageClassName = institution.id === "instituto-santa-barbara-concepcion"
     ? "app-shell institution-santa-barbara"
     : "app-shell";
+  const cityHeaderSearch = (
+    <form className="institution-search-bar city-header-search" onSubmit={(event) => event.preventDefault()}>
+      <span className="city-header-search-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg>
+      </span>
+      <label className="institution-search-field"><input type="search" placeholder="Buscar carreras, instituciones..." autoComplete="off" /></label>
+    </form>
+  );
 
   return (
     <div className={pageClassName}>
-      <PublicHeader />
+      <div className="institution-city-header-frame">
+        <PublicHeader variant="city-hero" citySearch={cityHeaderSearch} homeHref={`/${city.slug}`} />
+      </div>
 
       <section id="detailPage" className="page active" aria-live="polite">
-        <button
-          className="btn light"
-          type="button"
-          onClick={() => router.push(`/${city.slug}`)}
-        >
-          Volver a instituciones
-        </button>
-
         <article className="detail-hero" style={{ marginTop: 18 }}>
           <div
             className="detail-cover"
@@ -86,32 +94,9 @@ export default function InstitutionPageClient({ city, institution }) {
           </div>
         </article>
 
-        <section className="panel" style={{ marginTop: 22 }}>
-          <h2 className="detail-section-title">Galería de fotos</h2>
-          <div id="institutionGallery" className="creation-gallery">
-            <div
-              className="creation-marquee"
-              style={{ animationDuration: `${institution.gallery.length * 2500}ms` }}
-            >
-              <div className="creation-marquee-group">
-                {galleryItems.map((image, index) => (
-                  <article className="creation-card" tabIndex="0" key={`${image}-${index}`}>
-                    <img
-                      src={image}
-                      alt={`Foto ${index + 1} de ${institution.name}`}
-                    />
-                    <div className="creation-card-overlay">
-                      <p>{institution.name}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className="panel">
-          <h2 className="detail-section-title">Carreras</h2>
+          <h2 className="detail-section-title">Nuestras Carreras</h2>
+          <p className="detail-section-subtitle">¿Cuál vas a elegir?</p>
           <div id="careerGrid" className="career-grid">
             {institution.careers.map((career) => {
               const careerPath = career.routePath || null;
@@ -152,6 +137,97 @@ export default function InstitutionPageClient({ city, institution }) {
               </article>
               );
             })}
+          </div>
+        </section>
+
+        <section className="panel institution-all-careers" aria-labelledby="allCareersTitle">
+          <h2 id="allCareersTitle" className="detail-section-title institution-all-careers-title">
+            Todas las carreras de esta institución
+          </h2>
+          <p className="detail-section-subtitle institution-all-careers-subtitle">
+            Conocé la oferta completa y solicitá información de la carrera que te interese.
+          </p>
+
+          <div className="institution-career-list">
+            {primaryCareers.map((career) => {
+              const careerPath = career.routePath || null;
+
+              return (
+                <article className="institution-career-list-row" key={`summary-${career.id}`}>
+                  <h3>{career.name}</h3>
+                  <div className="institution-career-list-meta">
+                    <span>Duración: {career.duration}</span>
+                    <span>Modalidad: {career.modality}</span>
+                  </div>
+                  <button
+                    className="btn institution-career-info-button"
+                    type="button"
+                    onClick={careerPath ? () => router.push(careerPath) : undefined}
+                  >
+                    Solicitar información
+                  </button>
+                </article>
+              );
+            })}
+          </div>
+
+          {hasMoreCareers ? (
+            <div className={`institution-career-list-extra${allCareersExpanded ? " is-expanded" : ""}`}>
+              <div className="institution-career-list-extra-inner">
+                {remainingCareers.map((career) => {
+                  const careerPath = career.routePath || null;
+
+                  return (
+                    <article className="institution-career-list-row" key={`summary-${career.id}`}>
+                      <h3>{career.name}</h3>
+                      <div className="institution-career-list-meta">
+                        <span>Duración: {career.duration}</span>
+                        <span>Modalidad: {career.modality}</span>
+                      </div>
+                      <button
+                        className="btn institution-career-info-button"
+                        type="button"
+                        onClick={careerPath ? () => router.push(careerPath) : undefined}
+                      >
+                        Solicitar información
+                      </button>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+          ) : null}
+
+          {hasMoreCareers ? (
+            <div className="institution-career-list-toggle-wrap">
+              <button
+                className="institution-career-list-toggle"
+                type="button"
+                aria-expanded={allCareersExpanded}
+                onClick={() => setAllCareersExpanded((expanded) => !expanded)}
+              >
+                {allCareersExpanded ? "Ver menos carreras" : "Ver más carreras"}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+            </div>
+          ) : null}
+        </section>
+
+        <section className="panel">
+          <h2 className="detail-section-title">Galería de fotos</h2>
+          <div id="institutionGallery" className="creation-gallery">
+            <div className="creation-marquee" style={{ animationDuration: `${institution.gallery.length * 2500}ms` }}>
+              <div className="creation-marquee-group">
+                {galleryItems.map((image, index) => (
+                  <article className="creation-card" tabIndex="0" key={`${image}-${index}`}>
+                    <img src={image} alt={`Foto ${index + 1} de ${institution.name}`} />
+                    <div className="creation-card-overlay"><p>{institution.name}</p></div>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </section>

@@ -4,7 +4,7 @@
 
 import { useRouter } from "next/navigation";
 
-export default function PublicFooter({ cityFooter = false }) {
+export default function PublicFooter() {
   const router = useRouter();
 
   function goHome() {
@@ -32,20 +32,13 @@ export default function PublicFooter({ cityFooter = false }) {
   }
 
   return (
-    <footer id="siteFooter" className={`site-footer${cityFooter ? " city-footer" : ""}`}>
+    <footer id="siteFooter" className="site-footer">
       <div className="footer-inner">
         <div className="footer-column">
           <button className="footer-logo" type="button" onClick={goHome} aria-label="Volver al inicio">
-            {cityFooter ? (
-              <span className="city-footer-logo" aria-hidden="true">
-                <img src="/assets/get-city-footer-logo.png" alt="" />
-              </span>
-            ) : (
-              <span className="public-logo-compact" aria-hidden="true">
-                <img className="public-logo-light" src="/assets/get-logo-oficial.png" alt="" />
-                <img className="public-logo-dark" src="/assets/get-logo-hero-blanco-dorado.png" alt="" />
-              </span>
-            )}
+            <span className="city-footer-logo" aria-hidden="true">
+              <img src="/assets/get-city-footer-logo.png" alt="" />
+            </span>
           </button>
           <p className="footer-brand-copy">Instituciones, carreras y cursos de toda la provincia reunidos en un solo lugar.</p>
         </div>
@@ -65,12 +58,12 @@ export default function PublicFooter({ cityFooter = false }) {
         <div className="footer-column">
           <h3 className="footer-heading">Contacto</h3>
           <div className="footer-contact-list">
-            <a className="footer-contact-link" href={cityFooter ? "https://www.google.com/maps/search/?api=1&query=Crist%C3%B3bal%20Col%C3%B3n%20601%2C%20Concepci%C3%B3n%2C%20Tucum%C3%A1n" : "https://www.google.com/maps/search/?api=1&query=Dall+Asta+2469%2C+Concepci%C3%B3n%2C+Tucum%C3%A1n"} target="_blank" rel="noopener">
+            <a className="footer-contact-link" href="https://www.google.com/maps/search/?api=1&query=Crist%C3%B3bal%20Col%C3%B3n%20601%2C%20Concepci%C3%B3n%2C%20Tucum%C3%A1n" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
                 <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
                 <circle cx="12" cy="10" r="2.5" />
               </svg>
-              <span>{cityFooter ? "Cristóbal Colón 601, Concepción, Tucumán" : "Dall Asta 2469, Concepción, Tucumán"}</span>
+              <span>Cristóbal Colón 601, Concepción, Tucumán</span>
             </a>
             <a className="footer-contact-link" href="https://wa.me/5493865751273" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
