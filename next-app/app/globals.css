@@ -52,6 +52,21 @@ a {
   min-height: 100vh;
 }
 
+.public-site-root,
+.public-site-background {
+  min-height: 100vh;
+}
+
+.public-site-background {
+  background-color: #f5f7fa;
+  background-image:
+    linear-gradient(rgba(248, 250, 253, 0.5), rgba(248, 250, 253, 0.5)),
+    url("/assets/public-site-pattern.png");
+  background-position: center, center top;
+  background-repeat: repeat, repeat;
+  background-size: auto, 680px auto;
+}
+
 .hidden {
   display: none !important;
 }
