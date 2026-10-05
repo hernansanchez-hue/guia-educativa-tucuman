@@ -1745,6 +1745,191 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar:not(.city-h
   #cityPage.city-page-redesign .institution-search-bar:not(.city-header-search) .institution-search-submit { grid-column: 1 / -1; min-height: 52px; }
 }
 
+/* City community calls-to-action, shared by each city home. */
+.city-community-block,
+.city-commercial-block {
+  width: min(1320px, 100%);
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.city-community-block {
+  min-height: 278px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(230px, 0.55fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 76px);
+  padding: clamp(28px, 4vw, 52px) clamp(28px, 5vw, 68px);
+  overflow: hidden;
+}
+
+.city-community-copy { min-width: 0; }
+
+.city-community-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #b78614;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  line-height: 1.25;
+}
+
+.city-community-copy h2,
+.city-commercial-block h2 {
+  margin: 0;
+  color: var(--azul);
+  font-size: clamp(27px, 3.2vw, 43px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.city-community-copy h2 em {
+  color: #c9971a;
+  font-style: normal;
+}
+
+.city-community-copy p,
+.city-commercial-block p {
+  max-width: 640px;
+  margin: 15px 0 22px;
+  color: #586784;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.city-community-cta,
+.city-commercial-cta {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: #c9971a;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.city-community-cta:hover,
+.city-commercial-cta:hover {
+  background: #ae8115;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(148, 105, 10, 0.2);
+}
+
+.city-community-cta span,
+.city-commercial-cta span { font-size: 19px; line-height: 1; }
+
+.city-orientation-block {
+  border: 1px solid #e0e8f1;
+  background: linear-gradient(110deg, #fff 0%, #f7fbff 100%);
+  box-shadow: 0 10px 26px rgba(31, 49, 84, 0.06);
+}
+
+.city-orientation-art {
+  position: relative;
+  width: min(250px, 100%);
+  aspect-ratio: 1;
+  justify-self: end;
+  border-radius: 50%;
+  background: #edf5ff;
+  box-shadow: inset 0 0 0 20px rgba(255, 255, 255, 0.62);
+}
+
+.city-orientation-art span {
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--azul);
+  font-size: clamp(38px, 5vw, 66px);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+}
+
+.city-orientation-art i,
+.city-orientation-art b {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  background: #c9971a;
+}
+
+.city-orientation-art i { width: 42%; height: 11px; right: -5%; bottom: 27%; transform: rotate(-35deg); }
+.city-orientation-art b { width: 13px; height: 13px; top: 20%; right: 18%; }
+
+.city-expo-block {
+  grid-template-columns: auto minmax(0, 1fr);
+  background: linear-gradient(120deg, #091a3a 0%, #102a56 100%);
+  box-shadow: 0 18px 34px rgba(13, 27, 61, 0.17);
+}
+
+.city-expo-block .city-community-eyebrow { color: #e0b54c; }
+.city-expo-block .city-community-copy h2 { color: #fff; max-width: 720px; }
+.city-expo-block .city-community-copy p { color: rgba(255, 255, 255, 0.76); }
+.city-expo-block .city-community-cta-light { background: #fff; color: var(--azul); }
+.city-expo-block .city-community-cta-light:hover { background: #fffaf0; color: var(--azul); }
+
+.city-expo-mark {
+  width: 154px;
+  height: 154px;
+  display: grid;
+  place-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+}
+
+.city-expo-mark span { font-size: 28px; font-weight: 900; letter-spacing: -0.07em; }
+.city-expo-mark strong { color: #e0b54c; font-size: 30px; letter-spacing: 0.04em; }
+
+.city-commercial-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: clamp(27px, 3.5vw, 44px) clamp(28px, 4.5vw, 62px);
+  background: linear-gradient(120deg, #0d1b3d, #142d58);
+  box-shadow: 0 16px 32px rgba(13, 27, 61, 0.16);
+}
+
+.city-commercial-block .city-community-eyebrow { color: #e0b54c; }
+.city-commercial-block h2 { color: #fff; }
+.city-commercial-block p { max-width: 750px; margin-bottom: 0; color: rgba(255, 255, 255, 0.76); }
+.city-commercial-cta { flex: 0 0 auto; background: #c9971a; }
+
+.city-interest-notice {
+  min-height: 0;
+  margin: -28px auto 0;
+  color: #586784;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .city-community-block { grid-template-columns: 1fr; gap: 20px; min-height: 0; padding: 28px 22px; }
+  .city-community-copy h2, .city-commercial-block h2 { font-size: 27px; }
+  .city-community-copy p, .city-commercial-block p { margin: 12px 0 18px; font-size: 14px; }
+  .city-orientation-art { width: 145px; justify-self: center; }
+  .city-expo-block { grid-template-columns: 1fr; }
+  .city-expo-mark { width: 94px; height: 94px; justify-self: start; }
+  .city-expo-mark span { font-size: 19px; }
+  .city-expo-mark strong { font-size: 19px; }
+  .city-commercial-block { display: block; padding: 28px 22px; }
+  .city-commercial-cta { margin-top: 20px; }
+  .city-interest-notice { margin-top: -18px; }
+}
+
 @media (max-width: 430px) {
   .site-header.city-hero-header .course-cta { width: 142px; padding-right: 10px; padding-left: 10px; }
   .city-featured-inner { padding-top: 250px; }
@@ -2489,6 +2674,123 @@ body.dark-theme #cityPage .city-featured-institution-copy button {
   .city-featured-dots button {
     transition: none;
   }
+}
+
+/* Editorial refresh for the city orientation and expo calls-to-action. */
+.city-orientation-block {
+  grid-template-columns: minmax(0, 0.96fr) minmax(330px, 0.84fr);
+  min-height: 302px;
+  padding: 0;
+  background: #fff;
+}
+
+.city-orientation-block .city-community-copy {
+  padding: clamp(30px, 4vw, 52px) clamp(28px, 4.8vw, 66px);
+}
+
+.city-orientation-media {
+  position: relative;
+  align-self: stretch;
+  min-height: 302px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0 20px 20px 0;
+  background: #c8d5de;
+}
+
+.city-orientation-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(20, 45, 88, 0.28), transparent 48%);
+}
+
+.city-orientation-media img,
+.city-expo-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.city-orientation-media figcaption {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  z-index: 1;
+  max-width: 180px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--azul);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.city-expo-block {
+  position: relative;
+  grid-template-columns: minmax(310px, 0.84fr) minmax(0, 1.16fr);
+  min-height: 318px;
+  padding: 0;
+  overflow: hidden;
+  background: #091a3a;
+}
+
+.city-expo-media {
+  position: relative;
+  align-self: stretch;
+  min-height: 318px;
+  overflow: hidden;
+}
+
+.city-expo-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(5, 18, 43, 0.14), rgba(5, 18, 43, 0.72));
+}
+
+.city-expo-media-label {
+  position: absolute;
+  bottom: 25px;
+  left: 27px;
+  z-index: 1;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.07em;
+  line-height: 0.9;
+}
+
+.city-expo-media-label strong {
+  color: #e0b54c;
+  font-size: 38px;
+  letter-spacing: 0.01em;
+}
+
+.city-expo-block .city-community-copy {
+  padding: clamp(30px, 4vw, 58px) clamp(28px, 5vw, 72px);
+}
+
+@media (max-width: 720px) {
+  .city-orientation-block,
+  .city-expo-block {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .city-orientation-block .city-community-copy,
+  .city-expo-block .city-community-copy { padding: 28px 22px; }
+
+  .city-orientation-media { min-height: 190px; border-radius: 0 0 20px 20px; }
+  .city-orientation-media::after { background: linear-gradient(0deg, rgba(13, 27, 61, 0.3), transparent 60%); }
+  .city-orientation-media figcaption { right: 14px; bottom: 14px; }
+
+  .city-expo-media { min-height: 184px; }
+  .city-expo-media::after { background: linear-gradient(0deg, rgba(5, 18, 43, 0.75), rgba(5, 18, 43, 0.08)); }
+  .city-expo-media-label { bottom: 17px; left: 20px; font-size: 20px; }
+  .city-expo-media-label strong { font-size: 31px; }
 }
 
 /* Institution hierarchy: premium featured cards and compact catalog cards. */
