@@ -23,6 +23,7 @@ function getThemeSnapshot() {
 export default function PublicHeader({ variant = "default", citySearch = null, homeHref = "/" }) {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [headerQuery, setHeaderQuery] = useState("");
   const darkMode = useSyncExternalStore(
     subscribeToTheme,
     getThemeSnapshot,
@@ -61,7 +62,26 @@ export default function PublicHeader({ variant = "default", citySearch = null, h
     router.push("/cursos-docentes");
   }
 
+  function submitHeaderSearch(event) {
+    event.preventDefault();
+    const query = headerQuery.trim();
+    router.push(query ? `/instituciones?buscar=${encodeURIComponent(query)}` : "/instituciones");
+  }
+
   const themeLabel = darkMode ? "Activar modo claro" : "Activar modo oscuro";
+  const resolvedCitySearch = citySearch || (
+    <form className="institution-search-bar city-header-search" onSubmit={submitHeaderSearch}>
+      <span className="city-header-search-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-4-4" />
+        </svg>
+      </span>
+      <label className="institution-search-field">
+        <input type="search" placeholder="Buscar carreras, instituciones..." autoComplete="off" value={headerQuery} onChange={(event) => setHeaderQuery(event.target.value)} />
+      </label>
+    </form>
+  );
 
   return (
     <header className={variant === "city-hero" ? "site-header city-hero-header visible" : "site-header visible"}>
@@ -98,8 +118,8 @@ export default function PublicHeader({ variant = "default", citySearch = null, h
         </button>
       </nav>
 
-      {variant === "city-hero" && citySearch ? (
-        <div className="city-header-search-slot">{citySearch}</div>
+      {variant === "city-hero" ? (
+        <div className="city-header-search-slot">{resolvedCitySearch}</div>
       ) : null}
 
       <div className="site-header-actions">

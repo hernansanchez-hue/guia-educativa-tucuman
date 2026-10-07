@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import PublicFooter from "../../components/PublicFooter";
 import PublicHeader from "../../components/PublicHeader";
+import PublicHeaderFrame from "../../components/PublicHeaderFrame";
 import { savePublicLead } from "../../../lib/public-leads";
 
 function CareerMetaIcon({ type }) {
@@ -150,9 +151,9 @@ export default function InstitutionPageClient({ city, institution }) {
 
   return (
     <div className={pageClassName}>
-      <div className="institution-city-header-frame">
+      <PublicHeaderFrame>
         <PublicHeader variant="city-hero" citySearch={cityHeaderSearch} homeHref={`/${city.slug}`} />
-      </div>
+      </PublicHeaderFrame>
 
       <section id="detailPage" className="page active" aria-live="polite">
         <article className="detail-hero" style={{ marginTop: 18 }}>

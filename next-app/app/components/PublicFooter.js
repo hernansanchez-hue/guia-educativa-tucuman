@@ -27,6 +27,10 @@ export default function PublicFooter() {
     router.push("/instituciones");
   }
 
+  function goServices() {
+    router.push("/servicios");
+  }
+
   function footerComingSoon(item) {
     window.alert(`${item} estará disponible próximamente.`);
   }
@@ -48,6 +52,7 @@ export default function PublicFooter() {
           <div className="footer-link-list">
             <button type="button" onClick={goInstitutions}>Instituciones</button>
             <button type="button" onClick={goCareers}>Carreras</button>
+            <button type="button" onClick={goServices}>Servicios</button>
             <button type="button" onClick={() => footerComingSoon("Preguntas frecuentes")}>Preguntas frecuentes</button>
             <button type="button" onClick={goCourses}>Cursos docentes</button>
             <button type="button" onClick={goAbout}>Lo Próximo</button>

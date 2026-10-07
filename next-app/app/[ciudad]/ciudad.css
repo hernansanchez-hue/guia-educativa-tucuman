@@ -1965,6 +1965,18 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar:not(.city-h
   transform: translateX(-50%);
 }
 
+/* Shared floating header frame used by public detail and editorial pages. */
+.public-header-frame {
+  width: min(1800px, calc(100% - clamp(32px, 4vw, 64px)));
+  margin: 14px auto 0;
+  padding: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(13, 27, 61, 0.06);
+  border-radius: 34px;
+  background: #fff;
+  box-shadow: 0 24px 65px rgba(13, 27, 61, 0.11);
+}
+
 .site-header.city-hero-header {
   position: relative;
   top: auto;
@@ -2444,6 +2456,13 @@ body.dark-theme #cityPage .city-featured-institution-copy button {
 }
 
 @media (max-width: 720px) {
+  .public-header-frame {
+    width: calc(100% - 10%);
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 26px;
+  }
+
   #cityPage.city-page-redesign {
     padding: 8px 5% 40px;
   }
