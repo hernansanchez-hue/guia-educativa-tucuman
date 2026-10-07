@@ -57,6 +57,11 @@ export default function PublicHeader({ variant = "default", citySearch = null, h
     router.push("/nosotros");
   }
 
+  function goEvents() {
+    setMenuOpen(false);
+    router.push("/eventos");
+  }
+
   function goCourses() {
     setMenuOpen(false);
     router.push("/cursos-docentes");
@@ -102,7 +107,7 @@ export default function PublicHeader({ variant = "default", citySearch = null, h
         aria-label="Navegación principal"
       >
         <button data-nav="inicio" onClick={goHome}>Inicio</button>
-        <button data-nav="eventos">Eventos</button>
+        <button data-nav="eventos" onClick={goEvents}>Eventos</button>
         <button data-nav="nosotros" onClick={goAbout}>Nosotros</button>
         <button className="mobile-course-link" onClick={goCourses}>Cursos Docentes</button>
         <button
