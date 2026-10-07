@@ -32,6 +32,9 @@ export default function CareerPageClient({
     `Hola, quiero información sobre ${career.name}`,
   )}`;
   const studyPlanPdf = career.studyPlanPdf || career.study_plan_pdf || offering.studyPlanPdf || offering.study_plan_pdf;
+  const institutionLogoSrc = institution.slug === "universidad-siglo-21"
+    ? "/assets/universidad-siglo-21-logo.png"
+    : null;
 
   useEffect(() => () => window.clearTimeout(highlightTimer.current), []);
 
@@ -76,7 +79,9 @@ export default function CareerPageClient({
         </button>
         <span className="career-brand-divider" aria-hidden="true" />
         <button className="career-institution-brand" type="button" onClick={backToInstitution} aria-label={`Ir a ${institution.name}`}>
-          <span className="career-institution-mark" aria-hidden="true">{institution.logo || institution.name.slice(0, 3)}</span>
+          <span className={`career-institution-mark${institutionLogoSrc ? " career-institution-mark-logo" : ""}`} aria-hidden="true">
+            {institutionLogoSrc ? <img src={institutionLogoSrc} alt="" /> : institution.logo || institution.name.slice(0, 3)}
+          </span>
         </button>
       </header>
 
@@ -140,7 +145,16 @@ export default function CareerPageClient({
               <section id="careerRequirementsSection" className={`career-info-section career-requirements-section${highlightedSection === "careerRequirementsSection" ? " is-highlighted" : ""}`}>
                 <div className="career-section-heading"><span>INGRESO</span><h2>Todo lo que necesitás para comenzar</h2></div>
                 <div className="career-requirements-grid">
-                  <div><h3>Requisitos de ingreso</h3><ul id="careerRequirements">{career.requirements.map((item) => <li key={item}>{item}</li>)}</ul></div>
+                  <div className="career-requirements-group">
+                    <h3>Requisitos de ingreso</h3>
+                    <ul id="careerRequirements" className="career-requirements-list">{career.requirements.map((item, index) => (
+                      <li key={item}>
+                        <span className="career-requirement-index" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                        <span>{item}</span>
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="m7 12 3.2 3.2L17.5 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                      </li>
+                    ))}</ul>
+                  </div>
                   <div className="career-faq-list"><h3>Más información</h3><div id="careerFaq">{career.faq.map((item) => (
                     <details className="career-faq-item" key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>
                   ))}</div></div>
@@ -167,9 +181,9 @@ export default function CareerPageClient({
                     <option>Noche</option>
                   </select>
                   <textarea name="query" id="careerLeadQuery" placeholder="Escribí tu consulta (opcional)" />
-                  <a id="careerWhatsappButton" className="btn career-whatsapp" href={whatsappHref} target="_blank" rel="noopener">Hablar por WhatsApp</a>
-                  <div className="career-form-divider">o completá el formulario</div>
                   <button className="btn light" type="submit">Enviar consulta</button>
+                  <div className="career-form-divider">o completá el formulario</div>
+                  <a id="careerWhatsappButton" className="btn career-whatsapp" href={whatsappHref} target="_blank" rel="noopener">Hablar por WhatsApp</a>
                   <p id="careerFormMessage" className={formSent ? "" : "hidden"} style={{ color: "var(--exito)", fontWeight: 800 }}>Consulta enviada correctamente.</p>
                 </form>
               </section>

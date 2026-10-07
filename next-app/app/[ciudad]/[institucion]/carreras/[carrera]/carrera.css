@@ -959,3 +959,166 @@ body.dark-theme .career-info-section {
     box-shadow: 0 0 0 3px rgba(211, 161, 39, 0.34), 0 10px 26px rgba(31, 49, 84, 0.06);
   }
 }
+
+/* Career header brand treatment. */
+.career-brand-header { gap: 22px; }
+.career-get-brand img { width: 174px; height: 58px; }
+.career-brand-divider { height: 46px; }
+.career-institution-mark { min-width: 132px; height: 58px; font-size: 15px; }
+.career-institution-mark-logo { width: 168px; min-width: 168px; height: 62px; }
+.career-institution-mark-logo img { width: 100%; height: 100%; display: block; object-fit: contain; }
+
+@media (max-width: 760px) {
+  .career-brand-header { gap: 14px; }
+  .career-get-brand img { width: 128px; height: 46px; }
+  .career-brand-divider { height: 36px; }
+  .career-institution-mark { min-width: 104px; height: 46px; font-size: 12px; }
+  .career-institution-mark-logo { width: 132px; min-width: 132px; height: 48px; }
+}
+
+@media (max-width: 390px) {
+  .career-brand-header { gap: 10px; }
+  .career-get-brand img { width: 108px; height: 40px; }
+  .career-brand-divider { height: 30px; }
+  .career-institution-mark { min-width: 88px; height: 40px; font-size: 10px; }
+  .career-institution-mark-logo { width: 108px; min-width: 108px; height: 42px; }
+}
+
+/* Admission content: scan-friendly requirements and localized FAQ accordions. */
+.career-requirements-section {
+  border-color: rgba(211, 225, 239, 0.9);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.career-requirements-section .career-section-heading {
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+
+.career-requirements-grid {
+  align-items: start;
+  gap: clamp(28px, 4.5vw, 58px);
+}
+
+.career-requirements-grid > div + div {
+  padding-left: clamp(28px, 4.5vw, 58px);
+  border-left-color: rgba(211, 225, 239, 0.9);
+}
+
+.career-requirements-group h3,
+.career-faq-list h3 {
+  margin-bottom: 14px;
+  color: var(--azul);
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+
+.career-requirements-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.career-requirements-list li {
+  min-height: 112px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 13px 10px;
+  align-items: start;
+  padding: 15px;
+  border: 1px solid #e2eaf3;
+  border-radius: 14px;
+  background: rgba(249, 252, 255, 0.9);
+  color: #415276;
+  line-height: 1.45;
+  box-shadow: 0 7px 16px rgba(31, 49, 84, 0.035);
+}
+
+.career-requirements-list li::before { content: none; }
+
+.career-requirement-index {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #f7ecd2;
+  color: #a77710;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.career-requirements-list li > span:nth-child(2) {
+  align-self: center;
+  color: var(--azul);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.career-requirements-list svg {
+  width: 18px;
+  height: 18px;
+  grid-column: 2;
+  align-self: end;
+  color: #b88718;
+}
+
+.career-faq-list {
+  gap: 10px;
+}
+
+.career-faq-item {
+  padding: 0 15px;
+  border: 1px solid #e2eaf3;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.career-faq-item + .career-faq-item { margin-top: 9px; }
+.career-faq-item:last-child { border-bottom: 1px solid #e2eaf3; }
+.career-faq-item[open] {
+  border-color: rgba(201, 151, 26, 0.38);
+  background: rgba(255, 251, 239, 0.86);
+  box-shadow: 0 8px 18px rgba(157, 116, 21, 0.06);
+}
+
+.career-faq-item summary {
+  min-height: 54px;
+  padding: 12px 0;
+  font-size: 13px;
+}
+
+.career-faq-item summary::after {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f7ecd2;
+  color: #a77710;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.career-faq-item p {
+  margin: -1px 0 15px;
+  font-size: 13px !important;
+}
+
+@media (max-width: 760px) {
+  .career-requirements-grid > div + div {
+    padding-top: 24px;
+    padding-left: 0;
+    border-top-color: rgba(211, 225, 239, 0.9);
+  }
+
+  .career-requirements-list { grid-template-columns: 1fr; }
+  .career-requirements-list li { min-height: 0; grid-template-columns: auto 1fr auto; grid-template-rows: 1fr; align-items: center; }
+  .career-requirements-list svg { grid-column: 3; align-self: center; }
+}
