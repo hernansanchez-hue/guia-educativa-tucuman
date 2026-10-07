@@ -1954,7 +1954,7 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar:not(.city-h
   min-height: calc(100svh - 56px);
   display: flex;
   flex-direction: column;
-  margin: 0 0 38px 50%;
+  margin: 0 0 clamp(40px, 3.8vw, 60px) 50%;
   padding: 14px;
   overflow: hidden;
   border: 1px solid rgba(13, 27, 61, 0.06);
@@ -2451,7 +2451,7 @@ body.dark-theme #cityPage .city-featured-institution-copy button {
   .city-showcase-panel {
     width: calc(100% + 6vw);
     min-height: calc(100svh - 16px);
-    margin-bottom: 24px;
+    margin-bottom: clamp(30px, 8vw, 40px);
     padding: 8px;
     border-radius: 26px;
   }
@@ -2815,11 +2815,31 @@ body.dark-theme #cityPage .city-featured-institution-copy button {
 
 /* Institution hierarchy: premium featured cards and compact catalog cards. */
 .city-institution-sections {
+  --city-section-space: clamp(44px, 4.8vw, 72px);
+  --city-section-space-featured: clamp(60px, 6.2vw, 96px);
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 0;
   border-top: 0;
   background: transparent;
+}
+
+/* Each transition has its own visual rhythm while keeping the page background visible. */
+.city-institution-sections > .city-expo-block {
+  margin-top: var(--city-section-space);
+}
+
+.city-institution-sections > .city-featured-institutions,
+.city-institution-sections > .city-all-institutions {
+  margin-top: var(--city-section-space-featured);
+}
+
+.city-institution-sections > .city-commercial-block {
+  margin-top: clamp(68px, 6.8vw, 108px);
+}
+
+.city-institution-sections > .city-interest-notice {
+  margin-top: 18px;
 }
 
 #cityPage.city-page-redesign > .institutions-section {
@@ -3006,7 +3026,17 @@ body.dark-theme .city-institution-card-cta {
   }
 
   .city-institution-sections {
-    gap: 34px;
+    --city-section-space: clamp(32px, 8vw, 42px);
+    --city-section-space-featured: clamp(42px, 10vw, 56px);
+    gap: 0;
+  }
+
+  .city-institution-sections > .city-commercial-block {
+    margin-top: clamp(48px, 11vw, 60px);
+  }
+
+  .city-institution-sections > .city-interest-notice {
+    margin-top: 14px;
   }
 
   .city-institution-heading {
