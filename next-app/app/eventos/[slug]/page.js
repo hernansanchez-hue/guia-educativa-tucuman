@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import PublicHeader from "../../components/PublicHeader";
-import PublicHeaderFrame from "../../components/PublicHeaderFrame";
+import PublicFloatingHeader from "../../components/PublicFloatingHeader";
 import PublicFooter from "../../components/PublicFooter";
 import { events, getEvent } from "../../data/events";
 import "../../[ciudad]/ciudad.css";
@@ -16,7 +15,7 @@ export default async function EventDetailPage({ params }) {
   const event = getEvent(slug);
   if (!event) notFound();
   return <div className="app-shell events-page">
-    <PublicHeaderFrame><PublicHeader variant="city-hero" /></PublicHeaderFrame>
+    <PublicFloatingHeader />
     <main className="events-main event-detail-main">
       <section className="event-detail-hero"><img src={event.image} alt="" /><div /><div className="event-detail-hero-content"><Link href="/eventos">← Volver a eventos</Link><span>{event.category} · {event.city}</span><h1>{event.name}</h1><p>{event.description}</p><strong>{event.date}</strong></div></section>
       <section className="event-detail-overview events-section"><div><span className="eyebrow">Evento de demostración</span><h2>Una estructura lista para cada encuentro.</h2><p>Cuando el evento esté confirmado, esta página permitirá completar su portada, fecha, ubicación, instituciones participantes, imágenes, videos y las acciones realizadas por GET.</p></div><dl><div><dt>Ciudad</dt><dd>{event.city}</dd></div><div><dt>Ubicación</dt><dd>{event.location}</dd></div><div><dt>Instituciones</dt><dd>A confirmar</dd></div></dl></section>

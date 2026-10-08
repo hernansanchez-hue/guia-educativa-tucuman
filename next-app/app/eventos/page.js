@@ -4,8 +4,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import PublicHeader from "../components/PublicHeader";
-import PublicHeaderFrame from "../components/PublicHeaderFrame";
+import PublicFloatingHeader from "../components/PublicFloatingHeader";
 import PublicFooter from "../components/PublicFooter";
 import { eventCategories, eventCities, events } from "../data/events";
 import "../[ciudad]/ciudad.css";
@@ -21,7 +20,7 @@ export default function EventsPage() {
   const filteredEvents = useMemo(() => events.filter((event) => (city === "Todos" || event.city === city) && (category === "Todos" || event.category === category)), [city, category]);
 
   return <div className="app-shell events-page">
-    <PublicHeaderFrame><PublicHeader variant="city-hero" /></PublicHeaderFrame>
+    <PublicFloatingHeader />
     <main className="events-main">
       <section className="events-hero">
         <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=88" alt="Personas compartiendo un evento al aire libre" />

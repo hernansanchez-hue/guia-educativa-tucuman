@@ -3,8 +3,8 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
 import PublicFooter from "../../../../components/PublicFooter";
+import PublicFloatingHeader from "../../../../components/PublicFloatingHeader";
 import { savePublicLead } from "../../../../../lib/public-leads";
 
 const FIELD_CHIPS = [
@@ -19,7 +19,6 @@ export default function CareerPageClient({
   career,
   offering,
 }) {
-  const router = useRouter();
   const [formSent, setFormSent] = useState(false);
   const [highlightedSection, setHighlightedSection] = useState("");
   const highlightTimer = useRef();
@@ -32,15 +31,7 @@ export default function CareerPageClient({
     `Hola, quiero información sobre ${career.name}`,
   )}`;
   const studyPlanPdf = career.studyPlanPdf || career.study_plan_pdf || offering.studyPlanPdf || offering.study_plan_pdf;
-  const institutionLogoSrc = institution.slug === "universidad-siglo-21"
-    ? "/assets/universidad-siglo-21-logo.png"
-    : null;
-
   useEffect(() => () => window.clearTimeout(highlightTimer.current), []);
-
-  function backToInstitution() {
-    router.push(`/${city.slug}/${institution.slug}`);
-  }
 
   function navigateToSection(sectionId) {
     const section = document.getElementById(sectionId);
@@ -73,17 +64,7 @@ export default function CareerPageClient({
 
   return (
     <div className="app-shell career-page-shell-wrap">
-      <header className="career-brand-header">
-        <button className="career-get-brand" type="button" onClick={() => router.push(`/${city.slug}`)} aria-label={`Ir a la home de ${city.name}`}>
-          <img src="/assets/get-city-hero-logo.png" alt="Guía Educativa Tucumán" />
-        </button>
-        <span className="career-brand-divider" aria-hidden="true" />
-        <button className="career-institution-brand" type="button" onClick={backToInstitution} aria-label={`Ir a ${institution.name}`}>
-          <span className={`career-institution-mark${institutionLogoSrc ? " career-institution-mark-logo" : ""}`} aria-hidden="true">
-            {institutionLogoSrc ? <img src={institutionLogoSrc} alt="" /> : institution.logo || institution.name.slice(0, 3)}
-          </span>
-        </button>
-      </header>
+      <PublicFloatingHeader homeHref={`/${city.slug}`} />
 
       <section id="careerPage" className="page active career-page" aria-live="polite">
         <div className="career-page-shell">

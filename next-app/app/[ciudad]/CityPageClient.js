@@ -3,7 +3,7 @@
 import { useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import PublicFooter from "../components/PublicFooter";
-import PublicHeader from "../components/PublicHeader";
+import PublicFloatingHeader from "../components/PublicFloatingHeader";
 import CityFeaturedCareers from "./CityFeaturedCareers";
 import CityInstitutionSections from "./CityInstitutionSections";
 
@@ -98,10 +98,9 @@ export default function CityPageClient({ city }) {
 
   return (
     <div className="app-shell city-page-shell">
+      <PublicFloatingHeader citySearch={cityHeaderSearch} />
       <section id="cityPage" className="page active city-page-redesign" aria-live="polite">
         <div className="city-showcase-panel">
-          <PublicHeader variant="city-hero" citySearch={cityHeaderSearch} />
-
           <CityFeaturedCareers
             key={city.slug}
             city={city}

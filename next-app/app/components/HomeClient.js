@@ -5,8 +5,9 @@
 import { useEffect } from "react";
 import CitySelector from "./CitySelector";
 import PublicFooter from "./PublicFooter";
+import PublicFloatingHeader from "./PublicFloatingHeader";
 
-export default function HomeClient({ cities }) {
+export default function HomeClient({ cities, usePublicHeader = false }) {
   useEffect(() => {
     const darkMode = localStorage.getItem("guiaEducativaTheme") === "dark";
     document.body.classList.toggle("dark-theme", darkMode);
@@ -15,11 +16,11 @@ export default function HomeClient({ cities }) {
 
   return (
     <div className="app-shell">
-      <header className="home-header">
+      {usePublicHeader ? <PublicFloatingHeader /> : <header className="home-header">
         <div className="logo" aria-label="Guía Educativa Tucumán">
           <span className="home-brand-logo" aria-hidden="true"><img src="/assets/get-logo-hero-blanco-dorado.png" alt="" /></span>
         </div>
-      </header>
+      </header>}
 
       <main id="home" className="home">
         <video className="hero-video" autoPlay muted loop playsInline preload="auto" aria-hidden="true">

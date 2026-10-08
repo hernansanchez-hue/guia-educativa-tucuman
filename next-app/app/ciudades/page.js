@@ -1,5 +1,6 @@
 import HomeClient from "../components/HomeClient";
 import "../home.css";
+import "../[ciudad]/ciudad.css";
 import { getCitiesCatalog } from "../../lib/public-catalog/cities-catalog";
 import { createPublicMetadata } from "../../lib/seo/public-metadata";
 
@@ -14,5 +15,5 @@ export const metadata = createPublicMetadata({
 export default async function CitiesPage() {
   const cities = await getCitiesCatalog();
 
-  return <HomeClient cities={cities} />;
+  return <HomeClient cities={cities} usePublicHeader />;
 }

@@ -1,5 +1,5 @@
 import PublicFooter from "../components/PublicFooter";
-import PublicHeader from "../components/PublicHeader";
+import PublicFloatingHeader from "../components/PublicFloatingHeader";
 import ContactForm from "./ContactForm";
 import { createPublicMetadata } from "../../lib/seo/public-metadata";
 import "../[ciudad]/ciudad.css";
@@ -14,7 +14,7 @@ export const metadata = createPublicMetadata({
 export default function ContactPage() {
   return (
     <div className="app-shell">
-      <PublicHeader />
+      <PublicFloatingHeader />
       <section id="contactPage" className="page active">
         <div className="section-title">
           <span className="eyebrow">Contacto</span>

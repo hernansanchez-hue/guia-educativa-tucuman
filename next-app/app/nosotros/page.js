@@ -1,6 +1,5 @@
 import PublicFooter from "../components/PublicFooter";
-import PublicHeader from "../components/PublicHeader";
-import PublicHeaderFrame from "../components/PublicHeaderFrame";
+import PublicFloatingHeader from "../components/PublicFloatingHeader";
 import AboutHomeButton from "./AboutHomeButton";
 import AboutRevealClient from "./AboutRevealClient";
 import { createPublicMetadata } from "../../lib/seo/public-metadata";
@@ -34,7 +33,7 @@ export const metadata = createPublicMetadata({
 
 export default function AboutPage() {
   return <div className="app-shell">
-    <PublicHeaderFrame><PublicHeader variant="city-hero" /></PublicHeaderFrame>
+    <PublicFloatingHeader />
     <AboutRevealClient />
     <section id="aboutPage" className="page active"><div className="about-page">
       <section className="about-hero about-block about-reveal"><div><span className="eyebrow">Nuestro propósito</span><h1>Todo gran futuro comienza con una decisión.</h1><div className="about-hero-text"><p>Miles de personas buscan todos los días una oportunidad para estudiar, cambiar de carrera o aprender algo nuevo. Sin embargo, encontrar la información correcta muchas veces no es fácil.</p><p>Guía Educativa Tucumán nació para reunir en un solo lugar toda la oferta educativa de la provincia y acercar a cada persona a su próximo paso.</p></div></div><div className="about-hero-visual"><img className="about-hero-image" src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1000&q=82" alt="Estudiantes compartiendo ideas en un entorno educativo" /><div className="about-future-card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="m4 10 8-4 8 4-8 4Z" /><path d="M7 12v5c3 2 7 2 10 0v-5" /></svg></span><div><strong>Tu próximo paso</strong><small>Información clara para elegir con más confianza.</small></div></div></div></section>

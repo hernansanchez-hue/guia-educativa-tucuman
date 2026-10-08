@@ -4,6 +4,7 @@
 
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { useRouter } from "next/navigation";
+import PublicHeaderFrame from "./PublicHeaderFrame";
 
 const THEME_EVENT = "guia-educativa-theme-change";
 
@@ -20,7 +21,7 @@ function getThemeSnapshot() {
   return localStorage.getItem("guiaEducativaTheme") === "dark";
 }
 
-export default function PublicHeader({ variant = "default", citySearch = null, homeHref = "/" }) {
+export default function PublicHeader({ variant = "city-hero", citySearch = null, homeHref = "/", withinFrame = false }) {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [headerQuery, setHeaderQuery] = useState("");
@@ -88,11 +89,11 @@ export default function PublicHeader({ variant = "default", citySearch = null, h
     </form>
   );
 
-  return (
+  const header = (
     <header className={variant === "city-hero" ? "site-header city-hero-header visible" : "site-header visible"}>
       <button className="logo" onClick={goHome} aria-label="Volver al inicio">
         {variant === "city-hero" ? (
-          <span className="city-hero-logo" aria-hidden="true"><img src="/assets/get-city-hero-logo.png" alt="" /></span>
+          <span className="city-hero-logo" aria-hidden="true"><img src="/assets/get-city-footer-logo.png" alt="" /></span>
         ) : (
           <span className="public-logo-compact" aria-hidden="true">
             <img className="public-logo-light" src="/assets/get-logo-oficial.png" alt="" />
@@ -169,4 +170,6 @@ export default function PublicHeader({ variant = "default", citySearch = null, h
       </div>
     </header>
   );
+
+  return withinFrame ? header : <PublicHeaderFrame><PublicHeader variant={variant} citySearch={citySearch} homeHref={homeHref} withinFrame /></PublicHeaderFrame>;
 }

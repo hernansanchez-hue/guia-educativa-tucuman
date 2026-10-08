@@ -5,7 +5,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import PublicFooter from "../../../../components/PublicFooter";
-import PublicHeader from "../../../../components/PublicHeader";
+import PublicFloatingHeader from "../../../../components/PublicFloatingHeader";
 
 const FIELD_CHIPS = ["Instituciones públicas y privadas", "Organizaciones vinculadas al sector", "Ejercicio profesional y consultoría"];
 
@@ -58,7 +58,7 @@ export default function TrainingPageClient({ city, institution, program, offerin
 
   return (
     <div className="app-shell">
-      <PublicHeader />
+      <PublicFloatingHeader homeHref={`/${city.slug}`} />
       <section id="careerPage" className="page active" aria-live="polite">
         <div className="career-page-shell">
           <button className="btn light" type="button" onClick={() => router.push(`/${city.slug}/${institution.slug}`)}>Volver a la institución</button>

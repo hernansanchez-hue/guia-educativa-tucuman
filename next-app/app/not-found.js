@@ -1,13 +1,13 @@
 import Link from "next/link";
 import PublicFooter from "./components/PublicFooter";
-import PublicHeader from "./components/PublicHeader";
+import PublicFloatingHeader from "./components/PublicFloatingHeader";
 import "./[ciudad]/ciudad.css";
 import "./not-found.css";
 
 export default function NotFound() {
   return (
     <div className="app-shell">
-      <PublicHeader />
+      <PublicFloatingHeader />
       <main className="not-found-page">
         <section className="not-found-panel" aria-labelledby="notFoundTitle">
           <span className="eyebrow">Error 404</span>
