@@ -7,14 +7,14 @@ const VALID_SOURCES = new Set(["local", "supabase"]);
 function sourceFor(env) { const source = env.PUBLIC_CATALOG_SOURCE ?? "local"; if (!VALID_SOURCES.has(source)) throw new Error(`Unsupported PUBLIC_CATALOG_SOURCE: ${source}`); return source; }
 function publishedOffering(offering) { return (offering.visible ?? offering.is_visible) !== false && (offering.publication_status ?? "published") === "published"; }
 
-function createCatalog({ careerRows, institutionRows, cityRows, offeringRows, remote = false }) {
+export function createCatalog({ careerRows, institutionRows, cityRows, offeringRows, remote = false }) {
   const careerById = new Map(careerRows.map((career) => [career.id, career]));
   const institutionById = new Map(institutionRows.map((institution) => [institution.id, institution]));
   const cityById = new Map(cityRows.map((city) => [city.id, city]));
   const entries = offeringRows.filter(publishedOffering).map((offering) => {
     const career = careerById.get(remote ? offering.career_master_id : offering.careerId);
     const institution = institutionById.get(remote ? offering.institution_id : offering.institutionId);
-    const city = cityById.get(remote ? institution?.city_id : offering.citySlug);
+    const city = cityById.get(remote ? institution?.city_id : (institution?.cityId ?? offering.citySlug)) || (!remote ? cityRows.find(c=>c.slug===offering.citySlug) : null);
     if (!career || !institution || !city) return null;
     return { career: { id: career.id, slug: career.slug, name: career.name, description: career.description, graduateProfile: career.graduateProfile ?? career.graduate_profile, workField: career.workField ?? career.work_field }, institution: { slug: institution.slug, name: institution.name, type: institution.type, image: institution.image ?? institution.hero_image_url }, city: { slug: city.slug, name: city.name }, offering: { modality: offering.modality, duration: offering.duration, degree: offering.degree, image: offering.image ?? offering.image_url } };
   }).filter(Boolean);

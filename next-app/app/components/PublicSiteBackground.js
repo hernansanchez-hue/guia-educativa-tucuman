@@ -1,6 +1,10 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import {usePublicEditorial} from './PublicEditorialContext';
+import {designVariables} from '../../lib/admin/final-model.mjs';
+import SeoAuroraBackground from "./SeoAuroraBackground";
+import { isAdminPath } from "../../lib/admin/auth-contract.mjs";
 
 const BACKGROUND_LINES = [
   { d: "M-90 138C136 98 264 264 468 346C588 394 670 432 804 486", color: "#0d1b3d", dash: "13 100", duration: "10s", delay: "-2s", opacity: 0.28, width: 1.7 },
@@ -21,15 +25,26 @@ const BACKGROUND_LINES = [
   { d: "M1498 1020C1284 890 1174 810 1050 740C920 666 800 592 682 454", color: "#4f83cc", dash: "12 100", duration: "12s", delay: "-10s", opacity: 0.24, width: 1.7 },
 ];
 
-export default function PublicSiteBackground({ children }) {
-  const pathname = usePathname();
+export default function PublicSiteBackground({ children, previewPath }) {
+  const currentPath = usePathname();
+  const pathname = previewPath || currentPath;
+  const design=usePublicEditorial('design')||{};
+  const variables=designVariables(design);
+  const enabled=Object.keys(variables).length>0;
+  const attributes=enabled?{style:variables,'data-cms-design':'true','data-cms-font':Boolean(design.font)||undefined,'data-cms-body-size':Boolean(design.bodySize)||undefined,'data-cms-heading-size':Boolean(design.headingSize)||undefined,'data-cms-button':Boolean(variables['--cms-button-padding'])||undefined,'data-cms-spacing':Boolean(variables['--cms-block-gap'])||undefined}:{};
+
+  if (isAdminPath(pathname)) return children;
 
   if (pathname === "/") {
     return <div className="public-site-root">{children}</div>;
   }
 
+  if (pathname === "/carreras" || pathname.startsWith("/carreras/") || pathname === "/instituciones" || pathname.startsWith("/instituciones/")) {
+    return <SeoAuroraBackground attributes={attributes}>{children}</SeoAuroraBackground>;
+  }
+
   return (
-    <div className="public-site-background">
+    <div className="public-site-background" {...attributes}>
       <svg
         aria-hidden="true"
         className="public-site-background-lines"

@@ -1,6 +1,8 @@
 import { cityPages, institutions } from "../../app/data/institutions.js";
 import { careers } from "../../app/data/careers.js";
 import { offerings } from "../../app/data/offerings.js";
+import {editorialCatalog} from '../admin/editorial-model.mjs';
+import {getVersionedPublicCatalogEntries} from '../catalog/versioned-public-catalog.mjs';
 import {
   getSupabaseAcademicOfferings,
   getSupabaseCareerMasters,
@@ -102,9 +104,10 @@ export async function getSupabaseHomeMapCatalog(options = {}) {
   });
 }
 
-export async function getHomeMapCatalog(options = {}) {
-  const source = (options.env ?? process.env).PUBLIC_CATALOG_SOURCE ?? "local";
-  if (source === "local") return getLocalHomeMapCatalog();
-  if (source === "supabase") return getSupabaseHomeMapCatalog(options);
-  throw new Error(`Unsupported PUBLIC_CATALOG_SOURCE: ${source}`);
+export async function getHomeMapCatalog() {
+  const c=editorialCatalog(getVersionedPublicCatalogEntries(),{includeLegacy:false});
+  const masters=new Map(c.careers.map(m=>[m.id,m]));
+  const map=buildHomeMapCatalog({cities:c.cities.map(v=>({...v,active:true})),institutions:c.institutions.map(i=>({...i,active:true})),offerings:c.offerings.map(o=>({...o,active:true,careerName:masters.get(o.careerId)?.name,careerSlug:masters.get(o.careerId)?.slug}))},{...CITY_DEPARTMENT_IDS,...Object.fromEntries(c.cities.filter(v=>v.departmentId).map(v=>[v.slug,v.departmentId]))});
+  for(const id of new Set(c.brands.flatMap(b=>(b.generalOffers||[]).map(o=>o.careerId)))){const master=masters.get(id);if(master&&!map.search.some(v=>v.type==='Carrera'&&v.label===master.name))map.search.push({type:'Carrera',label:master.name,context:'Oferta institucional · Sede a consultar',href:`/carreras/${master.slug}`});}
+  return map;
 }

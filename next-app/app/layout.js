@@ -1,7 +1,10 @@
 import "./globals.css";
 import "./components/public-footer.css";
 import PublicSiteBackground from "./components/PublicSiteBackground";
-import Script from "next/script";
+import {PublicEditorialProvider} from "./components/PublicEditorialContext";
+import {getPublishedSiteContent} from "../lib/admin/published-extended";
+import {getSiteConfiguration} from '../lib/admin/published-configuration';
+import PublicAnalytics from "./components/PublicAnalytics";
 
 import {
   SITE_DESCRIPTION,
@@ -9,7 +12,7 @@ import {
   SITE_URL,
 } from "../lib/seo/public-metadata";
 
-export const metadata = {
+const initialMetadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_NAME,
@@ -26,26 +29,20 @@ export const metadata = {
   },
 };
 
+export async function generateMetadata(){const {settings}=await getSiteConfiguration();return {...initialMetadata,title:{default:settings.siteName,template:'%s | '+settings.siteName},description:settings.description,openGraph:{...initialMetadata.openGraph,title:settings.siteName,description:settings.description,siteName:settings.siteName,...(settings.ogImage?{images:[{url:settings.ogImage}]}:{})},...(settings.favicon?{icons:{icon:settings.favicon}}:{})};}
+
 export const viewport = {
   width: "device-width",
   initialScale: 1,
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const siteContent=await getPublishedSiteContent();
   return (
     <html lang="es">
       <body>
-        <PublicSiteBackground>{children}</PublicSiteBackground>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-KY9E5NG5V2"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-KY9E5NG5V2');`}
-        </Script>
+        <PublicEditorialProvider content={siteContent}><PublicSiteBackground>{children}</PublicSiteBackground></PublicEditorialProvider>
+        <PublicAnalytics />
       </body>
     </html>
   );

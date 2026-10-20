@@ -81,6 +81,7 @@ export default function CitySelector({ cities = DEFAULT_CITIES }) {
             onClick={() => openCity(city)}
           >
             <span className="city-card-head"><LocationIcon /><strong>{city.name}</strong></span>
+            {city.institutionCount!==undefined?<small>{city.institutionCount} instituciones · {city.careerCount} ofertas</small>:null}
           </button>
         ))}
         <p className={visibleCities.length ? "city-empty hidden" : "city-empty"}>No encontramos esa ciudad.</p>

@@ -1,0 +1,2 @@
+export function searchText(value){return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\bdonde\b|\bestudiar\b|\bcarreras?\b|\ben\b|\bde\b/g,' ').replace(/\s+/g,' ').trim();}
+export function matchesSearch(query,...values){const terms=searchText(query).split(' ').filter(Boolean),haystack=searchText(values.flat(Infinity).join(' '));return terms.every(term=>haystack.includes(term));}

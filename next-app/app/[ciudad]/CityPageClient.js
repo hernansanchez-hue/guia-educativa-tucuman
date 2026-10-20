@@ -2,6 +2,7 @@
 
 import { useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import {usePublicEditorial} from "../components/PublicEditorialContext";
 import PublicFooter from "../components/PublicFooter";
 import PublicFloatingHeader from "../components/PublicFloatingHeader";
 import CityFeaturedCareers from "./CityFeaturedCareers";
@@ -16,6 +17,7 @@ function normalizeText(value) {
 }
 
 function institutionModality(institution) {
+  if(institution.plan==='Normal')return [...new Set(institution.careers.map(c=>c.modality).filter(Boolean))].join(' ').replace(/a distancia|virtual/gi,'Online');
   if (institution.plan === "Premium") return "Presencial y Online";
   if (/online|distancia|virtual/i.test(`${institution.description} ${institution.slogan}`)) return "Online";
   return "Presencial";
@@ -29,6 +31,7 @@ function institutionLevel(institution) {
 }
 
 export default function CityPageClient({ city }) {
+  const navigation=usePublicEditorial('navigation');
   const router = useRouter();
   const [query, setQuery] = useState("");
   const [modality, setModality] = useState("");
@@ -59,6 +62,7 @@ export default function CityPageClient({ city }) {
 
   function applyInstitutionSearch(event) {
     event.preventDefault();
+    if(query.trim()&&!city.institutions.some(i=>normalizeText([i.name,...i.careers.map(c=>c.name)].join(' ')).includes(normalizeText(query)))){router.push(`/instituciones?buscar=${encodeURIComponent(query.trim())}`);return;}
     setAppliedFilters({ query, modality, level });
     window.requestAnimationFrame(() => {
       cardsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -78,7 +82,7 @@ export default function CityPageClient({ city }) {
         </svg>
       </span>
       <label className="institution-search-field">
-        <input id="institutionSearchInput" type="search" placeholder="Buscar carreras, instituciones..." autoComplete="off" value={query} onChange={(event) => setQuery(event.target.value)} />
+        <input id="institutionSearchInput" type="search" placeholder={navigation.searchPlaceholder} autoComplete="off" value={query} onChange={(event) => setQuery(event.target.value)} />
       </label>
       {/* Preserved for the existing filtering contract; advanced filters are intentionally outside the visible hero UI. */}
       <select id="institutionModalityFilter" aria-label="Modalidad" value={modality} onChange={(event) => setModality(event.target.value)}>

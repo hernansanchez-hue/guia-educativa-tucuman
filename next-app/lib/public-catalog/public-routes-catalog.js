@@ -3,6 +3,8 @@ import { cityPages, institutions } from "../../app/data/institutions.js";
 import { offerings } from "../../app/data/offerings.js";
 import { trainingOfferings } from "../../app/data/trainingOfferings.js";
 import { trainingPrograms } from "../../app/data/trainingPrograms.js";
+import { editorialCatalog } from "../admin/editorial-model.mjs";
+import { getVersionedPublicCatalogEntries } from "../catalog/versioned-public-catalog.mjs";
 import {
   getSupabaseAcademicOfferings,
   getSupabaseCareerMasters,
@@ -21,14 +23,6 @@ export const STATIC_PUBLIC_PATHS = Object.freeze([
   "/carreras",
   "/instituciones",
 ]);
-
-const VALID_SOURCES = new Set(["local", "supabase"]);
-
-function sourceFor(env) {
-  const source = env.PUBLIC_CATALOG_SOURCE ?? "local";
-  if (!VALID_SOURCES.has(source)) throw new Error(`Unsupported PUBLIC_CATALOG_SOURCE: ${source}`);
-  return source;
-}
 
 function isPublishedOffering(record) {
   const visible = record.is_visible ?? record.visible;
@@ -131,6 +125,28 @@ export function getLocalPublicRoutePaths() {
   });
 }
 
+export function getVersionedPublicRoutePaths() {
+  const catalog = editorialCatalog(getVersionedPublicCatalogEntries(), { includeLegacy: false });
+  return createPublicRoutePaths({
+    cities: catalog.cities,
+    institutions: catalog.institutions.map((institution) => ({ ...institution, city_id: institution.cityId })),
+    careers: catalog.careers,
+    academicOfferings: catalog.offerings.map((offering) => ({
+      ...offering,
+      institution_id: offering.institutionId,
+      career_master_id: offering.careerId,
+    })),
+    trainingPrograms: trainingPrograms.map((program) => ({ ...program, is_active: true })),
+    trainingOfferings: trainingOfferings.map((offering) => ({
+      ...offering,
+      institution_id: offering.institutionId,
+      training_program_id: offering.trainingProgramId,
+      is_visible: offering.visible,
+      publication_status: offering.publicationStatus,
+    })),
+  });
+}
+
 export async function getSupabasePublicRoutePaths(options = {}) {
   const [cities, remoteInstitutions, remoteCareers, academicOfferings, remotePrograms, remoteTrainingOfferings] = await Promise.all([
     getSupabaseCities(options),
@@ -150,8 +166,6 @@ export async function getSupabasePublicRoutePaths(options = {}) {
   });
 }
 
-export function getPublicRoutePaths(options = {}) {
-  return sourceFor(options.env ?? process.env) === "local"
-    ? getLocalPublicRoutePaths()
-    : getSupabasePublicRoutePaths(options);
+export function getPublicRoutePaths() {
+  return getVersionedPublicRoutePaths();
 }

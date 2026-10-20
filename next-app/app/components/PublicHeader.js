@@ -3,8 +3,10 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import {usePublicEditorial} from "./PublicEditorialContext";
 import PublicHeaderFrame from "./PublicHeaderFrame";
+import {isPublicNavigationItemActive} from '../data/publicSiteContent';
 
 const THEME_EVENT = "guia-educativa-theme-change";
 
@@ -23,6 +25,8 @@ function getThemeSnapshot() {
 
 export default function PublicHeader({ variant = "city-hero", citySearch = null, homeHref = "/", withinFrame = false }) {
   const router = useRouter();
+  const pathname=usePathname();
+  const menu=usePublicEditorial("navigation"),footer=usePublicEditorial("footer");
   const [menuOpen, setMenuOpen] = useState(false);
   const [headerQuery, setHeaderQuery] = useState("");
   const darkMode = useSyncExternalStore(
@@ -53,19 +57,11 @@ export default function PublicHeader({ variant = "city-hero", citySearch = null,
     router.push(homeHref);
   }
 
-  function goAbout() {
-    setMenuOpen(false);
-    router.push("/nosotros");
-  }
 
-  function goEvents() {
-    setMenuOpen(false);
-    router.push("/eventos");
-  }
 
   function goCourses() {
     setMenuOpen(false);
-    router.push("/cursos-docentes");
+    router.push(menu.courseHref);
   }
 
   function submitHeaderSearch(event) {
@@ -84,7 +80,7 @@ export default function PublicHeader({ variant = "city-hero", citySearch = null,
         </svg>
       </span>
       <label className="institution-search-field">
-        <input type="search" placeholder="Buscar carreras, instituciones..." autoComplete="off" value={headerQuery} onChange={(event) => setHeaderQuery(event.target.value)} />
+        <input type="search" placeholder={menu.searchPlaceholder} autoComplete="off" value={headerQuery} onChange={(event) => setHeaderQuery(event.target.value)} />
       </label>
     </form>
   );
@@ -93,7 +89,7 @@ export default function PublicHeader({ variant = "city-hero", citySearch = null,
     <header className={variant === "city-hero" ? "site-header city-hero-header visible" : "site-header visible"}>
       <button className="logo" onClick={goHome} aria-label="Volver al inicio">
         {variant === "city-hero" ? (
-          <span className="city-hero-logo" aria-hidden="true"><img src="/assets/get-city-footer-logo.png" alt="" /></span>
+          <span className="city-hero-logo" aria-hidden="true"><img src={footer.logo||menu.logo} alt="" /></span>
         ) : (
           <span className="public-logo-compact" aria-hidden="true">
             <img className="public-logo-light" src="/assets/get-logo-oficial.png" alt="" />
@@ -107,10 +103,8 @@ export default function PublicHeader({ variant = "city-hero", citySearch = null,
         className={menuOpen ? "site-nav open" : "site-nav"}
         aria-label="Navegación principal"
       >
-        <button data-nav="inicio" onClick={goHome}>Inicio</button>
-        <button data-nav="eventos" onClick={goEvents}>Eventos</button>
-        <button data-nav="nosotros" onClick={goAbout}>Nosotros</button>
-        <button className="mobile-course-link" onClick={goCourses}>Cursos Docentes</button>
+        {menu.items.filter(item=>item.visible).map(item=>{const active=isPublicNavigationItemActive(item,pathname,homeHref);return <button key={item.id} className={active?'active':''} aria-current={active?'page':undefined} data-nav={item.id} data-edit-id={`root.data.items.${menu.items.indexOf(item)}`} onClick={()=>{setMenuOpen(false);router.push(item.contextual?homeHref:item.href);}}>{item.label}</button>;})}
+        <button className="mobile-course-link" onClick={goCourses}>{menu.courseLabel}</button>
         <button
           className="mobile-menu-close"
           type="button"
@@ -153,7 +147,7 @@ export default function PublicHeader({ variant = "city-hero", citySearch = null,
             <path d="m7.438 13.985 3.77 3.77 3.769-3.77m-3.774-4.712v8.482" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M19.576 15.012a4.712 4.712 0 0 0-2.714-8.567h-1.188a7.54 7.54 0 1 0-12.949 6.87" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          Cursos Docentes
+          {menu.courseLabel}
         </button>
 
         <button

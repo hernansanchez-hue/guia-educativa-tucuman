@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { getLocalInstitutionPageCatalog, getSupabaseInstitutionPageCatalog, getInstitutionPageCatalog } from "../lib/public-catalog/institution-page-catalog.js";
 import { cityPages, institutions } from "../app/data/institutions.js";
+import { offerings } from "../app/data/offerings.js";
+import { trainingOfferings } from "../app/data/trainingOfferings.js";
 
 const local = getLocalInstitutionPageCatalog("concepcion", "universidad-siglo-21");
 const city = { id: "city-concepcion", slug: "concepcion", name: "Concepción", title: "Instituciones de Concepción", visual_metadata: {} };
@@ -56,16 +58,26 @@ const catalogCareerMasters = [...new Map(localSummaries.filter(({ institution })
 const catalogTrainingPrograms = localSummaries.filter(({ institution }) => institution.id === "centro-de-formacion-tucuman-monteros").map(({ career }) => ({
   id: `training-${career.id}`, legacy_key: career.id, slug: career.slug, name: career.name, description: career.description,
 }));
-const catalogAcademicOfferings = localSummaries.filter(({ institution }) => institution.id !== "centro-de-formacion-tucuman-monteros").map(({ institution, career }, index) => ({
-  id: `academic-${index}`, legacy_key: `${institution.id}-${summaryMasterKey(career.id)}`, institution_id: catalogInstitutions.find((item) => item.legacy_key === institution.id).id,
-  career_master_id: `career-${summaryMasterKey(career.id)}`, image_url: career.image, badge: career.badge, duration: career.duration, modality: career.modality,
-  display_order: institution.careers.findIndex((item) => item.id === career.id) + 1, is_visible: true, publication_status: "published",
-}));
-const catalogTrainingOfferings = localSummaries.filter(({ institution }) => institution.id === "centro-de-formacion-tucuman-monteros").map(({ institution, career }, index) => ({
-  id: `training-offering-${index}`, legacy_key: `${institution.id}-${career.id}`, institution_id: catalogInstitutions.find((item) => item.legacy_key === institution.id).id,
-  training_program_id: `training-${career.id}`, image_url: career.image, badge: career.badge, duration: career.duration, modality: career.modality,
-  display_order: index + 1, is_visible: true, publication_status: "published",
-}));
+const catalogAcademicOfferings = localSummaries.filter(({ institution }) => institution.id !== "centro-de-formacion-tucuman-monteros").map(({ institution, career }, index) => {
+  const source = offerings.find((item) => item.institutionId === institution.id && item.careerId === summaryMasterKey(career.id));
+  assert.ok(source, `Falta oferta académica local: ${institution.id}/${career.id}`);
+  return {
+    id: `academic-${index}`, legacy_key: `${institution.id}-${summaryMasterKey(career.id)}`, institution_id: catalogInstitutions.find((item) => item.legacy_key === institution.id).id,
+    career_master_id: `career-${summaryMasterKey(career.id)}`, image_url: career.image, badge: career.badge, duration: career.duration, modality: career.modality,
+    national_validity: source.nationalValidity,
+    display_order: institution.careers.findIndex((item) => item.id === career.id) + 1, is_visible: true, publication_status: "published",
+  };
+});
+const catalogTrainingOfferings = localSummaries.filter(({ institution }) => institution.id === "centro-de-formacion-tucuman-monteros").map(({ institution, career }, index) => {
+  const source = trainingOfferings.find((item) => item.institutionId === institution.id && item.trainingProgramId === career.id);
+  assert.ok(source, `Falta capacitación local: ${institution.id}/${career.id}`);
+  return {
+    id: `training-offering-${index}`, legacy_key: `${institution.id}-${career.id}`, institution_id: catalogInstitutions.find((item) => item.legacy_key === institution.id).id,
+    training_program_id: `training-${career.id}`, image_url: career.image, badge: career.badge, duration: career.duration, modality: career.modality,
+    national_validity: source.nationalValidity,
+    display_order: index + 1, is_visible: true, publication_status: "published",
+  };
+});
 const catalogOptions = {
   env: options.env,
   fetchImpl: (url) => Promise.resolve({

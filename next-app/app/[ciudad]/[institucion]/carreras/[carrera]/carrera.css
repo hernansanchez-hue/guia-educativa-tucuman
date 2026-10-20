@@ -857,6 +857,7 @@ body.dark-theme .career-info-section {
 .career-page-copy .career-overview-degree,
 .career-page-copy .career-overview-description {
   color: #fff;
+  overflow-wrap: anywhere;
 }
 
 .career-page-copy .career-overview-degree {

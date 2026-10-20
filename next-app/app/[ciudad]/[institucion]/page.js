@@ -1,6 +1,4 @@
-import { notFound } from "next/navigation";
-import { getInstitutionPageCatalog } from "../../../lib/public-catalog/institution-page-catalog";
-import { createPublicMetadata } from "../../../lib/seo/public-metadata";
+import { getInstitutionPageCatalog, editorialMetadata, resolveEditorialMissing } from "../../../lib/admin/published-editorial";
 import InstitutionPageClient from "./InstitutionPageClient";
 import "../ciudad.css";
 import "./institucion.css";
@@ -26,22 +24,22 @@ export async function generateMetadata({ params }) {
   const { ciudad, institucion } = await params;
   const page = await getInstitutionPageCatalog(ciudad, institucion);
 
-  if (!page) notFound();
+  if (!page) await resolveEditorialMissing(`/${ciudad}/${institucion}`);
 
   const { city, institution } = page;
-  return createPublicMetadata({
+  return editorialMetadata({
     title: `${institution.name} en ${city.name}`,
-    description: institution.description || institution.slogan,
+    description: institution.description || institution.slogan || `${institution.name}: ubicación, contacto y oferta publicada en ${city.name}, Tucumán.`,
     path: `/${city.slug}/${institution.slug}`,
     image: institution.image,
-  });
+  }, institution);
 }
 
 export default async function InstitutionPage({ params }) {
   const { ciudad, institucion } = await params;
   const page = await getInstitutionPageCatalog(ciudad, institucion);
 
-  if (!page) notFound();
+  if (!page) await resolveEditorialMissing(`/${ciudad}/${institucion}`);
 
   return <InstitutionPageClient {...page} />;
 }

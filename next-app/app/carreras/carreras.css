@@ -16,7 +16,8 @@
 .career-breadcrumb { display: flex; gap: 9px; align-items: center; margin-bottom: 17px; color: #667085; font-size: 12px; }
 .career-breadcrumb a { color: inherit; text-decoration: none; }
 .career-directory-hero { display: flex; align-items: center; min-height: 315px; padding: 50px; border-radius: 22px; background: linear-gradient(115deg, #0d1b3d, #183766); background-position: center; background-size: cover; color: #fff; }
-.career-directory-hero > div { max-width: 570px; }
+.career-directory-hero > div { min-width: 0; max-width: 570px; }
+.career-directory-hero h1, .career-section h2 { overflow-wrap: anywhere; }
 .career-directory-hero h1 { margin-bottom: 16px; font-size: clamp(38px, 5vw, 61px); line-height: 1.03; }
 .career-directory-hero em { color: #f1c34d; font-style: normal; }
 .career-directory-hero p { max-width: 530px; line-height: 1.6; }

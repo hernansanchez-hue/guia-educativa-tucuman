@@ -76,6 +76,184 @@ a {
   background: transparent;
 }
 
+.seo-aurora-background {
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  background:
+    linear-gradient(120deg, rgba(241, 247, 255, 0.92), rgba(250, 252, 255, 0.82) 42%, rgba(246, 249, 254, 0.94)),
+    #f7faff;
+}
+
+.seo-scroll-scene {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.seo-scroll-ribbon {
+  position: absolute;
+  width: 122%;
+  height: 78%;
+  overflow: visible;
+  will-change: transform, opacity;
+}
+
+.seo-scroll-ribbon path {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.seo-scroll-ribbon.is-primary {
+  top: -13%;
+  left: -11%;
+  opacity: 0.74;
+  transform: translate3d(var(--seo-shift-x, 0), var(--seo-shift-a, 0), 0);
+  animation: seo-ribbon-breathe 18s ease-in-out infinite alternate;
+}
+
+.seo-scroll-ribbon.is-primary path:first-child {
+  stroke: rgba(32, 87, 164, 0.25);
+  stroke-width: 2.2;
+}
+
+.seo-scroll-ribbon.is-primary path:last-child {
+  stroke: rgba(99, 178, 218, 0.31);
+  stroke-width: 1.15;
+}
+
+.seo-scroll-ribbon.is-secondary {
+  top: 16%;
+  left: -8%;
+  transform: translate3d(var(--seo-shift-x-reverse, 0), var(--seo-shift-b, 0), 0);
+  animation: seo-ribbon-breathe 23s ease-in-out -8s infinite alternate-reverse;
+}
+
+.seo-scroll-ribbon.is-secondary path:first-child {
+  stroke: rgba(13, 27, 61, 0.17);
+  stroke-width: 2;
+}
+
+.seo-scroll-ribbon.is-secondary path:last-child {
+  stroke: rgba(101, 159, 207, 0.22);
+  stroke-width: 1.1;
+}
+
+.seo-scroll-ribbon.is-gold {
+  top: 43%;
+  left: -10%;
+  transform: translate3d(0, var(--seo-shift-c, 0), 0);
+  animation: seo-ribbon-breathe 20s ease-in-out -13s infinite alternate;
+}
+
+.seo-scroll-ribbon.is-gold path {
+  stroke: rgba(201, 151, 26, 0.27);
+  stroke-width: 1.7;
+}
+
+.seo-scroll-orbit {
+  position: absolute;
+  display: block;
+  border: 1px solid rgba(43, 111, 185, 0.21);
+  border-radius: 48% 52% 55% 45% / 45% 46% 54% 55%;
+  will-change: transform, opacity;
+}
+
+.seo-scroll-orbit.is-navy {
+  top: 10%;
+  right: -17%;
+  width: min(49vw, 690px);
+  height: min(49vw, 690px);
+  border-color: rgba(13, 27, 61, 0.18);
+  transform: translate3d(0, var(--seo-shift-a, 0), 0) rotate(var(--seo-turn, 0));
+  animation: seo-orbit-breathe 24s ease-in-out -6s infinite alternate;
+}
+
+.seo-scroll-orbit.is-sky {
+  bottom: 8%;
+  left: -14%;
+  width: min(37vw, 520px);
+  height: min(37vw, 520px);
+  border-color: rgba(74, 166, 202, 0.22);
+  transform: translate3d(var(--seo-shift-x, 0), var(--seo-shift-b, 0), 0) rotate(var(--seo-turn-reverse, 0));
+  animation: seo-orbit-breathe 28s ease-in-out -14s infinite alternate-reverse;
+}
+
+.seo-scroll-arch {
+  position: absolute;
+  top: 50%;
+  right: -3%;
+  display: block;
+  width: min(31vw, 450px);
+  height: min(17vw, 230px);
+  border: 2px solid rgba(201, 151, 26, 0.23);
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+  transform: translate3d(var(--seo-shift-x, 0), var(--seo-shift-c, 0), 0) rotate(var(--seo-turn-soft, 0));
+  animation: seo-arch-breathe 21s ease-in-out -10s infinite alternate;
+  will-change: transform, opacity;
+}
+
+.seo-scroll-dots {
+  position: absolute;
+  top: 32%;
+  left: 8%;
+  display: flex;
+  gap: clamp(12px, 1.6vw, 25px);
+  transform: translate3d(var(--seo-shift-x, 0), var(--seo-shift-b, 0), 0);
+  will-change: transform, opacity;
+}
+
+.seo-scroll-dots i {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(13, 27, 61, 0.25);
+  box-shadow: 0 0 0 5px rgba(101, 159, 207, 0.06);
+  animation: seo-dot-pulse 6s ease-in-out infinite alternate;
+}
+
+.seo-scroll-dots i:nth-child(2) { background: rgba(201, 151, 26, 0.42); animation-delay: -1.6s; }
+.seo-scroll-dots i:nth-child(3) { background: rgba(80, 161, 196, 0.36); animation-delay: -3.1s; }
+.seo-scroll-dots i:nth-child(4) { animation-delay: -4.2s; }
+.seo-scroll-dots i:nth-child(5) { background: rgba(201, 151, 26, 0.34); animation-delay: -2.4s; }
+
+.seo-aurora-background-content {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+.seo-aurora-background-content > .app-shell {
+  min-height: 100vh;
+  background: transparent;
+}
+
+@keyframes seo-ribbon-breathe {
+  from { opacity: 0.64; }
+  to { opacity: 1; }
+}
+
+@keyframes seo-orbit-breathe {
+  from { opacity: 0.52; }
+  to { opacity: 0.92; }
+}
+
+@keyframes seo-arch-breathe {
+  from { opacity: 0.44; }
+  to { opacity: 0.82; }
+}
+
+@keyframes seo-dot-pulse {
+  from { transform: scale(0.82); opacity: 0.48; }
+  to { transform: scale(1.18); opacity: 0.9; }
+}
+
 .public-site-background-lines {
   position: fixed;
   inset: 0;
@@ -120,6 +298,45 @@ a {
   .public-site-background-line:nth-child(n + 12) {
     display: none;
   }
+
+  .seo-scroll-ribbon.is-secondary,
+  .seo-scroll-orbit.is-sky {
+    display: none;
+  }
+
+  .seo-scroll-ribbon {
+    width: 160%;
+    height: 66%;
+  }
+
+  .seo-scroll-ribbon.is-primary {
+    top: -7%;
+    left: -28%;
+  }
+
+  .seo-scroll-ribbon.is-gold {
+    top: 57%;
+    left: -31%;
+  }
+
+  .seo-scroll-orbit.is-navy {
+    top: 19%;
+    right: -42%;
+    width: 78vw;
+    height: 78vw;
+  }
+
+  .seo-scroll-arch {
+    top: 52%;
+    right: -22%;
+    width: 58vw;
+    height: 31vw;
+  }
+
+  .seo-scroll-dots {
+    top: 38%;
+    left: 12%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -128,6 +345,14 @@ a {
     stroke-dasharray: 16 100;
     stroke-dashoffset: 0;
     opacity: calc(var(--line-opacity) * 0.72);
+  }
+
+  .seo-scroll-ribbon,
+  .seo-scroll-orbit,
+  .seo-scroll-arch,
+  .seo-scroll-dots,
+  .seo-scroll-dots i {
+    animation: none;
   }
 }
 
@@ -208,3 +433,9 @@ body.dark-theme .courses-page :is(h1, h2, h3, .courses-visual-card strong),
 body.dark-theme .contact-detail-content :is(h2, strong) {
   color: #edf4ff;
 }
+/* Opt-in CMS tokens. No attributes = approved CSS remains unchanged. Home/Admin excluded. */
+[data-cms-design][data-cms-font="true"] :is(main,section,article,h1,h2,h3,p,button,input,select,textarea,a) {font-family:var(--cms-font);}
+[data-cms-design][data-cms-body-size="true"] :is(p,li) {font-size:var(--cms-body-size);}
+[data-cms-design][data-cms-heading-size="true"] h1 {font-size:var(--cms-heading-size);}
+[data-cms-design][data-cms-button="true"] :is(.btn,.btn-primary,.btn-secondary,.institution-contact-actions a,.institution-contact-actions button) {padding:var(--cms-button-padding);}
+[data-cms-design][data-cms-spacing="true"] :is(.city-institution-sections,#detailPage,.career-detail-main) > section + section {margin-top:var(--cms-block-gap);}

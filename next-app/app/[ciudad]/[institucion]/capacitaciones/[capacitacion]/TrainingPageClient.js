@@ -26,7 +26,7 @@ export default function TrainingPageClient({ city, institution, program, offerin
   const digits = whatsapp.replace(/\D/g, "");
   const number = digits.startsWith("54") ? digits : `54${digits}`;
   const whatsappHref = `https://wa.me/${number}?text=${encodeURIComponent(`Hola, quiero información sobre ${program.name}`)}`;
-  const facts = [["Duración", offering.duration], ["Sede", campus], ["Título", offering.certification], ["Validez", offering.nationalValidity], ["Turnos", offering.shifts], ["Modalidad", offering.modality]];
+  const facts = [...(offering.startDate?[["Inicio",offering.startDate]]:[]),...(offering.endDate?[["Fin",offering.endDate]]:[]),["Duración", offering.duration], ["Sede", campus], ["Título", offering.certification], ["Validez", offering.nationalValidity], ["Turnos", offering.shifts], ["Modalidad", offering.modality]];
 
   function scrollTo(id) {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -83,7 +83,7 @@ export default function TrainingPageClient({ city, institution, program, offerin
               </nav>
               <section id="trainingAboutSection" className="career-info-section"><div className="career-about-layout"><div><h2>Sobre la capacitación</h2><p>{program.description}</p><h2 style={{ marginTop: 20 }}>Perfil del egresado</h2><p>{program.profile}</p></div><div className="career-feature-list"><span>Formación práctica en entornos reales</span><span>Docentes especializados</span><span>Herramientas profesionales actuales</span></div></div></section>
               <section id="trainingFieldSection" className="career-info-section"><div className="career-field-header"><span className="career-field-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M4 7h16v13H4z"/><path d="M9 7V4h6v3M4 12h16"/></svg></span><div><h2>Campo laboral</h2><p>{program.workField}</p></div></div><div className="career-field-chips">{FIELD_CHIPS.map((item) => <span className="career-field-chip" key={item}>{item}</span>)}</div></section>
-              <section id="trainingPlanSection" className="career-info-section"><h2>Contenidos</h2><p style={{ marginBottom: 15 }}>Conocé la organización general de la capacitación.</p><ol className="career-study-plan">{program.contents.map((item, index) => <li key={item}><strong>{index + 1}° Año</strong>{item}</li>)}</ol></section>
+              <section id="trainingPlanSection" className="career-info-section"><h2>Contenidos</h2><p style={{ marginBottom: 15 }}>Conocé la organización general de la capacitación.</p><ol className="career-study-plan">{program.contents.map((item, index) => <li key={item}><strong>{index + 1}° Año</strong>{item}</li>)}</ol>{program.pdf?<a className='btn light' href={program.pdf} target='_blank' rel='noopener noreferrer'>Descargar contenidos</a>:null}{offering.material?<a className='btn light' href={offering.material} target='_blank' rel='noopener noreferrer'>Ver material</a>:null}</section>
               <section id="trainingRequirementsSection" className="career-info-section"><h2>Requisitos de ingreso</h2><ul>{program.requirements.map((item) => <li key={item}>{item}</li>)}</ul></section>
               <section id="trainingFaqSection" className="career-info-section"><h2>Preguntas frecuentes</h2><div>{program.faq.map((item) => <div className="career-faq-item" key={item.question}><strong>{item.question}</strong><p>{item.answer}</p></div>)}</div></section>
             </main>

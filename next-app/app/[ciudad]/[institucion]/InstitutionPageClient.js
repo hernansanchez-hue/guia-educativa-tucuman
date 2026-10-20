@@ -4,9 +4,12 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import {usePublicEditorial} from "../../components/PublicEditorialContext";
 import PublicFooter from "../../components/PublicFooter";
 import PublicFloatingHeader from "../../components/PublicFloatingHeader";
 import { savePublicLead } from "../../../lib/public-leads";
+import { heroStyle } from "../../../lib/admin/hero-style.mjs";
+import {isPremiumCareer} from '../../../lib/catalog/commercial-policy.mjs';
 
 function CareerMetaIcon({ type }) {
   if (type === "duration") {
@@ -94,6 +97,7 @@ function CareerMedia({ career }) {
 }
 
 export default function InstitutionPageClient({ city, institution }) {
+  const navigation=usePublicEditorial('navigation');
   const router = useRouter();
   const [allCareersExpanded, setAllCareersExpanded] = useState(false);
   const [contactModalOpen, setContactModalOpen] = useState(false);
@@ -103,6 +107,7 @@ export default function InstitutionPageClient({ city, institution }) {
   const primaryCareers = institution.careers.slice(0, initialCareerCount);
   const remainingCareers = institution.careers.slice(initialCareerCount);
   const hasMoreCareers = remainingCareers.length > 0;
+  const featuredCareers=institution.careers.filter(c=>isPremiumCareer(c,institution));
   const whatsappDigits = (institution.whatsapp || "").replace(/\D/g, "");
   const whatsappNumber = whatsappDigits.startsWith("54")
     ? whatsappDigits
@@ -114,7 +119,7 @@ export default function InstitutionPageClient({ city, institution }) {
     ? (institution.address.toLowerCase().includes("tucumán") ? institution.address : `${institution.address}, Tucumán`)
     : "";
   const locationQuery = [institution.name, locationAddressLabel].filter(Boolean).join(", ");
-  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(locationQuery)}`;
+  const mapsHref = institution.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(locationQuery)}`;
   const mapsEmbedHref = `https://www.google.com/maps?q=${encodeURIComponent(locationQuery)}&output=embed`;
 
   function saveInstitutionLead(event) {
@@ -144,7 +149,7 @@ export default function InstitutionPageClient({ city, institution }) {
       <span className="city-header-search-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg>
       </span>
-      <label className="institution-search-field"><input type="search" placeholder="Buscar carreras, instituciones..." autoComplete="off" /></label>
+      <label className="institution-search-field"><input type="search" placeholder={navigation.searchPlaceholder} autoComplete="off" /></label>
     </form>
   );
 
@@ -162,7 +167,7 @@ export default function InstitutionPageClient({ city, institution }) {
             <div>
               <div className="brand-row">
                 <span className="mini-logo" id="detailLogo">
-                  {institution.logo}
+                  {institution.logoUrl ? <img src={institution.logoUrl} alt={institution.name} style={{maxWidth:'100%',maxHeight:'100%',objectFit:'contain'}} /> : institution.logo}
                 </span>
                 <span
                   className="eyebrow"
@@ -172,13 +177,13 @@ export default function InstitutionPageClient({ city, institution }) {
                   {institution.type} | {city.name}
                 </span>
               </div>
-              <h1 id="instName">{institution.name}</h1>
+              <h1 id="instName" style={heroStyle(institution.cmsDesign)}>{institution.name}</h1>
               <p id="instSlogan">{institution.slogan}</p>
             </div>
           </div>
         </article>
 
-        <section className="institution-location panel" aria-labelledby="institutionLocationTitle">
+        {institution.address?<section className="institution-location panel" aria-labelledby="institutionLocationTitle">
           <div className="institution-location-details">
             <h2 id="institutionLocationTitle" className="detail-section-title">Nuestra ubicación</h2>
             <p className="institution-location-intro">Conocé cómo llegar a esta institución.</p>
@@ -191,6 +196,7 @@ export default function InstitutionPageClient({ city, institution }) {
                 </span>
               </a>
             ) : null}
+            {institution.openingHours ? <p>{institution.openingHours}</p> : null}
           </div>
 
           {institution.address ? (
@@ -207,13 +213,13 @@ export default function InstitutionPageClient({ city, institution }) {
               </a>
             </div>
           ) : null}
-        </section>
+        </section>:null}
 
-        <section className="panel">
+        {featuredCareers.length?<section className="panel">
           <h2 className="detail-section-title">Carreras destacadas</h2>
           <p className="detail-section-subtitle">¿Cuál vas a elegir?</p>
           <div id="careerGrid" className="career-grid">
-            {institution.careers.map((career) => {
+            {featuredCareers.map((career) => {
             const careerPath = career.routePath || null;
             const isNewCareer = career.isNew ?? career.badge === "Nueva carrera";
             const validityLabel = career.nationalValidity === "Sí"
@@ -258,9 +264,9 @@ export default function InstitutionPageClient({ city, institution }) {
               );
             })}
           </div>
-        </section>
+        </section>:null}
 
-        <section className="panel institution-all-careers" aria-labelledby="allCareersTitle">
+        {institution.careers.length?<section className="panel institution-all-careers" aria-labelledby="allCareersTitle">
           <h2 id="allCareersTitle" className="detail-section-title institution-all-careers-title">
             Todas las carreras de esta institución
           </h2>
@@ -276,8 +282,8 @@ export default function InstitutionPageClient({ city, institution }) {
                 <article className="institution-career-list-row" key={`summary-${career.id}`}>
                   <h3>{career.name}</h3>
                   <div className="institution-career-list-meta">
-                    <span>Duración: {career.duration}</span>
-                    <span>Modalidad: {career.modality}</span>
+                    {career.duration?<span>Duración: {career.duration}</span>:null}
+                    {career.modality?<span>Modalidad: {career.modality}</span>:null}
                   </div>
                   <button
                     className="btn institution-career-info-button"
@@ -301,8 +307,8 @@ export default function InstitutionPageClient({ city, institution }) {
                     <article className="institution-career-list-row" key={`summary-${career.id}`}>
                       <h3>{career.name}</h3>
                       <div className="institution-career-list-meta">
-                        <span>Duración: {career.duration}</span>
-                        <span>Modalidad: {career.modality}</span>
+                        {career.duration?<span>Duración: {career.duration}</span>:null}
+                        {career.modality?<span>Modalidad: {career.modality}</span>:null}
                       </div>
                       <button
                         className="btn institution-career-info-button"
@@ -333,9 +339,9 @@ export default function InstitutionPageClient({ city, institution }) {
               </button>
             </div>
           ) : null}
-        </section>
+        </section>:null}
 
-        <section className="panel">
+        {institution.gallery.length?<section className="panel">
           <h2 className="detail-section-title">Galería de fotos</h2>
           <div id="institutionGallery" className="creation-gallery">
             <div className="creation-marquee" style={{ animationDuration: `${institution.gallery.length * 2500}ms` }}>
@@ -349,12 +355,15 @@ export default function InstitutionPageClient({ city, institution }) {
               </div>
             </div>
           </div>
-        </section>
+        </section>:null}
 
         <section className="institution-contact-actions" aria-labelledby="institutionContactTitle">
           <div>
             <h2 id="institutionContactTitle">¿Necesitás más información?</h2>
             <p>Contactá a {institution.name} o dejá tu consulta para recibir asesoramiento.</p>
+            {institution.phone ? <p id="institutionPhone">{institution.phone}</p> : null}
+            {institution.email ? <p><a href={`mailto:${institution.email}`}>{institution.email}</a></p> : null}
+            {institution.website ? <p><a href={institution.website} target="_blank" rel="noopener">Sitio web</a></p> : null}
           </div>
           <div className="institution-contact-actions-buttons">
             {whatsappDigits ? (

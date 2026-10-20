@@ -5,6 +5,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { departmentAction } from "../../lib/public-catalog/home-map-interaction";
+import { HOME_CONTENT, homeTitleStyle } from '../../lib/admin/home-editorial.mjs';
+import {matchesSearch,searchText} from '../../lib/catalog/search.mjs';
 
 const WIDTH = 520;
 const HEIGHT = 550;
@@ -35,14 +37,14 @@ function pathsFor(features) {
 }
 
 function normalize(value) {
-  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es").trim();
+  return searchText(value);
 }
 
 function plural(count, singular, pluralValue) {
   return `${count} ${count === 1 ? singular : pluralValue}`;
 }
 
-export default function HomeMapClient({ catalog }) {
+export default function HomeMapClient({ catalog, content = HOME_CONTENT }) {
   const router = useRouter();
   const [features, setFeatures] = useState([]);
   const [mapError, setMapError] = useState(false);
@@ -56,7 +58,7 @@ export default function HomeMapClient({ catalog }) {
   const department = activeId ? (catalog.byDepartment[activeId] ?? { cities: [], institutionCount: 0, careerCount: 0 }) : null;
   const results = useMemo(() => {
     const term = normalize(query);
-    return term ? catalog.search.filter((entry) => normalize(`${entry.label} ${entry.context ?? ""}`).includes(term)).slice(0, 7) : [];
+    return term ? catalog.search.filter((entry) => matchesSearch(term,entry.label,entry.context)).slice(0, 7) : [];
   }, [catalog.search, query]);
 
   useEffect(() => {
@@ -87,22 +89,22 @@ export default function HomeMapClient({ catalog }) {
 
   return (
     <main className="home-map-hero">
-      <video className="home-map-video" autoPlay muted loop playsInline preload="auto" aria-hidden="true">
-        <source src="https://res.cloudinary.com/disj9fs8m/video/upload/q_auto/v1782350401/get/hero/v2l8k0maxocxnxf0yerh.mp4" type="video/mp4" />
-      </video>
-      <div className="home-map-backdrop" aria-hidden="true" />
+      {content.videoVisible && <video key={content.video} className="home-map-video" autoPlay muted loop playsInline preload="auto" aria-hidden="true">
+        <source src={content.video} type="video/mp4" />
+      </video>}
+      <div className="home-map-backdrop" aria-hidden="true" style={content.cmsDesign?.overlay ? {background:`linear-gradient(100deg, rgba(7, 21, 47, ${content.cmsDesign.overlay}), rgba(7, 21, 47, ${Math.max(.5,content.cmsDesign.overlay-.16)}))`} : undefined} />
       <div className="home-map-content">
         <header className="home-map-brand">
-          <img className="home-map-hero-logo" src="/assets/get-logo-hero-white.png" alt="GET — Guía Educativa Tucumán" />
+          <img className="home-map-hero-logo" src={content.logo} alt={content.logoAlt} style={content.cmsDesign?.logoSize ? {width:`min(100%, ${content.cmsDesign.logoSize}px)`} : undefined} />
         </header>
 
-        <h1>Toda la oferta educativa de <span>Tucumán</span> en un solo lugar</h1>
+        <h1 style={homeTitleStyle(content.cmsDesign)}>{content.titleBefore} <span>{content.titleHighlight}</span> {content.titleAfter}</h1>
 
         <div className="home-map-explorer">
           <div className="home-map-search-wrap">
             <form className="home-map-search" role="search" onSubmit={submitSearch}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m16 16 5 5" /></svg>
-              <input aria-label="Buscar ciudad, institución o carrera" type="search" autoComplete="off" placeholder="Buscar ciudad, institución o carrera..." value={query} onChange={(event) => { setQuery(event.target.value); setShowResults(true); }} onFocus={() => setShowResults(true)} />
+              <input aria-label="Buscar ciudad, institución o carrera" type="search" autoComplete="off" placeholder={content.searchPlaceholder} value={query} onChange={(event) => { setQuery(event.target.value); setShowResults(true); }} onFocus={() => setShowResults(true)} />
               {query && <button type="button" onClick={() => { setQuery(""); setShowResults(false); }} aria-label="Limpiar búsqueda">×</button>}
             </form>
             {showResults && query && <div className="home-map-results" role="listbox" aria-label="Resultados de búsqueda">
@@ -122,14 +124,14 @@ export default function HomeMapClient({ catalog }) {
 
           <div className="home-map-details">
             <section className="home-map-panel" aria-live="polite" aria-atomic="true">
-              <span className="home-map-eyebrow">{activeShape ? "DEPARTAMENTO" : "PROVINCIA"}</span>
-              <h2>{activeShape?.name ?? "Tucumán"}</h2>
+              <span className="home-map-eyebrow">{activeShape ? content.departmentLabel : content.provinceLabel}</span>
+              <h2>{activeShape?.name ?? content.provinceName}</h2>
               <p>{activeShape ? plural(department.cities.length, "ciudad disponible", "ciudades disponibles") : plural(catalog.province.cityCount, "ciudad disponible", "ciudades disponibles")}</p>
               <div className="home-map-stats">
-                <div><strong>{activeShape ? department.institutionCount : catalog.province.institutionCount}</strong><span>Instituciones</span></div>
-                <div><strong>{activeShape ? department.careerCount : catalog.province.careerCount}</strong><span>Carreras</span></div>
+                <div><strong>{activeShape ? department.institutionCount : catalog.province.institutionCount}</strong><span>{content.institutionsLabel}</span></div>
+                <div><strong>{activeShape ? department.careerCount : catalog.province.careerCount}</strong><span>{content.careersLabel}</span></div>
               </div>
-              {activeShape ? department.cities.length === 0 ? <p className="home-map-coming">Próximamente en GET</p> : <div className="home-map-cities"><h3>{department.cities.length > 1 ? "Elegí una ciudad" : "Ciudad disponible"}</h3>{department.cities.map((city) => <a key={city.slug} href={`/${city.slug}`}>Ver {city.name} <span aria-hidden="true">→</span></a>)}</div> : <p className="home-map-hint">Seleccioná un departamento para conocer las ciudades, instituciones y carreras disponibles.</p>}
+              {activeShape ? department.cities.length === 0 ? <p className="home-map-coming">{content.comingText}</p> : <div className="home-map-cities"><h3>{department.cities.length > 1 ? content.selectCityLabel : content.cityAvailableLabel}</h3>{department.cities.map((city) => <a key={city.slug} href={`/${city.slug}`}>{content.cityLinkLabel} {city.name} <span aria-hidden="true">→</span></a>)}</div> : <p className="home-map-hint">{content.hint}</p>}
             </section>
           </div>
         </div>

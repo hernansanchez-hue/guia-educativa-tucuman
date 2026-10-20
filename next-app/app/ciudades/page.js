@@ -1,7 +1,7 @@
 import HomeClient from "../components/HomeClient";
 import "../home.css";
 import "../[ciudad]/ciudad.css";
-import { getCitiesCatalog } from "../../lib/public-catalog/cities-catalog";
+import { getCitiesCatalog } from "../../lib/admin/published-editorial";
 import { createPublicMetadata } from "../../lib/seo/public-metadata";
 
 export const revalidate = 60;

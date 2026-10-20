@@ -1,6 +1,4 @@
-import { notFound } from "next/navigation";
-import { getCareerPageCatalog } from "../../../../../lib/public-catalog/career-page-catalog";
-import { createPublicMetadata } from "../../../../../lib/seo/public-metadata";
+import { getCareerPageCatalog, editorialMetadata, resolveEditorialMissing } from "../../../../../lib/admin/published-editorial";
 import CareerPageClient from "./CareerPageClient";
 import "../../../ciudad.css";
 import "../../institucion.css";
@@ -59,20 +57,20 @@ export async function generateMetadata({ params }) {
   const { ciudad, institucion, carrera } = await params;
   const page = await getCareerPageCatalog(ciudad, institucion, carrera);
 
-  if (!page) notFound();
+  if (!page) await resolveEditorialMissing(`/${ciudad}/${institucion}/carreras/${carrera}`);
 
   const { city, institution, career, offering } = page;
-  return createPublicMetadata({
+  return editorialMetadata({
     title: `${career.name} en ${institution.name}, ${city.name}`,
-    description: career.description,
+    description: career.description || `${career.name} en ${institution.name}, ${city.name}: oferta publicada y datos de contacto.`,
     path: `/${city.slug}/${institution.slug}/carreras/${career.slug}`,
     image: offering.image,
-  });
+  }, offering);
 }
 
 export default async function CareerPage({ params }) {
   const { ciudad, institucion, carrera } = await params;
   const page = await getCareerPageCatalog(ciudad, institucion, carrera);
-  if (!page) notFound();
+  if (!page) await resolveEditorialMissing(`/${ciudad}/${institucion}/carreras/${carrera}`);
   return <CareerPageClient {...page} />;
 }

@@ -1408,12 +1408,12 @@ body.dark-theme .footer-bottom {
   background: transparent;
 }
 
-.site-header.city-hero-header .site-nav button[data-nav="inicio"] {
+.site-header.city-hero-header .site-nav button.active {
   position: relative;
   color: #fff;
 }
 
-.site-header.city-hero-header .site-nav button[data-nav="inicio"]::after {
+.site-header.city-hero-header .site-nav button.active::after {
   position: absolute;
   right: 14px;
   bottom: 1px;
@@ -2031,12 +2031,12 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar:not(.city-h
 
 .site-header.city-hero-header .site-nav button:hover,
 .site-header.city-hero-header .site-nav button.active,
-.site-header.city-hero-header .site-nav button[data-nav="inicio"] {
+.site-header.city-hero-header .site-nav button.active {
   color: #0d1b3d;
   background: transparent;
 }
 
-.site-header.city-hero-header .site-nav button[data-nav="inicio"]::after {
+.site-header.city-hero-header .site-nav button.active::after {
   right: 12px;
   bottom: 0;
   left: 12px;
@@ -2377,7 +2377,7 @@ body.dark-theme #cityPage .site-header.city-hero-header {
 body.dark-theme #cityPage .site-header.city-hero-header .site-nav button,
 body.dark-theme #cityPage .site-header.city-hero-header .site-nav button:hover,
 body.dark-theme #cityPage .site-header.city-hero-header .site-nav button.active,
-body.dark-theme #cityPage .site-header.city-hero-header .site-nav button[data-nav="inicio"] {
+body.dark-theme #cityPage .site-header.city-hero-header .site-nav button.active {
   color: #0d1b3d;
 }
 

@@ -71,7 +71,7 @@ test("department action handles no city, desktop direct navigation, touch select
   assert.deepEqual(departmentAction([{ slug: "concepcion" }, { slug: "other" }], true), { type: "choose-city" });
 });
 
-test("Supabase adapter keeps UUIDs server-side and filters inactive/draft rows", async () => {
+test("Supabase adapter remains available, but the public home map stays versioned", async () => {
   const tables = {
     cities: [{ id: "uuid-city", slug: "concepcion", name: "Concepción", is_active: true }],
     institutions: [{ id: "uuid-institution", city_id: "uuid-city", slug: "instituto", name: "Instituto", is_active: true }],
@@ -85,5 +85,7 @@ test("Supabase adapter keeps UUIDs server-side and filters inactive/draft rows",
   const result = await getSupabaseHomeMapCatalog(options);
   assert.deepEqual(result.province, { cityCount: 1, institutionCount: 1, careerCount: 1 });
   assert.ok(!JSON.stringify(result).includes("uuid-"));
-  assert.deepEqual(await getHomeMapCatalog(options), result);
+  const publicResult=await getHomeMapCatalog(options);
+  assert.deepEqual(publicResult.province, {cityCount:27,institutionCount:125,careerCount:198});
+  assert.ok(publicResult.search.some(entry=>entry.href==='/san-miguel-de-tucuman'));
 });

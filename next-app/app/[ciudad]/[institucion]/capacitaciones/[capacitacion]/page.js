@@ -1,6 +1,4 @@
-import { notFound } from "next/navigation";
-import { getTrainingPageCatalog } from "../../../../../lib/public-catalog/training-page-catalog";
-import { createPublicMetadata } from "../../../../../lib/seo/public-metadata";
+import { getTrainingPageCatalog,resolveEditorialMissing,editorialMetadata } from "../../../../../lib/admin/published-editorial";
 import TrainingPageClient from "./TrainingPageClient";
 import "../../../ciudad.css";
 import "../../institucion.css";
@@ -20,20 +18,20 @@ export async function generateMetadata({ params }) {
   const { ciudad, institucion, capacitacion } = await params;
   const page = await getTrainingPageCatalog(ciudad, institucion, capacitacion);
 
-  if (!page) notFound();
+  if (!page) await resolveEditorialMissing(`/${ciudad}/${institucion}/capacitaciones/${capacitacion}`);
 
   const { city, institution, program, offering } = page;
-  return createPublicMetadata({
+  return editorialMetadata({
     title: `${program.name} en ${institution.name}, ${city.name}`,
     description: program.description,
     path: `/${city.slug}/${institution.slug}/capacitaciones/${program.slug}`,
     image: offering.image,
-  });
+  },page);
 }
 
 export default async function TrainingPage({ params }) {
   const { ciudad, institucion, capacitacion } = await params;
   const page = await getTrainingPageCatalog(ciudad, institucion, capacitacion);
-  if (!page) notFound();
+  if (!page) await resolveEditorialMissing(`/${ciudad}/${institucion}/capacitaciones/${capacitacion}`);
   return <TrainingPageClient {...page} />;
 }

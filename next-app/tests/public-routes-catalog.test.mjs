@@ -3,8 +3,8 @@ import test from "node:test";
 
 import {
   createPublicRoutePaths,
-  getLocalPublicRoutePaths,
   getPublicRoutePaths,
+  getVersionedPublicRoutePaths,
   STATIC_PUBLIC_PATHS,
 } from "../lib/public-catalog/public-routes-catalog.js";
 import {
@@ -73,26 +73,24 @@ function createSupabaseFixture() {
   };
 }
 
-test("the local public sitemap has 51 unique canonical URLs", () => {
-  const paths = getLocalPublicRoutePaths();
+test("the versioned public route catalog has 546 unique canonical URLs", () => {
+  const paths = getVersionedPublicRoutePaths();
 
-  assert.equal(paths.length, 51);
+  assert.equal(paths.length, 546);
   assert.equal(new Set(paths).size, paths.length);
   assert.deepEqual(paths.slice(0, STATIC_PUBLIC_PATHS.length), STATIC_PUBLIC_PATHS);
-  assert.deepEqual(
-    paths.filter((path) => ["/concepcion", "/monteros", "/aguilares"].includes(path)).sort(),
-    ["/aguilares", "/concepcion", "/monteros"],
-  );
-  assert.equal(paths.filter((path) => path.includes("/carreras/")).length, 30);
+  for(const path of ["/aguilares","/concepcion","/monteros","/san-miguel-de-tucuman","/famailla","/burruyacu"])assert.ok(paths.includes(path));
+  assert.equal(paths.filter((path) => /^\/[a-z].*\/[a-z].*\/carreras\//.test(path)).length, 195);
   assert.equal(paths.filter((path) => path.includes("/capacitaciones/")).length, 3);
 });
 
-test("the public sitemap excludes non-V1 routes and internal identifiers", () => {
-  const serialized = JSON.stringify(getLocalPublicRoutePaths());
+test("the public sitemap includes approved SEO indexes and excludes private routes and internal identifiers", () => {
+  const serialized = JSON.stringify(getVersionedPublicRoutePaths());
 
-  for (const excluded of ["/eventos", "/admin", "/carreras", "/cursos-docentes/"]) {
+  for (const excluded of ["/admin", "/api", "/media", "/cursos-docentes/"]) {
     assert.equal(serialized.includes(`\"${excluded}\"`), false);
   }
+  for(const included of ["/carreras","/instituciones"])assert.ok(getVersionedPublicRoutePaths().includes(included));
   assert.equal(
     /[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}/i.test(serialized),
     false,
@@ -117,14 +115,11 @@ test("inactive, hidden, and draft records are excluded from Supabase routes", ()
   assert.equal(serialized.includes("curso-borrador"), false);
 });
 
-test("public route source defaults to local and rejects unsupported sources", async () => {
-  const local = await getPublicRoutePaths({});
-
-  assert.deepEqual(local, getLocalPublicRoutePaths());
-  assert.throws(
-    () => getPublicRoutePaths({ env: { PUBLIC_CATALOG_SOURCE: "desconocido" } }),
-    /Unsupported PUBLIC_CATALOG_SOURCE/,
-  );
+test("public route source stays versioned under Netlify and cannot switch accidentally", async () => {
+  const versioned = getVersionedPublicRoutePaths();
+  assert.deepEqual(await getPublicRoutePaths({}), versioned);
+  assert.deepEqual(await getPublicRoutePaths({env:{NETLIFY:"true",NODE_ENV:"production"}}), versioned);
+  assert.deepEqual(await getPublicRoutePaths({env:{NETLIFY:"true",PUBLIC_CATALOG_SOURCE:"supabase"}}), versioned);
 });
 
 test("metadata helper emits canonical and basic Open Graph metadata", () => {

@@ -3,33 +3,8 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useEffect, useMemo, useRef, useState } from "react";
-
-const CANONICAL_CAREER_SEGMENTS = {
-  "licenciatura-en-administracion": "lic-en-administracion",
-};
-
-function createFeaturedCareers(city) {
-  return city.institutions
-    .flatMap((institution) => institution.careers.map((career) => {
-      const isTraining = /capacitaci/i.test(institution.type ?? "");
-      const segment = CANONICAL_CAREER_SEGMENTS[career.slug] ?? career.slug;
-
-      return {
-        ...career,
-        id: `${institution.id}-${career.id}`,
-        institutionName: institution.name,
-        institution: {
-          name: institution.name,
-          description: institution.description,
-          image: institution.image,
-          type: institution.type,
-          route: `/${city.slug}/${institution.slug}`,
-        },
-        route: `/${city.slug}/${institution.slug}/${isTraining ? "capacitaciones" : "carreras"}/${segment}`,
-      };
-    }))
-    .slice(0, 5);
-}
+import {heroStyle} from "../../lib/admin/hero-style.mjs";
+import {resolveCityBanner} from '../../lib/catalog/city-template.mjs';
 
 function ArrowIcon({ direction }) {
   return (
@@ -40,12 +15,13 @@ function ArrowIcon({ direction }) {
 }
 
 export default function CityFeaturedCareers({ city, onOpenCareer, onOpenInstitution }) {
-  const featuredCareers = useMemo(() => createFeaturedCareers(city), [city]);
+  const banner = useMemo(() => resolveCityBanner(city), [city]);
+  const featuredCareers = banner.slides;
   const [activeIndex, setActiveIndex] = useState(0);
   const [reducedMotion, setReducedMotion] = useState(false);
   const touchStart = useRef(0);
   const total = featuredCareers.length;
-  const activeCareer = featuredCareers[activeIndex] ?? featuredCareers[0];
+  const activeCareer = featuredCareers.find(c=>c.id===city.previewSlideId) ?? featuredCareers[activeIndex] ?? featuredCareers[0];
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -56,14 +32,28 @@ export default function CityFeaturedCareers({ city, onOpenCareer, onOpenInstitut
   }, []);
 
   useEffect(() => {
-    if (reducedMotion || total < 2) return undefined;
+    if (reducedMotion || city.previewSlideId || total < 2) return undefined;
     const timer = window.setInterval(() => {
       setActiveIndex((index) => (index + 1) % total);
     }, 3000);
     return () => window.clearInterval(timer);
-  }, [reducedMotion, total]);
+  }, [reducedMotion, total, city.previewSlideId]);
 
-  if (!activeCareer) return null;
+  if (!activeCareer) return (
+    <section className="city-featured" data-banner-kind="editorial" aria-labelledby="featuredCareersTitle">
+      <div className="city-featured-backdrop" style={{backgroundImage: `url(${banner.image})`}} aria-hidden="true" />
+      <div className="city-featured-shade" aria-hidden="true" />
+      <div className="city-featured-inner">
+        <article className="city-featured-copy">
+          <h1 id="featuredCareersTitle" style={heroStyle(city.cmsDesign)}>{banner.title}</h1>
+          <p className="city-featured-description">{banner.description}</p>
+          <button className="city-featured-cta" type="button" aria-controls="institutionCards" onClick={() => document.getElementById('allInstitutionsTitle')?.scrollIntoView({behavior: reducedMotion ? 'auto' : 'smooth', block: 'start'})}>
+            {banner.ctaLabel} <span aria-hidden="true">→</span>
+          </button>
+        </article>
+      </div>
+    </section>
+  );
 
   function changeCareer(direction) {
     setActiveIndex((index) => (index + direction + total) % total);
@@ -77,18 +67,19 @@ export default function CityFeaturedCareers({ city, onOpenCareer, onOpenInstitut
   return (
     <section
       className="city-featured"
+      data-banner-kind="commercial"
       aria-labelledby="featuredCareersTitle"
       onTouchStart={(event) => { touchStart.current = event.touches[0].clientX; }}
       onTouchEnd={finishSwipe}
     >
-      <div className="city-featured-backdrop" style={{ backgroundImage: `url(${activeCareer.image})` }} aria-hidden="true" />
+      <div className="city-featured-backdrop" style={{ backgroundImage: `url(${Array.isArray(city.slides)?activeCareer.image:city.heroImage || activeCareer.image})` }} aria-hidden="true" />
       <div className="city-featured-shade" aria-hidden="true" />
       <div className="city-featured-inner">
         <article className="city-featured-copy">
-          <h1 id="featuredCareersTitle">{activeCareer.name}</h1>
-          <p className="city-featured-description">{activeCareer.description}</p>
+          <h1 id="featuredCareersTitle" style={heroStyle(city.cmsDesign)}>{Array.isArray(city.slides)?activeCareer.title:city.heroTitle || activeCareer.name}</h1>
+          <p className="city-featured-description">{Array.isArray(city.slides)?activeCareer.description:city.heroDescription || activeCareer.description}</p>
           <button className="city-featured-cta" type="button" onClick={() => onOpenCareer(activeCareer.route)}>
-            Ver carrera <span aria-hidden="true">→</span>
+            {activeCareer.ctaLabel||'Ver carrera'} <span aria-hidden="true">→</span>
           </button>
         </article>
 
@@ -101,7 +92,7 @@ export default function CityFeaturedCareers({ city, onOpenCareer, onOpenInstitut
             <h2>{activeCareer.institution.name}</h2>
             {activeCareer.institution.description ? <p>{activeCareer.institution.description}</p> : null}
             <button type="button" onClick={() => onOpenInstitution(activeCareer.institution.route)}>
-              Conocer más <strong aria-hidden="true">→</strong>
+              {activeCareer.institutionCtaLabel||'Conocer más'} <strong aria-hidden="true">→</strong>
             </button>
           </div>
         </aside>
