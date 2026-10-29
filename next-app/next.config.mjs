@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  outputFileTracingIncludes: {
+    '/api/public-inquiries': ['./lib/integration/crm-mapping.json'],
+  },
 };
 
 export default nextConfig;

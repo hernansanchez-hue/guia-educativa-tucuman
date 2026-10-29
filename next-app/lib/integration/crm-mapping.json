@@ -1,0 +1,1173 @@
+{
+  "venues": {
+    "academia-profesional-norte-aguilares": {
+      "institutionId": "48e56827-4745-45d2-9cb4-9356cb065aa2"
+    },
+    "centro-de-formacion-tucuman-monteros": {
+      "institutionId": "8bf4ee94-a9ce-4f98-bfdc-175d74b0a8ac"
+    },
+    "ies-concepcion-concepcion": {
+      "institutionId": "6c800f44-af98-4c3f-9b48-b09ca9e2bb49"
+    },
+    "instituto-del-sur-monteros": {
+      "institutionId": "d3faaf7f-185c-4c2f-832d-aadab9aa8712"
+    },
+    "instituto-san-miguel-monteros": {
+      "institutionId": "61bb8022-190e-407c-8fcf-138a49a1c3a5"
+    },
+    "instituto-santa-barbara-aguilares": {
+      "institutionId": "842b2ced-eb31-4d3f-a126-326e8776a5b0"
+    },
+    "instituto-santa-barbara-concepcion": {
+      "institutionId": "23b6472a-be5e-4e01-9b42-5df76143f2b5"
+    },
+    "pdf-sede-900002700": {
+      "institutionId": "ff2cb7b2-a01a-4e3b-ae0e-e5025a8e17cf"
+    },
+    "pdf-sede-900003000": {
+      "institutionId": "76f0068a-c1ce-4768-b7a7-5b88959088f9"
+    },
+    "pdf-sede-900007100": {
+      "institutionId": "85aa4009-2ec2-485c-ac8d-edf3763bfca8"
+    },
+    "pdf-sede-900017300": {
+      "institutionId": "8a1b3e43-355c-4ca9-ba71-895ca713df02"
+    },
+    "pdf-sede-900018300": {
+      "institutionId": "110b5ee6-daca-41d6-a65f-dad8d7d94fc8"
+    },
+    "pdf-sede-900034000": {
+      "institutionId": "ef930519-3ef8-4420-9704-d2e6b5165964"
+    },
+    "pdf-sede-900035100": {
+      "institutionId": "37ee6b4c-0758-4c33-b616-f48e47b11937"
+    },
+    "pdf-sede-900036600": {
+      "institutionId": "d7814468-55fe-4499-92a7-f5e9a911086a"
+    },
+    "pdf-sede-900050700": {
+      "institutionId": "0ecc0e9f-fde6-40f1-bff9-6d807b464fa2"
+    },
+    "pdf-sede-900051900": {
+      "institutionId": "99fe3c0f-4a22-443a-8eff-d44ccc0af785"
+    },
+    "pdf-sede-900052900": {
+      "institutionId": "d1b818e1-62c4-4dd3-8099-63ad81ef17cd"
+    },
+    "pdf-sede-900054500": {
+      "institutionId": "e040ebf2-e427-4ea6-9dfa-d1b512c63228"
+    },
+    "pdf-sede-900055500": {
+      "institutionId": "b39e5fd6-d4e5-4361-a0d2-72a6037f23b8"
+    },
+    "pdf-sede-900056000": {
+      "institutionId": "42c4aa01-4bba-4a8c-888b-854f70c95945"
+    },
+    "pdf-sede-900056100": {
+      "institutionId": "166fdf45-27a3-4c05-8cca-1ded322b3dcd"
+    },
+    "pdf-sede-900056400": {
+      "institutionId": "a8937558-a3bd-4b0a-b01a-1b68b5bfee6c"
+    },
+    "pdf-sede-900056800": {
+      "institutionId": "ae606172-aad2-4825-9652-bd9aefa1e942"
+    },
+    "pdf-sede-900057700": {
+      "institutionId": "bdf36538-22c9-4b5a-934f-4c42a320dc66"
+    },
+    "pdf-sede-900058600": {
+      "institutionId": "b52889c1-1a35-4b4c-9bd4-05500bdca27d"
+    },
+    "pdf-sede-900060700": {
+      "institutionId": "90d15fa3-8bbb-465a-a7fa-fdd4e0c9e64b"
+    },
+    "pdf-sede-900061600": {
+      "institutionId": "93448453-9c86-45e7-94bf-63bb31c4583e"
+    },
+    "pdf-sede-900061603": {
+      "institutionId": "3759debd-25a0-4830-a99c-f05d05a80099"
+    },
+    "pdf-sede-900061700": {
+      "institutionId": "8d0aefa0-81cb-4d04-8821-23e377b26fd9"
+    },
+    "pdf-sede-900065400": {
+      "institutionId": "0419d6d7-b685-4fb4-bee7-c96af392684d"
+    },
+    "pdf-sede-900066400": {
+      "institutionId": "bd42a56b-01c5-406b-8d30-e38b3f9b82bb"
+    },
+    "pdf-sede-900071600": {
+      "institutionId": "58ac34ac-e5ae-41c1-b421-f5f226ba5c80"
+    },
+    "pdf-sede-900072600": {
+      "institutionId": "e3829585-f5ed-45fd-ad8c-16f7a2566316"
+    },
+    "pdf-sede-900076100": {
+      "institutionId": "05ac60de-06ee-4000-a112-7a8672aaff66"
+    },
+    "pdf-sede-900082800": {
+      "institutionId": "a4ea6142-e3a2-4e14-8dfe-92042f20a477"
+    },
+    "pdf-sede-900088300": {
+      "institutionId": "0919b3ea-ea6f-47ed-a450-6bba26721145"
+    },
+    "pdf-sede-900089600": {
+      "institutionId": "a7555803-e965-4d14-a01e-bea055507756"
+    },
+    "pdf-sede-900097000": {
+      "institutionId": "5022b92b-ed23-49f0-8519-cae158e58150"
+    },
+    "pdf-sede-900097900": {
+      "institutionId": "39550313-eaf2-4cef-9260-7671a0fe565f"
+    },
+    "pdf-sede-900099800": {
+      "institutionId": "97aae5a6-e830-4a5b-a03d-1502eb79fe99"
+    },
+    "pdf-sede-900102000": {
+      "institutionId": "8f56d8f2-5bc4-42a7-86c7-b728fe54e0fa"
+    },
+    "pdf-sede-900103700": {
+      "institutionId": "fee6f7bc-baf6-47a8-8e2e-529da9a68f47"
+    },
+    "pdf-sede-900104000": {
+      "institutionId": "50921da4-b8e8-460b-a44d-c9a1267b3e15"
+    },
+    "pdf-sede-900104001": {
+      "institutionId": "d12670b3-66be-457b-9ebb-f947a838cad0"
+    },
+    "pdf-sede-900104002": {
+      "institutionId": "76e2499f-7c43-4a71-917f-56a7afec950b"
+    },
+    "pdf-sede-900104003": {
+      "institutionId": "01b912d9-d56f-45cf-b54c-a7d1cd780287"
+    },
+    "pdf-sede-900104004": {
+      "institutionId": "8c233ce5-db6d-4c77-b2a5-e35165d962b6"
+    },
+    "pdf-sede-900104005": {
+      "institutionId": "06914a72-7d3b-43ab-be4d-a15233055f81"
+    },
+    "pdf-sede-900104006": {
+      "institutionId": "4ab39921-ffcf-47a4-8796-17b7bdf29841"
+    },
+    "pdf-sede-900104007": {
+      "institutionId": "cc968f42-a2da-4a8c-aa63-72485a6720f8"
+    },
+    "pdf-sede-900104008": {
+      "institutionId": "fafba74f-d11d-4923-86c2-79ffde600386"
+    },
+    "pdf-sede-900104009": {
+      "institutionId": "a542c847-7b72-40c1-8bce-c52e7322b232"
+    },
+    "pdf-sede-900104010": {
+      "institutionId": "1427a250-5f4b-4068-af8e-71e1deb8683b"
+    },
+    "pdf-sede-900104011": {
+      "institutionId": "45b9d6b7-3fbf-41cc-be6c-9741ba8cb872"
+    },
+    "pdf-sede-900104012": {
+      "institutionId": "15187b17-7923-41ef-86af-797092407854"
+    },
+    "pdf-sede-900104013": {
+      "institutionId": "f3a86028-f6e3-435b-bbc0-6e425f767a3e"
+    },
+    "pdf-sede-900104014": {
+      "institutionId": "92daf712-f358-489f-8f80-e3fa960763da"
+    },
+    "pdf-sede-900104015": {
+      "institutionId": "3a9729b2-8fbb-4802-bf22-c7c9074c5e8e"
+    },
+    "pdf-sede-900129800": {
+      "institutionId": "d8f5e63e-493d-495b-8a04-262c82e13984"
+    },
+    "pdf-sede-900134000": {
+      "institutionId": "d8d7e1d4-a990-48dc-8e31-2aa2ccef6141"
+    },
+    "pdf-sede-900134100": {
+      "institutionId": "e7a93303-9a99-4080-81ed-9f0b89ad590b"
+    },
+    "pdf-sede-900161200": {
+      "institutionId": "87705749-cf68-4243-a004-85ab75856858"
+    },
+    "pdf-sede-900162800": {
+      "institutionId": "2ad568a0-99a6-43a7-893c-40f0e00df20e"
+    },
+    "pdf-sede-900166100": {
+      "institutionId": "07e41c38-cda5-4019-926d-d36b063e0614"
+    },
+    "pdf-sede-900167300": {
+      "institutionId": "4edc9262-b337-4831-8023-917e1ab986f9"
+    },
+    "pdf-sede-900167301": {
+      "institutionId": "add69eb1-1850-420c-82bf-82883e440db2"
+    },
+    "pdf-sede-900168600": {
+      "institutionId": "d742dd76-69cc-489d-885a-84284263ad16"
+    },
+    "pdf-sede-900170800": {
+      "institutionId": "0209ec25-8c77-4272-8a81-4f8b87aba35f"
+    },
+    "pdf-sede-900173600": {
+      "institutionId": "43b262e3-f2bd-4af8-a544-9924858a9172"
+    },
+    "pdf-sede-900181000": {
+      "institutionId": "e414fced-3016-4b62-aa75-944e1de6ff4d"
+    },
+    "pdf-sede-900181100": {
+      "institutionId": "4cb3fa4e-fa23-4025-8d73-813b2e6e079e"
+    },
+    "pdf-sede-900181300": {
+      "institutionId": "acbe3866-3a2c-46f9-9b0f-5ed14eb80dc8"
+    },
+    "pdf-sede-900182700": {
+      "institutionId": "ab046c46-a43c-49bf-990e-26f00d87efb7"
+    },
+    "pdf-sede-900182800": {
+      "institutionId": "e81656dd-576b-4c46-a302-244858ef3fbc"
+    },
+    "pdf-sede-900183000": {
+      "institutionId": "29ed0616-6e8c-4dff-961e-211b186211a4"
+    },
+    "pdf-sede-900183800": {
+      "institutionId": "a5911040-a451-4153-9690-64094f7d2e22"
+    },
+    "pdf-sede-900184400": {
+      "institutionId": "6fe8d44c-eedc-4366-b65c-95aff6e4366d"
+    },
+    "pdf-sede-900185100": {
+      "institutionId": "b53273ee-d7de-4742-b7b8-f9849bea373b"
+    },
+    "pdf-sede-900185300": {
+      "institutionId": "d755b39b-5645-4fba-8bec-1d40daf352d7"
+    },
+    "pdf-sede-900185400": {
+      "institutionId": "6a960c6e-b00d-43d6-8eaa-29d12a9386c3"
+    },
+    "pdf-sede-900185600": {
+      "institutionId": "ac8bec69-5381-4a54-8970-aeeac11813d8"
+    },
+    "pdf-sede-900185700": {
+      "institutionId": "aefddcf1-5c93-4df4-b26e-6abf8381ab19"
+    },
+    "pdf-sede-900185800": {
+      "institutionId": "c2ff1f7c-8105-411c-8e08-86d1b552789e"
+    },
+    "pdf-sede-900186500": {
+      "institutionId": "73776668-7f80-4c7d-9a48-42f03a3b376d"
+    },
+    "pdf-sede-900190400": {
+      "institutionId": "1a02cfeb-31a3-45ff-a197-28eaa01127d0"
+    },
+    "pdf-sede-900190600": {
+      "institutionId": "84ecafdb-5ab2-4457-8fa5-872ba9594f87"
+    },
+    "pdf-sede-900190700": {
+      "institutionId": "9b5ad8cd-8839-4d99-82ee-e969e4902357"
+    },
+    "pdf-sede-900198100": {
+      "institutionId": "5c3298e3-766a-4d66-95f7-362fa2b3d7db"
+    },
+    "pdf-sede-900202800": {
+      "institutionId": "28664dc7-3614-4c1e-807b-491502cfcef5"
+    },
+    "pdf-sede-900202801": {
+      "institutionId": "79c81764-8cae-421d-9902-70ade40a456f"
+    },
+    "pdf-sede-900202802": {
+      "institutionId": "ac9b1237-32de-46c2-8202-32f488d9f3d9"
+    },
+    "pdf-sede-900210300": {
+      "institutionId": "727f041a-527e-408d-843e-864f068b51fe"
+    },
+    "pdf-sede-900226400": {
+      "institutionId": "8bf53cb5-ddbf-4fdc-b552-c29000087562"
+    },
+    "pdf-sede-900226401": {
+      "institutionId": "9a492999-e716-485e-91b8-f1d1c0b2e855"
+    },
+    "pdf-sede-900226402": {
+      "institutionId": "225f923f-be8e-4c88-b152-58e5700a74db"
+    },
+    "pdf-sede-900236400": {
+      "institutionId": "d6893fbc-4611-46a6-8991-f7d3d2775798"
+    },
+    "pdf-sede-900240100": {
+      "institutionId": "2d65d03c-7f32-43d4-a3db-d002e86d0284"
+    },
+    "pdf-sede-900240400": {
+      "institutionId": "b6dcb5a6-b744-47b0-ad7c-b698a5304030"
+    },
+    "pdf-sede-900242400": {
+      "institutionId": "2de06a1e-e75a-473e-ab70-4eacb73380b2"
+    },
+    "pdf-sede-900242401": {
+      "institutionId": "b1679d80-29c6-4afc-83e6-8db0b4e0632a"
+    },
+    "pdf-sede-900249900": {
+      "institutionId": "3ab84d44-9f7a-454a-9ea0-3cddd80ec437"
+    },
+    "pdf-sede-900250400": {
+      "institutionId": "ba833a84-3e0b-45ba-af9a-be1e72ec25cd"
+    },
+    "pdf-sede-900251600": {
+      "institutionId": "da68ad69-d659-4f49-acc0-6f639e61c2fd"
+    },
+    "pdf-sede-909000100": {
+      "institutionId": "64d4915d-93fc-4e7c-9013-ac19cf9b881e"
+    },
+    "pdf-sede-909000400": {
+      "institutionId": "03b3a190-a8db-4410-8b44-66d79b377366"
+    },
+    "pdf-sede-909000600": {
+      "institutionId": "a335daea-e3d2-484c-b7f6-1864837829de"
+    },
+    "pdf-sede-909000700": {
+      "institutionId": "cc44e97f-d8a6-4e31-be7a-d3315291fbd0"
+    },
+    "pdf-universidad-sede-20bb078f4353b932": {
+      "institutionId": "10f8fff7-fc3c-494b-a6e6-6ce89d80973c"
+    },
+    "pdf-universidad-sede-20dbf38c184338f4": {
+      "institutionId": "d09975be-17fd-424e-9955-2a0c62089ce6"
+    },
+    "pdf-universidad-sede-2645f1feef8b9e48": {
+      "institutionId": "e52f7b07-1c58-4d09-a604-5a4e2a7e347e"
+    },
+    "pdf-universidad-sede-584edaff5aa7ebb5": {
+      "institutionId": "c4ce20ef-7d53-4d79-9daa-a643d45d0400"
+    },
+    "pdf-universidad-sede-5c91fbaa7fd00217": {
+      "institutionId": "2b06393b-60d5-461c-87b3-4398322fbf6e"
+    },
+    "pdf-universidad-sede-6bb52231b8fdfe69": {
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-universidad-sede-6fc86e9206ca5297": {
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-universidad-sede-940e604eb9f571d3": {
+      "institutionId": "026c202a-2172-43dc-ba01-1526057aaf21"
+    },
+    "pdf-universidad-sede-bdc70255a58a7851": {
+      "institutionId": "0f497a9e-55f1-4356-ae0c-1a07e599d789"
+    },
+    "pdf-universidad-sede-c55b62dc8a826bc5": {
+      "institutionId": "3b63412b-00da-44e9-bad2-1dece4169ca3"
+    },
+    "pdf-universidad-sede-d2a7594bcb0de3fa": {
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-universidad-sede-d6d81d1dbedf8dc5": {
+      "institutionId": "9a5f8d72-fcfa-4f54-8c81-640ac8720577"
+    },
+    "pdf-universidad-sede-f60a8566910edb58": {
+      "institutionId": "dca9bd55-cbac-4a5f-8715-36c810463f91"
+    },
+    "pdf-universidad-sede-fba2ecd98e8507a3": {
+      "institutionId": "48515e24-ba6c-4154-b5dc-2dee6ff89350"
+    },
+    "universidad-siglo-21-aguilares": {
+      "institutionId": "b7317bc6-cbac-4e24-8653-d0bccadb4005"
+    },
+    "universidad-siglo-21-concepcion": {
+      "institutionId": "a2b4449d-fcf9-420c-b362-65a1bbe1a35a"
+    },
+    "universidad-siglo-21-monteros": {
+      "institutionId": "c3e0d90e-14cb-4a23-a84b-38c573c3c496"
+    }
+  },
+  "offerings": {
+    "academia-profesional-norte-aguilares-community-manager": {
+      "programId": "7c589171-9a46-4bf3-8810-3ac551f114c2",
+      "institutionId": "48e56827-4745-45d2-9cb4-9356cb065aa2"
+    },
+    "academia-profesional-norte-aguilares-diseno-grafico": {
+      "programId": "06aebc3f-fef9-413b-91d7-5ac13d3ce87a",
+      "institutionId": "48e56827-4745-45d2-9cb4-9356cb065aa2"
+    },
+    "academia-profesional-norte-aguilares-ventas-digitales": {
+      "programId": "2fa0478e-e56e-4d70-8328-645c787c25f0",
+      "institutionId": "48e56827-4745-45d2-9cb4-9356cb065aa2"
+    },
+    "ies-concepcion-concepcion-profesorado-educacion-primaria": {
+      "programId": "34d2163d-7fce-4348-9b45-50238584d9f8",
+      "institutionId": "6c800f44-af98-4c3f-9b48-b09ca9e2bb49"
+    },
+    "ies-concepcion-concepcion-profesorado-ingles": {
+      "programId": "90fefe66-7c75-4d26-8b93-5568c931c8c4",
+      "institutionId": "6c800f44-af98-4c3f-9b48-b09ca9e2bb49"
+    },
+    "ies-concepcion-concepcion-tecnicatura-administracion": {
+      "programId": "914b8eaa-b189-4658-bbd4-7f55c506c14e",
+      "institutionId": "6c800f44-af98-4c3f-9b48-b09ca9e2bb49"
+    },
+    "instituto-del-sur-monteros-administracion-de-empresas": {
+      "programId": "7134d425-ec8b-437b-8c50-9fad465f216e",
+      "institutionId": "d3faaf7f-185c-4c2f-832d-aadab9aa8712"
+    },
+    "instituto-del-sur-monteros-marketing": {
+      "programId": "ab43d147-402b-4dd0-be1d-6bc2cb690a4f",
+      "institutionId": "d3faaf7f-185c-4c2f-832d-aadab9aa8712"
+    },
+    "instituto-del-sur-monteros-recursos-humanos": {
+      "programId": "12587fe8-cb96-42e1-8322-9a2d15f5092b",
+      "institutionId": "d3faaf7f-185c-4c2f-832d-aadab9aa8712"
+    },
+    "instituto-san-miguel-monteros-acompanante-terapeutico": {
+      "programId": "4b61524f-7b21-482c-bff7-800e15109a3c",
+      "institutionId": "61bb8022-190e-407c-8fcf-138a49a1c3a5"
+    },
+    "instituto-san-miguel-monteros-gestion-educativa": {
+      "programId": "aac073c2-1e28-4480-98ea-4a1ede5ab4df",
+      "institutionId": "61bb8022-190e-407c-8fcf-138a49a1c3a5"
+    },
+    "instituto-san-miguel-monteros-profesorado": {
+      "programId": "ae43e84a-bdd3-472a-9a6a-b236217d38af",
+      "institutionId": "61bb8022-190e-407c-8fcf-138a49a1c3a5"
+    },
+    "instituto-santa-barbara-aguilares-diagnostico-por-imagenes": {
+      "programId": "59a2cd97-f009-4756-a23e-da7bc472e161",
+      "institutionId": "842b2ced-eb31-4d3f-a126-326e8776a5b0"
+    },
+    "instituto-santa-barbara-aguilares-instrumentacion-quirurgica": {
+      "programId": "f36830e6-b5e5-4164-bae3-0fd8bbdba3b5",
+      "institutionId": "842b2ced-eb31-4d3f-a126-326e8776a5b0"
+    },
+    "instituto-santa-barbara-aguilares-laboratorio-de-analisis-clinicos": {
+      "programId": "5c92808b-c2ee-4285-8d04-69f88847d7fd",
+      "institutionId": "842b2ced-eb31-4d3f-a126-326e8776a5b0"
+    },
+    "instituto-santa-barbara-concepcion-diagnostico-por-imagenes": {
+      "programId": "eb4e04e3-139d-4b9b-abfc-2c32ffd891e3",
+      "institutionId": "23b6472a-be5e-4e01-9b42-5df76143f2b5"
+    },
+    "instituto-santa-barbara-concepcion-instrumentacion-quirurgica": {
+      "programId": "65e97e31-b2d6-4ebe-9b9e-765c6e5a1dbf",
+      "institutionId": "23b6472a-be5e-4e01-9b42-5df76143f2b5"
+    },
+    "instituto-santa-barbara-concepcion-laboratorio-de-analisis-clinicos": {
+      "programId": "4b36cb8c-5a49-43c5-ac52-f1ccc7ce06f1",
+      "institutionId": "23b6472a-be5e-4e01-9b42-5df76143f2b5"
+    },
+    "pdf-oferta-01a08643c7c6549b": {
+      "programId": "7a8712e4-0057-4b44-a5ce-97456abc1b99",
+      "institutionId": "ef930519-3ef8-4420-9704-d2e6b5165964"
+    },
+    "pdf-oferta-046bbdb0e95b03c0": {
+      "programId": "715e732f-baf1-45fe-ba73-cc1faadb7b57",
+      "institutionId": "b52889c1-1a35-4b4c-9bd4-05500bdca27d"
+    },
+    "pdf-oferta-05319c4d0e56ece4": {
+      "programId": "485daf4e-68fe-433a-b87c-c254a200ca37",
+      "institutionId": "ef930519-3ef8-4420-9704-d2e6b5165964"
+    },
+    "pdf-oferta-05894660ac863fd1": {
+      "programId": "9dee6534-3ba2-4c67-af23-b23da57305c9",
+      "institutionId": "b39e5fd6-d4e5-4361-a0d2-72a6037f23b8"
+    },
+    "pdf-oferta-064bd59e292b25e6": {
+      "programId": "3d7fccc8-b0e7-4ee0-aba2-9051b01ff42b",
+      "institutionId": "e3829585-f5ed-45fd-ad8c-16f7a2566316"
+    },
+    "pdf-oferta-069218592271a3b2": {
+      "programId": "1a255f58-cdcc-4ffd-9eb8-ec372bdd4fb2",
+      "institutionId": "d1b818e1-62c4-4dd3-8099-63ad81ef17cd"
+    },
+    "pdf-oferta-0869f3fbd1f445ab": {
+      "programId": "ebe5fc15-a659-4d8c-be22-4011c4e930f0",
+      "institutionId": "64d4915d-93fc-4e7c-9013-ac19cf9b881e"
+    },
+    "pdf-oferta-09c6a7245aad2cf5": {
+      "programId": "3f69738d-e316-47c8-bcb5-3aaad5532840",
+      "institutionId": "0419d6d7-b685-4fb4-bee7-c96af392684d"
+    },
+    "pdf-oferta-0a145a5b4d7c33d7": {
+      "programId": "103b1a57-058d-419e-87ab-d6f8470a2b0f",
+      "institutionId": "110b5ee6-daca-41d6-a65f-dad8d7d94fc8"
+    },
+    "pdf-oferta-1230f4374f73505c": {
+      "programId": "38511579-342e-4b1f-a41e-a35210789798",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-12f29163406da103": {
+      "programId": "4f408645-c489-4ce2-9226-283c7a033856",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-13b5f05a41e4dbe2": {
+      "programId": "62483dec-ee67-4aba-99aa-253921588844",
+      "institutionId": "b52889c1-1a35-4b4c-9bd4-05500bdca27d"
+    },
+    "pdf-oferta-15418bae771b9b4f": {
+      "programId": "ceffd4b6-f877-4c0d-8488-6bbc1c83ed9b",
+      "institutionId": "acbe3866-3a2c-46f9-9b0f-5ed14eb80dc8"
+    },
+    "pdf-oferta-166d440036c38c10": {
+      "programId": "2e92a277-6681-400e-b1d0-81b085f53cc1",
+      "institutionId": "90d15fa3-8bbb-465a-a7fa-fdd4e0c9e64b"
+    },
+    "pdf-oferta-16f12de29b5167af": {
+      "programId": "97acc8aa-76d6-43bc-9556-88c4fda96f4d",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-17d300c8b3613570": {
+      "programId": "1f40c0be-0402-4f58-9f57-540d1d81a137",
+      "institutionId": "b52889c1-1a35-4b4c-9bd4-05500bdca27d"
+    },
+    "pdf-oferta-182249ba6716f9b0": {
+      "programId": "151dcf24-2a51-4290-b974-87e6e291e650",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-1904c26f9de6c1e0": {
+      "programId": "243b3c21-ee7b-4436-bcb6-061f7616043c",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-1957e263c15b91ca": {
+      "programId": "8db3fb6b-9885-4652-8816-404d37ef1c11",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-1a8e5e7247297145": {
+      "programId": "4244eeb6-b92e-46b2-9bee-827acdec3745",
+      "institutionId": "ef930519-3ef8-4420-9704-d2e6b5165964"
+    },
+    "pdf-oferta-1bf9362f18e63cd9": {
+      "programId": "582682c0-db9c-4767-ae2d-25fda48dc4f7",
+      "institutionId": "a4ea6142-e3a2-4e14-8dfe-92042f20a477"
+    },
+    "pdf-oferta-20b05315556fb04e": {
+      "programId": "7f0ad9a4-850c-47bd-81a8-13232b956218",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-210ef8afa93b365f": {
+      "programId": "687f22d0-43ef-42e0-81ed-8cf2948e01b6",
+      "institutionId": "37ee6b4c-0758-4c33-b616-f48e47b11937"
+    },
+    "pdf-oferta-22b9e1c9e19f3d92": {
+      "programId": "b167be9f-aa2e-4984-8799-8e7c238b34a6",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-2a61760b129d5574": {
+      "programId": "64c9efac-f236-497c-a933-20c6a864ed29",
+      "institutionId": "ab046c46-a43c-49bf-990e-26f00d87efb7"
+    },
+    "pdf-oferta-2aaf48aab594eefe": {
+      "programId": "547eb3f1-ae5e-4636-9a37-7173e44193a9",
+      "institutionId": "93448453-9c86-45e7-94bf-63bb31c4583e"
+    },
+    "pdf-oferta-2ad147b304854fb2": {
+      "programId": "bf4b9b99-8bfb-476d-b51e-dbb12fbf441d",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-2c44352ad7f6637b": {
+      "programId": "78dd1482-4d7e-46ec-a4c8-fe46eb7e9d3c",
+      "institutionId": "d755b39b-5645-4fba-8bec-1d40daf352d7"
+    },
+    "pdf-oferta-30fa0631466f90f1": {
+      "programId": "0bf23256-0653-4482-b197-557d4efc6547",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-315831147557c4b4": {
+      "programId": "3648fd42-0cc5-4de7-95df-ddc304087b54",
+      "institutionId": "110b5ee6-daca-41d6-a65f-dad8d7d94fc8"
+    },
+    "pdf-oferta-31e7f08846ad8fc1": {
+      "programId": "c692f1dd-85d2-410e-a852-93b54d638931",
+      "institutionId": "64d4915d-93fc-4e7c-9013-ac19cf9b881e"
+    },
+    "pdf-oferta-320ccd3765798aa0": {
+      "programId": "506abaad-5111-46e0-9a7e-f42a67dc2253",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-349f55ccce513028": {
+      "programId": "b07070c7-065a-435c-a564-18df875ef71b",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-357d2f500a73e30f": {
+      "programId": "39061a9c-da59-4fe7-8d81-3837e1e667bd",
+      "institutionId": "bd42a56b-01c5-406b-8d30-e38b3f9b82bb"
+    },
+    "pdf-oferta-3650a9f46f78806d": {
+      "programId": "f083eb90-d691-40ce-824c-7960e981fe66",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-3d98358722e56dcc": {
+      "programId": "ecc161ca-152a-49db-93b1-ee270a54f5d8",
+      "institutionId": "ef930519-3ef8-4420-9704-d2e6b5165964"
+    },
+    "pdf-oferta-3f881bf8f16b418b": {
+      "programId": "082c8e05-adf7-4adf-a606-23b6b8f06b85",
+      "institutionId": "e81656dd-576b-4c46-a302-244858ef3fbc"
+    },
+    "pdf-oferta-3f90bb807423a6aa": {
+      "programId": "e4993501-e64a-44fe-bd92-d4d252788671",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-4351e0925ae4bfce": {
+      "programId": "fd4792f7-12e1-41f4-a92d-7f4340e0e91c",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-445b00a838b04381": {
+      "programId": "d15fbf02-af8e-43ec-a39b-ae5f9b78738f",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-447046a654618b23": {
+      "programId": "ca0dff54-b456-4a6c-9750-5b31806f83d5",
+      "institutionId": "3759debd-25a0-4830-a99c-f05d05a80099"
+    },
+    "pdf-oferta-46430297dbaa6983": {
+      "programId": "eaa5e2be-3abc-4292-ae44-73476ac9929c",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-47d2d02290fe852e": {
+      "programId": "ba80c522-fb82-45eb-9f11-8895516d92cd",
+      "institutionId": "110b5ee6-daca-41d6-a65f-dad8d7d94fc8"
+    },
+    "pdf-oferta-4975e935ce96e36f": {
+      "programId": "c76c1149-a2c3-42ab-9a3c-9d0fd1cd9122",
+      "institutionId": "acbe3866-3a2c-46f9-9b0f-5ed14eb80dc8"
+    },
+    "pdf-oferta-4a4a855de8c1d94c": {
+      "programId": "48e1f538-3c16-4a61-89bc-c287319e3bd8",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-4da3e20173892a03": {
+      "programId": "33240f5b-88ae-4bff-81e4-572d5841b348",
+      "institutionId": "a5911040-a451-4153-9690-64094f7d2e22"
+    },
+    "pdf-oferta-50102f57d0599fd4": {
+      "programId": "e5f9afce-e69f-4428-b693-62b00d042ed3",
+      "institutionId": "23b6472a-be5e-4e01-9b42-5df76143f2b5"
+    },
+    "pdf-oferta-519b873d71c2c1b8": {
+      "programId": "ec527008-d0a6-4b47-bf65-4aca7724a125",
+      "institutionId": "97aae5a6-e830-4a5b-a03d-1502eb79fe99"
+    },
+    "pdf-oferta-53da2f27de95c688": {
+      "programId": "ba08909c-9673-40c2-94a8-5fd4fb388f69",
+      "institutionId": "110b5ee6-daca-41d6-a65f-dad8d7d94fc8"
+    },
+    "pdf-oferta-542211f5ca9c984e": {
+      "programId": "8ff82e7d-7db3-4cb4-bd25-05f8af156982",
+      "institutionId": "b52889c1-1a35-4b4c-9bd4-05500bdca27d"
+    },
+    "pdf-oferta-5777877a9e0cc339": {
+      "programId": "6fad5773-dcbd-4729-b554-4916f91b47f0",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-57921515c79f5597": {
+      "programId": "f845ab1d-8279-4f97-9d5b-079db2c3df1b",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-5907e2e12a68763c": {
+      "programId": "41fa535e-4ebf-41de-8db4-592c128cffdd",
+      "institutionId": "a8937558-a3bd-4b0a-b01a-1b68b5bfee6c"
+    },
+    "pdf-oferta-5b802adcfd88eb1e": {
+      "programId": "c289789c-efc0-412e-93a9-387340413f2f",
+      "institutionId": "bd42a56b-01c5-406b-8d30-e38b3f9b82bb"
+    },
+    "pdf-oferta-5bbb4684cc0a2101": {
+      "programId": "e4b7fb64-7bc2-43d7-8612-bafafd947c96",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-5ea6fca0e26fd697": {
+      "programId": "10731720-964e-427d-aaec-3b79db0ffb8b",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-5f67e4747cfda249": {
+      "programId": "05925b6c-b744-423c-94f4-d16f514ee336",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-5feedc988743e269": {
+      "programId": "f312ef14-bc24-4082-a955-6cff8b3ef934",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-6140072108960493": {
+      "programId": "40dfd905-0be2-4fde-a9d6-dfbd403a8727",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-6409fe680f07df8a": {
+      "programId": "ab46da5c-0a5e-408a-a6cd-23f6958bdea2",
+      "institutionId": "07e41c38-cda5-4019-926d-d36b063e0614"
+    },
+    "pdf-oferta-643c7d0675a4ef44": {
+      "programId": "bf517b46-009e-4e54-adf3-fd2a800f7690",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-648e412be533022f": {
+      "programId": "55fa4df1-21cd-46fb-9742-7e409ba8319b",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-652033aa2312be76": {
+      "programId": "99ecb4c1-461d-4f63-95bc-a6b3142a21d4",
+      "institutionId": "d1b818e1-62c4-4dd3-8099-63ad81ef17cd"
+    },
+    "pdf-oferta-65eba282e60ced3a": {
+      "programId": "b2cd488f-29c6-4b41-861b-c38ac8469d3e",
+      "institutionId": "ef930519-3ef8-4420-9704-d2e6b5165964"
+    },
+    "pdf-oferta-66c7892fdba178b4": {
+      "programId": "1f8ce317-55f4-4f82-857f-26a30e5a49b4",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-6738166726e3c747": {
+      "programId": "612daddb-8320-4c2c-8a85-31c121372e37",
+      "institutionId": "bd42a56b-01c5-406b-8d30-e38b3f9b82bb"
+    },
+    "pdf-oferta-67687fb2e0c73c6a": {
+      "programId": "34aaf428-b3de-4920-85b2-3baa274db9af",
+      "institutionId": "3759debd-25a0-4830-a99c-f05d05a80099"
+    },
+    "pdf-oferta-69158b925b1bd09f": {
+      "programId": "1b0460a6-1ba2-406b-b399-44c1d0b52a5f",
+      "institutionId": "e3829585-f5ed-45fd-ad8c-16f7a2566316"
+    },
+    "pdf-oferta-6a4700e880567d8f": {
+      "programId": "3a72b59c-a529-46b9-b4fa-e7cbd677ef62",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-6b93fcd7c3a3c983": {
+      "programId": "2dc7e012-3e4f-4fdb-96e1-7507a2d59aab",
+      "institutionId": "e81656dd-576b-4c46-a302-244858ef3fbc"
+    },
+    "pdf-oferta-6dd11a5ad0d7a267": {
+      "programId": "4813dff0-fb63-41f5-ab1d-de72e32c2ddb",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-6fdc04dc19171b9d": {
+      "programId": "05b9855e-0037-4e70-a206-db9f1353e714",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-70f8288a9bbbe9b5": {
+      "programId": "a224c22b-d43d-4e16-84fa-c309f8c8f047",
+      "institutionId": "a7555803-e965-4d14-a01e-bea055507756"
+    },
+    "pdf-oferta-715485123b8cbd58": {
+      "programId": "3bbd781c-2e46-4562-bce1-87d8e4162ff9",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-7283207cd413bd84": {
+      "programId": "15a5b24c-650e-4b45-8de0-f96450f5c764",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-74c810d70f5550a0": {
+      "programId": "bc65396b-52e3-4dca-a9d1-231fe5a3b1a7",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-7862fbe000f53152": {
+      "programId": "5f09f76b-8ee1-41a7-b50e-ad1bbbf07609",
+      "institutionId": "ac8bec69-5381-4a54-8970-aeeac11813d8"
+    },
+    "pdf-oferta-79d93bf9bbe6a88d": {
+      "programId": "677514f8-2c6a-42d3-91ff-0dfe322dab07",
+      "institutionId": "bdf36538-22c9-4b5a-934f-4c42a320dc66"
+    },
+    "pdf-oferta-7d12e7203ccf365c": {
+      "programId": "5a4f245d-ee3a-4241-b3e3-186b4bee2783",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-7f906e3f9eae0d6a": {
+      "programId": "3274d910-c12f-44d7-b4ab-2530e6337b00",
+      "institutionId": "3759debd-25a0-4830-a99c-f05d05a80099"
+    },
+    "pdf-oferta-83688a9d77b59af8": {
+      "programId": "f829f7d5-72ab-410f-8e52-94bb38ba6dbc",
+      "institutionId": "bdf36538-22c9-4b5a-934f-4c42a320dc66"
+    },
+    "pdf-oferta-850ef59ad04d2e06": {
+      "programId": "8f83c35e-61d7-4606-9c6d-4ae4d5ecda7c",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-855be198496e1745": {
+      "programId": "6f4e6735-e223-4b64-bc53-82f0cb844a62",
+      "institutionId": "a4ea6142-e3a2-4e14-8dfe-92042f20a477"
+    },
+    "pdf-oferta-8922cc7afa3ae57e": {
+      "programId": "2c0f5cf5-388d-4b7d-a0f3-2172583c91c1",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-8931cbf1201f6458": {
+      "programId": "d32f06b4-cb42-4b4a-b15c-c64df03c6dd8",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-89a43460c009b03d": {
+      "programId": "0c700344-1581-4785-84ac-a7ed42f81348",
+      "institutionId": "acbe3866-3a2c-46f9-9b0f-5ed14eb80dc8"
+    },
+    "pdf-oferta-8a2b4f31f113f996": {
+      "programId": "68a0b54e-3e4f-40d4-9522-fc57bb504031",
+      "institutionId": "b52889c1-1a35-4b4c-9bd4-05500bdca27d"
+    },
+    "pdf-oferta-8a399c96864a519b": {
+      "programId": "a9f16c87-6950-4e79-90ef-9091a7fbd3bb",
+      "institutionId": "99fe3c0f-4a22-443a-8eff-d44ccc0af785"
+    },
+    "pdf-oferta-8adcf9881b241cfc": {
+      "programId": "58c99bf4-5a31-4bc0-984a-eb51d99cec08",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-8ba3137dab1269ec": {
+      "programId": "5abec7d9-786c-46a1-bdbb-12524a506271",
+      "institutionId": "a4ea6142-e3a2-4e14-8dfe-92042f20a477"
+    },
+    "pdf-oferta-8d6c4dd9d18592eb": {
+      "programId": "60c950c5-7e4e-4c78-b4ad-a3c83d19da89",
+      "institutionId": "6c800f44-af98-4c3f-9b48-b09ca9e2bb49"
+    },
+    "pdf-oferta-8f53860a3c2d81db": {
+      "programId": "a544316e-e535-4005-827d-6c2e09dec6dd",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-9116c353c3d561a0": {
+      "programId": "49d8c97d-b9f9-4d81-a9d6-c0dbeff99b3e",
+      "institutionId": "ef930519-3ef8-4420-9704-d2e6b5165964"
+    },
+    "pdf-oferta-9144b1ac14554efa": {
+      "programId": "eff5dd93-e9e1-4c81-b608-2487d38fd709",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-918fc333d216ac87": {
+      "programId": "cfa0166d-b081-495a-bdc1-2484a70a159c",
+      "institutionId": "23b6472a-be5e-4e01-9b42-5df76143f2b5"
+    },
+    "pdf-oferta-941cc915edaf862b": {
+      "programId": "d9b712e8-6607-483e-8855-eea13e0f8b2d",
+      "institutionId": "a8937558-a3bd-4b0a-b01a-1b68b5bfee6c"
+    },
+    "pdf-oferta-944903e5320d3d9e": {
+      "programId": "a0f5c403-b933-4ca7-bb2e-e2d0421a25d5",
+      "institutionId": "ac8bec69-5381-4a54-8970-aeeac11813d8"
+    },
+    "pdf-oferta-94f6f91abadfea79": {
+      "programId": "b68ef721-885c-4ad7-bafc-79a70110337f",
+      "institutionId": "5022b92b-ed23-49f0-8519-cae158e58150"
+    },
+    "pdf-oferta-97920b289880795b": {
+      "programId": "1c485982-2011-47c1-84b4-9368a380a6bc",
+      "institutionId": "bd42a56b-01c5-406b-8d30-e38b3f9b82bb"
+    },
+    "pdf-oferta-97e29ef7f8e951ad": {
+      "programId": "790cd0f3-0adb-4dd2-8354-a7db2604681f",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-99041e0eb475b3a2": {
+      "programId": "dc0fc488-cf8f-4759-a401-31f1e146ae41",
+      "institutionId": "a7555803-e965-4d14-a01e-bea055507756"
+    },
+    "pdf-oferta-9945478d28bdf537": {
+      "programId": "60db9bb8-50c0-446b-85f4-1ea34864506d",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-99e801bb83e2cd49": {
+      "programId": "5f57a29d-8ea4-40fd-bfe7-fb84ca71e196",
+      "institutionId": "6c800f44-af98-4c3f-9b48-b09ca9e2bb49"
+    },
+    "pdf-oferta-9a1bf687f8d86e77": {
+      "programId": "bbafe48e-6d49-42a9-a954-a4f7a0a7438a",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-9a93edbaee9d160f": {
+      "programId": "7014b07d-df63-4def-9423-907ff7238caa",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-9e3860b50d4bf013": {
+      "programId": "8515020c-935c-45df-aea7-98c92f49bc4f",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-a19d380b39a5761b": {
+      "programId": "ac27055e-10fd-4eba-b6ff-056cb8af006d",
+      "institutionId": "37ee6b4c-0758-4c33-b616-f48e47b11937"
+    },
+    "pdf-oferta-a3b91646ae918980": {
+      "programId": "76f1ed9e-05b4-4165-8dba-e5a7a722cb4c",
+      "institutionId": "97aae5a6-e830-4a5b-a03d-1502eb79fe99"
+    },
+    "pdf-oferta-a57d2d69b5fc2c82": {
+      "programId": "87dadb7b-d424-4a93-b7a9-8cf30a87646e",
+      "institutionId": "93448453-9c86-45e7-94bf-63bb31c4583e"
+    },
+    "pdf-oferta-a93a0bd92d31bf3e": {
+      "programId": "e844a08a-6aed-4641-b742-11a47a4f8a3f",
+      "institutionId": "a8937558-a3bd-4b0a-b01a-1b68b5bfee6c"
+    },
+    "pdf-oferta-a9b71e359fddcf7e": {
+      "programId": "8dca785a-ec8c-4e4d-af19-7876e5a88661",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-ab09f17aacad1bf8": {
+      "programId": "89af81ad-9250-4a54-a2ab-0e475d6f40f6",
+      "institutionId": "37ee6b4c-0758-4c33-b616-f48e47b11937"
+    },
+    "pdf-oferta-ac41bfe382f89531": {
+      "programId": "584eb3d9-88ee-4462-b552-196e1afd5798",
+      "institutionId": "37ee6b4c-0758-4c33-b616-f48e47b11937"
+    },
+    "pdf-oferta-af4d70d29ffbeda2": {
+      "programId": "8ccb3265-47cc-4a83-bb28-c41173eac613",
+      "institutionId": "a4ea6142-e3a2-4e14-8dfe-92042f20a477"
+    },
+    "pdf-oferta-b0a962642913465f": {
+      "programId": "1c0377a3-ef84-4b45-8aee-f05a7c98b22e",
+      "institutionId": "e81656dd-576b-4c46-a302-244858ef3fbc"
+    },
+    "pdf-oferta-b33b71023c11c77d": {
+      "programId": "f2404bf9-1efb-4015-961b-88ae796f8d23",
+      "institutionId": "97aae5a6-e830-4a5b-a03d-1502eb79fe99"
+    },
+    "pdf-oferta-b45040a0e9f4b974": {
+      "programId": "f0bf94e5-d190-4ce8-b0f8-c1b74e03ffb7",
+      "institutionId": "a8937558-a3bd-4b0a-b01a-1b68b5bfee6c"
+    },
+    "pdf-oferta-b51ae6d71856dcfb": {
+      "programId": "055a0346-bb4f-46d4-9e84-61d8c3bfc3f7",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-b73dbfabfd3820f6": {
+      "programId": "3452729d-452b-4040-bd67-1c8a9d4ad7c3",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-b76f4cff70a6d31b": {
+      "programId": "222f55de-42a9-47c2-9e0b-47c513924ca9",
+      "institutionId": "99fe3c0f-4a22-443a-8eff-d44ccc0af785"
+    },
+    "pdf-oferta-b7b32aede8a37b4e": {
+      "programId": "ab497103-19ac-4f71-a221-00d04c2f319a",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-b94e09c40e2e105d": {
+      "programId": "b1b87b94-ce03-49c2-983c-6f8aee1115c8",
+      "institutionId": "aefddcf1-5c93-4df4-b26e-6abf8381ab19"
+    },
+    "pdf-oferta-b9f72ebee0099c14": {
+      "programId": "44d5a78e-0e28-4589-a6ee-ddc7513e2cf3",
+      "institutionId": "b39e5fd6-d4e5-4361-a0d2-72a6037f23b8"
+    },
+    "pdf-oferta-bb22106fef40a8a3": {
+      "programId": "c2e52969-dffe-43c1-be90-51bdca7fa896",
+      "institutionId": "37ee6b4c-0758-4c33-b616-f48e47b11937"
+    },
+    "pdf-oferta-bb7e2eef30538dcc": {
+      "programId": "4a8e33ac-47cc-468c-8b71-2649cbb4a3c2",
+      "institutionId": "2ad568a0-99a6-43a7-893c-40f0e00df20e"
+    },
+    "pdf-oferta-bbf55ae30692a1d2": {
+      "programId": "e2b148a2-de45-423c-8378-da0cb53e291d",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-bbf977cac0482563": {
+      "programId": "8f7f2f06-2161-48e5-82cd-a6193a6aec40",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-bc14fb628d29b065": {
+      "programId": "bfe4ab5a-fc25-487a-bdae-b39ddf5ab2ee",
+      "institutionId": "d1b818e1-62c4-4dd3-8099-63ad81ef17cd"
+    },
+    "pdf-oferta-c3ab7858d7299e5a": {
+      "programId": "f4dbd977-accd-4147-8c97-5738375ab841",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-c62441e259b1905a": {
+      "programId": "9384f68a-d8df-4481-b992-6ce6e1e77d32",
+      "institutionId": "99fe3c0f-4a22-443a-8eff-d44ccc0af785"
+    },
+    "pdf-oferta-c7011c14285f5b59": {
+      "programId": "edc54730-a55b-4b07-8167-9d2186e39f67",
+      "institutionId": "ab046c46-a43c-49bf-990e-26f00d87efb7"
+    },
+    "pdf-oferta-c802014acf91d323": {
+      "programId": "01cef4de-79ac-4a82-a174-54ce61f571a3",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-cb2410471a5b7b4a": {
+      "programId": "e47acb0e-7a4a-48df-bcf8-2835b056f6a3",
+      "institutionId": "90d15fa3-8bbb-465a-a7fa-fdd4e0c9e64b"
+    },
+    "pdf-oferta-cce29cc8e2d52f98": {
+      "programId": "58f3b1f4-f563-4e88-8b4e-3e27b82c9f17",
+      "institutionId": "6c800f44-af98-4c3f-9b48-b09ca9e2bb49"
+    },
+    "pdf-oferta-cd31ed49f9d98cfd": {
+      "programId": "7dbb4a15-1b22-4116-8b44-8c41c3b2e1cb",
+      "institutionId": "aefddcf1-5c93-4df4-b26e-6abf8381ab19"
+    },
+    "pdf-oferta-cdce6a7a8b1ce0c7": {
+      "programId": "74407414-31e8-4086-97b6-b99899f1dcbf",
+      "institutionId": "97aae5a6-e830-4a5b-a03d-1502eb79fe99"
+    },
+    "pdf-oferta-cff1d534d0fac56d": {
+      "programId": "447a9339-4eb9-4d7a-8ed0-8c914b4b0834",
+      "institutionId": "aefddcf1-5c93-4df4-b26e-6abf8381ab19"
+    },
+    "pdf-oferta-d2aae17383aae09d": {
+      "programId": "f7c17ca8-fc65-4977-88ae-42b6f02a6a75",
+      "institutionId": "a4ea6142-e3a2-4e14-8dfe-92042f20a477"
+    },
+    "pdf-oferta-d3856961df259706": {
+      "programId": "7ae9d945-8f06-4610-a148-5bdd47254166",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-d3f9fda6fd1be056": {
+      "programId": "e8376bb2-1541-4950-b013-73fc2a38c517",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-d47bfaa9b871c5c7": {
+      "programId": "822e2ba2-ccc1-4cce-bfbd-144eb5b05100",
+      "institutionId": "b52889c1-1a35-4b4c-9bd4-05500bdca27d"
+    },
+    "pdf-oferta-d82154935641a6d2": {
+      "programId": "6baa9482-2316-4603-8059-ab1e311f1799",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-d862de2d44f72254": {
+      "programId": "86260529-a88b-443e-b5dc-182b81b882d2",
+      "institutionId": "37ee6b4c-0758-4c33-b616-f48e47b11937"
+    },
+    "pdf-oferta-d9ed2f0c931c5a8a": {
+      "programId": "6c30b5b1-9914-4e15-8a07-c77a3a97c3ba",
+      "institutionId": "bd42a56b-01c5-406b-8d30-e38b3f9b82bb"
+    },
+    "pdf-oferta-dabacaecc2d804ea": {
+      "programId": "15003f84-51c0-47b4-bdbf-aebd095a3bda",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-dcf5599db366ccab": {
+      "programId": "94660e82-6408-4d46-9e53-14511d683a0c",
+      "institutionId": "97aae5a6-e830-4a5b-a03d-1502eb79fe99"
+    },
+    "pdf-oferta-dec9c868dc592693": {
+      "programId": "ffa3362c-59e6-4fbb-9f97-f096be7724e5",
+      "institutionId": "a8937558-a3bd-4b0a-b01a-1b68b5bfee6c"
+    },
+    "pdf-oferta-e09e016addbe836f": {
+      "programId": "346e04af-b14b-49cf-8f07-ee7ebec74941",
+      "institutionId": "d1b818e1-62c4-4dd3-8099-63ad81ef17cd"
+    },
+    "pdf-oferta-e09ed10778c487fc": {
+      "programId": "37952299-5e41-41fc-a466-78fbef680912",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-e0eb07b13694ce89": {
+      "programId": "8ca5e4cf-156a-4118-8a62-3e9592d0d77e",
+      "institutionId": "ef930519-3ef8-4420-9704-d2e6b5165964"
+    },
+    "pdf-oferta-e14ae471e4f92d4b": {
+      "programId": "200434b4-5889-4371-823f-a9aaff263e3a",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-e20cda49f45dfb06": {
+      "programId": "0b154c1c-7310-4da3-80a2-4b34db01c31a",
+      "institutionId": "99fe3c0f-4a22-443a-8eff-d44ccc0af785"
+    },
+    "pdf-oferta-e6878ed4cc855474": {
+      "programId": "74bea007-4446-46bb-bfdd-e1c6dd23516b",
+      "institutionId": "d1b818e1-62c4-4dd3-8099-63ad81ef17cd"
+    },
+    "pdf-oferta-e854d336c4ae14ae": {
+      "programId": "946242b1-8b12-4aeb-9b2a-95b59ff76e98",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-e928513ea8a01304": {
+      "programId": "1974f734-b9bb-4602-a0d2-a24bfad37ad5",
+      "institutionId": "76f0068a-c1ce-4768-b7a7-5b88959088f9"
+    },
+    "pdf-oferta-ea63302f130d7abb": {
+      "programId": "e08edfec-7355-4e02-814c-6cd063cbcd1b",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-eb37a960e4a897d8": {
+      "programId": "81bd993c-c5db-44d8-9eed-a870ef935e54",
+      "institutionId": "97aae5a6-e830-4a5b-a03d-1502eb79fe99"
+    },
+    "pdf-oferta-eb37d64281976011": {
+      "programId": "535162a9-46ed-48ec-ad22-a798be133dd1",
+      "institutionId": "a7555803-e965-4d14-a01e-bea055507756"
+    },
+    "pdf-oferta-eb8f51e7dca6dc2c": {
+      "programId": "76087f51-b6ea-4efe-81c8-93eff9da3ccf",
+      "institutionId": "ef930519-3ef8-4420-9704-d2e6b5165964"
+    },
+    "pdf-oferta-ed79c9f9c8df927c": {
+      "programId": "5fe95245-7d40-494e-a9a8-bcb147dbb32f",
+      "institutionId": "110b5ee6-daca-41d6-a65f-dad8d7d94fc8"
+    },
+    "pdf-oferta-f2577815d27dce7b": {
+      "programId": "5d9b7103-9dbf-4cb8-bf2c-1f0c9ec2f50c",
+      "institutionId": "b52889c1-1a35-4b4c-9bd4-05500bdca27d"
+    },
+    "pdf-oferta-f3ee3e5cc3a47809": {
+      "programId": "0a0f375f-2191-48ee-9f19-633ffcb1b687",
+      "institutionId": "61e6defe-b77b-46b4-9d80-d181eb08df79"
+    },
+    "pdf-oferta-f4d81e7fc926d7c7": {
+      "programId": "b3a1084f-45f6-4455-9f40-a05f59f25ae0",
+      "institutionId": "b52889c1-1a35-4b4c-9bd4-05500bdca27d"
+    },
+    "pdf-oferta-f51f06615e7c43e1": {
+      "programId": "a30b5334-0894-401f-b71d-a38f6a13a33e",
+      "institutionId": "37ee6b4c-0758-4c33-b616-f48e47b11937"
+    },
+    "pdf-oferta-f7be0ebec0660629": {
+      "programId": "66ed3cd5-041a-4dab-8bc5-a2a0900706e8",
+      "institutionId": "e8464dd2-d195-42d4-b1ad-a6f075ed76cb"
+    },
+    "pdf-oferta-f98b2c9d23a4a9ca": {
+      "programId": "020bff54-e446-42f7-b762-aed0e73b8439",
+      "institutionId": "3d84bf4b-20dc-4f99-a776-5b175a9b605c"
+    },
+    "pdf-oferta-fb085a2b88f24b6c": {
+      "programId": "2d4f2a65-b9a1-4e86-a1fc-bf99b99eb495",
+      "institutionId": "b52889c1-1a35-4b4c-9bd4-05500bdca27d"
+    },
+    "pdf-oferta-ffaa58ec5351b6e8": {
+      "programId": "75f39eaf-f283-467f-bedb-9f5877d8860c",
+      "institutionId": "93448453-9c86-45e7-94bf-63bb31c4583e"
+    },
+    "universidad-siglo-21-aguilares-abogacia": {
+      "programId": "ee45d486-94b0-4ece-bf1b-6166545b8cba",
+      "institutionId": "b7317bc6-cbac-4e24-8653-d0bccadb4005"
+    },
+    "universidad-siglo-21-aguilares-contador-publico": {
+      "programId": "286e141c-5e1d-43d6-9b98-ddcab5a1297c",
+      "institutionId": "b7317bc6-cbac-4e24-8653-d0bccadb4005"
+    },
+    "universidad-siglo-21-aguilares-higiene-y-seguridad": {
+      "programId": "67b112a8-0712-42d6-acd4-ef6a0e9f18b5",
+      "institutionId": "b7317bc6-cbac-4e24-8653-d0bccadb4005"
+    },
+    "universidad-siglo-21-aguilares-lic-en-administracion": {
+      "programId": "3b03dc6c-7297-4efb-8ab2-ce7930effa6d",
+      "institutionId": "b7317bc6-cbac-4e24-8653-d0bccadb4005"
+    },
+    "universidad-siglo-21-concepcion-abogacia": {
+      "programId": "031ef12d-35d7-4a69-84ee-a525f5164635",
+      "institutionId": "a2b4449d-fcf9-420c-b362-65a1bbe1a35a"
+    },
+    "universidad-siglo-21-concepcion-contador-publico": {
+      "programId": "9edfc816-aeda-4b7b-b5f0-39cf9ba199c1",
+      "institutionId": "a2b4449d-fcf9-420c-b362-65a1bbe1a35a"
+    },
+    "universidad-siglo-21-concepcion-higiene-y-seguridad": {
+      "programId": "c4f4873c-0e37-447b-936c-1b30b99f92d7",
+      "institutionId": "a2b4449d-fcf9-420c-b362-65a1bbe1a35a"
+    },
+    "universidad-siglo-21-concepcion-lic-en-administracion": {
+      "programId": "2a6bcae7-869f-4413-9d99-f865b7f55d54",
+      "institutionId": "a2b4449d-fcf9-420c-b362-65a1bbe1a35a"
+    },
+    "universidad-siglo-21-monteros-abogacia": {
+      "programId": "669f280e-3a0a-42e2-960c-ff1b79b51194",
+      "institutionId": "c3e0d90e-14cb-4a23-a84b-38c573c3c496"
+    },
+    "universidad-siglo-21-monteros-contador-publico": {
+      "programId": "45aac927-397d-4883-ab7e-6a6998cfd275",
+      "institutionId": "c3e0d90e-14cb-4a23-a84b-38c573c3c496"
+    },
+    "universidad-siglo-21-monteros-higiene-y-seguridad": {
+      "programId": "e307d592-45b8-4002-bee7-0dc059d54916",
+      "institutionId": "c3e0d90e-14cb-4a23-a84b-38c573c3c496"
+    },
+    "universidad-siglo-21-monteros-lic-en-administracion": {
+      "programId": "3159048b-52d3-40a6-b169-a0d7439254e6",
+      "institutionId": "c3e0d90e-14cb-4a23-a84b-38c573c3c496"
+    }
+  }
+}
