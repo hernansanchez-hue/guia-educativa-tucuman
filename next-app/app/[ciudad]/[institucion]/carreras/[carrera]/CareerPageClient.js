@@ -5,7 +5,7 @@
 import { useEffect, useRef, useState } from "react";
 import PublicFooter from "../../../../components/PublicFooter";
 import PublicFloatingHeader from "../../../../components/PublicFloatingHeader";
-import { savePublicLead } from "../../../../../lib/public-leads";
+import { savePublicLead, submitPublicInquiry } from "../../../../../lib/public-leads";
 import { heroStyle } from "../../../../../lib/admin/hero-style.mjs";
 
 const FIELD_CHIPS = [
@@ -21,6 +21,8 @@ export default function CareerPageClient({
   offering,
 }) {
   const [formSent, setFormSent] = useState(false);
+  const [formError, setFormError] = useState("");
+  const formSubmitting = useRef(false);
   const [highlightedSection, setHighlightedSection] = useState("");
   const [videoUnavailable,setVideoUnavailable]=useState(false);
   const highlightTimer = useRef();
@@ -46,11 +48,13 @@ export default function CareerPageClient({
     highlightTimer.current = window.setTimeout(() => setHighlightedSection(""), 1250);
   }
 
-  function saveCareerLead(event) {
+  async function saveCareerLead(event) {
     event.preventDefault();
+    if (formSubmitting.current) return;
+    formSubmitting.current = true;
     const form = event.currentTarget;
     const formData = new FormData(form);
-    savePublicLead({
+    const lead = {
       institution: institution.name,
       city: city.name,
       name: String(formData.get("name") || "").trim(),
@@ -59,9 +63,19 @@ export default function CareerPageClient({
       career: career.name,
       shift: String(formData.get("shift") || ""),
       query: String(formData.get("query") || "").trim(),
-    });
-    setFormSent(true);
-    form.reset();
+    };
+    setFormError("");
+    try {
+      await submitPublicInquiry({institutionId:institution.id, offeringId:offering.id, name:lead.name, phone:lead.phone, email:lead.email, query:lead.query});
+      setFormSent(true);
+      form.reset();
+    } catch {
+      const saved = savePublicLead(lead);
+      setFormSent(false);
+      setFormError(saved ? "La recepción no fue confirmada. La consulta quedó guardada solo en este navegador." : "La recepción no fue confirmada. Conservá tus datos e intentá más tarde.");
+    } finally {
+      formSubmitting.current = false;
+    }
   }
 
   return (
@@ -168,6 +182,7 @@ export default function CareerPageClient({
                   {whatsappNumber?<><div className="career-form-divider">o completá el formulario</div>
                   <a id="careerWhatsappButton" className="btn career-whatsapp" href={whatsappHref} target="_blank" rel="noopener">Hablar por WhatsApp</a></>:null}
                   <p id="careerFormMessage" className={formSent ? "" : "hidden"} style={{ color: "var(--exito)", fontWeight: 800 }}>Consulta enviada correctamente.</p>
+                  {formError ? <p role="alert">{formError}</p> : null}
                 </form>
               </section>
 

@@ -2,12 +2,12 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {usePublicEditorial} from "../../components/PublicEditorialContext";
 import PublicFooter from "../../components/PublicFooter";
 import PublicFloatingHeader from "../../components/PublicFloatingHeader";
-import { savePublicLead } from "../../../lib/public-leads";
+import { savePublicLead, submitPublicInquiry } from "../../../lib/public-leads";
 import { heroStyle } from "../../../lib/admin/hero-style.mjs";
 import {isPremiumCareer} from '../../../lib/catalog/commercial-policy.mjs';
 
@@ -102,6 +102,8 @@ export default function InstitutionPageClient({ city, institution }) {
   const [allCareersExpanded, setAllCareersExpanded] = useState(false);
   const [contactModalOpen, setContactModalOpen] = useState(false);
   const [contactFormSent, setContactFormSent] = useState(false);
+  const [contactFormError, setContactFormError] = useState("");
+  const contactSubmitting = useRef(false);
   const galleryItems = [...institution.gallery, ...institution.gallery];
   const initialCareerCount = 3;
   const primaryCareers = institution.careers.slice(0, initialCareerCount);
@@ -122,12 +124,13 @@ export default function InstitutionPageClient({ city, institution }) {
   const mapsHref = institution.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(locationQuery)}`;
   const mapsEmbedHref = `https://www.google.com/maps?q=${encodeURIComponent(locationQuery)}&output=embed`;
 
-  function saveInstitutionLead(event) {
+  async function saveInstitutionLead(event) {
     event.preventDefault();
+    if (contactSubmitting.current) return;
+    contactSubmitting.current = true;
     const form = event.currentTarget;
     const formData = new FormData(form);
-
-    savePublicLead({
+    const lead = {
       institution: institution.name,
       city: city.name,
       name: String(formData.get("name") || "").trim(),
@@ -136,10 +139,19 @@ export default function InstitutionPageClient({ city, institution }) {
       career: "Consulta general por institución",
       shift: "",
       query: String(formData.get("query") || "").trim(),
-    });
-
-    setContactFormSent(true);
-    form.reset();
+    };
+    setContactFormError("");
+    try {
+      await submitPublicInquiry({institutionId:institution.id, name:lead.name, phone:lead.phone, email:lead.email, query:lead.query});
+      setContactFormSent(true);
+      form.reset();
+    } catch {
+      const saved = savePublicLead(lead);
+      setContactFormSent(false);
+      setContactFormError(saved ? "La recepción no fue confirmada. La consulta quedó guardada solo en este navegador." : "La recepción no fue confirmada. Conservá tus datos e intentá más tarde.");
+    } finally {
+      contactSubmitting.current = false;
+    }
   }
   const pageClassName = institution.id === "instituto-santa-barbara-concepcion"
     ? "app-shell institution-santa-barbara"
@@ -396,6 +408,7 @@ export default function InstitutionPageClient({ city, institution }) {
                 <textarea name="query" placeholder="Escribí tu consulta (opcional)" />
                 <button className="btn" type="submit">Enviar consulta</button>
                 {contactFormSent ? <p className="institution-contact-form-success">Consulta enviada correctamente.</p> : null}
+                {contactFormError ? <p role="alert">{contactFormError}</p> : null}
               </form>
             </section>
           </div>

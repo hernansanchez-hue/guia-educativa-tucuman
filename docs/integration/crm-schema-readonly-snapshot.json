@@ -1,0 +1,29 @@
+{
+  "projectRef": "txqxbndfiestxjjojlgh",
+  "observedDate": "2026-10-28",
+  "source": "Supabase execute_sql, consultas SELECT a information_schema.columns y conteos públicos",
+  "tables": {
+    "public.institutions": {
+      "remotePresent": true,
+      "requiredWithoutDefault": ["name", "slug"],
+      "relevantColumns": ["id", "name", "slug", "status", "city", "province", "address", "get_enabled"],
+      "existingRows": 2,
+      "qaRows": 2
+    },
+    "public.programs": {
+      "remotePresent": true,
+      "requiredWithoutDefault": ["institution_id", "code", "name"],
+      "relevantColumns": ["id", "institution_id", "code", "name", "status"],
+      "existingRows": 4,
+      "qaRows": 4
+    },
+    "private.public_catalog_institution_links": {
+      "remotePresent": false,
+      "localMigration": "GET INSTITUCIONAL/supabase/migrations/20261029001649_public_inquiry_ingestion.sql"
+    },
+    "private.public_catalog_offering_links": {
+      "remotePresent": false,
+      "localMigration": "GET INSTITUCIONAL/supabase/migrations/20261029001649_public_inquiry_ingestion.sql"
+    }
+  }
+}

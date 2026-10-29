@@ -1,0 +1,14 @@
+{
+  "projectRef": "txqxbndfiestxjjojlgh",
+  "snapshotDate": "2026-10-28",
+  "institutions": [
+    {"id":"35ec38f4-afe1-44a7-b4d6-db90fd32a8dd","name":"Institución QA Central","slug":"institucion-qa-central","status":"active","getEnabled":false,"qa":true},
+    {"id":"652e14fc-fdcf-438c-abbc-20ec277e67e3","name":"Institución QA GET","slug":"institucion-qa-get","status":"active","getEnabled":true,"qa":true}
+  ],
+  "programs": [
+    {"id":"ba259da1-51f0-45f5-b559-599f46ce6832","institutionId":"35ec38f4-afe1-44a7-b4d6-db90fd32a8dd","code":"qa-central-001","name":"Carrera de prueba QA","status":"active"},
+    {"id":"7fdb0805-e6b9-4613-939b-cb77edfdbc45","institutionId":"652e14fc-fdcf-438c-abbc-20ec277e67e3","code":"abogacia-qa","name":"Abogacía QA","status":"active"},
+    {"id":"8407ba60-4ebb-409c-8992-2580e6431ec9","institutionId":"652e14fc-fdcf-438c-abbc-20ec277e67e3","code":"administracion-qa","name":"Administración QA","status":"active"},
+    {"id":"4afdad3a-147a-4262-9f28-f2d34384bfba","institutionId":"652e14fc-fdcf-438c-abbc-20ec277e67e3","code":"marketing-qa","name":"Marketing QA","status":"active"}
+  ]
+}

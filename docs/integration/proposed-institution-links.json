@@ -1,0 +1,877 @@
+[
+  {
+    "source_code": "get_public",
+    "public_institution_id": "academia-profesional-norte-aguilares",
+    "institution_lookup_slug": "get-public-academia-profesional-norte-aguilares",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "centro-de-formacion-tucuman-monteros",
+    "institution_lookup_slug": "get-public-centro-de-formacion-tucuman-monteros",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "ies-concepcion-concepcion",
+    "institution_lookup_slug": "get-public-ies-concepcion-concepcion",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "instituto-del-sur-monteros",
+    "institution_lookup_slug": "get-public-instituto-del-sur-monteros",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "instituto-san-miguel-monteros",
+    "institution_lookup_slug": "get-public-instituto-san-miguel-monteros",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "instituto-santa-barbara-aguilares",
+    "institution_lookup_slug": "get-public-instituto-santa-barbara-aguilares",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "instituto-santa-barbara-concepcion",
+    "institution_lookup_slug": "get-public-instituto-santa-barbara-concepcion",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900002700",
+    "institution_lookup_slug": "get-public-pdf-sede-900002700",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900003000",
+    "institution_lookup_slug": "get-public-pdf-sede-900003000",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900007100",
+    "institution_lookup_slug": "get-public-pdf-sede-900007100",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900017300",
+    "institution_lookup_slug": "get-public-pdf-sede-900017300",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900018300",
+    "institution_lookup_slug": "get-public-pdf-sede-900018300",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900034000",
+    "institution_lookup_slug": "get-public-pdf-sede-900034000",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900035100",
+    "institution_lookup_slug": "get-public-pdf-sede-900035100",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900036600",
+    "institution_lookup_slug": "get-public-pdf-sede-900036600",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900050700",
+    "institution_lookup_slug": "get-public-pdf-sede-900050700",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900051900",
+    "institution_lookup_slug": "get-public-pdf-sede-900051900",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900052900",
+    "institution_lookup_slug": "get-public-pdf-sede-900052900",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900054500",
+    "institution_lookup_slug": "get-public-pdf-sede-900054500",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900055500",
+    "institution_lookup_slug": "get-public-pdf-sede-900055500",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900056000",
+    "institution_lookup_slug": "get-public-pdf-sede-900056000",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900056100",
+    "institution_lookup_slug": "get-public-pdf-sede-900056100",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900056400",
+    "institution_lookup_slug": "get-public-pdf-sede-900056400",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900056800",
+    "institution_lookup_slug": "get-public-pdf-sede-900056800",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900057700",
+    "institution_lookup_slug": "get-public-pdf-sede-900057700",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900058600",
+    "institution_lookup_slug": "get-public-pdf-sede-900058600",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900060700",
+    "institution_lookup_slug": "get-public-pdf-sede-900060700",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900061600",
+    "institution_lookup_slug": "get-public-pdf-sede-900061600",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900061603",
+    "institution_lookup_slug": "get-public-pdf-sede-900061603",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900061700",
+    "institution_lookup_slug": "get-public-pdf-sede-900061700",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900065400",
+    "institution_lookup_slug": "get-public-pdf-sede-900065400",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900066400",
+    "institution_lookup_slug": "get-public-pdf-sede-900066400",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900071600",
+    "institution_lookup_slug": "get-public-pdf-sede-900071600",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900072600",
+    "institution_lookup_slug": "get-public-pdf-sede-900072600",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900076100",
+    "institution_lookup_slug": "get-public-pdf-sede-900076100",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900082800",
+    "institution_lookup_slug": "get-public-pdf-sede-900082800",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900088300",
+    "institution_lookup_slug": "get-public-pdf-sede-900088300",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900089600",
+    "institution_lookup_slug": "get-public-pdf-sede-900089600",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900097000",
+    "institution_lookup_slug": "get-public-pdf-sede-900097000",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900097900",
+    "institution_lookup_slug": "get-public-pdf-sede-900097900",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900099800",
+    "institution_lookup_slug": "get-public-pdf-sede-900099800",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900102000",
+    "institution_lookup_slug": "get-public-pdf-sede-900102000",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900103700",
+    "institution_lookup_slug": "get-public-pdf-sede-900103700",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104000",
+    "institution_lookup_slug": "get-public-pdf-sede-900104000",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104001",
+    "institution_lookup_slug": "get-public-pdf-sede-900104001",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104002",
+    "institution_lookup_slug": "get-public-pdf-sede-900104002",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104003",
+    "institution_lookup_slug": "get-public-pdf-sede-900104003",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104004",
+    "institution_lookup_slug": "get-public-pdf-sede-900104004",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104005",
+    "institution_lookup_slug": "get-public-pdf-sede-900104005",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104006",
+    "institution_lookup_slug": "get-public-pdf-sede-900104006",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104007",
+    "institution_lookup_slug": "get-public-pdf-sede-900104007",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104008",
+    "institution_lookup_slug": "get-public-pdf-sede-900104008",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104009",
+    "institution_lookup_slug": "get-public-pdf-sede-900104009",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104010",
+    "institution_lookup_slug": "get-public-pdf-sede-900104010",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104011",
+    "institution_lookup_slug": "get-public-pdf-sede-900104011",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104012",
+    "institution_lookup_slug": "get-public-pdf-sede-900104012",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104013",
+    "institution_lookup_slug": "get-public-pdf-sede-900104013",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104014",
+    "institution_lookup_slug": "get-public-pdf-sede-900104014",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900104015",
+    "institution_lookup_slug": "get-public-pdf-sede-900104015",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900129800",
+    "institution_lookup_slug": "get-public-pdf-sede-900129800",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900134000",
+    "institution_lookup_slug": "get-public-pdf-sede-900134000",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900134100",
+    "institution_lookup_slug": "get-public-pdf-sede-900134100",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900161200",
+    "institution_lookup_slug": "get-public-pdf-sede-900161200",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900162800",
+    "institution_lookup_slug": "get-public-pdf-sede-900162800",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900166100",
+    "institution_lookup_slug": "get-public-pdf-sede-900166100",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900167300",
+    "institution_lookup_slug": "get-public-pdf-sede-900167300",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900167301",
+    "institution_lookup_slug": "get-public-pdf-sede-900167301",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900168600",
+    "institution_lookup_slug": "get-public-pdf-sede-900168600",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900170800",
+    "institution_lookup_slug": "get-public-pdf-sede-900170800",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900173600",
+    "institution_lookup_slug": "get-public-pdf-sede-900173600",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900181000",
+    "institution_lookup_slug": "get-public-pdf-sede-900181000",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900181100",
+    "institution_lookup_slug": "get-public-pdf-sede-900181100",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900181300",
+    "institution_lookup_slug": "get-public-pdf-sede-900181300",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900182700",
+    "institution_lookup_slug": "get-public-pdf-sede-900182700",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900182800",
+    "institution_lookup_slug": "get-public-pdf-sede-900182800",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900183000",
+    "institution_lookup_slug": "get-public-pdf-sede-900183000",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900183800",
+    "institution_lookup_slug": "get-public-pdf-sede-900183800",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900184400",
+    "institution_lookup_slug": "get-public-pdf-sede-900184400",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900185100",
+    "institution_lookup_slug": "get-public-pdf-sede-900185100",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900185300",
+    "institution_lookup_slug": "get-public-pdf-sede-900185300",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900185400",
+    "institution_lookup_slug": "get-public-pdf-sede-900185400",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900185600",
+    "institution_lookup_slug": "get-public-pdf-sede-900185600",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900185700",
+    "institution_lookup_slug": "get-public-pdf-sede-900185700",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900185800",
+    "institution_lookup_slug": "get-public-pdf-sede-900185800",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900186500",
+    "institution_lookup_slug": "get-public-pdf-sede-900186500",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900190400",
+    "institution_lookup_slug": "get-public-pdf-sede-900190400",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900190600",
+    "institution_lookup_slug": "get-public-pdf-sede-900190600",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900190700",
+    "institution_lookup_slug": "get-public-pdf-sede-900190700",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900198100",
+    "institution_lookup_slug": "get-public-pdf-sede-900198100",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900202800",
+    "institution_lookup_slug": "get-public-pdf-sede-900202800",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900202801",
+    "institution_lookup_slug": "get-public-pdf-sede-900202801",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900202802",
+    "institution_lookup_slug": "get-public-pdf-sede-900202802",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900210300",
+    "institution_lookup_slug": "get-public-pdf-sede-900210300",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900226400",
+    "institution_lookup_slug": "get-public-pdf-sede-900226400",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900226401",
+    "institution_lookup_slug": "get-public-pdf-sede-900226401",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900226402",
+    "institution_lookup_slug": "get-public-pdf-sede-900226402",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900236400",
+    "institution_lookup_slug": "get-public-pdf-sede-900236400",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900240100",
+    "institution_lookup_slug": "get-public-pdf-sede-900240100",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900240400",
+    "institution_lookup_slug": "get-public-pdf-sede-900240400",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900242400",
+    "institution_lookup_slug": "get-public-pdf-sede-900242400",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900242401",
+    "institution_lookup_slug": "get-public-pdf-sede-900242401",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900249900",
+    "institution_lookup_slug": "get-public-pdf-sede-900249900",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900250400",
+    "institution_lookup_slug": "get-public-pdf-sede-900250400",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-900251600",
+    "institution_lookup_slug": "get-public-pdf-sede-900251600",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-909000100",
+    "institution_lookup_slug": "get-public-pdf-sede-909000100",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-909000400",
+    "institution_lookup_slug": "get-public-pdf-sede-909000400",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-909000600",
+    "institution_lookup_slug": "get-public-pdf-sede-909000600",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-sede-909000700",
+    "institution_lookup_slug": "get-public-pdf-sede-909000700",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-20bb078f4353b932",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-20bb078f4353b932",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-20dbf38c184338f4",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-20dbf38c184338f4",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-2645f1feef8b9e48",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-2645f1feef8b9e48",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-584edaff5aa7ebb5",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-584edaff5aa7ebb5",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-5c91fbaa7fd00217",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-5c91fbaa7fd00217",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-6bb52231b8fdfe69",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-6bb52231b8fdfe69",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-6fc86e9206ca5297",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-6fc86e9206ca5297",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-940e604eb9f571d3",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-940e604eb9f571d3",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-bdc70255a58a7851",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-bdc70255a58a7851",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-c55b62dc8a826bc5",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-c55b62dc8a826bc5",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-d2a7594bcb0de3fa",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-d2a7594bcb0de3fa",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-d6d81d1dbedf8dc5",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-d6d81d1dbedf8dc5",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-f60a8566910edb58",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-f60a8566910edb58",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "pdf-universidad-sede-fba2ecd98e8507a3",
+    "institution_lookup_slug": "get-public-pdf-universidad-sede-fba2ecd98e8507a3",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "universidad-siglo-21-aguilares",
+    "institution_lookup_slug": "get-public-universidad-siglo-21-aguilares",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "universidad-siglo-21-concepcion",
+    "institution_lookup_slug": "get-public-universidad-siglo-21-concepcion",
+    "institution_id": null,
+    "active": true
+  },
+  {
+    "source_code": "get_public",
+    "public_institution_id": "universidad-siglo-21-monteros",
+    "institution_lookup_slug": "get-public-universidad-siglo-21-monteros",
+    "institution_id": null,
+    "active": true
+  }
+]

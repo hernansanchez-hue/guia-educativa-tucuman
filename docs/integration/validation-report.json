@@ -1,0 +1,25 @@
+{
+  "catalogVersion": 638,
+  "counts": {
+    "cities": 27,
+    "venues": 125,
+    "brands": 93,
+    "masters": 195,
+    "offerings": 198,
+    "multisiteBrandGroups": 11
+  },
+  "confirmedVenueMappings": 0,
+  "confirmedOfferingMappings": 0,
+  "confirmedCommercialTenants": 0,
+  "crmRealInstitutions": 0,
+  "crmRealPrograms": 0,
+  "possibleDuplicates": 3,
+  "sharedProgramDecisions": 29,
+  "inconsistencies": 0,
+  "validator": {
+    "cities": 27,
+    "venues": 125,
+    "careers": 195,
+    "offerings": 198
+  }
+}

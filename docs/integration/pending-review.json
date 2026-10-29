@@ -1,0 +1,411 @@
+{
+  "multiVenueGroups": [
+    {
+      "brandId": "instituto-santa-barbara",
+      "brandName": "Instituto Santa Bárbara",
+      "publicVenueIds": [
+        "instituto-santa-barbara-aguilares",
+        "instituto-santa-barbara-concepcion"
+      ],
+      "commercialTenantDecision": "requires_commercial_decision",
+      "crmInstitutionId": null
+    },
+    {
+      "brandId": "pdf-marca-9000616",
+      "brandName": "CONSERVATORIO PROVINCIAL DE MUSICA",
+      "publicVenueIds": [
+        "pdf-sede-900061600",
+        "pdf-sede-900061603"
+      ],
+      "commercialTenantDecision": "requires_commercial_decision",
+      "crmInstitutionId": null
+    },
+    {
+      "brandId": "pdf-marca-9001040",
+      "brandName": "CENTRO EDUCATIVO DE NIVEL TERCIARIO N° 74 (C.E.N.T. N° 74)",
+      "publicVenueIds": [
+        "pdf-sede-900104000",
+        "pdf-sede-900104001",
+        "pdf-sede-900104002",
+        "pdf-sede-900104003",
+        "pdf-sede-900104004",
+        "pdf-sede-900104005",
+        "pdf-sede-900104006",
+        "pdf-sede-900104007",
+        "pdf-sede-900104008",
+        "pdf-sede-900104009",
+        "pdf-sede-900104010",
+        "pdf-sede-900104011",
+        "pdf-sede-900104012",
+        "pdf-sede-900104013",
+        "pdf-sede-900104014",
+        "pdf-sede-900104015"
+      ],
+      "commercialTenantDecision": "requires_commercial_decision",
+      "crmInstitutionId": null
+    },
+    {
+      "brandId": "pdf-marca-9001673",
+      "brandName": "INST. DE PERFECCIONAMIENTO DOCENTE",
+      "publicVenueIds": [
+        "pdf-sede-900167300",
+        "pdf-sede-900167301"
+      ],
+      "commercialTenantDecision": "requires_commercial_decision",
+      "crmInstitutionId": null
+    },
+    {
+      "brandId": "pdf-marca-9002028",
+      "brandName": "FUNDACION JUAN XXIII",
+      "publicVenueIds": [
+        "pdf-sede-900202800",
+        "pdf-sede-900202801",
+        "pdf-sede-900202802"
+      ],
+      "commercialTenantDecision": "requires_commercial_decision",
+      "crmInstitutionId": null
+    },
+    {
+      "brandId": "pdf-marca-9002264",
+      "brandName": "INST. SUPER. DEL PROFESORADO DE EDUC. FISICA NORTE ARGENTINO",
+      "publicVenueIds": [
+        "pdf-sede-900226400",
+        "pdf-sede-900226401",
+        "pdf-sede-900226402"
+      ],
+      "commercialTenantDecision": "requires_commercial_decision",
+      "crmInstitutionId": null
+    },
+    {
+      "brandId": "pdf-marca-9002424",
+      "brandName": "COLEGIO PILAR IBAÑEZ",
+      "publicVenueIds": [
+        "pdf-sede-900242400",
+        "pdf-sede-900242401"
+      ],
+      "commercialTenantDecision": "requires_commercial_decision",
+      "crmInstitutionId": null
+    },
+    {
+      "brandId": "pdf-universidad-unsta",
+      "brandName": "Universidad del Norte Santo Tomás de Aquino (UNSTA)",
+      "publicVenueIds": [
+        "pdf-universidad-sede-6bb52231b8fdfe69",
+        "pdf-universidad-sede-6fc86e9206ca5297",
+        "pdf-universidad-sede-d2a7594bcb0de3fa"
+      ],
+      "commercialTenantDecision": "requires_commercial_decision",
+      "crmInstitutionId": null
+    },
+    {
+      "brandId": "pdf-universidad-usp-t",
+      "brandName": "Universidad de San Pablo-Tucumán (USP-T)",
+      "publicVenueIds": [
+        "pdf-universidad-sede-584edaff5aa7ebb5",
+        "pdf-universidad-sede-bdc70255a58a7851"
+      ],
+      "commercialTenantDecision": "requires_commercial_decision",
+      "crmInstitutionId": null
+    },
+    {
+      "brandId": "pdf-universidad-utn-frt",
+      "brandName": "Universidad Tecnológica Nacional — Facultad Regional Tucumán (UTN-FRT)",
+      "publicVenueIds": [
+        "pdf-universidad-sede-20dbf38c184338f4",
+        "pdf-universidad-sede-940e604eb9f571d3"
+      ],
+      "commercialTenantDecision": "requires_commercial_decision",
+      "crmInstitutionId": null
+    },
+    {
+      "brandId": "universidad-siglo-21",
+      "brandName": "Universidad Siglo 21",
+      "publicVenueIds": [
+        "pdf-universidad-sede-20bb078f4353b932",
+        "pdf-universidad-sede-2645f1feef8b9e48",
+        "pdf-universidad-sede-fba2ecd98e8507a3",
+        "universidad-siglo-21-aguilares",
+        "universidad-siglo-21-concepcion",
+        "universidad-siglo-21-monteros"
+      ],
+      "commercialTenantDecision": "requires_commercial_decision",
+      "crmInstitutionId": null
+    }
+  ],
+  "sharedProgramDecisions": [
+    {
+      "brandAndMaster": "instituto-santa-barbara:diagnostico-por-imagenes",
+      "publicVenueIds": [
+        "instituto-santa-barbara-aguilares",
+        "instituto-santa-barbara-concepcion"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "instituto-santa-barbara:instrumentacion-quirurgica",
+      "publicVenueIds": [
+        "instituto-santa-barbara-aguilares",
+        "instituto-santa-barbara-concepcion"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "instituto-santa-barbara:laboratorio-de-analisis-clinicos",
+      "publicVenueIds": [
+        "instituto-santa-barbara-aguilares",
+        "instituto-santa-barbara-concepcion"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-66e8054d2c2f43e1",
+      "publicVenueIds": [
+        "pdf-universidad-sede-d2a7594bcb0de3fa",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-75b7cb1d21043670",
+      "publicVenueIds": [
+        "pdf-universidad-sede-d2a7594bcb0de3fa",
+        "pdf-universidad-sede-6fc86e9206ca5297",
+        "pdf-universidad-sede-6bb52231b8fdfe69"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:abogacia",
+      "publicVenueIds": [
+        "pdf-universidad-sede-6fc86e9206ca5297",
+        "pdf-universidad-sede-d2a7594bcb0de3fa"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-b5ad47d0738bb9cb",
+      "publicVenueIds": [
+        "pdf-universidad-sede-d2a7594bcb0de3fa",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-b15d59c73c6a7bec",
+      "publicVenueIds": [
+        "pdf-universidad-sede-d2a7594bcb0de3fa",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-0b51c9ea55556170",
+      "publicVenueIds": [
+        "pdf-universidad-sede-d2a7594bcb0de3fa",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-marca-9000616:pdf-carrera-270799e7e8e9cf33",
+      "publicVenueIds": [
+        "pdf-sede-900061600",
+        "pdf-sede-900061603"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-9e2098e08f807eb5",
+      "publicVenueIds": [
+        "pdf-universidad-sede-d2a7594bcb0de3fa",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-1eec54ab9baf6ee2",
+      "publicVenueIds": [
+        "pdf-universidad-sede-d2a7594bcb0de3fa",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-4aa784c6ac6a70cd",
+      "publicVenueIds": [
+        "pdf-universidad-sede-6bb52231b8fdfe69",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-7bcb778ef755148c",
+      "publicVenueIds": [
+        "pdf-universidad-sede-6bb52231b8fdfe69",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-6b56f07a7ef9a705",
+      "publicVenueIds": [
+        "pdf-universidad-sede-6fc86e9206ca5297",
+        "pdf-universidad-sede-d2a7594bcb0de3fa"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-68c2517332cee069",
+      "publicVenueIds": [
+        "pdf-universidad-sede-d2a7594bcb0de3fa",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-3d2451362a400d3a",
+      "publicVenueIds": [
+        "pdf-universidad-sede-6bb52231b8fdfe69",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-cc906f04aafac750",
+      "publicVenueIds": [
+        "pdf-universidad-sede-6fc86e9206ca5297",
+        "pdf-universidad-sede-d2a7594bcb0de3fa"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-f998cb9937926638",
+      "publicVenueIds": [
+        "pdf-universidad-sede-6bb52231b8fdfe69",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:contador-publico",
+      "publicVenueIds": [
+        "pdf-universidad-sede-d2a7594bcb0de3fa",
+        "pdf-universidad-sede-6bb52231b8fdfe69",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-marca-9000616:pdf-carrera-fb5ed0d82289f5ee",
+      "publicVenueIds": [
+        "pdf-sede-900061603",
+        "pdf-sede-900061600"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-f5a8ee7a8e20fcaa",
+      "publicVenueIds": [
+        "pdf-universidad-sede-d2a7594bcb0de3fa",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-marca-9000616:pdf-carrera-95582b7679becc56",
+      "publicVenueIds": [
+        "pdf-sede-900061603",
+        "pdf-sede-900061600"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-0e3d946bd59a93f3",
+      "publicVenueIds": [
+        "pdf-universidad-sede-6bb52231b8fdfe69",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "pdf-universidad-unsta:pdf-carrera-8e412ded7b2a215e",
+      "publicVenueIds": [
+        "pdf-universidad-sede-6bb52231b8fdfe69",
+        "pdf-universidad-sede-6fc86e9206ca5297"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "universidad-siglo-21:abogacia",
+      "publicVenueIds": [
+        "universidad-siglo-21-aguilares",
+        "universidad-siglo-21-concepcion",
+        "universidad-siglo-21-monteros"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "universidad-siglo-21:contador-publico",
+      "publicVenueIds": [
+        "universidad-siglo-21-aguilares",
+        "universidad-siglo-21-concepcion",
+        "universidad-siglo-21-monteros"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "universidad-siglo-21:higiene-y-seguridad",
+      "publicVenueIds": [
+        "universidad-siglo-21-aguilares",
+        "universidad-siglo-21-concepcion",
+        "universidad-siglo-21-monteros"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    },
+    {
+      "brandAndMaster": "universidad-siglo-21:lic-en-administracion",
+      "publicVenueIds": [
+        "universidad-siglo-21-aguilares",
+        "universidad-siglo-21-concepcion",
+        "universidad-siglo-21-monteros"
+      ],
+      "decision": "Do not share CRM program without tenant and commercial review"
+    }
+  ],
+  "possibleDuplicates": [
+    {
+      "type": "same_venue_master_requires_modality_review",
+      "ids": [
+        "pdf-oferta-57921515c79f5597",
+        "pdf-oferta-f7be0ebec0660629"
+      ]
+    },
+    {
+      "type": "same_venue_master_requires_modality_review",
+      "ids": [
+        "pdf-oferta-d3856961df259706",
+        "pdf-oferta-8adcf9881b241cfc"
+      ]
+    },
+    {
+      "type": "same_venue_master_requires_modality_review",
+      "ids": [
+        "pdf-oferta-a9b71e359fddcf7e",
+        "pdf-oferta-349f55ccce513028"
+      ]
+    }
+  ],
+  "inconsistencies": [],
+  "qaExcluded": [
+    {
+      "id": "35ec38f4-afe1-44a7-b4d6-db90fd32a8dd",
+      "name": "Institución QA Central"
+    },
+    {
+      "id": "652e14fc-fdcf-438c-abbc-20ec277e67e3",
+      "name": "Institución QA GET"
+    }
+  ],
+  "crmRealInstitutions": 0,
+  "crmRealPrograms": 0
+}

@@ -1,0 +1,68 @@
+{
+  "projectRef": "txqxbndfiestxjjojlgh",
+  "sourceSnapshotDate": "2026-10-28",
+  "mode": "offline_dry_run_no_remote_writes",
+  "schemaSnapshotDate": "2026-10-28",
+  "schema": {
+    "institutions": "remote_present",
+    "programs": "remote_present",
+    "privateInstitutionLinks": "remote_absent_local_migration_only",
+    "privateOfferingLinks": "remote_absent_local_migration_only"
+  },
+  "counts": {
+    "catalogCities": 27,
+    "catalogMasters": 195,
+    "inventoryVenues": 125,
+    "inventoryOfferings": 198,
+    "existingRealInstitutions": 0,
+    "existingRealPrograms": 0,
+    "qaInstitutionsExcluded": 2,
+    "qaProgramsExcluded": 4,
+    "institutionsToCreate": 125,
+    "programsToCreate": 198,
+    "institutionLinksToCreateAfterMigration": 125,
+    "offeringLinksToCreateAfterMigration": 198,
+    "sameVenueMasterPairs": 3,
+    "exactModalityDuplicates": 0,
+    "blockingIssues": 0
+  },
+  "sameVenueMasterPairs": [
+    [
+      {
+        "publicOfferingId": "pdf-oferta-349f55ccce513028",
+        "modality": null
+      },
+      {
+        "publicOfferingId": "pdf-oferta-a9b71e359fddcf7e",
+        "modality": "A distancia"
+      }
+    ],
+    [
+      {
+        "publicOfferingId": "pdf-oferta-57921515c79f5597",
+        "modality": null
+      },
+      {
+        "publicOfferingId": "pdf-oferta-f7be0ebec0660629",
+        "modality": "A distancia"
+      }
+    ],
+    [
+      {
+        "publicOfferingId": "pdf-oferta-8adcf9881b241cfc",
+        "modality": "A distancia"
+      },
+      {
+        "publicOfferingId": "pdf-oferta-d3856961df259706",
+        "modality": null
+      }
+    ]
+  ],
+  "readyForReview": true,
+  "importSafeNow": false,
+  "importBlockedBy": [
+    "Explicit user approval required",
+    "Private link tables not deployed remotely",
+    "Remote state must be refreshed immediately before execution"
+  ]
+}
