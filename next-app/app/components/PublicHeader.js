@@ -1,11 +1,10 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import {usePublicEditorial} from "./PublicEditorialContext";
 import PublicHeaderFrame from "./PublicHeaderFrame";
+import PublicImage from './PublicImage';
 import {isPublicNavigationItemActive} from '../data/publicSiteContent';
 
 const THEME_EVENT = "guia-educativa-theme-change";
@@ -80,7 +79,7 @@ export default function PublicHeader({ variant = "city-hero", citySearch = null,
         </svg>
       </span>
       <label className="institution-search-field">
-        <input type="search" placeholder={menu.searchPlaceholder} autoComplete="off" value={headerQuery} onChange={(event) => setHeaderQuery(event.target.value)} />
+        <input type="search" aria-label={menu.searchPlaceholder || "Buscar carreras e instituciones"} placeholder={menu.searchPlaceholder} autoComplete="off" value={headerQuery} onChange={(event) => setHeaderQuery(event.target.value)} />
       </label>
     </form>
   );
@@ -89,11 +88,11 @@ export default function PublicHeader({ variant = "city-hero", citySearch = null,
     <header className={variant === "city-hero" ? "site-header city-hero-header visible" : "site-header visible"}>
       <button className="logo" onClick={goHome} aria-label="Volver al inicio">
         {variant === "city-hero" ? (
-          <span className="city-hero-logo" aria-hidden="true"><img src={footer.logo||menu.logo} alt="" /></span>
+          <span className="city-hero-logo" aria-hidden="true"><PublicImage src={footer.logo||menu.logo} alt="" width={908} height={542} sizes="180px" loading="eager" /></span>
         ) : (
           <span className="public-logo-compact" aria-hidden="true">
-            <img className="public-logo-light" src="/assets/get-logo-oficial.png" alt="" />
-            <img className="public-logo-dark" src="/assets/get-logo-hero-blanco-dorado.png" alt="" />
+            <PublicImage className="public-logo-light" src="/assets/get-logo-oficial.png" alt="" width={5225} height={5225} sizes="180px" />
+            <PublicImage className="public-logo-dark" src="/assets/get-logo-hero-blanco-dorado.png" alt="" width={1254} height={1254} sizes="180px" />
           </span>
         )}
       </button>

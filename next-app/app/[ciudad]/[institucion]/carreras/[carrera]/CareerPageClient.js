@@ -1,10 +1,9 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-
 import { useEffect, useRef, useState } from "react";
 import PublicFooter from "../../../../components/PublicFooter";
 import PublicFloatingHeader from "../../../../components/PublicFloatingHeader";
+import PublicImage from '../../../../components/PublicImage';
 import { savePublicLead, submitPublicInquiry } from "../../../../../lib/public-leads";
 import { heroStyle } from "../../../../../lib/admin/hero-style.mjs";
 
@@ -95,7 +94,7 @@ export default function CareerPageClient({
                     {career.description}
                   </p>
                 </div>
-                <div className="career-overview-media">{offering.video&&!videoUnavailable?<video id="careerPageImage" className="career-page-image" src={offering.video} poster={offering.image||undefined} controls playsInline preload="metadata" onError={()=>setVideoUnavailable(true)} aria-label={`Video de ${career.name}`}/>:offering.image?<img id="careerPageImage" className="career-page-image" src={offering.image} alt={offering.imageAlt||career.name}/>:null}</div>
+                <div className="career-overview-media">{offering.video&&!videoUnavailable?<video id="careerPageImage" className="career-page-image" src={offering.video} poster={offering.image||undefined} controls playsInline preload="metadata" onError={()=>setVideoUnavailable(true)} aria-label={`Video de ${career.name}`}/>:offering.image?<PublicImage id="careerPageImage" className="career-page-image" src={offering.image} alt={offering.imageAlt||career.name} width={1200} height={800} sizes="(max-width: 980px) max(680px, 100vw), 60vw" loading="eager" fetchPriority="high"/>:null}</div>
               </section>
 
               {(career.description||career.workField||career.studyPlan.length||career.requirements.length||career.faq.length)?<nav className="career-section-tabs career-section-navigation" aria-label="Contenido de la carrera">

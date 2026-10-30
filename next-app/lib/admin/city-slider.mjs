@@ -17,7 +17,7 @@ export function automaticCitySlides(city) {
     institutionName:institution.name,
     institution:{name:institution.name,description:institution.description,image:institution.image,type:institution.type,route:`/${city.slug}/${institution.slug}`},
     route:`/${city.slug}/${institution.slug}/${/capacitaci/i.test(institution.type??'')?'capacitaciones':'carreras'}/${canonical[career.slug]??career.slug}`,
-  }))).slice(0,5);
+  })));
 }
 
 export function seedCitySlides(city) {

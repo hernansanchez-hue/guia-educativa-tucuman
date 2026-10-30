@@ -1,8 +1,8 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import PublicImage from '../../components/PublicImage';
+import useViewportActivity from '../../components/useViewportActivity';
 import { useRouter } from "next/navigation";
 import {usePublicEditorial} from "../../components/PublicEditorialContext";
 import PublicFooter from "../../components/PublicFooter";
@@ -76,22 +76,36 @@ function LocationIcon({ type }) {
 function CareerMedia({ career }) {
   const [videoUnavailable, setVideoUnavailable] = useState(false);
   const videoSource = career.video || "https://media.w3.org/2010/05/sintel/trailer.mp4";
+  const {ref, active, seen} = useViewportActivity({rootMargin: '200px', reducedMotion: true});
+
+  useEffect(() => {
+    const video = ref.current;
+    if (!video || video.tagName !== 'VIDEO' || !seen) return;
+    video.load();
+  }, [seen, videoSource, ref]);
+
+  useEffect(() => {
+    const video = ref.current;
+    if (!video || video.tagName !== 'VIDEO') return;
+    if (active) video.play().catch(() => {});
+    else video.pause();
+  }, [active, seen, ref]);
 
   if (!videoSource || videoUnavailable) {
-    return <img src={career.image} alt={career.name} />;
+    return <PublicImage src={career.image} alt={career.name} width={1600} height={900} sizes="(max-width: 767px) calc(100vw - 64px), (max-width: 1100px) 43vw, 24vw" loading="lazy" />;
   }
 
   return (
     <video
-      autoPlay
+      ref={ref}
       loop
       muted
       playsInline
-      poster={career.image}
-      preload="metadata"
+      poster={seen ? career.image : undefined}
+      preload="none"
       onError={() => setVideoUnavailable(true)}
     >
-      <source src={videoSource} type="video/mp4" />
+      <source src={seen ? videoSource : undefined} type="video/mp4" />
     </video>
   );
 }
@@ -104,6 +118,7 @@ export default function InstitutionPageClient({ city, institution }) {
   const [contactFormSent, setContactFormSent] = useState(false);
   const [contactFormError, setContactFormError] = useState("");
   const contactSubmitting = useRef(false);
+  const {ref: galleryRef, active: galleryActive} = useViewportActivity();
   const galleryItems = [...institution.gallery, ...institution.gallery];
   const initialCareerCount = 3;
   const primaryCareers = institution.careers.slice(0, initialCareerCount);
@@ -174,12 +189,13 @@ export default function InstitutionPageClient({ city, institution }) {
           <div
             className="detail-cover"
             id="detailCover"
-            style={{ backgroundImage: `url("${institution.image}")` }}
+            style={{ isolation: 'isolate' }}
           >
+            <PublicImage src={institution.image} alt="" fill sizes="(max-width: 767px) max(465px, calc(100vw - 32px)), 90vw" loading="eager" fetchPriority="high" style={{objectFit: 'cover', zIndex: -1}} />
             <div>
               <div className="brand-row">
                 <span className="mini-logo" id="detailLogo">
-                  {institution.logoUrl ? <img src={institution.logoUrl} alt={institution.name} style={{maxWidth:'100%',maxHeight:'100%',objectFit:'contain'}} /> : institution.logo}
+                  {institution.logoUrl ? <PublicImage src={institution.logoUrl} alt={institution.name} width={160} height={160} sizes="160px" style={{maxWidth:'100%',maxHeight:'100%',objectFit:'contain'}} /> : institution.logo}
                 </span>
                 <span
                   className="eyebrow"
@@ -355,12 +371,12 @@ export default function InstitutionPageClient({ city, institution }) {
 
         {institution.gallery.length?<section className="panel">
           <h2 className="detail-section-title">Galería de fotos</h2>
-          <div id="institutionGallery" className="creation-gallery">
-            <div className="creation-marquee" style={{ animationDuration: `${institution.gallery.length * 2500}ms` }}>
+          <div id="institutionGallery" className="creation-gallery" ref={galleryRef}>
+            <div className="creation-marquee" style={{ animationDuration: `${institution.gallery.length * 2500}ms`, animationPlayState: galleryActive ? undefined : 'paused' }}>
               <div className="creation-marquee-group">
                 {galleryItems.map((image, index) => (
                   <article className="creation-card" tabIndex="0" key={`${image}-${index}`}>
-                    <img src={image} alt={`Foto ${index + 1} de ${institution.name}`} />
+                    <PublicImage src={image} alt={`Foto ${index + 1} de ${institution.name}`} width={1200} height={800} sizes="224px" loading="lazy" />
                     <div className="creation-card-overlay"><p>{institution.name}</p></div>
                   </article>
                 ))}

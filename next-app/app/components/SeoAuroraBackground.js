@@ -9,29 +9,39 @@ export default function SeoAuroraBackground({ children,attributes={} }) {
     const scene = sceneRef.current;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let frame = 0;
+    let lastScrollY = null;
+    // Cache the decorative targets once. Updating inherited custom properties
+    // on the scene invalidates all descendants on every scroll frame.
+    const targets = [
+      [scene.querySelector('.seo-scroll-ribbon.is-primary'), y => `translate3d(${y * 0.028}px, ${y * -0.055}px, 0)`],
+      [scene.querySelector('.seo-scroll-ribbon.is-secondary'), y => `translate3d(${y * -0.0154}px, ${y * 0.085}px, 0)`],
+      [scene.querySelector('.seo-scroll-ribbon.is-gold'), y => `translate3d(0, ${y * -0.035}px, 0)`],
+      [scene.querySelector('.seo-scroll-orbit.is-navy'), y => `translate3d(0, ${y * -0.055}px, 0) rotate(${y * 0.006}deg)`],
+      [scene.querySelector('.seo-scroll-orbit.is-sky'), y => `translate3d(${y * 0.028}px, ${y * 0.085}px, 0) rotate(${y * -0.0042}deg)`],
+      [scene.querySelector('.seo-scroll-arch'), y => `translate3d(${y * 0.028}px, ${y * -0.035}px, 0) rotate(${y * 0.0027}deg)`],
+      [scene.querySelector('.seo-scroll-dots'), y => `translate3d(${y * 0.028}px, ${y * 0.085}px, 0)`],
+    ];
 
     const updateParallax = () => {
       frame = 0;
-      if (reducedMotion.matches) return;
+      if (reducedMotion.matches || document.hidden) return;
 
       const scrollY = window.scrollY;
-      scene.style.setProperty("--seo-shift-a", `${scrollY * -0.055}px`);
-      scene.style.setProperty("--seo-shift-b", `${scrollY * 0.085}px`);
-      scene.style.setProperty("--seo-shift-c", `${scrollY * -0.035}px`);
-      scene.style.setProperty("--seo-shift-x", `${scrollY * 0.028}px`);
-      scene.style.setProperty("--seo-shift-x-reverse", `${scrollY * -0.0154}px`);
-      scene.style.setProperty("--seo-turn", `${scrollY * 0.006}deg`);
-      scene.style.setProperty("--seo-turn-reverse", `${scrollY * -0.0042}deg`);
-      scene.style.setProperty("--seo-turn-soft", `${scrollY * 0.0027}deg`);
+      if (scrollY === lastScrollY) return;
+      lastScrollY = scrollY;
+      for (const [element, transform] of targets) element.style.transform = transform(scrollY);
     };
 
     const requestUpdate = () => {
-      if (!frame) frame = window.requestAnimationFrame(updateParallax);
+      if (!frame && !document.hidden && !reducedMotion.matches) frame = window.requestAnimationFrame(updateParallax);
     };
 
     const resetForReducedMotion = () => {
       if (reducedMotion.matches) {
-        ["--seo-shift-a", "--seo-shift-b", "--seo-shift-c", "--seo-shift-x", "--seo-shift-x-reverse", "--seo-turn", "--seo-turn-reverse", "--seo-turn-soft"].forEach((property) => scene.style.removeProperty(property));
+        if (frame) window.cancelAnimationFrame(frame);
+        frame = 0;
+        lastScrollY = null;
+        for (const [element] of targets) element.style.removeProperty('transform');
       } else {
         requestUpdate();
       }
@@ -40,10 +50,12 @@ export default function SeoAuroraBackground({ children,attributes={} }) {
     requestUpdate();
     window.addEventListener("scroll", requestUpdate, { passive: true });
     reducedMotion.addEventListener("change", resetForReducedMotion);
+    document.addEventListener("visibilitychange", requestUpdate);
 
     return () => {
       window.removeEventListener("scroll", requestUpdate);
       reducedMotion.removeEventListener("change", resetForReducedMotion);
+      document.removeEventListener("visibilitychange", requestUpdate);
       if (frame) window.cancelAnimationFrame(frame);
     };
   }, []);

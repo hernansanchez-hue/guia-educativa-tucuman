@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;550;600;650;700;750;800&display=swap');
+.get-city-approved{--navy:#12233f;--ink:#17263d;--gold:#c59b36;--muted:#687384;--paper:#f7f8fa;--line:#e3e6eb}
+.get-city-approved *{box-sizing:border-box}
+.get-city-approved{scroll-behavior:smooth;scroll-padding-top:100px}
+.get-city-approved{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:15px;-webkit-font-smoothing:antialiased}
+.get-city-approved button,.get-city-approved input,.get-city-approved a{-webkit-tap-highlight-color:transparent}
+.get-city-approved button,.get-city-approved input{font:inherit}
+.get-city-approved button,.get-city-approved a{touch-action:manipulation}
+.get-city-approved button{cursor:pointer}
+.get-city-approved a{color:inherit;text-decoration:none}
+.get-city-approved button{border:0}
+.get-city-approved button:focus-visible,.get-city-approved a:focus-visible,.get-city-approved input:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
+.get-city-approved button{color:inherit}
+.get-city-approved h1,.get-city-approved h2,.get-city-approved h3,.get-city-approved p{margin:0}
+.get-city-approved h1,.get-city-approved h2,.get-city-approved h3{font-family:Manrope,Arial,sans-serif}
+.get-city-approved svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6}
+.get-city-approved .network{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.get-city-approved .wrap{max-width:1160px;width:calc(100% - 96px);margin-inline:auto}
+.get-city-approved .header{max-width:1380px;margin:18px auto 0;width:calc(100% - 48px);height:84px;display:flex;align-items:center;justify-content:space-between;gap:32px;background:rgba(255,255,255,.96);padding:16px 32px;border-radius:18px;box-shadow:0 6px 25px #17263d05;border:1px solid #fff;position:relative;z-index:5}
+.get-city-approved .brand img{width:132px;height:48px;object-fit:contain}
+.get-city-approved .header nav{display:flex;align-items:center;gap:31px;margin-right:auto;margin-left:45px;height:100%;font-size:13px;font-weight:600}
+.get-city-approved .header nav a,.get-city-approved .header nav button{background:none;position:relative;padding:14px 0}
+.get-city-approved .header nav .active:after{content:'';position:absolute;bottom:3px;left:0;right:0;height:2px;background:var(--gold)}
+.get-city-approved .header-right{display:flex;align-items:center;gap:22px}
+.get-city-approved .city{display:flex;align-items:center;gap:7px;background:none;font-size:12px}
+.get-city-approved .city svg{width:15px;height:15px}
+.get-city-approved .city span{margin-left:12px;color:#888}
+.get-city-approved .courses{background:var(--navy);color:white;padding:14px 17px;border-radius:9px;font-size:12px}
+.get-city-approved .courses span{margin-left:16px}
+.get-city-approved .intro{text-align:center;padding:62px 0 40px}
+.get-city-approved .eyebrow{font-size:10px;letter-spacing:1.8px;font-weight:700;display:block}
+.get-city-approved .intro .eyebrow{display:flex;align-items:center;justify-content:center;gap:10px;color:#737d8c}
+.get-city-approved .tiny-line{width:22px;height:1px;background:var(--gold)}
+.get-city-approved h1{font-size:57px;line-height:1.13;letter-spacing:-2.6px;font-weight:750;margin-top:17px}
+.get-city-approved h1 em{font-style:normal;color:#b48a28}
+.get-city-approved .intro>p{font-size:15px;color:var(--muted);margin:20px 0 24px;line-height:1.8}
+.get-city-approved .mobile-only{display:none}
+.get-city-approved .search{width:650px;max-width:100%;margin:auto;display:flex;align-items:center;gap:16px;padding:8px 8px 8px 23px;background:white;border:1px solid #dfe3e9;border-radius:13px;box-shadow:0 8px 22px #12233f06}
+.get-city-approved .search>svg{color:#87919e;flex-shrink:0}
+.get-city-approved .search input{flex:1;width:100%;min-width:0;background:none;border:0;outline:none;font-size:14px;padding:13px 0}
+.get-city-approved .search button{background:var(--navy);color:#fff;border-radius:8px;padding:16px 23px;font-size:13px}
+.get-city-approved .search button span{margin-left:18px}
+.get-city-approved .quick{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:17px;font-size:11px}
+.get-city-approved .quick>span{color:#8a929e}
+.get-city-approved .quick a,.get-city-approved .quick button{font-size:11px;background:none;padding:5px 0;color:#4b5667}
+.get-city-approved #results{background:white;border:1px solid var(--line);max-width:650px;margin:15px auto 0;text-align:left;padding:20px;border-radius:12px;box-shadow:0 6px 20px #12233f08}
+.get-city-approved #results button{width:100%;text-align:left;padding:14px;border-radius:7px;background:#f6f7f9;margin:5px 0}
+.get-city-approved #results small{display:block;color:var(--muted);margin-top:5px}
+.get-city-approved .hero{background:var(--navy);border-radius:20px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;box-shadow:0 15px 40px #14263e0b}
+.get-city-approved .hero-copy{padding:38px 46px 24px;color:white;position:relative}
+.get-city-approved .gold{color:#d4b25b}
+.get-city-approved .sponsored{display:flex;gap:7px;align-items:center;font-size:10px;color:#bec8d4;margin-top:25px}
+.get-city-approved .sponsored span{width:5px;height:5px;background:#d9b864;border-radius:50%}
+.get-city-approved .hero h2{font-size:43px;letter-spacing:-1.8px;font-weight:600;line-height:1.15;margin-top:10px}
+.get-city-approved .hero p{font-size:13px;line-height:1.75;color:#c4cbd5;margin-top:14px;max-width:350px;min-height:46px}
+.get-city-approved .hero-institution{display:flex;gap:12px;align-items:center;margin-top:21px}
+.get-city-approved .school-icon{border:1px solid #ffffff28;width:35px;height:35px;display:grid;place-items:center;border-radius:7px;color:#d8b861;font-size:21px}
+.get-city-approved .hero-institution small{display:block;font-size:8px;letter-spacing:1.4px;color:#98a5b8;margin-bottom:4px}
+.get-city-approved .hero-institution strong{font-weight:500;font-size:12px}
+.get-city-approved .gold-button{display:inline-flex;justify-content:space-between;align-items:center;gap:32px;background:#e5bf62;color:#17263d;border-radius:8px;padding:15px 20px;font-size:12px;font-weight:650}
+.get-city-approved .hero .gold-button{margin-top:22px}
+.get-city-approved .slider-controls{display:flex;align-items:center;justify-content:space-between;margin-top:27px}
+.get-city-approved .slides{display:flex;gap:7px}
+.get-city-approved .slides button{width:7px;height:7px;border-radius:20px;background:#758194;padding:0;position:relative}
+.get-city-approved .slides button:before{content:'';position:absolute;inset:-12px}
+.get-city-approved .slides button.selected{width:27px;background:#e5bf62}
+.get-city-approved .arrows{display:flex;gap:8px;align-items:center}
+.get-city-approved .arrows span{font-size:9px;letter-spacing:2px;color:#a8b1c0;margin-right:14px}
+.get-city-approved .arrows button{background:transparent;color:#fff;border:1px solid #ffffff30;width:30px;height:30px;border-radius:50%}
+.get-city-approved .hero-photo{position:relative;overflow:hidden;min-height:425px}
+.get-city-approved .hero-photo>img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.get-city-approved .hero-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#0b1c36b8,transparent 60%)}
+.get-city-approved .photo-caption{position:absolute;bottom:31px;left:32px;right:31px;z-index:1;color:white;display:flex;justify-content:space-between;align-items:end;font-size:10px;letter-spacing:1.6px;line-height:1.8}
+.get-city-approved .photo-arrow{font-size:40px;font-weight:400}
+.get-city-approved .photo-tag{position:absolute;right:23px;top:25px;background:#ffffffdd;padding:10px 15px;border-radius:30px;font-size:10px;color:#253147}
+.get-city-approved .help-grid{display:grid;grid-template-columns:1.12fr 1fr;gap:23px;margin-top:26px}
+.get-city-approved .orientation{background:#eeeee9;border:1px solid #e7e7e0;padding:27px 0 27px 30px;border-radius:15px;display:flex;align-items:center;justify-content:space-between;gap:15px;overflow:hidden}
+.get-city-approved .orientation .eyebrow{color:#81744e;font-size:8px;letter-spacing:1.5px}
+.get-city-approved .orientation h2{font-size:23px;letter-spacing:-.8px;line-height:1.3;margin:13px 0 10px}
+.get-city-approved .orientation p,.get-city-approved .expo p{font-size:11px;line-height:1.8;color:#6a717b}
+.get-city-approved .text-button{background:none;padding:0;font-size:11px;font-weight:650;display:flex;align-items:center;gap:22px;margin-top:21px}
+.get-city-approved .orientation-image{width:185px;height:182px;position:relative;flex-shrink:0;margin-right:24px;border-radius:60px 60px 10px 10px;overflow:hidden}
+.get-city-approved .orientation-image img{width:100%;height:100%;object-fit:cover}
+.get-city-approved .orientation-image span{position:absolute;bottom:10px;left:10px;right:10px;background:#fffffff0;border-radius:4px;padding:8px 3px;text-align:center;font-size:9px}
+.get-city-approved .expo{background:#e9eef4;border:1px solid #e0e5eb;border-radius:15px;padding:27px 30px;position:relative;overflow:hidden}
+.get-city-approved .expo-head{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.get-city-approved .expo-head .eyebrow{font-size:8px;letter-spacing:1.3px}
+.get-city-approved .soon{font-size:8px;background:#ffffffc9;padding:6px 9px;border-radius:20px;white-space:nowrap}
+.get-city-approved .expo-title{font-family:Manrope,Arial;font-size:49px;font-weight:800;letter-spacing:-3px;margin:14px 0 6px;line-height:1;display:flex;align-items:center;gap:10px}
+.get-city-approved .expo-title>span:not(.expo-spark){font-size:19px;letter-spacing:-1px;align-self:end;line-height:1.5;color:#ae8326}
+.get-city-approved .expo-spark{font-size:62px;font-weight:400;margin-left:auto;color:#b89647;line-height:1}
+.get-city-approved .expo .text-button{margin-top:18px}
+.get-city-approved .featured{padding-top:65px}
+.get-city-approved .section-top{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px;gap:20px}
+.get-city-approved .section-top .eyebrow{font-size:9px;color:#778392;letter-spacing:1.6px;margin-bottom:12px}
+.get-city-approved .section-top h2{font-size:31px;letter-spacing:-1.3px;font-weight:650;line-height:1.3}
+.get-city-approved .gold-dot{color:#b98d2c}
+.get-city-approved .section-top>a{font-size:11px;white-space:nowrap;padding-bottom:4px}
+.get-city-approved .section-top>a span{margin-left:14px}
+.get-city-approved .featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.get-city-approved .school-card{background:white;border:1px solid #e5e8ed;border-radius:15px;overflow:hidden;box-shadow:0 5px 20px #17263d03;transition:transform .2s,box-shadow .2s}
+.get-city-approved .school-card:hover{transform:translateY(-3px);box-shadow:0 10px 25px #17263d0a}
+.get-city-approved .school-photo{height:218px;position:relative;overflow:hidden}
+.get-city-approved .school-photo img{width:100%;height:100%;object-fit:cover}
+.get-city-approved .featured-label{position:absolute;left:20px;top:20px;background:#fff9e8;color:#81601d;font-size:8px;font-weight:700;letter-spacing:1.3px;padding:9px 12px;border-radius:5px}
+.get-city-approved .school-photo small{position:absolute;bottom:10px;right:12px;background:#0b1c36ad;color:#fff;padding:4px 7px;border-radius:3px;font-size:8px}
+.get-city-approved .school-body{padding:25px 25px 0}
+.get-city-approved .school-type{font-size:8px;letter-spacing:1px;color:#998040;display:flex;justify-content:space-between}
+.get-city-approved .school-type span{color:#929ba7}
+.get-city-approved .school-body h3{font-size:22px;letter-spacing:-.8px;margin-top:10px;font-weight:650}
+.get-city-approved .school-body>p{font-size:11px;color:#7b8490;margin-top:9px;line-height:1.6}
+.get-city-approved .school-facts{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.get-city-approved .school-facts span{background:#f3f5f7;padding:7px 10px;border-radius:5px;font-size:10px;color:#586477}
+.get-city-approved .school-area{font-size:10px;color:#85909d;margin-top:15px}
+.get-city-approved .school-area i{font-style:normal;margin:0 8px;color:#ba9a4b}
+.get-city-approved .school-bottom{border-top:1px solid #edf0f3;margin-top:23px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0}
+.get-city-approved .school-bottom>span{font-size:10px;color:#808a98}
+.get-city-approved .school-bottom button{background:none;font-size:11px;font-weight:650;padding:5px 0}
+.get-city-approved .reference-note{font-size:10px;line-height:1.6;color:#8a929b;margin-top:13px}
+.get-city-approved .directory{margin-top:58px}
+.get-city-approved .directory .section-top h2{font-size:27px}
+.get-city-approved .directory-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:35px;background:#ffffffad;border:1px solid #e6e9ed;border-radius:14px;padding:10px 27px}
+.get-city-approved .directory-grid button{display:flex;text-align:left;align-items:center;justify-content:space-between;gap:20px;min-height:63px;border-bottom:1px solid #e9ecf0;background:none;font-size:12px;line-height:1.5;padding:14px 0}
+.get-city-approved .directory-grid button span{color:#929caa;font-size:18px}
+.get-city-approved .directory-grid button:nth-last-child(-n+2){border-bottom:0}
+.get-city-approved .directory-foot{display:flex;justify-content:center;gap:12px;align-items:center;margin-top:22px;font-size:10px;color:#7d8794}
+.get-city-approved .directory-foot button{background:none;font-size:10px;font-weight:600;color:#465268;padding:8px 0}
+.get-city-approved .partner{position:relative;margin-top:58px;padding:35px 42px;background:var(--navy);color:white;border-radius:16px;display:flex;align-items:center;justify-content:space-between;overflow:hidden;gap:25px}
+.get-city-approved .partner .eyebrow{font-size:8px;letter-spacing:1.5px}
+.get-city-approved .partner h2{font-size:27px;letter-spacing:-.8px;line-height:1.3;font-weight:550;margin-top:13px}
+.get-city-approved .partner>div,.get-city-approved .partner>a{z-index:1}
+.get-city-approved .partner-decoration{position:absolute;font-size:260px;line-height:1;color:#ffffff05;top:-70px;right:80px}
+.get-city-approved footer{margin-top:44px!important;padding-bottom:58px}
+.get-city-approved .footer-top{display:flex;align-items:center;gap:35px;padding-bottom:28px}
+.get-city-approved .footer-top .brand img{width:110px}
+.get-city-approved .footer-top p{font-size:10px;line-height:1.8;color:#858d98}
+.get-city-approved .footer-top>a:last-child{margin-left:auto;font-size:11px}
+.get-city-approved .footer-bottom{border-top:1px solid #e2e6ec;padding-top:21px;display:flex;justify-content:space-between;font-size:9px;color:#8d95a0}
+.get-city-approved .preview-label{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:8px;letter-spacing:1.2px;padding:8px 14px;background:#ffffffeb;border:1px solid #e3e6eb;border-radius:25px;color:#7c8594;z-index:10;box-shadow:0 2px 8px #00000008}
+.get-city-approved .preview-label span{margin:0 7px;color:#c2a357}
+.get-city-approved dialog{border:1px solid #e2e5ea;border-radius:20px;width:560px;max-width:calc(100% - 32px);padding:38px;color:var(--ink);box-shadow:0 30px 100px #0002}
+.get-city-approved dialog::backdrop{background:#10203c88;backdrop-filter:blur(4px)}
+.get-city-approved .close{position:absolute;right:16px;top:10px;background:none;font-size:28px;color:#748092;width:36px;height:36px}
+.get-city-approved dialog h2{font-size:29px;letter-spacing:-1px;margin:15px 0}
+.get-city-approved dialog p{font-size:14px;line-height:1.8;color:#6e7888;margin:14px 0}
+.get-city-approved dialog .modal-list{padding:0;list-style:none}
+.get-city-approved dialog .modal-list li{border-bottom:1px solid var(--line);padding:13px 0;line-height:1.5;font-size:14px}
+.get-city-approved dialog .modal-list button{background:none;text-align:left;font-size:14px;padding:8px 0;width:100%}
+.get-city-approved dialog .gold-button{margin-top:14px}
+.get-city-approved dialog .note{font-size:11px;color:#9299a3}
+.get-city-approved button:hover,.get-city-approved a:hover{filter:brightness(.9)}
+@media(min-width:1600px){.get-city-approved .header{max-width:1310px}
+}
+@media(max-width:1100px){.get-city-approved .header{padding:16px 24px;gap:15px}
+.get-city-approved .header nav{margin-left:10px;gap:22px}
+.get-city-approved .header-right{gap:10px}
+.get-city-approved .wrap{width:calc(100% - 64px)}
+.get-city-approved .orientation{padding-left:23px}
+.get-city-approved .orientation-image{width:140px;margin-right:17px}
+.get-city-approved .orientation h2{font-size:21px}
+.get-city-approved .expo{padding:27px 22px}
+.get-city-approved .hero-copy{padding:35px 32px 24px}
+.get-city-approved .hero h2{font-size:37px}
+.get-city-approved .courses{padding:13px}
+.get-city-approved .city{font-size:11px}
+.get-city-approved .expo-spark{font-size:50px}
+}
+@media(max-width:780px){.get-city-approved .header{height:76px;padding:13px 20px;width:calc(100% - 30px);margin-top:12px;flex-wrap:wrap;height:auto;gap:12px;border-radius:14px}
+.get-city-approved .brand img{width:104px;height:35px}
+.get-city-approved .header nav{order:3;width:100%;justify-content:center;margin:0;border-top:1px solid #eef0f2;gap:38px;padding-top:3px}
+.get-city-approved .header nav a,.get-city-approved .header nav button{padding:10px 0;font-size:12px}
+.get-city-approved .header-right{margin-left:auto}
+.get-city-approved .city{font-size:10px;gap:3px}
+.get-city-approved .city span{margin-left:3px}
+.get-city-approved .courses{font-size:9px;padding:10px}
+.get-city-approved .courses span{display:none}
+.get-city-approved .wrap{width:calc(100% - 36px)}
+.get-city-approved .intro{padding:37px 0 30px}
+.get-city-approved .intro .eyebrow{font-size:8px;letter-spacing:1.5px}
+.get-city-approved h1{font-size:43px;letter-spacing:-2px;margin-top:15px}
+.get-city-approved .intro>p{font-size:13px;line-height:1.7;margin:17px 0 23px}
+.get-city-approved .mobile-only{display:block}
+.get-city-approved .search{padding:6px 6px 6px 14px;gap:10px}
+.get-city-approved .search input{font-size:12px}
+.get-city-approved .search button{padding:14px;font-size:11px}
+.get-city-approved .search button span{display:none}
+.get-city-approved .quick{flex-wrap:wrap;gap:12px;font-size:10px;margin-top:14px}
+.get-city-approved .quick>span{display:none}
+.get-city-approved .quick a,.get-city-approved .quick button{font-size:10px}
+.get-city-approved .hero{grid-template-columns:1fr;border-radius:15px}
+.get-city-approved .hero-copy{padding:28px 26px 22px;order:2}
+.get-city-approved .hero-photo{min-height:210px;order:1}
+.get-city-approved .hero-photo>img{object-position:center 50%}
+.get-city-approved .photo-caption{bottom:20px;left:25px;right:25px;font-size:8px}
+.get-city-approved .photo-arrow{font-size:28px}
+.get-city-approved .photo-tag{font-size:8px;right:15px;top:15px;padding:8px 12px}
+.get-city-approved .hero-copy>.eyebrow{font-size:8px}
+.get-city-approved .sponsored{margin-top:19px}
+.get-city-approved .hero h2{font-size:34px;letter-spacing:-1px}
+.get-city-approved .hero p{font-size:12px}
+.get-city-approved .hero-institution{margin-top:17px}
+.get-city-approved .hero .gold-button{margin-top:18px}
+.get-city-approved .slider-controls{margin-top:22px}
+.get-city-approved .help-grid{grid-template-columns:1fr;margin-top:19px;gap:17px}
+.get-city-approved .orientation{padding:24px}
+.get-city-approved .orientation-image{width:130px;height:157px;margin-right:0}
+.get-city-approved .orientation h2{font-size:22px}
+.get-city-approved .orientation p{font-size:10px}
+.get-city-approved .orientation .eyebrow{font-size:7px}
+.get-city-approved .expo{padding:25px}
+.get-city-approved .expo-title{font-size:50px}
+.get-city-approved .expo-spark{font-size:60px}
+.get-city-approved .featured{padding-top:42px}
+.get-city-approved .section-top{align-items:start;flex-direction:column;gap:13px;margin-bottom:20px}
+.get-city-approved .section-top h2{font-size:27px;letter-spacing:-1px}
+.get-city-approved .section-top .eyebrow{font-size:8px}
+.get-city-approved .section-top>a{font-size:10px}
+.get-city-approved .featured-grid{grid-template-columns:1fr;gap:20px}
+.get-city-approved .school-photo{height:200px}
+.get-city-approved .school-body{padding:22px 22px 0}
+.get-city-approved .school-body h3{font-size:22px}
+.get-city-approved .school-body>p{font-size:11px}
+.get-city-approved .reference-note{font-size:9px}
+.get-city-approved .directory{margin-top:40px}
+.get-city-approved .directory .section-top h2{font-size:25px;max-width:300px}
+.get-city-approved .directory-grid{grid-template-columns:1fr;padding:5px 20px}
+.get-city-approved .directory-grid button{font-size:12px;min-height:62px}
+.get-city-approved .directory-grid button:nth-last-child(-n+2){border-bottom:1px solid #e9ecf0}
+.get-city-approved .directory-grid button:last-child{border:0}
+.get-city-approved .directory-foot{flex-direction:column;gap:0;margin-top:16px}
+.get-city-approved .partner{margin-top:35px;padding:29px 26px;display:block}
+.get-city-approved .partner h2{font-size:25px}
+.get-city-approved .partner .gold-button{margin-top:25px}
+.get-city-approved .partner .eyebrow{font-size:7px;letter-spacing:1.1px}
+.get-city-approved .footer-top{flex-wrap:wrap;gap:14px}
+.get-city-approved .footer-top p{margin-left:auto;font-size:9px}
+.get-city-approved .footer-top>a:last-child{margin:0;font-size:10px}
+.get-city-approved .footer-bottom{flex-wrap:wrap;gap:14px;font-size:8px}
+.get-city-approved .footer-bottom span:nth-child(2){display:none}
+.get-city-approved dialog{padding:28px}
+.get-city-approved dialog h2{font-size:25px}
+}
+@media(prefers-reduced-motion:reduce){.get-city-approved{scroll-behavior:auto}
+.get-city-approved *{transition:none!important}
+}
+@media(max-width:780px){.get-city-approved .header{padding:13px;gap:10px}
+.get-city-approved .header .brand img{width:90px}
+.get-city-approved .header-right{gap:8px}
+.get-city-approved .city span{display:none}
+.get-city-approved .city svg{width:12px;height:12px}
+.get-city-approved .courses{padding:10px 8px}
+.get-city-approved h1{font-size:38px;letter-spacing:-1.7px}
+.get-city-approved .quick{gap:10px}
+}
+@media(max-width:360px){.get-city-approved .header .brand img{width:74px}
+.get-city-approved .city{font-size:9px}
+.get-city-approved .courses{font-size:8px}
+.get-city-approved h1{font-size:34px}
+.get-city-approved .orientation{padding:20px}
+.get-city-approved .orientation-image{width:105px}
+.get-city-approved .orientation h2{font-size:20px}
+}
+.get-city-approved{--navy:#12233f;--brand:#12233f;--blue:#b48a28;--gold:#e5bf62;--ink:#17263d;--green:#627a71;--orange:#ba8d54;--pink:#d9c5ba}
+.get-city-approved,.get-city-approved button,.get-city-approved input{font-family:Bahnschrift,'DM Sans',Arial,sans-serif}
+.get-city-approved h1,.get-city-approved h2,.get-city-approved h3{font-family:Bahnschrift,Manrope,Arial,sans-serif}
+.get-city-approved h1 em{color:var(--blue)}
+.get-city-approved .gold{color:#d4b25b}
+.get-city-approved .gold-button{background:var(--gold);color:#17263d}
+.get-city-approved .hero{background:linear-gradient(115deg,#12233f,var(--brand));position:relative}
+.get-city-approved .gold-dot{color:var(--blue)}
+.get-city-approved .sponsored span,.get-city-approved .slides button.selected{background:var(--gold)}
+.get-city-approved .school-icon{color:var(--gold)}
+.get-city-approved .expo{background:#e9eef4}
+.get-city-approved .expo-title>span:not(.expo-spark){color:var(--blue)}
+.get-city-approved .expo-spark{color:var(--gold)}
+.get-city-approved .orientation{background:#eeeee9;border-color:#e7e7e0}
+.get-city-approved .orientation .eyebrow{color:#81744e}
+.get-city-approved .partner{background:linear-gradient(110deg,#12233f,#12233f)}
+.get-city-approved button,.get-city-approved a{transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease,color .2s ease;filter:none!important}
+.get-city-approved .gold-button,.get-city-approved .search button,.get-city-approved .courses{position:relative;overflow:hidden}
+.get-city-approved .gold-button:after,.get-city-approved .search button:after,.get-city-approved .courses:after{content:'';position:absolute;inset:-80% auto -80% -60%;width:25%;transform:rotate(25deg);background:linear-gradient(90deg,transparent,#ffffff40,transparent);transition:left .55s;pointer-events:none}
+.get-city-approved .gold-button:hover:after,.get-city-approved .search button:hover:after,.get-city-approved .courses:hover:after{left:135%}
+.get-city-approved button:active,.get-city-approved .gold-button:active{transform:translateY(0) scale(.98)}
+@media(hover:hover){.get-city-approved .gold-button:hover,.get-city-approved .search button:hover,.get-city-approved .courses:hover{transform:translateY(-3px);box-shadow:0 7px 18px #12233f20}
+.get-city-approved .text-button:hover,.get-city-approved .quick a:hover,.get-city-approved .quick button:hover,.get-city-approved .school-bottom button:hover{transform:translateX(4px);color:var(--blue)}
+.get-city-approved .arrows button:hover{background:#ffffff25;transform:translateY(-2px)}
+.get-city-approved .header nav a:hover,.get-city-approved .header nav button:hover{color:var(--blue);transform:translateY(-2px)}
+}
+.get-city-approved .hero-copy{min-height:425px}
+.get-city-approved .hero h2{font-size:clamp(29px,3.1vw,43px);min-height:100px;display:flex;align-items:center;margin-top:2px;max-width:460px}
+.get-city-approved .hero-copy>h2,.get-city-approved .hero-copy>p,.get-city-approved .hero-institution{transition:opacity .23s ease,transform .35s ease}
+.get-city-approved .hero-photo>img{transition:opacity .35s ease,transform 6.5s ease;transform:scale(1.045);animation:photoDrift 12s ease-in-out infinite alternate}
+.get-city-approved .is-changing .hero-photo>img{opacity:0;transform:scale(1.09)}
+.get-city-approved .is-changing .hero-copy>h2,.get-city-approved .is-changing .hero-copy>p,.get-city-approved .is-changing .hero-institution{opacity:0;transform:translateY(10px)}
+.get-city-approved .hero .slider-controls{margin-top:22px}
+.get-city-approved .slide-progress{position:absolute;bottom:0;left:0;right:0;height:3px;background:#ffffff1a;z-index:3}
+.get-city-approved .slide-progress span{display:block;height:100%;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left}
+.get-city-approved .brand-pair{position:absolute;top:23px;right:23px;z-index:2;display:flex;align-items:center;gap:18px;padding:14px 17px;background:white;border-radius:10px;box-shadow:0 5px 22px #0001}
+.get-city-approved .brand-pair>img{width:115px;height:50px;object-fit:contain}
+.get-city-approved .brand-divider{height:37px;width:1px;background:#e7e8ed}
+.get-city-approved .institution-logo-slot{display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:145px;min-width:100px;min-height:47px;text-align:center;gap:5px}
+.get-city-approved .institution-logo-slot>span{font-size:7px;color:#7f8793;letter-spacing:1.2px}
+.get-city-approved .institution-logo-slot strong{font-size:11px;font-weight:600;color:var(--ink)}
+.get-city-approved .institution-logo-slot img{width:130px;height:47px;object-fit:contain}
+.get-city-approved .photo-caption{bottom:30px}
+@keyframes photoDrift{from{transform:scale(1.025)}to{transform:scale(1.075)}}
+.get-city-approved .featured-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.get-city-approved .school-photo{height:155px}
+.get-city-approved .school-body{padding:19px 19px 0}
+.get-city-approved .school-body h3{font-size:19px;letter-spacing:-.5px}
+.get-city-approved .school-type{font-size:7px}
+.get-city-approved .school-type span{display:none}
+.get-city-approved .school-body>p{font-size:11px;min-height:36px}
+.get-city-approved .school-facts{gap:5px;margin-top:13px}
+.get-city-approved .school-facts span{font-size:10px;padding:6px 8px}
+.get-city-approved .school-bottom{align-items:start;flex-direction:column;gap:8px;margin-top:17px;padding:13px 0}
+.get-city-approved .school-bottom button{font-size:12px;color:var(--brand)}
+.get-city-approved .school-area{margin-top:12px}
+.get-city-approved .featured-label{left:14px;top:14px;padding:7px 9px;background:#fff9e8}
+.get-city-approved .school-card[hidden]{display:none}
+.get-city-approved .featured-more{text-align:center;margin-top:20px}
+.get-city-approved .featured-more button{padding:12px 22px;border-radius:8px;background:#edf0f4;color:var(--brand)}
+.get-city-approved .featured-more:has(button[hidden]){display:none}
+.get-city-approved .reference-note{max-width:740px}
+.get-city-approved .directory-grid{background:none;border:0;padding:0;gap:14px;grid-template-columns:1fr 1fr}
+.get-city-approved .directory-grid .directory-card{background:#fff;min-height:96px;border:1px solid #dfe4eb;border-radius:11px;padding:18px;gap:14px;box-shadow:0 3px 12px #12233f03}
+.get-city-approved .directory-grid .directory-card:nth-last-child(-n+2){border:1px solid #dfe4eb}
+.get-city-approved .directory-initial{display:grid;place-items:center;flex-shrink:0;width:43px;height:43px;background:#edf0f5;border-radius:9px;color:var(--brand);font-weight:650;font-size:13px}
+.get-city-approved .directory-info{flex:1;min-width:0}
+.get-city-approved .directory-info strong{display:block;font-weight:600;font-size:13px;line-height:1.45;color:#17263d}
+.get-city-approved .directory-info small{display:block;margin-top:6px;font-size:11px;color:#687384}
+.get-city-approved .directory-grid .directory-arrow{color:var(--brand);font-size:18px;background:#f3f5f8;border-radius:50%;width:29px;height:29px;display:grid;place-items:center;flex-shrink:0}
+@media(hover:hover){.get-city-approved .directory-grid .directory-card:hover{transform:translateY(-3px);border-color:#c1cad7;box-shadow:0 8px 20px #12233f0a}
+.get-city-approved .directory-card:hover .directory-arrow{background:var(--brand);color:white}
+}
+.get-city-approved footer.site-footer{width:100%;max-width:none;background:#f9fafc;border-top:1px solid #eaedf2;padding:45px max(32px,calc((100% - 1160px)/2)) 55px;margin-top:50px!important}
+.get-city-approved .footer-inner{display:grid;grid-template-columns:1.25fr .8fr 1.15fr 1fr;gap:35px}
+.get-city-approved .footer-column{min-width:0}
+.get-city-approved .footer-logo{background:none;padding:0}
+.get-city-approved .city-footer-logo img{width:170px;height:80px;object-fit:contain}
+.get-city-approved .footer-brand-copy{font-size:12px;line-height:1.8;color:#737b8b;max-width:230px;margin-top:14px}
+.get-city-approved .footer-heading{font-size:13px;font-weight:650;margin:12px 0 18px}
+.get-city-approved .footer-link-list{display:flex;flex-direction:column;align-items:start;gap:11px}
+.get-city-approved .footer-link-list button{background:none;padding:0;font-size:11px;color:#646f80;text-align:left}
+.get-city-approved .footer-link-list button:hover{color:var(--brand);transform:translateX(3px)}
+.get-city-approved .footer-contact-list{display:flex;flex-direction:column;gap:15px}
+.get-city-approved .footer-contact-link{display:flex;align-items:start;gap:9px;font-size:11px;line-height:1.7;color:#647082;background:none;padding:0}
+.get-city-approved .footer-contact-link svg{flex-shrink:0;width:16px;height:18px}
+.get-city-approved .footer-app-buttons{display:grid;gap:9px}
+.get-city-approved .footer-app-button{display:flex;align-items:center;gap:10px;background:#172135;color:white;border-radius:7px;padding:11px 12px;text-align:left}
+.get-city-approved .footer-app-button svg{fill:currentColor;stroke:none;width:22px;height:25px}
+.get-city-approved .footer-app-button small{display:block;font-size:7px;letter-spacing:.4px}
+.get-city-approved .footer-app-button strong{font-size:16px;font-weight:500;display:block;margin-top:2px}
+.get-city-approved .footer-social-box{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:33px;padding:16px 19px;background:white;border:1px solid #edf0f4;border-radius:9px}
+.get-city-approved .footer-social-box>strong{font-size:11px;font-weight:600}
+.get-city-approved .footer-social-links{display:flex;gap:8px;flex-wrap:wrap}
+.get-city-approved .footer-social-link{display:block;font-size:10px;background:#f4f5f8;padding:7px 10px;border-radius:5px}
+.get-city-approved .site-footer .footer-bottom{padding-top:20px;margin-top:24px;align-items:center}
+.get-city-approved .site-footer .footer-bottom p{font-size:10px;line-height:1.7}
+.get-city-approved .site-footer .footer-bottom button{font-size:10px}
+@media(max-width:1000px){.get-city-approved .featured-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:780px}
+.get-city-approved .footer-inner{grid-template-columns:repeat(2,1fr);gap:30px}
+.get-city-approved .hero-copy{padding-inline:30px}
+.get-city-approved .hero h2{font-size:35px}
+.get-city-approved .brand-pair{gap:12px;padding:12px;top:16px;right:16px}
+.get-city-approved .brand-pair>img{width:95px}
+.get-city-approved .institution-logo-slot{max-width:110px}
+.get-city-approved .institution-logo-slot img{width:110px}
+}
+@media(max-width:780px){.get-city-approved .hero h2{font-size:32px;min-height:78px}
+.get-city-approved .hero-copy{min-height:400px;padding:26px}
+.get-city-approved .hero-photo{min-height:235px}
+.get-city-approved .brand-pair{gap:11px;padding:9px 12px}
+.get-city-approved .brand-pair>img{height:38px;width:98px}
+.get-city-approved .institution-logo-slot{min-height:37px;min-width:90px;max-width:105px}
+.get-city-approved .institution-logo-slot img{width:105px;height:38px}
+.get-city-approved .brand-divider{height:29px}
+.get-city-approved .institution-logo-slot strong{font-size:9px}
+.get-city-approved .institution-logo-slot>span{font-size:6px}
+.get-city-approved .featured-grid{gap:14px}
+.get-city-approved .school-photo{height:155px}
+.get-city-approved .school-body h3{font-size:20px}
+.get-city-approved .directory-grid{grid-template-columns:1fr;gap:12px}
+.get-city-approved .directory-grid .directory-card{min-height:90px}
+.get-city-approved .directory-info strong{font-size:13px}
+.get-city-approved .site-footer .footer-inner{gap:25px}
+.get-city-approved .footer-social-box{align-items:start;flex-direction:column;gap:13px}
+.get-city-approved .footer-social-link{font-size:10px}
+.get-city-approved .footer-brand-copy{font-size:11px}
+.get-city-approved .city-footer-logo img{width:140px;height:65px}
+.get-city-approved .site-footer .footer-bottom{gap:14px;flex-direction:column;align-items:start}
+.get-city-approved footer.site-footer{padding:30px 22px 55px}
+.get-city-approved .preview-label{font-size:7px}
+}
+@media(max-width:620px){.get-city-approved .featured-grid{grid-template-columns:1fr;max-width:420px;margin-inline:auto}
+.get-city-approved .school-card{display:grid;grid-template-columns:114px minmax(0,1fr)}
+.get-city-approved .school-photo{height:100%;min-height:252px}
+.get-city-approved .featured-label{left:8px;top:10px;font-size:6px;padding:6px}
+.get-city-approved .school-photo small{font-size:6px;left:7px;right:7px;text-align:center;bottom:7px}
+.get-city-approved .school-body{padding:17px 15px 0}
+.get-city-approved .school-body h3{font-size:18px}
+.get-city-approved .school-body>p{font-size:10px;margin-top:7px;min-height:0}
+.get-city-approved .school-type{font-size:7px;letter-spacing:.7px}
+.get-city-approved .school-facts span{font-size:8px;padding:5px 6px}
+.get-city-approved .school-area{font-size:9px;line-height:1.6}
+.get-city-approved .school-bottom{gap:5px;padding:11px 0;margin-top:12px}
+.get-city-approved .school-bottom button{font-size:11px}
+.get-city-approved .school-bottom>span{font-size:9px}
+.get-city-approved .footer-inner{grid-template-columns:1fr 1fr;column-gap:18px}
+.get-city-approved .footer-column:first-child{grid-column:1/-1;display:flex;align-items:center;gap:15px}
+.get-city-approved .footer-column:first-child p{margin:0}
+.get-city-approved .footer-column:last-child{grid-column:1/-1;max-width:380px}
+.get-city-approved .footer-app-buttons{grid-template-columns:1fr 1fr}
+.get-city-approved .footer-app-button{padding:10px;gap:7px}
+.get-city-approved .footer-app-button small{font-size:6px}
+.get-city-approved .footer-app-button strong{font-size:14px}
+.get-city-approved .footer-contact-link{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){.get-city-approved .hero-photo>img{animation:none;transform:none}
+.get-city-approved .gold-button:after,.get-city-approved .search button:after,.get-city-approved .courses:after{display:none}
+.get-city-approved button:hover,.get-city-approved a:hover,.get-city-approved .school-card:hover,.get-city-approved .directory-card:hover{transform:none!important}
+.get-city-approved .slide-progress{display:none}
+}
+@media(min-width:1001px){.get-city-approved .featured-grid{display:flex;flex-wrap:wrap;justify-content:center}
+.get-city-approved .school-card{width:calc((100% - 40px)/3)}
+}
+.get-city-approved{--navy:#12233f;--brand:#12233f;--blue:#b48a28;--gold:#e5bf62;--ink:#17263d;--paper:#f7f8fa;--muted:#687384;--line:#e3e6eb}
+.get-city-approved .hero,.get-city-approved .partner{background:#12233f}
+.get-city-approved .header nav .active:after,.get-city-approved .tiny-line{background:#c59b36}
+.get-city-approved h1 em{color:#b48a28}
+.get-city-approved .search button,.get-city-approved .courses{background:#12233f;color:white}
+.get-city-approved .gold-button{background:#e5bf62;color:#17263d}
+.get-city-approved .gold{color:#d4b25b}
+.get-city-approved .gold-dot{color:#b98d2c}
+.get-city-approved .expo{background:#e9eef4;border-color:#e0e5eb}
+.get-city-approved .expo-title>span:not(.expo-spark){color:#ae8326}
+.get-city-approved .expo-spark{color:#b89647}
+.get-city-approved .orientation{background:#eeeee9;border-color:#e7e7e0}
+.get-city-approved .orientation .eyebrow{color:#81744e}
+.get-city-approved .directory-initial{background:#edf0f5;color:#12233f}
+.get-city-approved .featured-label{background:#fff9e8;color:#81601d}
+.get-city-approved dialog .gold{color:#8a6a23}
+.get-city-approved .search button:focus-visible,.get-city-approved .header a:focus-visible{outline-color:#b48a28}
+
+/* Integration-only rules: preserve the approved composition while isolating legacy page CSS. */
+.get-city-approved{position:relative;isolation:isolate;min-height:100vh;display:flow-root}
+.public-site-background:has(.get-city-approved)>.public-site-background-lines{display:none}
+.get-city-approved section[id]{scroll-margin-top:24px}
+.get-city-approved .courses,.get-city-approved .search button{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap}
+.get-city-approved .courses svg,.get-city-approved .search button svg{width:15px;height:15px;vertical-align:middle}
+.get-city-approved .arrows button{display:grid;place-items:center;padding:0}
+.get-city-approved .arrows svg{width:14px;height:14px}
+.get-city-approved .photo-arrow{width:40px;height:40px}
+.get-city-approved .expo-spark svg{width:62px;height:62px}
+.get-city-approved .partner-decoration svg{width:260px;height:260px}
+.get-city-approved .school-bottom a{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:650;padding:5px 0}
+.get-city-approved .school-bottom a svg,.get-city-approved .text-button svg,.get-city-approved .section-top>a svg,.get-city-approved .directory-foot svg{width:15px;height:15px;vertical-align:middle}
+.get-city-approved .directory-card{display:flex;text-align:left;align-items:center;justify-content:space-between;line-height:1.5}
+.get-city-approved .directory-arrow svg{width:16px;height:16px}
+.get-city-approved .action-note{display:block;font-size:9px;color:#687384;margin-top:6px;line-height:1.5}
+.get-city-approved .partner p{font-size:12px;line-height:1.7;color:#c4cbd5;max-width:520px;margin-top:12px}
+.get-city-approved .dialog-search{display:grid;gap:8px;font-size:12px;color:#687384;margin:20px 0}
+.get-city-approved .dialog-search input{width:100%;border:1px solid #dfe3e9;border-radius:9px;padding:12px;background:#f7f8fa;color:#17263d}
+.get-city-approved .modal-list{list-style:none;padding:0;margin:10px 0;max-height:50vh;overflow-y:auto;overscroll-behavior:contain}
+.get-city-approved .modal-list li{border-bottom:1px solid #e3e6eb;padding:0}
+.get-city-approved .modal-list a{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:5px;padding:13px 4px;font-size:14px}
+.get-city-approved .modal-list a:hover,.get-city-approved .modal-list a[aria-current]{background:#f1f3f7}
+.get-city-approved .modal-list a small{width:100%;font-size:11px;color:#687384}
+.get-city-approved #results>a{display:block;margin-top:12px;font-size:12px;text-decoration:underline}
+.get-city-approved .help-actions{display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.get-city-approved .directory-empty{font-size:13px;color:#687384;line-height:1.7}
+.get-city-approved .hero-copy{display:flex;flex-direction:column}
+.get-city-approved .hero-copy>.gold-button{align-self:flex-start}
+.get-city-approved .slider-controls{gap:12px}
+.get-city-approved .slides button:before{inset:-12px -3px}
+.get-city-approved .slides{flex-wrap:wrap;row-gap:18px;max-width:55%}
+.get-city-approved .arrows{flex-shrink:0}
+.get-city-approved dialog{max-height:calc(100dvh - 32px);overflow-y:auto;margin:auto}
+@media(max-width:780px){.get-city-approved .expo-spark svg{width:60px;height:60px}.get-city-approved .photo-arrow{width:28px;height:28px}}
+@media(max-width:620px){.get-city-approved .slider-controls{flex-wrap:wrap}.get-city-approved .slides{max-width:100%;flex-shrink:0}.get-city-approved .arrows{margin-left:auto}}
+@media(max-width:380px){.get-city-approved .header{padding-inline:12px;gap:8px}.get-city-approved .header-right{gap:5px}.get-city-approved .brand img{width:82px}.get-city-approved .city{max-width:120px}.get-city-approved .courses{padding:10px 7px}.get-city-approved .slider-controls{flex-wrap:wrap}.get-city-approved .slides{max-width:100%}.get-city-approved .orientation-image{flex-shrink:1;min-width:100px}}

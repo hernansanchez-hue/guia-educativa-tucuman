@@ -170,6 +170,8 @@ nav button:focus-visible {
   box-shadow: 0 7px 16px rgba(201, 151, 26, 0.2);
 }
 
+.btn:focus-visible { outline: 3px solid rgba(201, 151, 26, 0.42); outline-offset: 3px; }
+
 .site-header .course-cta:hover {
   color: #fff;
   background: #a97c15;
@@ -576,6 +578,8 @@ nav button:focus-visible {
   outline: none;
   box-shadow: 0 18px 34px rgba(31, 49, 84, 0.14);
 }
+
+.card:focus-visible { outline: 3px solid rgba(201, 151, 26, 0.42); outline-offset: 3px; }
 
 .card-media {
   width: 100%;
@@ -2091,6 +2095,7 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar:not(.city-h
 
 #cityPage .city-featured-backdrop {
   background-position: center;
+  object-position: center;
   background-size: cover;
   transform: scale(1.002);
 }
@@ -2312,6 +2317,11 @@ body.dark-theme #cityPage.city-page-redesign .institution-search-bar:not(.city-h
   border-radius: 999px;
   background: #f5f7fb;
   box-shadow: none;
+}
+
+.site-header.city-hero-header .city-header-search:focus-within {
+  border-color: #c9971a;
+  box-shadow: 0 0 0 3px rgba(201, 151, 26, 0.16);
 }
 
 .site-header.city-hero-header .city-header-search .institution-search-field {
@@ -2553,6 +2563,7 @@ body.dark-theme #cityPage .city-featured-institution-copy button {
 
   #cityPage .city-featured-backdrop {
     background-position: center top;
+    object-position: center top;
   }
 
   #cityPage .city-featured-shade {

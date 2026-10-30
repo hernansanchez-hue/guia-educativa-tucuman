@@ -1,7 +1,7 @@
 "use client";
 import {useState} from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import PublicImage from './PublicImage';
 import {matchesSearch} from '../../lib/catalog/search.mjs';
 import './catalog-filters.css';
 /** Compact projections only: no full curricula, presentations or draft payloads. */
@@ -29,7 +29,7 @@ export default function CatalogFilters({kind,items,cities=[],careers=[],initialQ
   {careerMatches.length?<section className="catalog-search-related" aria-label="Carreras encontradas"><h2>Carreras</h2>{careerMatches.map(c=><Link key={c.slug} href={'/carreras/'+c.slug}>{c.name} →</Link>)}</section>:null}
   <p className="catalog-results-count" aria-live="polite">{shown.length} {isInstitution?'instituciones':'carreras'}</p>
   <section className={isInstitution?'institutions-index-grid':'careers-index-grid'}>
-   {visible.map(i=>isInstitution?<Link href={`/instituciones/${i.slug}`} key={i.slug}><Image src={i.image} alt={i.imageAlt||''} width={640} height={400} loading="lazy" sizes="(max-width: 720px) 100vw, 33vw" unoptimized={!i.image.startsWith('/assets/catalog/')}/><div><small>{i.type}</small><h2>{i.name}</h2><p>{i.venues.length} {i.venues.length===1?'sede':'sedes'} en Tucumán</p><strong>Ver institución →</strong></div></Link>:<Link className="career-index-card" href={`/carreras/${i.slug}`} key={i.slug}>{i.image?<Image className="catalog-career-image" src={i.image} alt={i.imageAlt||''} width={640} height={400} loading="lazy" sizes="(max-width: 600px) 100vw, 33vw" unoptimized={!i.image.startsWith('/assets/catalog/')}/>:null}<span>{new Set(i.offerings.map(o=>o.institution.slug)).size} instituciones</span><h2>{i.name}</h2>{i.description?<p>{i.description}</p>:null}<strong>Ver carrera <b>→</b></strong></Link>)}
+   {visible.map((i,index)=>isInstitution?<Link href={`/instituciones/${i.slug}`} prefetch={false} key={i.slug}><PublicImage src={i.image} alt={i.imageAlt||''} width={640} height={400} loading={index===0?'eager':'lazy'} sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1280px) 31vw, 396px"/><div><small>{i.type}</small><h2>{i.name}</h2><p>{i.venues.length} {i.venues.length===1?'sede':'sedes'} en Tucumán</p><strong>Ver institución →</strong></div></Link>:<Link className="career-index-card" href={`/carreras/${i.slug}`} prefetch={false} key={i.slug}>{i.image?<PublicImage className="catalog-career-image" src={i.image} alt={i.imageAlt||''} width={640} height={400} loading={index===0?'eager':'lazy'} sizes="(max-width: 600px) calc(100vw - 84px), (max-width: 900px) 43vw, (max-width: 1280px) 28vw, 344px"/>:null}<span>{new Set(i.offerings.map(o=>o.institution.slug)).size} instituciones</span><h2>{i.name}</h2>{i.description?<p>{i.description}</p>:null}<strong>Ver carrera <b>→</b></strong></Link>)}
   </section>
   {!shown.length?<p role="status">No encontramos resultados con esos filtros.</p>:null}
   {pages>1?<nav className="catalog-pagination" aria-label="Páginas del catálogo"><button type="button" disabled={current===1} onClick={()=>setPage(current-1)}>Anterior</button><span>{current} / {pages}</span><button type="button" disabled={current===pages} onClick={()=>setPage(current+1)}>Siguiente</button></nav>:null}

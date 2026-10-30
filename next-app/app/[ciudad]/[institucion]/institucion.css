@@ -591,6 +591,8 @@
 
 .career-summary-image-wrap {
   position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-bottom: 1px solid #e1e8f1;
   background: #dce5ef;
@@ -599,7 +601,7 @@
 .career-summary-card img,
 .career-summary-card video {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   display: block;
   object-fit: cover;
 }

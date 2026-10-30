@@ -80,6 +80,15 @@
 #siteFooter .footer-link-list button:hover,
 #siteFooter .footer-contact-link:hover { color: var(--verde); }
 
+#siteFooter .footer-link-list button:focus-visible,
+#siteFooter .footer-contact-link:focus-visible,
+#siteFooter .footer-social-link:focus-visible,
+#siteFooter .footer-app-button:focus-visible,
+#siteFooter .footer-logo:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 3px;
+}
+
 #siteFooter .footer-contact-link {
   display: flex;
   align-items: flex-start;

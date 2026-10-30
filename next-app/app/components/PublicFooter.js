@@ -1,15 +1,15 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-
 import { useRouter } from "next/navigation";
 import {usePublicEditorial} from "./PublicEditorialContext";
+import PublicImage from './PublicImage';
 
-export default function PublicFooter() {
+export default function PublicFooter({onGoHome} = {}) {
   const router = useRouter();
   const content=usePublicEditorial("footer");
 
   function goHome() {
+    if (onGoHome) { onGoHome(); return; }
     router.push("/");
   }
 
@@ -25,7 +25,7 @@ export default function PublicFooter() {
         <div className="footer-column">
           <button className="footer-logo" type="button" onClick={goHome} aria-label="Volver al inicio">
             <span className="city-footer-logo" aria-hidden="true">
-              <img src={content.logo} data-edit-id="root.data.logo" alt="" />
+              <PublicImage src={content.logo} data-edit-id="root.data.logo" alt="" width={908} height={542} sizes="250px" loading="lazy" />
             </span>
           </button>
           <p className="footer-brand-copy">{content.brandCopy}</p>

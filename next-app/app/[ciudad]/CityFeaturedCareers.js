@@ -1,121 +1,66 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
+import {useCallback,useEffect,useMemo,useRef,useState} from "react";
+import PublicImage from "../components/PublicImage";
+import CityEditorialImage from "./CityEditorialImage";
+import useViewportActivity from "../components/useViewportActivity";
+import {DesignIcon as Icon,moveTo} from "../components/ApprovedHomeUI";
+import {resolveCityBanner} from "../../lib/catalog/city-template.mjs";
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import {heroStyle} from "../../lib/admin/hero-style.mjs";
-import {resolveCityBanner} from '../../lib/catalog/city-template.mjs';
-
-function ArrowIcon({ direction }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d={direction === "previous" ? "M14.5 5 7.5 12l7 7M8 12h9" : "m9.5 5 7 7-7 7M7 12h9"} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
+function logoFor(city,slide){
+ const institution=city.institutions?.find(i=>i.id===slide.institutionId||slide.institution.route===`/${city.slug}/${i.slug}`);
+ if(typeof institution?.logo==="string" && /^(https?:\/\/|\/)/.test(institution.logo))return institution.logo;
+ if(slide.institution.route?.includes("/universidad-siglo-21"))return "/assets/universidad-siglo-21-logo.png";
+ if(slide.institution.route?.includes("/instituto-santa-barbara"))return "/assets/approved-home/santa-logo.png";
+ return null;
+}
+function referencePhoto(slide){
+ const name=slide?.title||slide?.name||"";
+ return "/assets/approved-home/city-reference/"+(/contador|administraci|econom/i.test(name)?"expo.jpg":/quirúrgic|salud/i.test(name)?"students.jpg":"campus.jpg");
 }
 
-export default function CityFeaturedCareers({ city, onOpenCareer, onOpenInstitution }) {
-  const banner = useMemo(() => resolveCityBanner(city), [city]);
-  const featuredCareers = banner.slides;
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const touchStart = useRef(0);
-  const total = featuredCareers.length;
-  const activeCareer = featuredCareers.find(c=>c.id===city.previewSlideId) ?? featuredCareers[activeIndex] ?? featuredCareers[0];
-
-  useEffect(() => {
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const updatePreference = () => setReducedMotion(media.matches);
-    updatePreference();
-    media.addEventListener("change", updatePreference);
-    return () => media.removeEventListener("change", updatePreference);
-  }, []);
-
-  useEffect(() => {
-    if (reducedMotion || city.previewSlideId || total < 2) return undefined;
-    const timer = window.setInterval(() => {
-      setActiveIndex((index) => (index + 1) % total);
-    }, 3000);
-    return () => window.clearInterval(timer);
-  }, [reducedMotion, total, city.previewSlideId]);
-
-  if (!activeCareer) return (
-    <section className="city-featured" data-banner-kind="editorial" aria-labelledby="featuredCareersTitle">
-      <div className="city-featured-backdrop" style={{backgroundImage: `url(${banner.image})`}} aria-hidden="true" />
-      <div className="city-featured-shade" aria-hidden="true" />
-      <div className="city-featured-inner">
-        <article className="city-featured-copy">
-          <h1 id="featuredCareersTitle" style={heroStyle(city.cmsDesign)}>{banner.title}</h1>
-          <p className="city-featured-description">{banner.description}</p>
-          <button className="city-featured-cta" type="button" aria-controls="institutionCards" onClick={() => document.getElementById('allInstitutionsTitle')?.scrollIntoView({behavior: reducedMotion ? 'auto' : 'smooth', block: 'start'})}>
-            {banner.ctaLabel} <span aria-hidden="true">→</span>
-          </button>
-        </article>
-      </div>
-    </section>
-  );
-
-  function changeCareer(direction) {
-    setActiveIndex((index) => (index + direction + total) % total);
-  }
-
-  function finishSwipe(event) {
-    const distance = event.changedTouches[0].clientX - touchStart.current;
-    if (Math.abs(distance) > 45) changeCareer(distance < 0 ? 1 : -1);
-  }
-
-  return (
-    <section
-      className="city-featured"
-      data-banner-kind="commercial"
-      aria-labelledby="featuredCareersTitle"
-      onTouchStart={(event) => { touchStart.current = event.touches[0].clientX; }}
-      onTouchEnd={finishSwipe}
-    >
-      <div className="city-featured-backdrop" style={{ backgroundImage: `url(${Array.isArray(city.slides)?activeCareer.image:city.heroImage || activeCareer.image})` }} aria-hidden="true" />
-      <div className="city-featured-shade" aria-hidden="true" />
-      <div className="city-featured-inner">
-        <article className="city-featured-copy">
-          <h1 id="featuredCareersTitle" style={heroStyle(city.cmsDesign)}>{Array.isArray(city.slides)?activeCareer.title:city.heroTitle || activeCareer.name}</h1>
-          <p className="city-featured-description">{Array.isArray(city.slides)?activeCareer.description:city.heroDescription || activeCareer.description}</p>
-          <button className="city-featured-cta" type="button" onClick={() => onOpenCareer(activeCareer.route)}>
-            {activeCareer.ctaLabel||'Ver carrera'} <span aria-hidden="true">→</span>
-          </button>
-        </article>
-
-        <aside className="city-featured-institution" aria-label={`Institución: ${activeCareer.institution.name}`}>
-          {activeCareer.institution.image ? (
-            <img src={activeCareer.institution.image} alt="" />
-          ) : null}
-          <div className="city-featured-institution-copy">
-            <span>{activeCareer.institution.type}</span>
-            <h2>{activeCareer.institution.name}</h2>
-            {activeCareer.institution.description ? <p>{activeCareer.institution.description}</p> : null}
-            <button type="button" onClick={() => onOpenInstitution(activeCareer.institution.route)}>
-              {activeCareer.institutionCtaLabel||'Conocer más'} <strong aria-hidden="true">→</strong>
-            </button>
-          </div>
-        </aside>
-      </div>
-
-      <div className="city-featured-controls">
-        <div className="city-featured-arrows">
-          <button type="button" onClick={() => changeCareer(-1)} aria-label="Carrera destacada anterior"><ArrowIcon direction="previous" /></button>
-          <button type="button" onClick={() => changeCareer(1)} aria-label="Siguiente carrera destacada"><ArrowIcon direction="next" /></button>
-        </div>
-        <div className="city-featured-dots" aria-label="Elegir carrera destacada">
-          {featuredCareers.map((career, index) => (
-            <button
-              className={index === activeIndex ? "active" : ""}
-              key={career.id}
-              type="button"
-              aria-label={`Mostrar ${career.name}`}
-              aria-pressed={index === activeIndex}
-              onClick={() => setActiveIndex(index)}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+export default function CityFeaturedCareers({city,onOpenCareer,onOpenInstitution,dialogOpen=false}){
+ const banner=useMemo(()=>resolveCityBanner(city),[city]), slides=banner.slides, total=slides.length;
+ const [index,setIndex]=useState(0),[paused,setPaused]=useState(false),[hover,setHover]=useState(false),[focused,setFocused]=useState(false),[reduced,setReduced]=useState(false),[changing,setChanging]=useState(false);
+ const progress=useRef(null),elapsed=useRef(0),transition=useRef(null),touch=useRef(null);
+ const {ref,active}=useViewportActivity({reducedMotion:true});
+ const preview=slides.find(s=>s.id===city.previewSlideId);
+ const slide=preview||slides[index%total]||slides[0];
+ const playing=active&&!paused&&!hover&&!focused&&!dialogOpen&&!changing&&!reduced&&!preview&&total>1;
+ useEffect(()=>{const m=matchMedia("(prefers-reduced-motion: reduce)");const update=()=>setReduced(m.matches);update();m.addEventListener("change",update);return()=>{m.removeEventListener("change",update);clearTimeout(transition.current);};},[]);
+ const select=useCallback(next=>{
+  elapsed.current=0;if(progress.current)progress.current.style.transform="scaleX(0)";
+  clearTimeout(transition.current);
+  const target=(next+total)%total;
+  if(!total)return;
+  if(reduced){setIndex(target);setChanging(false);return;}
+  setChanging(true);transition.current=setTimeout(()=>{setIndex(target);setChanging(false);},220);
+ },[total,reduced]);
+ useEffect(()=>{
+  if(!playing)return;
+  let frame=0,previous=null;
+  function tick(time){if(previous!==null)elapsed.current+=Math.min(time-previous,60);previous=time;if(progress.current)progress.current.style.transform=`scaleX(${Math.min(elapsed.current/6500,1)})`;if(elapsed.current>=6500){select(index+1);return;}frame=requestAnimationFrame(tick);}
+  frame=requestAnimationFrame(tick);return()=>cancelAnimationFrame(frame);
+ },[playing,index,select]);
+ if(!slide)return <section className="hero wrap" ref={ref} data-banner-kind="editorial" aria-labelledby="featuredCareersTitle"><div className="hero-copy"><div className="eyebrow gold">GUÍA EDUCATIVA TUCUMÁN</div><h2 id="featuredCareersTitle">{banner.title}</h2><p>{banner.description}</p><button className="gold-button" onClick={()=>moveTo("instituciones")}>{banner.ctaLabel}<Icon/></button></div><div className="hero-photo"><CityEditorialImage src={banner.image} fallbackSrc="/assets/approved-home/city-reference/campus.jpg" alt="Imagen ilustrativa de educación" width={1200} height={800} sizes="(max-width:780px) 100vw,50vw" loading="eager"/></div></section>;
+ const title=Array.isArray(city.slides)?slide.title:city.heroTitle||slide.name;
+ const description=Array.isArray(city.slides)?slide.description:city.heroDescription||slide.description;
+ const image=Array.isArray(city.slides)?slide.image:city.heroImage||slide.image;
+ const logo=logoFor(city,slide);
+ return <section className={"hero wrap"+(changing?" is-changing":"")} data-banner-kind="commercial" aria-labelledby="featuredCareersTitle" ref={ref}
+  onPointerEnter={e=>{if(e.pointerType==="mouse")setHover(true);}} onPointerLeave={()=>setHover(false)}
+  onFocusCapture={()=>setFocused(true)} onBlurCapture={e=>{if(!e.currentTarget.contains(e.relatedTarget))setFocused(false);}}
+  onTouchStart={e=>{touch.current={x:e.touches[0].clientX,y:e.touches[0].clientY};}}
+  onTouchEnd={e=>{if(!touch.current)return;const dx=e.changedTouches[0].clientX-touch.current.x,dy=e.changedTouches[0].clientY-touch.current.y;if(total>1&&Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy))select(index+(dx<0?1:-1));touch.current=null;}}>
+  <div className="hero-copy"><div className="eyebrow gold">ENCONTRÁ TU PRÓXIMO DESAFÍO</div><div className="sponsored"><span/>Carrera destacada</div><h2 id="featuredCareersTitle">{title}</h2><p>{description}</p>
+   <div className="hero-institution"><span className="school-icon"><Icon name="school"/></span><div><small>ESTUDIÁ EN</small><strong>{slide.institution.name}</strong></div></div>
+   <button className="gold-button" onClick={()=>onOpenCareer?.(slide.route)}>Conocer la carrera <Icon/></button>
+   {total>1&&<div className="slider-controls"><div className="slides" aria-label="Elegir carrera">{slides.map((s,i)=><button key={s.id} className={s===slide?"selected":""} aria-label={"Mostrar "+s.name} aria-pressed={s===slide} onClick={()=>select(i)}/>)}</div><div className="arrows"><button aria-label={paused?"Reanudar carrusel":"Pausar carrusel"} aria-pressed={paused} onClick={()=>setPaused(!paused)}><Icon name={paused?"play":"pause"}/></button><span aria-live="off">{String(slides.indexOf(slide)+1).padStart(2,"0")} / {String(total).padStart(2,"0")}</span><button aria-label="Carrera anterior" onClick={()=>select(index-1)}><Icon name="previous"/></button><button aria-label="Siguiente carrera" onClick={()=>select(index+1)}><Icon name="next"/></button></div></div>}
+  </div>
+  <div className="hero-photo"><CityEditorialImage key={image||slide.id} src={image} fallbackSrc={referencePhoto(slide)} alt={slide.name+": imagen editorial ilustrativa"} width={1200} height={800} sizes="(max-width:780px) 100vw,50vw" loading="eager" style={{animationPlayState:playing?"running":"paused"}}/>
+   <div className="photo-caption"><span>MUCHAS POSIBILIDADES.<br/>UN NUEVO COMIENZO.</span><Icon className="photo-arrow"/></div>
+   <button className="brand-pair" aria-label={"Conocer "+slide.institution.name} onClick={()=>onOpenInstitution?.(slide.institution.route)}><span className="institution-logo-slot">{logo?<PublicImage src={logo} alt={slide.institution.name} width={130} height={47} sizes="130px"/>:<strong>{slide.institution.name}</strong>}</span><span className="brand-divider"/><PublicImage src="/assets/approved-home/logo.png" alt="Guía Educativa Tucumán" width={115} height={50} sizes="115px"/></button>
+  </div>
+  {total>1&&<div className="slide-progress" aria-hidden="true"><span ref={progress}/></div>}
+ </section>;
 }
