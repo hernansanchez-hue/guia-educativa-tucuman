@@ -742,6 +742,9 @@
         "data": {
           "id": "universidad-siglo-21-concepcion",
           "plan": "Premium",
+          "featuredCareerIds": [
+            "abogacia"
+          ],
           "slug": "universidad-siglo-21",
           "type": "Privada",
           "image": "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=80",

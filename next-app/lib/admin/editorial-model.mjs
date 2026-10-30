@@ -73,7 +73,7 @@ export function composeInstitution(catalog, id, context = "institution") {
   });
   for (const o of catalog.offerings.filter(o => o.institutionId === id)) if (!institutionCareers.some(s => (s.id === "licenciatura-en-administracion" ? "lic-en-administracion" : s.id) === o.careerId)) institutionCareers.push(summaryFor(catalog, inst, o));
   const {presentation:_presentation,...publicInstitution}=inst;
-  return { ...publicInstitution, careers: institutionCareers.map(c => ({...c, ...(inst.featuredCareerIds ? {featured:inst.featuredCareerIds.includes(c.id === 'licenciatura-en-administracion' ? 'lic-en-administracion' : c.id)}:{})})) };
+  return { ...publicInstitution, careers: institutionCareers.map(c => ({...c, ...(context==="institution"&&inst.featuredCareerIds ? {featured:inst.featuredCareerIds.includes(c.id === 'licenciatura-en-administracion' ? 'lic-en-administracion' : c.id)}:{})})) };
 }
 export function cityPageFromCatalog(catalog, slug) {
   const c = catalog.cities.find(c => c.slug === slug); if (!c) return null;

@@ -1,11 +1,8 @@
-import PublicFooter from "../components/PublicFooter";
-import PublicFloatingHeader from "../components/PublicFloatingHeader";
-import AboutRevealClient from "../nosotros/AboutRevealClient";
 import { getTeacherCoursesCatalog } from "../../lib/public-catalog/teacher-courses-catalog.js";
 import { createPublicMetadata } from "../../lib/seo/public-metadata";
-import CoursesClient from "./CoursesClient";
-import "../[ciudad]/ciudad.css";
-import "./cursos-docentes.css";
+import CoursesClient from "../components/approved/ApprovedCourses";
+
+
 
 export const revalidate = 60;
 
@@ -18,14 +15,5 @@ export const metadata = createPublicMetadata({
 export default async function TeacherCoursesPage() {
   const courses = await getTeacherCoursesCatalog();
 
-  return (
-    <div className="app-shell">
-      <PublicFloatingHeader />
-      <AboutRevealClient />
-      <section id="coursesPage" className="page active">
-        <CoursesClient courses={courses} />
-      </section>
-      <PublicFooter />
-    </div>
-  );
+  return <CoursesClient courses={courses} today={new Date().toLocaleDateString('en-CA',{timeZone:'America/Argentina/Tucuman'})}/>;
 }

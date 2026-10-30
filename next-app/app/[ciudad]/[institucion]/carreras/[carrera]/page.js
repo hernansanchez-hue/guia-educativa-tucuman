@@ -1,8 +1,10 @@
+import {redirect} from 'next/navigation';
+import {hasFeaturedCareerProfile} from '../../../../../lib/catalog/profile-presentation.mjs';
 import { getCareerPageCatalog, editorialMetadata, resolveEditorialMissing } from "../../../../../lib/admin/published-editorial";
-import CareerPageClient from "./CareerPageClient";
-import "../../../ciudad.css";
-import "../../institucion.css";
-import "./carrera.css";
+import CareerPageClient from "../../../../components/approved/ApprovedCareer";
+
+
+
 
 export const revalidate = 60;
 
@@ -72,5 +74,6 @@ export default async function CareerPage({ params }) {
   const { ciudad, institucion, carrera } = await params;
   const page = await getCareerPageCatalog(ciudad, institucion, carrera);
   if (!page) await resolveEditorialMissing(`/${ciudad}/${institucion}/carreras/${carrera}`);
+  if(!hasFeaturedCareerProfile(page.institution,page.career))redirect(`/${ciudad}/${institucion}#carreras`);
   return <CareerPageClient {...page} />;
 }

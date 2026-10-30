@@ -1,7 +1,7 @@
 import { getInstitutionPageCatalog, editorialMetadata, resolveEditorialMissing } from "../../../lib/admin/published-editorial";
-import InstitutionPageClient from "./InstitutionPageClient";
-import "../ciudad.css";
-import "./institucion.css";
+import InstitutionPageClient from "../../components/approved/ApprovedProfile";
+
+
 
 export const revalidate = 60;
 

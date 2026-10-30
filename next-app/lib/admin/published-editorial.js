@@ -1,4 +1,5 @@
 import "server-only";
+import {institutionDesignPage} from "../catalog/institution-design.mjs";
 import { resolveSupabaseConfiguration } from "./environment.mjs";
 import { editorialCatalog, cityPageFromCatalog, institutionPageFromCatalog, careerPageFromCatalog,trainingPageFromCatalog } from "./editorial-model.mjs";
 import { createPublicMetadata } from "../seo/public-metadata";
@@ -20,8 +21,8 @@ export async function getCitiesCatalog(){const catalog=await getPublishedCatalog
 export async function getIndexablePublicRoutePaths(){const [paths,catalog,extended,home]=await Promise.all([getPublicRoutePaths(),getPublishedCatalog(),getExtendedCatalog(['events','services','trainings','about']),getPublishedHomeEntry()]);return indexablePublicPaths(paths,catalog,extended,home.payload.seo);}
 export async function getPublicRoutePaths(){const [c,ext]=await Promise.all([getPublishedCatalog(),getExtendedCatalog(['events','services','trainings'])]);return [...new Set([...createPublicRoutePaths({cities:c.cities,institutions:c.institutions.map(i=>({...i,city_id:i.cityId})),careers:c.careers,academicOfferings:c.offerings.map(o=>({...o,institution_id:o.institutionId,career_master_id:o.careerId})),trainingPrograms:ext.trainings,trainingOfferings:ext.trainingOfferings.map(o=>({...o,institution_id:o.institutionId,training_program_id:o.trainingProgramId}))}),'/eventos','/servicios',...ext.events.map(e=>`/eventos/${e.slug}`),...ext.services.map(s=>`/servicios/${s.slug}`),...directoryCareers(c).map(master=>`/carreras/${master.slug}`)])];}
 export async function getCityPageCatalog(slug) {const [entries,ext]=await Promise.all([getPublishedEditorialEntries(),getExtendedPublishedEntries(['trainings'])]);return cityPageFromCatalog(publishedCatalog([...entries,...ext]),slug);}
-export async function getInstitutionPageCatalog(city,inst) {const [entries,ext]=await Promise.all([getPublishedEditorialEntries(),getExtendedPublishedEntries(['trainings'])]);return institutionPageFromCatalog(publishedCatalog([...entries,...ext]),city,inst);}
-export async function getCareerPageCatalog(city,inst,career) { return careerPageFromCatalog(await getPublishedCatalog(),city,inst,career); }
+export async function getInstitutionPageCatalog(city,inst) {const [entries,ext]=await Promise.all([getPublishedEditorialEntries(),getExtendedPublishedEntries(['trainings'])]);const catalog=publishedCatalog([...entries,...ext]);return institutionDesignPage(catalog,institutionPageFromCatalog(catalog,city,inst));}
+export async function getCareerPageCatalog(city,inst,career) { const catalog=await getPublishedCatalog();return institutionDesignPage(catalog,careerPageFromCatalog(catalog,city,inst,career)); }
 export async function getTrainingPageCatalog(city,inst,program){const [catalog,ext]=await Promise.all([getPublishedCatalog(),getExtendedCatalog(['trainings'])]);return extendedTrainingPage(catalog,ext,city,inst,program);}
 export async function getCareersCatalog() { return directoryCareers(await getPublishedCatalog()); }
 export async function getCareerCatalog(slug) { return (await getCareersCatalog()).find(c=>c.slug===slug)||null; }
