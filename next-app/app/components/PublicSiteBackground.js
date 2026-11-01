@@ -63,7 +63,7 @@ export default function PublicSiteBackground({ children, previewPath }) {
               "--line-dash": line.dash,
               "--line-delay": line.delay,
               "--line-duration": line.duration,
-              "--line-opacity": line.opacity,
+              "--line-opacity": Math.min(line.opacity * 2.3, 0.7),
               "--line-width": line.width,
             }}
           />

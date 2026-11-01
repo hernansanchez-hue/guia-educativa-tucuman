@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import {usePublicEditorial} from "./PublicEditorialContext";
 import PublicImage from './PublicImage';
 
@@ -35,6 +36,7 @@ export default function PublicFooter({onGoHome} = {}) {
           <h3 className="footer-heading">{content.exploreTitle}</h3>
           <div className="footer-link-list">
             {content.explore.filter(item=>item.visible!==false).map((item,index)=><button type="button" key={item.id} data-edit-id={`root.data.explore.${index}`} onClick={()=>follow(item)}>{item.label}</button>)}
+            <Link href="/administrador">Acceso para instituciones</Link>
           </div>
         </div>
 

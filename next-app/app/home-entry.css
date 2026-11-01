@@ -338,7 +338,7 @@
 .get-home-approved .header nav{gap:34px}
 .get-home-approved .institution-link{border:1px solid #dce1e8;background:transparent;color:var(--navy);padding:13px 18px}
 .get-home-approved .institution-link:hover{background:var(--navy);color:white}
-.get-home-approved .network{opacity:.58}
+.get-home-approved .network{opacity:1}
 .get-home-approved .hero{grid-template-columns:1.1fr 1fr;gap:36px 60px;padding-top:55px;padding-bottom:0;align-items:center}
 .get-home-approved .hero-copy{padding-bottom:8px}
 .get-home-approved .hero-copy .eyebrow{font-size:9px;letter-spacing:2.2px}

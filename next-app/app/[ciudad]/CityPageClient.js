@@ -26,7 +26,7 @@ function CityHome({city}){
  const openCareers=()=>{setCareerQuery("");setPanel("careers");};
  const resultList=(items)=><ul className="modal-list">{items.map(r=><li key={r.id}><Link href={r.href} prefetch={false}><strong>{r.name}</strong><small>{r.type}{r.institution?" · "+r.institution:""}</small></Link></li>)}</ul>;
  return <div className="get-city-approved" id="city-home-top">
-  <NetworkBackground className="network"/>
+  <NetworkBackground className="network" lineIntensity={2.3}/>
   <header className="header"><Link className="brand" href="/" aria-label="GET Inicio"><Image src="/assets/approved-home/logo.png" alt="GET Guía Educativa Tucumán" width={132} height={48} priority/></Link>
    <nav aria-label="Navegación principal"><Link href="/" className="active">Inicio</Link><a href="#instituciones" onClick={jump("instituciones")}>Instituciones</a><button onClick={openCareers}>Carreras</button></nav>
    <div className="header-right"><button className="city" aria-haspopup="dialog" onClick={()=>{setCityQuery("");setPanel("cities");}}><Icon name="pin"/>{city.name}<span><Icon name="chevron"/></span></button><Link className="courses" href="/cursos-docentes">Cursos Docentes <span><Icon/></span></Link></div>

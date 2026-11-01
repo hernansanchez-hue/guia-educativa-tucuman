@@ -61,6 +61,7 @@
 }
 
 #siteFooter .footer-link-list button,
+#siteFooter .footer-link-list a,
 #siteFooter .footer-contact-link {
   width: max-content;
   max-width: 100%;
@@ -78,9 +79,11 @@
 }
 
 #siteFooter .footer-link-list button:hover,
+#siteFooter .footer-link-list a:hover,
 #siteFooter .footer-contact-link:hover { color: var(--verde); }
 
 #siteFooter .footer-link-list button:focus-visible,
+#siteFooter .footer-link-list a:focus-visible,
 #siteFooter .footer-contact-link:focus-visible,
 #siteFooter .footer-social-link:focus-visible,
 #siteFooter .footer-app-button:focus-visible,
@@ -171,6 +174,7 @@ body.dark-theme #siteFooter .footer-heading,
 body.dark-theme #siteFooter .footer-social-box strong { color: #edf4ff; }
 body.dark-theme #siteFooter .footer-brand-copy,
 body.dark-theme #siteFooter .footer-link-list button,
+body.dark-theme #siteFooter .footer-link-list a,
 body.dark-theme #siteFooter .footer-contact-link { color: #a8b6ca; }
 body.dark-theme #siteFooter .footer-social-box { border-color: #2c3a4f; background: #111c2e; }
 body.dark-theme #siteFooter .footer-social-link { border-color: #34445b; background: #0c1728; color: #c3cede; }

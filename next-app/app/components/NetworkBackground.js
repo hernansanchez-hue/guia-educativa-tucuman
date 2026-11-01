@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 // A subtle, continuously moving network shared by the provincial and city homes.
-export default function NetworkBackground({ className = "", paused = false }) {
+export default function NetworkBackground({ className = "", paused = false, lineIntensity = 1 }) {
   const canvasRef = useRef(null);
   const pausedRef = useRef(paused);
   const restartRef = useRef(null);
@@ -64,7 +64,7 @@ export default function NetworkBackground({ className = "", paused = false }) {
           const neighbor = positions[next];
           const distance = Math.hypot(point.x - neighbor.x, point.py - neighbor.py);
           if (distance >= 230) continue;
-          context.strokeStyle = `rgba(110,128,155,${0.27 * (1 - distance / 230)})`;
+          context.strokeStyle = `rgba(110,128,155,${0.27 * lineIntensity * (1 - distance / 230)})`;
           context.lineWidth = 0.7;
           context.beginPath();
           context.moveTo(point.x, point.py);
@@ -113,7 +113,7 @@ export default function NetworkBackground({ className = "", paused = false }) {
       document.removeEventListener("visibilitychange", restart);
       motion.removeEventListener("change", restart);
     };
-  }, []);
+  }, [lineIntensity]);
 
   return <canvas ref={canvasRef} className={className} aria-hidden="true" />;
 }

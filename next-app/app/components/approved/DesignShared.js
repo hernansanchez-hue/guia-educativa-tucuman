@@ -21,7 +21,7 @@ export function tabKeys(event){if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDow
 export function DesignShell({kind,city,children,paid=false}){
  const [open,setOpen]=useState(false),[paused,setPaused]=useState(false);const nav=usePublicEditorial('navigation'),footer=usePublicEditorial('footer');const pathname=usePathname();
  return <><div className={`get-approved design-${kind} ${paid?'paid':'free'} ${paused?'motion-paused':''}`}>
-  <NetworkBackground className="design-network" paused={paused}/><Link className="skip" href="#contenido">Ir al contenido</Link>
+  <NetworkBackground className="design-network" paused={paused} lineIntensity={2.3}/><Link className="skip" href="#contenido">Ir al contenido</Link>
   <header className="header" id="inicio"><Link className="brand" href={city?`/${city.slug}`:'/'} aria-label="GET — Inicio"><img src={nav.logo||footer.logo} alt="Guía Educativa Tucumán" width="142" height="54"/></Link>
    <nav id="approved-nav" aria-label="Navegación principal" className={open?'open':''}>{nav.items.filter(x=>x.visible!==false).map(item=><Link key={item.id} href={item.contextual&&city?`/${city.slug}`:item.href} className={pathname===item.href||(item.href==='/instituciones'&&city)?'active':undefined} aria-current={pathname===item.href?'page':undefined} onClick={()=>setOpen(false)}>{item.label}</Link>)}</nav>
    <div className="header-end">{city?<Link className="city-choice" href={`/${city.slug}`}><Icon name="pin"/>{city.name}</Link>:null}<Link className="button navy" href={nav.courseHref}>{nav.courseLabel}<Icon/></Link></div>
