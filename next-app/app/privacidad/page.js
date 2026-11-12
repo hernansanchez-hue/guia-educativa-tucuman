@@ -13,7 +13,7 @@ export default function PrivacyPage() {
   return <EightDesignShell><main className="get-privacy">
     <span className="eyebrow">Privacidad y datos personales</span>
     <h1>Política de Privacidad</h1>
-    <p>Versión {legalConfig.privacyVersion}. Última actualización: 11 de noviembre de 2026.</p>
+    <p>Versión {legalConfig.privacyVersion}. Última actualización: 12 de noviembre de 2026.</p>
 
     <section aria-labelledby="privacy-controller"><h2 id="privacy-controller">Quién es responsable</h2>
       <p>El responsable de Guía Educativa Tucumán (GET) es <strong>{legalConfig.legalName}</strong>, quien desarrolla la actividad {legalConfig.activity}.</p>
@@ -47,9 +47,11 @@ export default function PrivacyPage() {
     </section>
 
     <section aria-labelledby="privacy-analytics"><h2 id="privacy-analytics">Analítica opcional</h2>
-      <p>La integración de Google Analytics 4 (G-KY9E5NG5V2) está condicionada a verificar su configuración y a tu aceptación previa. Mientras esa verificación esté pendiente, permanece desactivada. Rechazarla no impide navegar ni enviar consultas.</p>
+      <p>Google Analytics 4 (G-KY9E5NG5V2) está habilitado para medir visitas e interacciones en las páginas públicas, únicamente después de que aceptes la analítica. Antes de aceptar, o si la rechazás, no se carga la etiqueta de Google ni se envían eventos de analítica. Rechazarla no impide navegar ni enviar consultas.</p>
       <p>Los eventos propios registran páginas públicas conocidas e interacciones. No envían nombres, emails, teléfonos, mensajes, el texto buscado, comprobantes de consultas ni parámetros de las URLs. El administrador y las vistas previas privadas están excluidos. No se ha incorporado Microsoft Clarity.</p>
-      <p>La preferencia de analítica guardada en este navegador se considera válida durante 180 días; después se vuelve a pedir una elección. Si se habilita Analytics, la etiqueta solicita una duración de 180 días para sus cookies, sin renovar ese plazo en cada visita. Esto no equivale al plazo de conservación de datos en la cuenta de Google.</p>
+      <p>La medición mejorada está desactivada: GET registra manualmente las visitas, las búsquedas sin su texto, las interacciones con WhatsApp y planes de estudio, y las consultas cuya recepción confirmó el servidor. La configuración no habilita Google Signals ni la personalización publicitaria.</p>
+      <p>Al aceptar, Google recibe esos eventos e información técnica de la conexión y del navegador, y utiliza identificadores de analítica guardados en cookies. Esto no significa una navegación anónima. Podés consultar <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">cómo utiliza Google la información de sitios que usan sus servicios</a>.</p>
+      <p>La preferencia de analítica guardada en este navegador se considera válida durante 180 días; después se vuelve a pedir una elección. La etiqueta solicita una duración de 180 días para sus cookies, sin renovar ese plazo en cada visita. Esto no equivale al plazo de conservación de datos en la cuenta de Google.</p>
       <p>Podés cambiar tu elección desde “Preferencias de analítica”. Retirarla detiene la medición, elimina las cookies de Analytics accesibles desde GET y recarga la página. Las sesiones del administrador utilizan almacenamiento de autenticación necesario para mantener un acceso autorizado, no para publicidad.</p>
       <p>Si usaste una versión anterior que guardaba consultas solo en tu navegador, pueden quedar copias locales: podés quitarlas borrando los datos de este sitio en tu navegador. Eso no elimina consultas ya recibidas por GET o por una institución.</p>
     </section>
