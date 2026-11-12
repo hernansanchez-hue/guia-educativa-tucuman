@@ -1,5 +1,6 @@
 import {createHmac, randomBytes} from 'node:crypto';
 import {hasInquiryConsent} from '../privacy/inquiry-consent.mjs';
+import {hasTrustedPublicOrigin} from '../security/request-origin.mjs';
 
 const KEY_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const RECEIPT_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9._:-]{0,159}$/;
@@ -107,7 +108,7 @@ const defaultGuard = createContactGuard();
 export async function handleCommercialContact(request, {
   env = process.env, fetchImpl = fetch, guard = defaultGuard, now = Date.now, persistence = null,
 } = {}) {
-  if (request.headers.get('origin') !== new URL(request.url).origin) return reply('Origen no permitido.', 403);
+  if (!hasTrustedPublicOrigin(request, env)) return reply('Origen no permitido.', 403);
   if (!request.headers.get('content-type')?.toLowerCase().startsWith('application/json')) return reply('Formato no permitido.', 415);
   const key = request.headers.get('idempotency-key');
   if (!KEY_PATTERN.test(key ?? '')) return reply('Identificador de solicitud inválido.', 400);

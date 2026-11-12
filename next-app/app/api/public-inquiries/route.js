@@ -1,13 +1,13 @@
 import {readFile} from 'node:fs/promises';
 import {resolvePublicInquiry} from '../../../lib/integration/public-inquiry.mjs';
+import {hasTrustedPublicOrigin} from '../../../lib/security/request-origin.mjs';
 
 export const runtime = 'nodejs';
 
 function reply(message, status) { return Response.json({ok:false, message}, {status, headers:{'Cache-Control':'no-store'}}); }
 
 export async function POST(request) {
-  const origin = request.headers.get('origin');
-  if (!origin || origin !== new URL(request.url).origin) return reply('Origen no permitido', 403);
+  if (!hasTrustedPublicOrigin(request)) return reply('Origen no permitido', 403);
   const idempotencyKey = request.headers.get('Idempotency-Key');
   if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(idempotencyKey ?? '')) return reply('Identificador de solicitud inválido', 400);
   const body = await request.text();
