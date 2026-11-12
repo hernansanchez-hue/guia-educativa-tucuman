@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
+const base=process.env.GET_CATALOG_ORIGIN||'http://localhost:4004';
+const response=await fetch(base+'/sitemap.xml');assert.equal(response.status,200);
+const xml=await response.text(),paths=[...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
+assert.equal(paths.length,new Set(paths).size);assert.ok(paths.includes('/famailla'));assert.ok(paths.some(p=>p.startsWith('/carreras/profesorado-de-')));assert.ok(paths.every(p=>!/^\/(admin|api|media)(\/|$)/.test(p)));
+const results=[],queue=[...paths],failures=[];
+await Promise.all(Array.from({length:4},async()=>{while(queue.length){const path=queue.shift(),started=Date.now();try{const r=await fetch(base+path),text=await r.text(),canonical=text.match(/<link[^>]*rel="canonical"[^>]*href="([^"]+)"/i)?.[1],noindex=/<meta[^>]*name="robots"[^>]*content="[^"]*noindex/i.test(text);assert.equal(r.status,200);assert.ok(canonical,'Sin canonical');assert.equal(new URL(canonical).pathname,path);assert.equal(noindex,false);results.push({path,status:r.status,canonical,ms:Date.now()-started});}catch(error){failures.push({path,error:error.message});}if((results.length+failures.length)%100===0)console.log('ROUTES',results.length,failures.length);}}));
+const robots=await(await fetch(base+'/robots.txt')).text();assert.ok(robots.includes('/admin'));assert.ok(robots.includes('sitemap.xml'));
+await writeFile('../docs/catalog/GET-CATALOG-ROUTES.json',JSON.stringify({origin:base,sitemapCount:paths.length,results,failures,robots},null,2)+'\n');
+console.log(JSON.stringify({sitemap:paths.length,passed:results.length,failed:failures.length,failures},null,2));assert.deepEqual(failures,[]);

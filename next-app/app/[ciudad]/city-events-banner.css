@@ -1,0 +1,119 @@
+.get-city-approved .city-events-banner {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+  padding: 30px 34px;
+  overflow: hidden;
+  border: 1px solid #283d5e;
+  border-radius: 16px;
+  background: linear-gradient(112deg, #12233f, #1d3657);
+  color: #fff;
+  box-shadow: 0 8px 24px #12233f0c;
+}
+.get-city-approved .city-events-banner::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 260px;
+  height: 260px;
+  right: -105px;
+  top: -125px;
+  border: 1px solid #e5bf6229;
+  border-radius: 50%;
+  box-shadow: 0 0 0 30px #e5bf6205, 0 0 0 60px #e5bf6204;
+  pointer-events: none;
+}
+.get-city-approved .city-events-banner__icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid #e5bf6240;
+  border-radius: 14px;
+  color: #e5bf62;
+  background: #ffffff05;
+}
+.get-city-approved .city-events-banner__icon svg {
+  width: 30px;
+  height: 30px;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.get-city-approved .city-events-banner__content {
+  min-width: 0;
+}
+.get-city-approved .city-events-banner h2 {
+  color: #fff;
+  font-size: clamp(20px, 1.8vw, 25px);
+  line-height: 1.3;
+  letter-spacing: -0.6px;
+}
+.get-city-approved .city-events-banner p {
+  max-width: 610px;
+  margin-top: 9px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #d8e0eb;
+}
+.get-city-approved .city-events-banner__link {
+  justify-content: center;
+  gap: 18px;
+  flex-shrink: 0;
+  min-height: 46px;
+  white-space: nowrap;
+}
+.get-city-approved .city-events-banner__link svg {
+  width: 17px;
+  height: 17px;
+}
+.get-city-approved .city-events-banner__link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+@media (max-width: 1000px) {
+  .get-city-approved .city-events-banner {
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+    gap: 18px;
+    padding: 26px;
+  }
+  .get-city-approved .city-events-banner__icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media (max-width: 780px) {
+  .get-city-approved .city-events-banner {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 18px;
+    margin-top: 19px;
+    padding: 24px;
+  }
+  .get-city-approved .city-events-banner__icon {
+    width: 44px;
+    height: 44px;
+    align-self: start;
+  }
+  .get-city-approved .city-events-banner__link {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+@media (max-width: 480px) {
+  .get-city-approved .city-events-banner {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 24px 22px;
+  }
+  .get-city-approved .city-events-banner__icon {
+    display: none;
+  }
+  .get-city-approved .city-events-banner__link {
+    grid-column: 1;
+    min-height: 46px;
+    white-space: normal;
+  }
+}

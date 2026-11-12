@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-14",
+  "scope": "Rediseño de UX del administrador GET",
+  "project": "C:/Codex/GET-production",
+  "files": [
+    "next-app/lib/admin/workspace-navigation.mjs",
+    "next-app/lib/admin/city-slider.mjs",
+    "next-app/lib/admin/editor-fields.mjs",
+    "next-app/lib/admin/editorial-model.mjs",
+    "next-app/lib/admin/editor-service.js",
+    "next-app/lib/admin/final-service.js",
+    "next-app/lib/admin/media-service.js",
+    "next-app/app/[ciudad]/CityFeaturedCareers.js",
+    "next-app/app/[ciudad]/CityInstitutionSections.js",
+    "next-app/app/admin/(protected)/page.js",
+    "next-app/app/admin/(protected)/[section]/page.js",
+    "next-app/app/admin/(protected)/ajustes/page.js",
+    "next-app/app/admin/(protected)/banners/page.js",
+    "next-app/app/admin/(protected)/multimedia/page.js",
+    "next-app/app/admin/api/media/route.js",
+    "next-app/app/admin/ui/AdminShell.js",
+    "next-app/app/admin/ui/Dashboard.js",
+    "next-app/app/admin/ui/SettingsHub.js",
+    "next-app/app/admin/ui/EntityList.js",
+    "next-app/app/admin/ui/ExtendedEntityList.js",
+    "next-app/app/admin/ui/EntityEditor.js",
+    "next-app/app/admin/ui/EditorField.js",
+    "next-app/app/admin/ui/CitySliderEditor.js",
+    "next-app/app/admin/ui/MediaLibrary.js",
+    "next-app/app/admin/ui/FinalConsole.js",
+    "next-app/app/admin/ui/NewEntityWizard.js",
+    "next-app/app/admin/ui/PreviewHost.js",
+    "next-app/app/admin/workspace.module.css",
+    "next-app/tests/admin-workspace.test.mjs",
+    "next-app/tests/admin-visual/client.js",
+    "next-app/tests/admin-visual/fixtures.js",
+    "next-app/scripts/admin-visual-harness.mjs",
+    "next-app/scripts/check-admin-workspace.mjs",
+    "next-app/scripts/check-admin-visual.mjs",
+    "next-app/scripts/check-admin-home-visual.mjs",
+    "next-app/scripts/check-admin-extended-visual.mjs",
+    "next-app/scripts/check-admin-final-visual.mjs",
+    "supabase/tests/cms_editorial_auth_v1.sql",
+    "supabase/tests/cms_final_console_v1.sql",
+    "supabase/tests/cms_workspace_v1.sql",
+    "docs/admin/ADMIN-USER-GUIDE.md",
+    "docs/admin/ADMIN-UX-SITE-MAP.md",
+    "docs/admin/ADMIN-UX-REPORT.md",
+    "docs/admin/ADMIN-UX-FILES.json"
+  ],
+  "externalArtifacts": [
+    "C:/Users/cesar/.codex/visualizations/2026/07/30/019fb113-3399-7862-ba8d-41e4e6b5f0cd/CMS-UX-CAPTURAS.html"
+  ],
+  "database": {
+    "schemaMigrations": 0,
+    "persistedContentWrites": 0,
+    "rlsChanges": 0,
+    "authChanges": 0
+  },
+  "git": {
+    "add": false,
+    "commit": false,
+    "push": false,
+    "deploy": false
+  },
+  "validation": {
+    "cmsUnit": {
+      "pass": 84,
+      "fail": 0
+    },
+    "allUnit": {
+      "pass": 189,
+      "fail": 0
+    },
+    "sqlChecks": 495,
+    "lintErrors": 0,
+    "existingLintWarnings": 9,
+    "build": "PASS",
+    "typescript": "PASS via Next build",
+    "workspaceResponsiveViews": 90,
+    "workspaceFlows": 7
+  }
+}

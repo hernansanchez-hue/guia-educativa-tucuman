@@ -1,0 +1,12 @@
+.get-eight .events-search-row { display: grid; grid-template-columns: auto minmax(160px, 1fr) auto minmax(160px, .45fr); gap: 12px; }
+.get-eight .events-search-row label { font-size: 13px; font-weight: 700; }
+.get-eight .events-search-row input { width: 100%; min-width: 0; min-height: 42px; border: 1px solid #536179; border-radius: 8px; padding: 10px 12px; background: #fff; color: var(--blue); font: inherit; font-size: 14px; color-scheme: light; }
+.get-eight .events-results-summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+.get-eight .events-results-summary p { margin: 0; font-size: 13px; }
+.get-eight .events-image-note { font-size: 12px; margin: 10px 0 0; color: var(--gray); }
+.get-eight .event-card-meta time { font-size: inherit; }
+.get-eight .event-detail-gallery video { max-width: 100%; width: 100%; border-radius: 14px; }
+@media (max-width: 730px) {
+ .get-eight .events-search-row { display: grid; grid-template-columns: 1fr; gap: 7px; }
+ .get-eight .events-search-row input { font-size: 16px; }
+}

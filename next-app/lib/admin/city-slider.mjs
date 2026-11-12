@@ -1,10 +1,10 @@
 import {isSafeContentLink} from './content-document.mjs';
-import {isPremiumCareer,isPremiumInstitution} from '../catalog/commercial-policy.mjs';
+import {isPremiumCareer} from '../catalog/commercial-policy.mjs';
 
 const canonical = {'licenciatura-en-administracion':'lic-en-administracion'};
 function safePublicLink(value){
  if(!isSafeContentLink(value))return false;
- try{return !/^\/(?:admin|api)(?:\/|$)/i.test(new URL(decodeURIComponent(value),'https://get.local').pathname);}catch{return false;}
+ try{return !/^\/(?:administrador|admin|api)(?:\/|$)/i.test(new URL(decodeURIComponent(value),'https://get.local').pathname);}catch{return false;}
 }
 
 /** Same five offers and order used by the approved city renderer. No persistence here. */
@@ -29,13 +29,27 @@ export function seedCitySlides(city) {
   }));
 }
 
+// A manual slide is an editorial selection, not a commercial plan or a profile benefit.
+// Offer choices come from this city's visible institutional catalog, not from its slider.
+export function citySlideOptions(city) {
+  return (city.institutions || []).flatMap(institution => (institution.careers || [])
+    .filter(career => career.visible !== false && career.id && career.slug)
+    .map(career => ({
+      id: institution.id + '-' + career.id, institutionId: institution.id, careerId: career.id,
+      institutionName: institution.name, careerName: career.name, title: career.name,
+      description: career.description || '', image: career.image || '',
+      href: career.routePath || `/${city.slug}/${institution.slug}/${/capacitaci/i.test(institution.type || '') ? 'capacitaciones' : 'carreras'}/${canonical[career.slug] || career.slug}`,
+      ctaLabel: 'Conocer la carrera', institutionCtaLabel: 'Conocer más', active: true,
+    })));
+}
+
 export function resolveCitySlides(city) {
   if(!Array.isArray(city.slides)) return automaticCitySlides(city);
   try{validateCitySlides(city.slides);}catch{return [];}
   return city.slides.filter(slide=>slide.active!==false).flatMap(slide=>{
     const institution=city.institutions.find(i=>i.id===slide.institutionId);
-    if(!institution||!isPremiumInstitution(institution,city))return [];
-    if(slide.careerId){const career=institution.careers.find(c=>c.id===slide.careerId);if(!career||!isPremiumCareer(career,institution,city))return [];}
+    if(!institution||institution.visible===false)return [];
+    if(slide.careerId){const career=institution.careers.find(c=>c.id===slide.careerId);if(!career||career.visible===false)return [];}
     return [{...slide,name:slide.title,route:slide.href,
       institution:{name:institution.name,description:institution.description,image:institution.image,type:institution.type,route:`/${city.slug}/${institution.slug}`}}];
   });

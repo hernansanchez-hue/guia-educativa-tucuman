@@ -3,13 +3,14 @@
 import {useState} from "react";
 import Link from "next/link";
 import CityEditorialImage from "./CityEditorialImage";
+import CityEventsBanner from "./CityEventsBanner";
 import {usePublicEditorial} from "../components/PublicEditorialContext";
 import {showCityOrientation} from "../../lib/catalog/city-template.mjs";
 import {DesignIcon} from "../components/ApprovedHomeUI";
 
 const reference="/assets/approved-home/city-reference/";
 const institutionHref=(city,institution)=>`/${city.slug}/${institution.slug}`;
-function InstitutionCard({city,institution}) {
+export function InstitutionCard({city,institution}) {
   const careers=institution.careers??[];
   const modalities=[...new Set(careers.map(career=>career.modality).filter(Boolean))];
   const fallback=reference+(institution.slug?.includes("siglo-21")?"campus.jpg":"institute.jpg");
@@ -74,6 +75,7 @@ export default function CityInstitutionSections({city,institutions=[],searching=
         <small className="action-note">Recibí información por WhatsApp.</small>
       </article>:null}
     </section>
+    <CityEventsBanner/>
     {featured.length>0?<section className="featured wrap" id="instituciones" aria-labelledby="featuredInstitutionsTitle">
       <div className="section-top"><div><div className="eyebrow">CONOCÉ DÓNDE PODÉS ESTUDIAR</div><h2 id="featuredInstitutionsTitle">{city.featuredInstitutionsTitle||"Instituciones destacadas"}<span className="gold-dot">.</span></h2></div><a href="#directorio">Ver todas las instituciones <DesignIcon name="arrow"/></a></div>
       <div className="featured-grid" id="featuredGrid">{visibleFeatured.map(institution=><InstitutionCard key={institution.id} city={city} institution={institution}/>)}</div>

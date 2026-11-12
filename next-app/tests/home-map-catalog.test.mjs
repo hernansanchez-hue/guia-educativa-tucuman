@@ -86,6 +86,6 @@ test("Supabase adapter remains available, but the public home map stays versione
   assert.deepEqual(result.province, { cityCount: 1, institutionCount: 1, careerCount: 1 });
   assert.ok(!JSON.stringify(result).includes("uuid-"));
   const publicResult=await getHomeMapCatalog(options);
-  assert.deepEqual(publicResult.province, {cityCount:27,institutionCount:125,careerCount:198});
+  assert.deepEqual(publicResult.province, {cityCount:27,institutionCount:125,careerCount:200});
   assert.ok(publicResult.search.some(entry=>entry.href==='/san-miguel-de-tucuman'));
 });

@@ -1,0 +1,48 @@
+-- Controlled database acceptance, always rolled back. NOT an end-to-end human login.
+begin;
+set constraints all immediate;
+do $$
+declare adm uuid:=gen_random_uuid(); ed uuid:=gen_random_uuid(); ads uuid:=gen_random_uuid(); es uuid:=gen_random_uuid();
+ d public.cms_documents; original jsonb; payload jsonb; checks int:=0;
+begin
+ insert into auth.users(id,email,email_confirmed_at) values(adm,adm||'@home-cms-test.invalid',now()),(ed,ed||'@home-cms-test.invalid',now());
+ insert into auth.sessions(id,user_id) values(ads,adm),(es,ed);
+ insert into public.admin_profiles(id,display_name,role) values(adm,'CMS HOME TEST ADMIN','ADMIN'),(ed,'CMS HOME TEST EDITOR','EDITOR');
+ select * into d from public.cms_documents where module_id='home' and entity_key='main';original:=d.draft;
+ if d.id is null or d.published_version is null then raise exception 'Home import missing';end if;checks:=checks+1;
+ if (select count(*) from public.cms_documents where module_id='home')<>1 then raise exception 'Home singleton violated';end if;checks:=checks+1;
+ if d.draft->'data'->>'logo'<>'/assets/get-logo-hero-white.png' then raise exception 'Original Home logo lost';end if;checks:=checks+1;
+ if d.draft->'data'->>'video' not like '%v2l8k0maxocxnxf0yerh.mp4' then raise exception 'Original Home video lost';end if;checks:=checks+1;
+ perform set_config('request.jwt.claims','{}',true);set local role anon;
+ if public.cms_read_published('home','main') is distinct from original then raise exception 'Public Home snapshot unavailable';end if;checks:=checks+1;
+ begin perform count(*) from public.cms_documents;raise exception 'Anonymous draft access';exception when insufficient_privilege then checks:=checks+1;end;
+ begin perform public.cms_editorial_bundle('save','[]');raise exception 'Anonymous mutation accepted';exception when insufficient_privilege then checks:=checks+1;end;
+ reset role;
+ payload:=jsonb_set(d.draft,'{data,titleBefore}','"HOME TEST DRAFT"');
+ perform set_config('request.jwt.claims',jsonb_build_object('sub',ed,'role','authenticated','session_id',es)::text,true);set local role authenticated;
+ if not exists(select 1 from public.cms_documents where id=d.id) then raise exception 'Editor cannot read Home';end if;checks:=checks+1;
+ perform public.cms_editorial_bundle('save',jsonb_build_array(jsonb_build_object('id',d.id,'revision',d.revision,'payload',payload)));
+ if public.cms_read_published('home','main') is distinct from original then raise exception 'Home draft leaked';end if;checks:=checks+1;
+ begin perform public.cms_editorial_bundle('publish',jsonb_build_array(jsonb_build_object('id',d.id,'revision',d.revision+1,'payload',payload)));raise exception 'Editor published Home';exception when insufficient_privilege then checks:=checks+1;end;
+ begin perform public.cms_editorial_bundle('save',jsonb_build_array(jsonb_build_object('id',d.id,'revision',d.revision,'payload',payload)));raise exception 'Stale revision accepted';exception when serialization_failure then checks:=checks+1;end;
+ reset role;
+ perform set_config('request.jwt.claims',jsonb_build_object('sub',adm,'role','authenticated','session_id',ads)::text,true);set local role authenticated;
+ perform public.cms_editorial_bundle('publish',jsonb_build_array(jsonb_build_object('id',d.id,'revision',d.revision+1,'payload',payload)));
+ if public.cms_read_published('home','main')->'data'->>'titleBefore'<>'HOME TEST DRAFT' then raise exception 'Home publication failed';end if;checks:=checks+1;
+ if (select count(*) from public.cms_versions where document_id=d.id)<>2 then raise exception 'Immutable version missing';end if;checks:=checks+1;
+ if (select count(*) from public.cms_audit_logs where entity_id=d.id and actor_id in (adm,ed))<>2 then raise exception 'Home audit missing';end if;checks:=checks+1;
+ select * into d from public.cms_documents where id=d.id;
+ begin perform public.cms_editorial_bundle('save',jsonb_build_array(jsonb_build_object('id',d.id,'revision',d.revision,'payload',jsonb_set(payload,'{data,videoVisible}','"false"'))));raise exception 'Invalid visibility accepted';exception when invalid_parameter_value then checks:=checks+1;end;
+ begin perform public.cms_editorial_bundle('save',jsonb_build_array(jsonb_build_object('id',d.id,'revision',d.revision,'payload',payload#-'{data,titleAfter}')));raise exception 'Missing Home text accepted';exception when invalid_parameter_value then checks:=checks+1;end;
+ begin perform public.cms_editorial_bundle('save',jsonb_build_array(jsonb_build_object('id',d.id,'revision',d.revision,'payload',jsonb_set(payload,'{data,logo}','"/admin/media/test.png"'))));raise exception 'Private resource published';exception when invalid_parameter_value then checks:=checks+1;end;
+ begin perform public.cms_mutate_content('archive',d.id,null,null,null,d.revision,null);raise exception 'Home archive accepted';exception when invalid_parameter_value then checks:=checks+1;end;
+ begin perform public.cms_mutate_content('unpublish',d.id,null,null,null,d.revision,null);raise exception 'Home withdrawal accepted';exception when invalid_parameter_value then checks:=checks+1;end;
+ perform public.cms_editorial_bundle('save',jsonb_build_array(jsonb_build_object('id',d.id,'revision',d.revision,'payload',original)));
+ perform public.cms_editorial_bundle('publish',jsonb_build_array(jsonb_build_object('id',d.id,'revision',d.revision+1,'payload',original)));
+ if public.cms_read_published('home','main') is distinct from original then raise exception 'Home restoration failed';end if;checks:=checks+1;
+ if jsonb_array_length(public.cms_public_entries())<>69 then raise exception 'Legacy editorial catalog changed';end if;checks:=checks+1;
+ reset role;
+ create temporary table home_acceptance_result on commit drop as select checks as passed, true as restores_original, true as fixtures_rolled_back;
+end $$;
+select * from home_acceptance_result;
+rollback;

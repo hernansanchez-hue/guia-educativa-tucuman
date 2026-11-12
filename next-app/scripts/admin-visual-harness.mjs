@@ -1,0 +1,12 @@
+// Isolated visual test server. Never mounted in Next.js and never connected to Supabase.
+import {build} from 'esbuild';
+import {createServer} from 'node:http';
+import {mkdtemp,readFile} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+if(process.env.NODE_ENV!=='test')throw new Error('This harness only runs with NODE_ENV=test.');
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),out=await mkdtemp(path.join(tmpdir(),'get-cms-visual-'));
+await build({entryPoints:[path.join(root,'tests/admin-visual/client.js')],bundle:true,outfile:path.join(out,'bundle.js'),platform:'browser',jsx:'automatic',define:{'process.env.NODE_ENV':'"test"'},loader:{'.js':'jsx','.css':'css'},plugins:[{name:'test-only-aliases',setup(b){b.onResolve({filter:/^next\/(navigation|link|image)$/},a=>({path:path.join(root,'tests/admin-visual',a.path.split('/')[1]+'.js')}));b.onResolve({filter:/\/(editor-actions|content-actions|final-actions|actions)$/},()=>({path:path.join(root,'tests/admin-visual/actions.js')}));}}]});
+const types={'.js':'text/javascript','.css':'text/css','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.svg':'image/svg+xml','.webp':'image/webp'};
+createServer(async(req,res)=>{try{const pathname=new URL(req.url,'http://127.0.0.1').pathname;if(pathname==='/admin/api/media'){res.setHeader('Content-Type','application/json');res.end(JSON.stringify(new URL(req.url,'http://127.0.0.1').searchParams.has('uso')?[]:[{id:'fixture-media',url:'/assets/get-city-footer-logo.png',name:'Logo GET',kind:'logo',origin:'local',alt:'GET',usage:4,state:'ready'}]));return;}let file;if(pathname==='/bundle.js'||pathname==='/bundle.css')file=path.join(out,pathname.slice(1));else if(pathname.startsWith('/assets/')){file=path.resolve(root,'public',pathname.slice(1));if(!file.startsWith(path.join(root,'public')+path.sep))throw new Error('Invalid path');}else{res.setHeader('Content-Type','text/html; charset=utf-8');res.end('<!doctype html><html lang="es"><head><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/bundle.css"></head><body><div id="root"></div><script src="/bundle.js"></script></body></html>');return;}res.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');res.end(await readFile(file));}catch{res.statusCode=404;res.end('Not found');}}).listen(4015,'127.0.0.1',()=>console.log('Isolated CMS visual test: http://127.0.0.1:4015/admin · TEST FIXTURES ONLY'));

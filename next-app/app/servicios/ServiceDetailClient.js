@@ -3,7 +3,9 @@ import PublicHeader from '../components/PublicHeader';
 import PublicHeaderFrame from '../components/PublicHeaderFrame';
 import PublicFooter from '../components/PublicFooter';
 import ServiceHero from '../components/ServiceHero';
+import SocialServicePage from './redes-sociales/SocialServicePage';
 export default function ServiceDetailClient({service:s}){
+  if (s.slug === 'redes-sociales') return <SocialServicePage service={s}/>;
   return <div className="app-shell services-page">
     <PublicHeaderFrame><PublicHeader variant="city-hero" /></PublicHeaderFrame>
     <main className="services-main">

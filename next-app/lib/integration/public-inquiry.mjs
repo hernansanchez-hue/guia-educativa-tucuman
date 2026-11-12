@@ -1,10 +1,12 @@
 import {publicIntegrationCatalog, validateIntegrationMap} from './catalog-map.mjs';
+import {hasInquiryConsent} from '../privacy/inquiry-consent.mjs';
 
 const validText = (value, min, max) => typeof value === 'string' && value.trim().length >= min && value.trim().length <= max;
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function resolvePublicInquiry(input, mapping, catalog = publicIntegrationCatalog()) {
   if (!input || typeof input !== 'object' || Array.isArray(input)) return {error:'Solicitud inválida', status:400};
+  if (!hasInquiryConsent(input)) return {error:'Revisá la Política de Privacidad y autorizá el envío de tu consulta.', status:400};
   if (!validText(input.institutionId, 2, 160) || !validText(input.name, 2, 200) || !validText(input.phone, 3, 50) || !validText(input.email, 3, 320) || !emailPattern.test(input.email.trim()) || !validText(input.query ?? '', 0, 2000)) return {error:'Revisá los datos de contacto', status:400};
   if (input.offeringId != null && !validText(input.offeringId, 2, 180)) return {error:'Oferta inválida', status:400};
   const institution = catalog.institutions.find(row => row.id === input.institutionId);

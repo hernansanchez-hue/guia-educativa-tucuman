@@ -1,7 +1,7 @@
 import ApprovedHomeClient from './components/ApprovedHomeClient';
 import { getCityEntryCatalog } from '../lib/public-catalog/city-entry.mjs';
 import { getPublishedHome } from '../lib/admin/published-home';
-import { editorialMetadata } from '../lib/admin/published-editorial';
+import { editorialMetadata,getPublishedEditorialEntries } from '../lib/admin/published-editorial';
 import { SITE_DESCRIPTION, SITE_NAME } from '../lib/seo/public-metadata';
 
 export const revalidate = 60;
@@ -17,6 +17,6 @@ export async function generateMetadata() {
   return editorialMetadata(originalMetadata, await getPublishedHome());
 }
 
-export default function Home() {
-  return <ApprovedHomeClient cities={getCityEntryCatalog()} />;
+export default async function Home() {
+  return <ApprovedHomeClient cities={getCityEntryCatalog(await getPublishedEditorialEntries())} />;
 }

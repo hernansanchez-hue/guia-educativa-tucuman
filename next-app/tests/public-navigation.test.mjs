@@ -5,11 +5,11 @@ import {isPublicNavigationItemActive,navigationContent,resolvePublicNavigation} 
 
 const visible=menu=>menu.items.filter(item=>item.visible!==false);
 
-test('the shared public menu exposes only Inicio, Instituciones and Carreras',()=>{
+test('the shared public menu exposes Inicio, Instituciones and Carreras without Eventos',()=>{
  const items=visible(navigationContent);
  assert.deepEqual(items.map(item=>item.label),['Inicio','Instituciones','Carreras']);
  assert.deepEqual(items.map(item=>item.href),['/','/instituciones','/carreras']);
- assert.equal(items.some(item=>['Eventos','Nosotros'].includes(item.label)),false);
+ assert.equal(items.some(item=>['Admin','Administración'].includes(item.label)),false);
 });
 
 test('published legacy navigation is normalized through the shared public configuration',()=>{
@@ -28,9 +28,11 @@ test('institution and career routes receive their corresponding active public na
  assert.deepEqual(active('/concepcion/universidad-siglo-21/carreras/abogacia'),['carreras']);
  assert.deepEqual(active('/concepcion'),['inicio']);
  assert.deepEqual(active('/concepcion','/concepcion'),['inicio']);
+ assert.deepEqual(active('/eventos'),[]);
+ assert.deepEqual(active('/eventos/un-evento'),[]);
 });
 
-test('Eventos and Nosotros remain available routes outside the main navigation',()=>{
+test('Eventos and Nosotros keep their public routes',()=>{
  assert.equal(existsSync(new URL('../app/eventos/page.js',import.meta.url)),true);
  assert.equal(existsSync(new URL('../app/nosotros/page.js',import.meta.url)),true);
 });

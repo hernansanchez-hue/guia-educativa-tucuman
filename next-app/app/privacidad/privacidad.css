@@ -1,0 +1,6 @@
+.get-eight main.get-privacy{max-width:900px;padding-bottom:48px}
+.get-privacy .privacy-draft{border-left:3px solid var(--ochre);background:#f4efdf;padding:20px 24px;border-radius:0 12px 12px 0;margin:28px 0 42px}
+.get-privacy .privacy-draft p{margin:10px 0 0}
+.get-eight .get-privacy h2{font-size:clamp(24px,3vw,32px)}
+.get-eight .get-privacy a{text-decoration:underline;text-underline-offset:3px}
+.get-eight .get-privacy section{margin-bottom:36px}

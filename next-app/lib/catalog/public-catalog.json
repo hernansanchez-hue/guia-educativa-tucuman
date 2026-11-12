@@ -136,7 +136,7 @@
             "Aguilares"
           ],
           "cityId": "concepcion",
-          "address": "Belgrano 810, Aguilares",
+          "address": "Nasif Estéfano 175, Concepción, Tucumán",
           "brandId": "instituto-santa-barbara",
           "gallery": [
             "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80",
@@ -755,7 +755,7 @@
             "Aguilares"
           ],
           "cityId": "concepcion",
-          "address": "San Martín 124, Concepción",
+          "address": "Buenos Aires 128, Concepción, Tucumán",
           "brandId": "universidad-siglo-21",
           "gallery": [
             "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=80",
@@ -796,14 +796,14 @@
               "universidad-siglo-21-concepcion-abogacia": {
                 "badge": "Inscripciones abiertas",
                 "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
-                "duration": "3 años",
+                "duration": "4 años",
                 "modality": "Presencial",
                 "nationalValidity": "Sí"
               },
               "universidad-siglo-21-concepcion-contador-publico": {
                 "badge": "Nueva carrera",
                 "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
-                "duration": "3 años",
+                "duration": "4 años",
                 "modality": "Presencial",
                 "nationalValidity": "Sí"
               },
@@ -817,7 +817,7 @@
               "universidad-siglo-21-concepcion-lic-en-administracion": {
                 "badge": "Próximo ingreso",
                 "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-                "duration": "3 años",
+                "duration": "4 años",
                 "modality": "Presencial",
                 "nationalValidity": "Sí"
               }
@@ -829,7 +829,7 @@
                 "slug": "abogacia",
                 "badge": "Inscripciones abiertas",
                 "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
-                "duration": "3 años",
+                "duration": "4 años",
                 "modality": "Presencial",
                 "description": "Formación jurídica con modalidad flexible y acompañamiento tutorial."
               },
@@ -839,7 +839,7 @@
                 "slug": "contador-publico",
                 "badge": "Nueva carrera",
                 "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
-                "duration": "3 años",
+                "duration": "4 años",
                 "modality": "Presencial",
                 "description": "Herramientas contables, impositivas y financieras para empresas."
               },
@@ -849,7 +849,7 @@
                 "slug": "licenciatura-en-administracion",
                 "badge": "Próximo ingreso",
                 "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-                "duration": "3 años",
+                "duration": "4 años",
                 "modality": "Presencial",
                 "description": "Gestión, liderazgo y estrategia para organizaciones actuales."
               },
@@ -872,7 +872,7 @@
                 "badge": "Inscripciones abiertas",
                 "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
                 "video": null,
-                "duration": "3 años",
+                "duration": "4 años",
                 "modality": "Presencial",
                 "routePath": "/concepcion/universidad-siglo-21/carreras/abogacia",
                 "description": "Formación jurídica con modalidad flexible y acompañamiento tutorial.",
@@ -885,7 +885,7 @@
                 "badge": "Nueva carrera",
                 "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
                 "video": null,
-                "duration": "3 años",
+                "duration": "4 años",
                 "modality": "Presencial",
                 "routePath": "/concepcion/universidad-siglo-21/carreras/contador-publico",
                 "description": "Herramientas contables, impositivas y financieras para empresas.",
@@ -898,7 +898,7 @@
                 "badge": "Próximo ingreso",
                 "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
                 "video": null,
-                "duration": "3 años",
+                "duration": "4 años",
                 "modality": "Presencial",
                 "routePath": "/concepcion/universidad-siglo-21/carreras/lic-en-administracion",
                 "description": "Gestión, liderazgo y estrategia para organizaciones actuales.",
@@ -2657,7 +2657,7 @@
           "visible": true,
           "careerId": "abogacia",
           "citySlug": "concepcion",
-          "duration": "3 años",
+          "duration": "4 años",
           "modality": "Presencial",
           "formEnabled": true,
           "institutionId": "universidad-siglo-21-concepcion",
@@ -2705,7 +2705,7 @@
           "visible": true,
           "careerId": "contador-publico",
           "citySlug": "concepcion",
-          "duration": "3 años",
+          "duration": "4 años",
           "modality": "Presencial",
           "formEnabled": true,
           "institutionId": "universidad-siglo-21-concepcion",
@@ -2753,7 +2753,7 @@
           "visible": true,
           "careerId": "lic-en-administracion",
           "citySlug": "concepcion",
-          "duration": "3 años",
+          "duration": "4 años",
           "modality": "Presencial",
           "formEnabled": true,
           "institutionId": "universidad-siglo-21-concepcion",
@@ -8620,7 +8620,7 @@
           "cities": [
             "Concepción"
           ],
-          "address": "JUAN GORENA 1219, Concepción, Tucumán",
+      "address": "Presidente Roca 371, Concepción, Tucumán",
           "phone": "03865 427258",
           "email": "cent74tuc@hotmail.com",
           "cueAnexo": "900104001",
@@ -14830,6 +14830,7 @@
             "Concepción"
           ],
           "website": "https://www.unsta.edu.ar/oferta_academica/",
+          "address": "Julio A. Roca 37, Concepción, Tucumán",
           "phone": "(0381) 410-1141 / 381 408-0310 / 381 620-1120",
           "email": "informes@unsta.edu.ar"
         },
@@ -17931,6 +17932,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-9945478d28bdf537",
+          "duration": "4 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "contador-publico",
           "degree": "Contador Público",
@@ -18071,6 +18074,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-643c7d0675a4ef44",
+          "duration": "4 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-0b51c9ea55556170",
           "degree": "Licenciatura en Recursos Humanos",
@@ -18155,6 +18160,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-f3ee3e5cc3a47809",
+          "duration": "4 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-b5ad47d0738bb9cb",
           "degree": "Notariado",
@@ -18407,6 +18414,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-5feedc988743e269",
+          "duration": "5 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-f998cb9937926638",
           "degree": "Ingeniería en Informática",
@@ -18491,6 +18500,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-74c810d70f5550a0",
+          "duration": "3 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-22e953a463a7469b",
           "degree": "Tecnicatura universitaria en Higiene y Seguridad Laboral",
@@ -18603,6 +18614,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-9a1bf687f8d86e77",
+          "duration": "4 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-504cce5323a8cf3d",
           "degree": "Licenciatura en Higiene y Seguridad Laboral",
@@ -18715,6 +18728,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-6140072108960493",
+          "duration": "5 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-4aa784c6ac6a70cd",
           "degree": "Licenciatura en Psicología",
@@ -18995,6 +19010,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-46430297dbaa6983",
+          "duration": "2 años",
+          "modality": "Híbrida",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-66e8054d2c2f43e1",
           "degree": "Profesorado Universitario en Ciencias Económicas (CCC)",
@@ -19275,6 +19292,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-182249ba6716f9b0",
+          "duration": "4 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-75b7cb1d21043670",
           "degree": "Licenciatura en Administración de Empresas",
@@ -19611,6 +19630,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-d3856961df259706",
+          "duration": "2 años y medio",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-3d2451362a400d3a",
           "degree": "Tecnicatura universitaria en Desarrollo y Calidad de Software",
@@ -19947,6 +19968,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-16f12de29b5167af",
+          "duration": "5 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "abogacia",
           "degree": "Abogacía",
@@ -20003,6 +20026,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-5bbb4684cc0a2101",
+          "duration": "3 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-9e2098e08f807eb5",
           "degree": "Procuración",
@@ -20144,6 +20169,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-e854d336c4ae14ae",
+          "duration": "5 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-8e412ded7b2a215e",
           "degree": "Ingeniería Industrial",
@@ -20454,6 +20481,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-e14ae471e4f92d4b",
+          "duration": "4 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-0e3d946bd59a93f3",
           "degree": "Licenciatura en Nutrición",
@@ -20538,6 +20567,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-9a93edbaee9d160f",
+          "duration": "4 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-7bcb778ef755148c",
           "degree": "Licenciatura en Terapia Ocupacional",
@@ -20650,6 +20681,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-b51ae6d71856dcfb",
+          "duration": "4 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-1eec54ab9baf6ee2",
           "degree": "Profesorado Universitario de Inglés",
@@ -20762,6 +20795,8 @@
         "_kind": "offering",
         "data": {
           "id": "pdf-oferta-5ea6fca0e26fd697",
+          "duration": "4 años",
+          "modality": "Presencial",
           "institutionId": "pdf-universidad-sede-6fc86e9206ca5297",
           "careerId": "pdf-carrera-cc906f04aafac750",
           "degree": "Licenciatura en Marketing",
@@ -20975,6 +21010,98 @@
           "sha256": "b320a46777c248865924c3b9e2e923c6e8097b381b3f8cb72236a27b7b6c92fd",
           "page": 5,
           "record": "UNSTA:170"
+        }
+      },
+      "visibility": "published"
+    },
+    {
+      "moduleId": "careers",
+      "key": "carrera/enfermero-profesional",
+      "payload": {
+        "_kind": "career",
+        "data": {
+          "id": "enfermero-profesional",
+          "slug": "enfermero-profesional",
+          "name": "Enfermero Profesional",
+          "description": "",
+          "graduateProfile": "",
+          "workField": "",
+          "studyPlan": [],
+          "requirements": [],
+          "faq": [],
+          "image": "/assets/catalog/clinical.webp",
+          "imageAlt": "Imagen editorial del área de Enfermero Profesional",
+          "premium": false
+        }
+      },
+      "visibility": "published"
+    },
+    {
+      "moduleId": "careers",
+      "key": "oferta/pdf-sede-900104001-enfermero-profesional",
+      "payload": {
+        "_kind": "offering",
+        "data": {
+          "id": "pdf-sede-900104001-enfermero-profesional",
+          "institutionId": "pdf-sede-900104001",
+          "careerId": "enfermero-profesional",
+          "degree": "Enfermero Profesional",
+          "image": "/assets/catalog/clinical.webp",
+          "imageAlt": "Imagen editorial del área de Enfermero Profesional",
+          "featured": false,
+          "premium": false,
+          "visible": true,
+          "formEnabled": true,
+          "badge": "",
+          "order": 100,
+          "duration": "3 años",
+          "modality": "Presencial"
+        }
+      },
+      "visibility": "published"
+    },
+    {
+      "moduleId": "careers",
+      "key": "carrera/tecnico-superior-en-agente-socio-sanitario",
+      "payload": {
+        "_kind": "career",
+        "data": {
+          "id": "tecnico-superior-en-agente-socio-sanitario",
+          "slug": "tecnico-superior-en-agente-socio-sanitario",
+          "name": "Técnico Superior en Agente Socio Sanitario",
+          "description": "",
+          "graduateProfile": "",
+          "workField": "",
+          "studyPlan": [],
+          "requirements": [],
+          "faq": [],
+          "image": "/assets/catalog/community.webp",
+          "imageAlt": "Imagen editorial del área de Técnico Superior en Agente Socio Sanitario",
+          "premium": false
+        }
+      },
+      "visibility": "published"
+    },
+    {
+      "moduleId": "careers",
+      "key": "oferta/pdf-sede-900104001-tecnico-superior-en-agente-socio-sanitario",
+      "payload": {
+        "_kind": "offering",
+        "data": {
+          "id": "pdf-sede-900104001-tecnico-superior-en-agente-socio-sanitario",
+          "institutionId": "pdf-sede-900104001",
+          "careerId": "tecnico-superior-en-agente-socio-sanitario",
+          "degree": "Técnico Superior en Agente Socio Sanitario",
+          "image": "/assets/catalog/community.webp",
+          "imageAlt": "Imagen editorial del área de Técnico Superior en Agente Socio Sanitario",
+          "featured": false,
+          "premium": false,
+          "visible": true,
+          "formEnabled": true,
+          "badge": "",
+          "order": 100,
+          "duration": "3 años",
+          "modality": "Presencial"
         }
       },
       "visibility": "published"

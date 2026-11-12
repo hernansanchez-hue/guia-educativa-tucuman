@@ -18,10 +18,10 @@ test('PDF support rejects unsafe or missing resources',()=>{
  for(const href of ['',undefined,'javascript:alert(1)','//example.com/p.pdf','https://example.com/p.html'])assert.equal(safeStudyPlanPdf({studyPlanPdf:href}),null);
  assert.equal(safeStudyPlanPdf({studyPlanPdf:'/assets/plan.pdf'}),'/assets/plan.pdf');
 });
-test('page adapter preserves all 198 territorial offerings without mutating shared catalog',()=>{
+test('page adapter preserves all 200 territorial offerings without mutating shared catalog',()=>{
  const catalog=editorialCatalog(getVersionedPublicCatalogEntries(),{includeLegacy:false});
  const before=JSON.stringify(catalog);let count=0;
- assert.deepEqual([catalog.cities.length,catalog.institutions.length,catalog.careers.length,catalog.offerings.length],[27,125,195,198]);
+ assert.deepEqual([catalog.cities.length,catalog.institutions.length,catalog.careers.length,catalog.offerings.length],[27,125,197,200]);
  for(const institution of catalog.institutions){
   const page=institutionDesignPage(catalog,institutionPageFromCatalog(catalog,institution.citySlug,institution.slug));
   const ids=page.institution.careers.map(c=>c.offeringId).filter(Boolean);
@@ -29,7 +29,7 @@ test('page adapter preserves all 198 territorial offerings without mutating shar
   for(const id of ids)assert.equal(catalog.offerings.find(o=>o.id===id).institutionId,institution.id);
   count+=ids.length;
  }
- assert.equal(count,198);assert.equal(JSON.stringify(catalog),before);
+ assert.equal(count,200);assert.equal(JSON.stringify(catalog),before);
 });
 
 test('Siglo 21 Concepcion explicitly features only Abogacia and links its real page',()=>{

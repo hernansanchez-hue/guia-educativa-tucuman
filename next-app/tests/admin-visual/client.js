@@ -1,0 +1,43 @@
+import {createRoot} from 'react-dom/client';
+import FinalConsole from '../../app/admin/ui/FinalConsole';
+import {globalFixtures,finalRows,historyRows,userRows} from './final-fixtures';
+import AdminShell from '../../app/admin/ui/AdminShell';
+import SettingsHub from '../../app/admin/ui/SettingsHub';
+import Dashboard from '../../app/admin/ui/Dashboard';
+import EntityList from '../../app/admin/ui/EntityList';
+import EntityEditor from '../../app/admin/ui/EntityEditor';
+import NewEntityWizard from '../../app/admin/ui/NewEntityWizard';
+import ExtendedPreviewHost from '../../app/admin/ui/ExtendedPreviewHost';
+import ExtendedEntityList from '../../app/admin/ui/ExtendedEntityList';
+import MediaLibrary from '../../app/admin/ui/MediaLibrary';
+import BannerIndex from '../../app/admin/ui/BannerIndex';
+import {extendedCatalog,EXTENDED_TYPES,EXTENDED_KINDS} from '../../lib/admin/extended-editorial.mjs';
+import PreviewHost from '../../app/admin/ui/PreviewHost';
+import {actor,entries,documents,catalog,load} from './fixtures';
+import {newEditorialPreview} from '../../lib/admin/new-editorial-preview.mjs';
+import '../../app/globals.css';
+import '../../app/home-map.css';
+import '../../app/components/public-footer.css';
+import '../../app/[ciudad]/ciudad.css';
+import '../../app/[ciudad]/[institucion]/institucion.css';
+import '../../app/[ciudad]/[institucion]/carreras/[carrera]/carrera.css';
+import '../../app/eventos/eventos.css';
+import '../../app/servicios/servicios.css';
+import '../../app/nosotros/nosotros.css';
+const pathname=location.pathname,segments=pathname.split('/').filter(Boolean),type=segments[1],kind={ciudades:'city',instituciones:'institution',carreras:'offering',...Object.fromEntries(Object.entries(EXTENDED_TYPES).map(([k,v])=>[k,v.kind]))}[type];let view;
+window.__CMS_TEST_HARNESS__=true;
+if(type==='vista-previa'){if(segments[2]==='nuevo'){const tipo=new URLSearchParams(location.search).get('tipo'),Host=EXTENDED_TYPES[tipo]?ExtendedPreviewHost:PreviewHost;view=<Host id={`nuevo-${tipo}`} entries={entries} initialParts={newEditorialPreview(tipo,{},catalog())}/>;}else{const data=load(segments[2]==='home'?documents.find(d=>d.moduleId==='home').id:segments[2]==='modulos'?segments[3]:segments[2]),Host=EXTENDED_KINDS[data.root.draft._kind]?ExtendedPreviewHost:PreviewHost;view=<Host id={data.root.id} entries={entries} homeMapCatalog={data.homeMapCatalog} initialParts={[data.root,...data.shared?[data.shared]:[]].map(d=>({moduleId:d.moduleId,key:d.entityKey,payload:d.draft}))}/>;}}
+else{if(!type)view=<Dashboard cities={documents.filter(d=>d.draft._kind==='city').map(d=>({id:d.id,name:d.draft.data.name}))} actor={actor} metrics={[[3,'Ciudades','city'],[10,'Sedes institucionales','building'],[30,'Ofertas de carrera','book'],[0,'Borradores','clock'],[0,'Cambios pendientes','clock']].map(([value,label,icon])=>({value,label,icon,note:'Fixture visual · no son datos de sesión'}))} activity={[]}/>;
+else if(type==='ajustes')view=<SettingsHub actor={actor}/>;
+else if(['diseno','configuracion','seo','historial','usuarios','buscar'].includes(type)){const mode={diseno:'design',configuracion:'settings',seo:segments[2]==='redirects'?'redirects':'seo',historial:'history',usuarios:'users',buscar:'search'}[type];view=<FinalConsole canInvite options={catalog()} mode={mode} actor={actor} global={globalFixtures[mode]} rows={mode==='history'?historyRows:mode==='users'?userRows:mode==='redirects'?[]:finalRows} metrics={mode==='seo'?{total:104,published:104,noindex:0,missingTitles:0,missingDescriptions:4,missingImages:6}:null}/>;}
+else if(type==='multimedia')view=<section><h1>Biblioteca multimedia</h1><MediaLibrary initial={[{id:'fixture-media',url:'/assets/get-city-footer-logo.png',name:'Logo GET',kind:'logo',origin:'local',alt:'GET',usage:4,state:'ready'}]} canDelete/></section>;
+else if(type==='banners')view=<BannerIndex rows={documents.filter(d=>['city','event','service','about'].includes(d.draft._kind)).map(d=>({id:d.id,kind:d.draft._kind,name:d.draft.data.name,image:d.draft.data.image||'',state:d.state,updated:d.updatedAt,href:d.moduleId==='about'?'/admin/nosotros':`/admin/${d.moduleId==='cities'?'ciudades':d.moduleId==='events'?'eventos':'servicios'}/${d.id}`}))}/>;
+else if(['nosotros','orientacion-vocacional','menus','footer'].includes(type))view=<EntityEditor initial={load(documents.find(d=>d.moduleId===({nosotros:'about','orientacion-vocacional':'orientation',menus:'navigation',footer:'footer'})[type]).id)}/>;
+else if(segments[2]==='pagina')view=<EntityEditor initial={load(documents.find(d=>d.moduleId===EXTENDED_TYPES[type].module&&d.entityKey==='main').id)}/>;
+else if(type==='home')view=<EntityEditor initial={load(documents.find(d=>d.moduleId==='home').id)}/>;
+else if(segments[2]==='nuevo')view=<NewEntityWizard type={type} catalog={catalog()}/>;
+else if(segments[2])view=<EntityEditor initial={load(segments[2])}/>;
+else if(EXTENDED_TYPES[type])view=<ExtendedEntityList type={type} actor={actor} result={{data:documents.filter(d=>d.draft._kind===kind).map(d=>({id:d.id,draft:d.draft,state:d.state,updated_at:d.updatedAt})),count:documents.filter(d=>d.draft._kind===kind).length,catalog:catalog(),extended:extendedCatalog(entries)}}/>;
+else view=<EntityList type={type} rows={documents.filter(d=>d.draft._kind===kind).map(d=>({id:d.id,draft:d.draft,state:d.state,updated_at:d.updatedAt}))} count={documents.filter(d=>d.draft._kind===kind).length} catalog={catalog()} actor={actor}/>;
+view=<AdminShell actor={actor}>{view}</AdminShell>;}
+createRoot(document.getElementById('root')).render(view);

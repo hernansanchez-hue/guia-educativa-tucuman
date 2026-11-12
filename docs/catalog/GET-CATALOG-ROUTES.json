@@ -1,0 +1,4028 @@
+{
+  "origin": "http://localhost:4004",
+  "sitemapCount": 670,
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar",
+      "ms": 5614
+    },
+    {
+      "path": "/ciudades",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/ciudades",
+      "ms": 5614
+    },
+    {
+      "path": "/nosotros",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/nosotros",
+      "ms": 5625
+    },
+    {
+      "path": "/cursos-docentes",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/cursos-docentes",
+      "ms": 5628
+    },
+    {
+      "path": "/carreras",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras",
+      "ms": 416
+    },
+    {
+      "path": "/contacto",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/contacto",
+      "ms": 5368
+    },
+    {
+      "path": "/concepcion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion",
+      "ms": 5357
+    },
+    {
+      "path": "/instituciones",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones",
+      "ms": 5370
+    },
+    {
+      "path": "/monteros",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros",
+      "ms": 9052
+    },
+    {
+      "path": "/burruyacu",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/burruyacu",
+      "ms": 4241
+    },
+    {
+      "path": "/la-ramada",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/la-ramada",
+      "ms": 4232
+    },
+    {
+      "path": "/aguilares",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares",
+      "ms": 4249
+    },
+    {
+      "path": "/san-miguel-de-tucuman",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman",
+      "ms": 623
+    },
+    {
+      "path": "/alderetes",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/alderetes",
+      "ms": 597
+    },
+    {
+      "path": "/banda-del-rio-sali",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/banda-del-rio-sali",
+      "ms": 596
+    },
+    {
+      "path": "/esperanza",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/esperanza",
+      "ms": 609
+    },
+    {
+      "path": "/los-ralos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/los-ralos",
+      "ms": 521
+    },
+    {
+      "path": "/famailla",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/famailla",
+      "ms": 529
+    },
+    {
+      "path": "/graneros",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/graneros",
+      "ms": 534
+    },
+    {
+      "path": "/lamadrid",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/lamadrid",
+      "ms": 643
+    },
+    {
+      "path": "/juan-bautista-alberdi",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/juan-bautista-alberdi",
+      "ms": 566
+    },
+    {
+      "path": "/la-cocha",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/la-cocha",
+      "ms": 564
+    },
+    {
+      "path": "/bella-vista",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/bella-vista",
+      "ms": 570
+    },
+    {
+      "path": "/santa-rosa-de-leales",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/santa-rosa-de-leales",
+      "ms": 459
+    },
+    {
+      "path": "/lules",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/lules",
+      "ms": 542
+    },
+    {
+      "path": "/villa-quinteros",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/villa-quinteros",
+      "ms": 507
+    },
+    {
+      "path": "/simoca",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/simoca",
+      "ms": 504
+    },
+    {
+      "path": "/amaicha-del-valle",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/amaicha-del-valle",
+      "ms": 500
+    },
+    {
+      "path": "/tafi-del-valle",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/tafi-del-valle",
+      "ms": 500
+    },
+    {
+      "path": "/tafi-viejo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/tafi-viejo",
+      "ms": 434
+    },
+    {
+      "path": "/san-pedro-de-colalao",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-pedro-de-colalao",
+      "ms": 430
+    },
+    {
+      "path": "/villa-trancas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/villa-trancas",
+      "ms": 430
+    },
+    {
+      "path": "/yerba-buena",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena",
+      "ms": 304
+    },
+    {
+      "path": "/san-pablo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-pablo",
+      "ms": 286
+    },
+    {
+      "path": "/carreras/tecnicatura-administracion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-administracion",
+      "ms": 3012
+    },
+    {
+      "path": "/carreras/profesorado-ingles",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-ingles",
+      "ms": 3026
+    },
+    {
+      "path": "/carreras/profesorado-educacion-primaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-educacion-primaria",
+      "ms": 2768
+    },
+    {
+      "path": "/carreras/diagnostico-por-imagenes",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/diagnostico-por-imagenes",
+      "ms": 2765
+    },
+    {
+      "path": "/carreras/laboratorio-de-analisis-clinicos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/laboratorio-de-analisis-clinicos",
+      "ms": 570
+    },
+    {
+      "path": "/carreras/instrumentacion-quirurgica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/instrumentacion-quirurgica",
+      "ms": 566
+    },
+    {
+      "path": "/carreras/abogacia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/abogacia",
+      "ms": 561
+    },
+    {
+      "path": "/carreras/contador-publico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/contador-publico",
+      "ms": 566
+    },
+    {
+      "path": "/carreras/lic-en-administracion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/lic-en-administracion",
+      "ms": 431
+    },
+    {
+      "path": "/carreras/higiene-y-seguridad",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/higiene-y-seguridad",
+      "ms": 566
+    },
+    {
+      "path": "/carreras/marketing",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/marketing",
+      "ms": 579
+    },
+    {
+      "path": "/carreras/recursos-humanos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/recursos-humanos",
+      "ms": 685
+    },
+    {
+      "path": "/carreras/administracion-de-empresas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/administracion-de-empresas",
+      "ms": 566
+    },
+    {
+      "path": "/carreras/profesorado",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado",
+      "ms": 587
+    },
+    {
+      "path": "/carreras/gestion-educativa",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/gestion-educativa",
+      "ms": 574
+    },
+    {
+      "path": "/carreras/acompanante-terapeutico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/acompanante-terapeutico",
+      "ms": 586
+    },
+    {
+      "path": "/carreras/diseno-grafico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/diseno-grafico",
+      "ms": 568
+    },
+    {
+      "path": "/carreras/community-manager",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/community-manager",
+      "ms": 512
+    },
+    {
+      "path": "/carreras/ventas-digitales",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ventas-digitales",
+      "ms": 557
+    },
+    {
+      "path": "/carreras/profesorado-de-biologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-biologia",
+      "ms": 567
+    },
+    {
+      "path": "/carreras/profesorado-de-educacion-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-educacion-inicial",
+      "ms": 541
+    },
+    {
+      "path": "/carreras/profesorado-de-musica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-musica",
+      "ms": 563
+    },
+    {
+      "path": "/carreras/profesorado-de-musica-con-orientacion-en-canto",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-musica-con-orientacion-en-canto",
+      "ms": 547
+    },
+    {
+      "path": "/carreras/profesorado-de-musica-con-orientacion-en-educacion-musical",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-musica-con-orientacion-en-educacion-musical",
+      "ms": 559
+    },
+    {
+      "path": "/carreras/profesorado-de-educacion-nivel-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-educacion-nivel-inicial",
+      "ms": 490
+    },
+    {
+      "path": "/carreras/profesorado-de-educacion-primaria-egb",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-educacion-primaria-egb",
+      "ms": 508
+    },
+    {
+      "path": "/carreras/profesorado-de-geografia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-geografia",
+      "ms": 615
+    },
+    {
+      "path": "/carreras/profesorado-de-portugues",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-portugues",
+      "ms": 602
+    },
+    {
+      "path": "/carreras/profesorado-de-economia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-economia",
+      "ms": 564
+    },
+    {
+      "path": "/carreras/profesorado-de-frances",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-frances",
+      "ms": 547
+    },
+    {
+      "path": "/carreras/profesorado-de-idioma-frances",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-idioma-frances",
+      "ms": 575
+    },
+    {
+      "path": "/carreras/profesorado-de-matematica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-matematica",
+      "ms": 702
+    },
+    {
+      "path": "/carreras/profesorado-de-educacion-especial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-educacion-especial",
+      "ms": 591
+    },
+    {
+      "path": "/carreras/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual",
+      "ms": 583
+    },
+    {
+      "path": "/carreras/profesorado-de-fisica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-fisica",
+      "ms": 669
+    },
+    {
+      "path": "/carreras/profesorado-de-historia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-historia",
+      "ms": 554
+    },
+    {
+      "path": "/carreras/profesorado-de-lengua",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-lengua",
+      "ms": 553
+    },
+    {
+      "path": "/carreras/profesorado-de-lengua-y-literatura",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-lengua-y-literatura",
+      "ms": 557
+    },
+    {
+      "path": "/carreras/profesorado-de-educacion-fisica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-educacion-fisica",
+      "ms": 451
+    },
+    {
+      "path": "/carreras/profesorado-de-psicologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-psicologia",
+      "ms": 569
+    },
+    {
+      "path": "/carreras/profesorado-de-ciencia-politica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-ciencia-politica",
+      "ms": 572
+    },
+    {
+      "path": "/carreras/profesorado-de-quimica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-quimica",
+      "ms": 601
+    },
+    {
+      "path": "/carreras/profesorado-de-ciencias-sagradas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-ciencias-sagradas",
+      "ms": 775
+    },
+    {
+      "path": "/carreras/profesorado-de-educacion-tecnologica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-educacion-tecnologica",
+      "ms": 675
+    },
+    {
+      "path": "/carreras/profesorado-de-informatica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-informatica",
+      "ms": 677
+    },
+    {
+      "path": "/carreras/tecnico-superior-en-computacion-y-redes",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnico-superior-en-computacion-y-redes",
+      "ms": 655
+    },
+    {
+      "path": "/carreras/tecnico-superior-en-bioenergia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnico-superior-en-bioenergia",
+      "ms": 485
+    },
+    {
+      "path": "/carreras/trayecto-de-formacion-profesional-mecanica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/trayecto-de-formacion-profesional-mecanica",
+      "ms": 603
+    },
+    {
+      "path": "/carreras/tecnicatura-en-laboratorio-de-analisis-clinicos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-en-laboratorio-de-analisis-clinicos",
+      "ms": 583
+    },
+    {
+      "path": "/carreras/radiologia-e-imagenologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/radiologia-e-imagenologia",
+      "ms": 577
+    },
+    {
+      "path": "/carreras/tecnicatura-superior-en-comercializacion-y-ventas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-superior-en-comercializacion-y-ventas",
+      "ms": 682
+    },
+    {
+      "path": "/carreras/tecnicatura-superior-en-enfermeria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-superior-en-enfermeria",
+      "ms": 535
+    },
+    {
+      "path": "/carreras/tecnicatura-superior-en-farmacia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-superior-en-farmacia",
+      "ms": 568
+    },
+    {
+      "path": "/carreras/profesorado-de-educacion-especial-con-orientacion-en-sordos-e-hipoacusicos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-educacion-especial-con-orientacion-en-sordos-e-hipoacusicos",
+      "ms": 598
+    },
+    {
+      "path": "/carreras/profesorado-de-tecnologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-tecnologia",
+      "ms": 643
+    },
+    {
+      "path": "/carreras/profesorado-de-danza-con-orientacion-en-danzas-folkloricas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-danza-con-orientacion-en-danzas-folkloricas",
+      "ms": 657
+    },
+    {
+      "path": "/carreras/licenciatura-en-kinesiologia-y-fisiatria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-kinesiologia-y-fisiatria",
+      "ms": 637
+    },
+    {
+      "path": "/carreras/procuracion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/procuracion",
+      "ms": 637
+    },
+    {
+      "path": "/carreras/medicina",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/medicina",
+      "ms": 605
+    },
+    {
+      "path": "/carreras/ingenieria-en-informatica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-en-informatica",
+      "ms": 462
+    },
+    {
+      "path": "/carreras/ingenieria-industrial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-industrial",
+      "ms": 568
+    },
+    {
+      "path": "/carreras/licenciatura-en-marketing",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-marketing",
+      "ms": 546
+    },
+    {
+      "path": "/carreras/licenciatura-en-recursos-humanos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-recursos-humanos",
+      "ms": 544
+    },
+    {
+      "path": "/carreras/notariado",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/notariado",
+      "ms": 548
+    },
+    {
+      "path": "/carreras/locucion-nacional",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/locucion-nacional",
+      "ms": 560
+    },
+    {
+      "path": "/carreras/licenciatura-en-comunicacion-social",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-comunicacion-social",
+      "ms": 581
+    },
+    {
+      "path": "/carreras/ingenieria-ambiental",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-ambiental",
+      "ms": 608
+    },
+    {
+      "path": "/carreras/tecnicatura-universitaria-en-higiene-y-seguridad-laboral",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-universitaria-en-higiene-y-seguridad-laboral",
+      "ms": 609
+    },
+    {
+      "path": "/carreras/licenciatura-en-diseno-grafico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-diseno-grafico",
+      "ms": 619
+    },
+    {
+      "path": "/carreras/licenciatura-en-higiene-y-seguridad-laboral",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-higiene-y-seguridad-laboral",
+      "ms": 726
+    },
+    {
+      "path": "/carreras/licenciatura-en-psicologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-psicologia",
+      "ms": 458
+    },
+    {
+      "path": "/carreras/licenciatura-en-gastronomia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-gastronomia",
+      "ms": 590
+    },
+    {
+      "path": "/carreras/licenciatura-en-diagnostico-por-imagenes",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-diagnostico-por-imagenes",
+      "ms": 577
+    },
+    {
+      "path": "/carreras/licenciatura-en-ingles-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-ingles-ccc",
+      "ms": 1208
+    },
+    {
+      "path": "/carreras/profesorado-universitario-en-ciencias-economicas-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-universitario-en-ciencias-economicas-ccc",
+      "ms": 1628
+    },
+    {
+      "path": "/carreras/profesorado-en-ciencias-politicas-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-ciencias-politicas-ccc",
+      "ms": 1678
+    },
+    {
+      "path": "/carreras/profesorado-universitario-en-educacion-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-universitario-en-educacion-ccc",
+      "ms": 1671
+    },
+    {
+      "path": "/carreras/licenciatura-en-administracion-de-empresas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-administracion-de-empresas",
+      "ms": 1070
+    },
+    {
+      "path": "/carreras/licenciatura-en-management-turistico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-management-turistico",
+      "ms": 628
+    },
+    {
+      "path": "/carreras/licenciatura-en-comunicacion-digital",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-comunicacion-digital",
+      "ms": 595
+    },
+    {
+      "path": "/carreras/licenciatura-en-ciencias-sociales",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-ciencias-sociales",
+      "ms": 600
+    },
+    {
+      "path": "/carreras/bioingenieria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/bioingenieria",
+      "ms": 488
+    },
+    {
+      "path": "/carreras/tecnicatura-universitaria-en-desarrollo-y-calidad-de-software",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-universitaria-en-desarrollo-y-calidad-de-software",
+      "ms": 617
+    },
+    {
+      "path": "/carreras/profesorado-en-derecho-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-derecho-ccc",
+      "ms": 595
+    },
+    {
+      "path": "/carreras/licenciatura-en-turismo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-turismo",
+      "ms": 585
+    },
+    {
+      "path": "/carreras/licenciatura-en-ciencias-politicas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-ciencias-politicas",
+      "ms": 702
+    },
+    {
+      "path": "/carreras/ingenieria-en-inteligencia-artificial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-en-inteligencia-artificial",
+      "ms": 570
+    },
+    {
+      "path": "/carreras/licenciatura-en-diseno-de-interiores",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-diseno-de-interiores",
+      "ms": 585
+    },
+    {
+      "path": "/carreras/licenciatura-en-diseno-multimedial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-diseno-multimedial",
+      "ms": 572
+    },
+    {
+      "path": "/carreras/licenciatura-en-nutricion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-nutricion",
+      "ms": 542
+    },
+    {
+      "path": "/carreras/licenciatura-en-terapia-ocupacional",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-terapia-ocupacional",
+      "ms": 542
+    },
+    {
+      "path": "/carreras/licenciatura-en-teoria-y-gestion-de-las-organizaciones",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-teoria-y-gestion-de-las-organizaciones",
+      "ms": 547
+    },
+    {
+      "path": "/carreras/profesorado-universitario-de-ingles",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-universitario-de-ingles",
+      "ms": 578
+    },
+    {
+      "path": "/carreras/profesorado-de-derecho-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-de-derecho-ccc",
+      "ms": 598
+    },
+    {
+      "path": "/carreras/profesorado-universitario-en-ciencias-politicas-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-universitario-en-ciencias-politicas-ccc",
+      "ms": 601
+    },
+    {
+      "path": "/concepcion/instituto-santa-barbara",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/instituto-santa-barbara",
+      "ms": 589
+    },
+    {
+      "path": "/aguilares/universidad-siglo-21",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/universidad-siglo-21",
+      "ms": 554
+    },
+    {
+      "path": "/aguilares/academia-profesional-norte",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/academia-profesional-norte",
+      "ms": 520
+    },
+    {
+      "path": "/concepcion/universidad-siglo-21",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-siglo-21",
+      "ms": 513
+    },
+    {
+      "path": "/monteros/universidad-siglo-21",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/universidad-siglo-21",
+      "ms": 478
+    },
+    {
+      "path": "/aguilares/instituto-santa-barbara",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/instituto-santa-barbara",
+      "ms": 631
+    },
+    {
+      "path": "/monteros/instituto-del-sur",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/instituto-del-sur",
+      "ms": 492
+    },
+    {
+      "path": "/monteros/centro-de-formacion-tucuman",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/centro-de-formacion-tucuman",
+      "ms": 493
+    },
+    {
+      "path": "/monteros/instituto-san-miguel",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/instituto-san-miguel",
+      "ms": 531
+    },
+    {
+      "path": "/concepcion/ies-concepcion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/ies-concepcion",
+      "ms": 570
+    },
+    {
+      "path": "/burruyacu/inst-de-ensenanza-superior-integracion-de-las-americas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/burruyacu/inst-de-ensenanza-superior-integracion-de-las-americas",
+      "ms": 490
+    },
+    {
+      "path": "/la-ramada/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/la-ramada/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 599
+    },
+    {
+      "path": "/san-miguel-de-tucuman/centro-de-altos-estudios",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/centro-de-altos-estudios",
+      "ms": 557
+    },
+    {
+      "path": "/san-miguel-de-tucuman/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 381
+    },
+    {
+      "path": "/san-miguel-de-tucuman/centro-educativo-nivel-terciario-n-72-c-e-n-t-72",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/centro-educativo-nivel-terciario-n-72-c-e-n-t-72",
+      "ms": 480
+    },
+    {
+      "path": "/san-miguel-de-tucuman/centro-educativo-nivel-terciario-n-73-c-e-n-t-73",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/centro-educativo-nivel-terciario-n-73-c-e-n-t-73",
+      "ms": 486
+    },
+    {
+      "path": "/san-miguel-de-tucuman/col-san-carlos-borromeo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/col-san-carlos-borromeo",
+      "ms": 506
+    },
+    {
+      "path": "/san-miguel-de-tucuman/col-simon-bolivar",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/col-simon-bolivar",
+      "ms": 481
+    },
+    {
+      "path": "/san-miguel-de-tucuman/conservatorio-provincial-de-musica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/conservatorio-provincial-de-musica",
+      "ms": 467
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-de-bellas-artes-y-artes-decor-e-indus-atilio-terragni",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-de-bellas-artes-y-artes-decor-e-indus-atilio-terragni",
+      "ms": 458
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi",
+      "ms": 443
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-superior-de-educacion-artistica-e-s-e-a",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-superior-de-educacion-artistica-e-s-e-a",
+      "ms": 445
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-superior-de-hoteleria-gastronomia-y-turismo-argencat",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-superior-de-hoteleria-gastronomia-y-turismo-argencat",
+      "ms": 572
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-y-liceo-vocacional-sarmiento",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-y-liceo-vocacional-sarmiento",
+      "ms": 471
+    },
+    {
+      "path": "/san-miguel-de-tucuman/fundacion-juan-xxiii",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/fundacion-juan-xxiii",
+      "ms": 457
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-americano-dr-juan-bautista-alberdi",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-americano-dr-juan-bautista-alberdi",
+      "ms": 474
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-cultural-argentino-de-lenguas-vivas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-cultural-argentino-de-lenguas-vivas",
+      "ms": 439
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-privada-maria-montessori",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-privada-maria-montessori",
+      "ms": 442
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-alfredo-coviello",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-alfredo-coviello",
+      "ms": 468
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-de-policia-gral-don-jose-de-san-martin",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-de-policia-gral-don-jose-de-san-martin",
+      "ms": 462
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-dr-miguel-campero",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-dr-miguel-campero",
+      "ms": 461
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-lola-mora",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-lola-mora",
+      "ms": 561
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti",
+      "ms": 446
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-perfeccionamiento-docente",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-perfeccionamiento-docente",
+      "ms": 437
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-decroly",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-decroly",
+      "ms": 448
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-del-profesorado-general-san-martin",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-del-profesorado-general-san-martin",
+      "ms": 355
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-dr-carlos-pellegrini",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-dr-carlos-pellegrini",
+      "ms": 447
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-george-washington",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-george-washington",
+      "ms": 456
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-mariano-moreno",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-mariano-moreno",
+      "ms": 450
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-modelo-tecnico-mecanico-dental",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-modelo-tecnico-mecanico-dental",
+      "ms": 445
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-nicolas-avellaneda",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-nicolas-avellaneda",
+      "ms": 487
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-privado-san-judas-tadeo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-privado-san-judas-tadeo",
+      "ms": 490
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-sagrado-corazon-de-jesus-hnas-esclavas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-sagrado-corazon-de-jesus-hnas-esclavas",
+      "ms": 507
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-san-miguel",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-san-miguel",
+      "ms": 504
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-super-del-profesorado-de-educ-fisica-norte-argentino",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-super-del-profesorado-de-educ-fisica-norte-argentino",
+      "ms": 460
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-super-del-profesorado-de-educ-fisica-norte-argentino-anexo-02-02",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-super-del-profesorado-de-educ-fisica-norte-argentino-anexo-02-02",
+      "ms": 474
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-superior-de-cultura-religiosa-sto-toribio-de-mogrovejo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-superior-de-cultura-religiosa-sto-toribio-de-mogrovejo",
+      "ms": 466
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-superior-de-educacion-tecnologica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-superior-de-educacion-tecnologica",
+      "ms": 462
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-superior-de-musica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-superior-de-musica",
+      "ms": 484
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-superior-de-psicologia-social-de-tucuman",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-superior-de-psicologia-social-de-tucuman",
+      "ms": 468
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-tecnico-u-n-t",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-tecnico-u-n-t",
+      "ms": 492
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-terciario-eton",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-terciario-eton",
+      "ms": 581
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-tucumano-de-ensenanza-personalizada-i-t-e-p",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-tucumano-de-ensenanza-personalizada-i-t-e-p",
+      "ms": 499
+    },
+    {
+      "path": "/san-miguel-de-tucuman/instituto-9-de-julio",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/instituto-9-de-julio",
+      "ms": 505
+    },
+    {
+      "path": "/san-miguel-de-tucuman/instituto-de-ciencias-empresariales",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/instituto-de-ciencias-empresariales",
+      "ms": 376
+    },
+    {
+      "path": "/san-miguel-de-tucuman/instituto-de-ensenanza-superior-penitenciario-nuestra-sra-del-carmen",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/instituto-de-ensenanza-superior-penitenciario-nuestra-sra-del-carmen",
+      "ms": 478
+    },
+    {
+      "path": "/san-miguel-de-tucuman/instituto-privado-almafuerte",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/instituto-privado-almafuerte",
+      "ms": 455
+    },
+    {
+      "path": "/san-miguel-de-tucuman/instituto-provincial-de-la-administracion-publica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/instituto-provincial-de-la-administracion-publica",
+      "ms": 432
+    },
+    {
+      "path": "/san-miguel-de-tucuman/instituto-santo-domingo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/instituto-santo-domingo",
+      "ms": 449
+    },
+    {
+      "path": "/san-miguel-de-tucuman/juvenil-instituto-moderno",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/juvenil-instituto-moderno",
+      "ms": 477
+    },
+    {
+      "path": "/san-miguel-de-tucuman/semin-mayor-arquid-ntra-sra-de-las-mercedes-y-san-jose",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/semin-mayor-arquid-ntra-sra-de-las-mercedes-y-san-jose",
+      "ms": 476
+    },
+    {
+      "path": "/san-miguel-de-tucuman/sistemas-y-capacitacion-informatica-c-p-soft",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/sistemas-y-capacitacion-informatica-c-p-soft",
+      "ms": 487
+    },
+    {
+      "path": "/concepcion/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 504
+    },
+    {
+      "path": "/concepcion/conservatorio-provincial-de-musica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/conservatorio-provincial-de-musica",
+      "ms": 480
+    },
+    {
+      "path": "/concepcion/inst-de-perfeccionamiento-docente",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/inst-de-perfeccionamiento-docente",
+      "ms": 481
+    },
+    {
+      "path": "/concepcion/inst-san-luis-gonzaga",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/inst-san-luis-gonzaga",
+      "ms": 494
+    },
+    {
+      "path": "/concepcion/inst-vocacional-concepcion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/inst-vocacional-concepcion",
+      "ms": 459
+    },
+    {
+      "path": "/alderetes/inst-san-vicente-de-paul",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/alderetes/inst-san-vicente-de-paul",
+      "ms": 490
+    },
+    {
+      "path": "/banda-del-rio-sali/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/banda-del-rio-sali/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 489
+    },
+    {
+      "path": "/banda-del-rio-sali/col-santa-rita",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/banda-del-rio-sali/col-santa-rita",
+      "ms": 468
+    },
+    {
+      "path": "/banda-del-rio-sali/colegio-instituto-inmaculada-concepcion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/banda-del-rio-sali/colegio-instituto-inmaculada-concepcion",
+      "ms": 1636
+    },
+    {
+      "path": "/esperanza/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/esperanza/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 1549
+    },
+    {
+      "path": "/los-ralos/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/los-ralos/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 1670
+    },
+    {
+      "path": "/famailla/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/famailla/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 1695
+    },
+    {
+      "path": "/famailla/inst-de-ensenanza-superior-famailla",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/famailla/inst-de-ensenanza-superior-famailla",
+      "ms": 530
+    },
+    {
+      "path": "/famailla/inst-super-del-profesorado-de-educ-fisica-norte-argentino",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/famailla/inst-super-del-profesorado-de-educ-fisica-norte-argentino",
+      "ms": 501
+    },
+    {
+      "path": "/famailla/instituto-privado-famailla",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/famailla/instituto-privado-famailla",
+      "ms": 490
+    },
+    {
+      "path": "/graneros/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/graneros/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 493
+    },
+    {
+      "path": "/graneros/inst-de-ensenanza-superior-graneros",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/graneros/inst-de-ensenanza-superior-graneros",
+      "ms": 592
+    },
+    {
+      "path": "/lamadrid/inst-de-ensenanza-superior-la-madrid",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/lamadrid/inst-de-ensenanza-superior-la-madrid",
+      "ms": 593
+    },
+    {
+      "path": "/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino",
+      "ms": 493
+    },
+    {
+      "path": "/juan-bautista-alberdi/fundacion-juan-xxiii",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/juan-bautista-alberdi/fundacion-juan-xxiii",
+      "ms": 482
+    },
+    {
+      "path": "/la-cocha/inst-de-ensenanza-superior-la-cocha",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/la-cocha/inst-de-ensenanza-superior-la-cocha",
+      "ms": 388
+    },
+    {
+      "path": "/bella-vista/inst-de-ensenanza-superior-bella-vista",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/bella-vista/inst-de-ensenanza-superior-bella-vista",
+      "ms": 575
+    },
+    {
+      "path": "/bella-vista/inst-san-jose",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/bella-vista/inst-san-jose",
+      "ms": 562
+    },
+    {
+      "path": "/santa-rosa-de-leales/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/santa-rosa-de-leales/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 571
+    },
+    {
+      "path": "/lules/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/lules/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 655
+    },
+    {
+      "path": "/lules/inst-padre-manuel-ballesteros",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/lules/inst-padre-manuel-ballesteros",
+      "ms": 464
+    },
+    {
+      "path": "/monteros/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 481
+    },
+    {
+      "path": "/monteros/esc-normal-superior-tte-gral-julio-a-roca",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/esc-normal-superior-tte-gral-julio-a-roca",
+      "ms": 457
+    },
+    {
+      "path": "/monteros/esc-superior-de-comercio-general-jose-de-san-martin",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/esc-superior-de-comercio-general-jose-de-san-martin",
+      "ms": 363
+    },
+    {
+      "path": "/monteros/fundacion-juan-xxiii",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/fundacion-juan-xxiii",
+      "ms": 353
+    },
+    {
+      "path": "/monteros/inst-de-ensenanza-superior-gral-bernabe-araoz",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/inst-de-ensenanza-superior-gral-bernabe-araoz",
+      "ms": 438
+    },
+    {
+      "path": "/monteros/instituto-superior-de-arte-guaipa",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/instituto-superior-de-arte-guaipa",
+      "ms": 449
+    },
+    {
+      "path": "/monteros/instituto-superior-san-cristobal",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/instituto-superior-san-cristobal",
+      "ms": 455
+    },
+    {
+      "path": "/villa-quinteros/inst-de-ensenanza-superior-villa-quinteros",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/villa-quinteros/inst-de-ensenanza-superior-villa-quinteros",
+      "ms": 476
+    },
+    {
+      "path": "/aguilares/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 477
+    },
+    {
+      "path": "/aguilares/inst-de-ensenanza-superior-aguilares",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/inst-de-ensenanza-superior-aguilares",
+      "ms": 476
+    },
+    {
+      "path": "/simoca/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/simoca/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 484
+    },
+    {
+      "path": "/simoca/escuela-normal-superior-manuel-belgrano",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/simoca/escuela-normal-superior-manuel-belgrano",
+      "ms": 561
+    },
+    {
+      "path": "/amaicha-del-valle/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/amaicha-del-valle/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 470
+    },
+    {
+      "path": "/amaicha-del-valle/inst-de-ensenanza-superior-amaicha-del-valle",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/amaicha-del-valle/inst-de-ensenanza-superior-amaicha-del-valle",
+      "ms": 484
+    },
+    {
+      "path": "/tafi-del-valle/inst-de-ensenanza-superior-tafi-del-valle",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/tafi-del-valle/inst-de-ensenanza-superior-tafi-del-valle",
+      "ms": 480
+    },
+    {
+      "path": "/tafi-viejo/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/tafi-viejo/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 406
+    },
+    {
+      "path": "/tafi-viejo/inst-de-ensenanza-superior-tafi-viejo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/tafi-viejo/inst-de-ensenanza-superior-tafi-viejo",
+      "ms": 516
+    },
+    {
+      "path": "/tafi-viejo/instituto-de-educacion-superior-sisaiani",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/tafi-viejo/instituto-de-educacion-superior-sisaiani",
+      "ms": 570
+    },
+    {
+      "path": "/san-pedro-de-colalao/colegio-pilar-ibanez",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-pedro-de-colalao/colegio-pilar-ibanez",
+      "ms": 588
+    },
+    {
+      "path": "/villa-trancas/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/villa-trancas/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 466
+    },
+    {
+      "path": "/villa-trancas/colegio-pilar-ibanez",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/villa-trancas/colegio-pilar-ibanez",
+      "ms": 450
+    },
+    {
+      "path": "/villa-trancas/inst-de-ensenanza-superior-trancas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/villa-trancas/inst-de-ensenanza-superior-trancas",
+      "ms": 479
+    },
+    {
+      "path": "/villa-trancas/inst-privado-san-joaquin",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/villa-trancas/inst-privado-san-joaquin",
+      "ms": 367
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-nacional-de-tucuman-unt",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-nacional-de-tucuman-unt",
+      "ms": 447
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-tecnologica-nacional-facultad-regional-tucuman-utn-frt",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-tecnologica-nacional-facultad-regional-tucuman-utn-frt",
+      "ms": 455
+    },
+    {
+      "path": "/concepcion/universidad-tecnologica-nacional-facultad-regional-tucuman-utn-frt",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-tecnologica-nacional-facultad-regional-tucuman-utn-frt",
+      "ms": 455
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta",
+      "ms": 440
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta",
+      "ms": 504
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta",
+      "ms": 504
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-de-san-pablo-tucuman-usp-t",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-de-san-pablo-tucuman-usp-t",
+      "ms": 530
+    },
+    {
+      "path": "/san-pablo/universidad-de-san-pablo-tucuman-usp-t",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-pablo/universidad-de-san-pablo-tucuman-usp-t",
+      "ms": 529
+    },
+    {
+      "path": "/juan-bautista-alberdi/universidad-siglo-21",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/juan-bautista-alberdi/universidad-siglo-21",
+      "ms": 477
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-siglo-21",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-siglo-21",
+      "ms": 470
+    },
+    {
+      "path": "/yerba-buena/universidad-siglo-21",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-siglo-21",
+      "ms": 441
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-blas-pascal-red-pascal-tucuman",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-blas-pascal-red-pascal-tucuman",
+      "ms": 443
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-catolica-de-salta-ucasal",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-catolica-de-salta-ucasal",
+      "ms": 469
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-fasta-educacion-a-distancia-tucuman",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-fasta-educacion-a-distancia-tucuman",
+      "ms": 698
+    },
+    {
+      "path": "/instituciones/instituto-santa-barbara",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/instituto-santa-barbara",
+      "ms": 630
+    },
+    {
+      "path": "/instituciones/universidad-siglo-21",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/universidad-siglo-21",
+      "ms": 658
+    },
+    {
+      "path": "/instituciones/academia-profesional-norte",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/academia-profesional-norte",
+      "ms": 680
+    },
+    {
+      "path": "/instituciones/instituto-del-sur",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/instituto-del-sur",
+      "ms": 569
+    },
+    {
+      "path": "/instituciones/centro-de-formacion-tucuman",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/centro-de-formacion-tucuman",
+      "ms": 459
+    },
+    {
+      "path": "/instituciones/instituto-san-miguel",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/instituto-san-miguel",
+      "ms": 542
+    },
+    {
+      "path": "/instituciones/ies-concepcion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/ies-concepcion",
+      "ms": 660
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-integracion-de-las-americas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-integracion-de-las-americas",
+      "ms": 550
+    },
+    {
+      "path": "/instituciones/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/centro-educativo-de-nivel-terciario-n-74-c-e-n-t-n-74",
+      "ms": 544
+    },
+    {
+      "path": "/instituciones/centro-de-altos-estudios",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/centro-de-altos-estudios",
+      "ms": 554
+    },
+    {
+      "path": "/instituciones/centro-educativo-nivel-terciario-n-72-c-e-n-t-72",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/centro-educativo-nivel-terciario-n-72-c-e-n-t-72",
+      "ms": 430
+    },
+    {
+      "path": "/instituciones/centro-educativo-nivel-terciario-n-73-c-e-n-t-73",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/centro-educativo-nivel-terciario-n-73-c-e-n-t-73",
+      "ms": 439
+    },
+    {
+      "path": "/instituciones/col-san-carlos-borromeo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/col-san-carlos-borromeo",
+      "ms": 545
+    },
+    {
+      "path": "/instituciones/col-simon-bolivar",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/col-simon-bolivar",
+      "ms": 525
+    },
+    {
+      "path": "/instituciones/conservatorio-provincial-de-musica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/conservatorio-provincial-de-musica",
+      "ms": 531
+    },
+    {
+      "path": "/instituciones/esc-de-bellas-artes-y-artes-decor-e-indus-atilio-terragni",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/esc-de-bellas-artes-y-artes-decor-e-indus-atilio-terragni",
+      "ms": 631
+    },
+    {
+      "path": "/instituciones/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi",
+      "ms": 511
+    },
+    {
+      "path": "/instituciones/esc-superior-de-educacion-artistica-e-s-e-a",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/esc-superior-de-educacion-artistica-e-s-e-a",
+      "ms": 554
+    },
+    {
+      "path": "/instituciones/esc-superior-de-hoteleria-gastronomia-y-turismo-argencat",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/esc-superior-de-hoteleria-gastronomia-y-turismo-argencat",
+      "ms": 559
+    },
+    {
+      "path": "/instituciones/esc-y-liceo-vocacional-sarmiento",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/esc-y-liceo-vocacional-sarmiento",
+      "ms": 586
+    },
+    {
+      "path": "/instituciones/fundacion-juan-xxiii",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/fundacion-juan-xxiii",
+      "ms": 589
+    },
+    {
+      "path": "/instituciones/inst-americano-dr-juan-bautista-alberdi",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-americano-dr-juan-bautista-alberdi",
+      "ms": 549
+    },
+    {
+      "path": "/instituciones/inst-cultural-argentino-de-lenguas-vivas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-cultural-argentino-de-lenguas-vivas",
+      "ms": 575
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-privada-maria-montessori",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-privada-maria-montessori",
+      "ms": 557
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-alfredo-coviello",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-alfredo-coviello",
+      "ms": 552
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-de-policia-gral-don-jose-de-san-martin",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-de-policia-gral-don-jose-de-san-martin",
+      "ms": 561
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-dr-miguel-campero",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-dr-miguel-campero",
+      "ms": 626
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-lola-mora",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-lola-mora",
+      "ms": 474
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-prof-manuel-marchetti",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-prof-manuel-marchetti",
+      "ms": 511
+    },
+    {
+      "path": "/instituciones/inst-de-perfeccionamiento-docente",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-perfeccionamiento-docente",
+      "ms": 525
+    },
+    {
+      "path": "/instituciones/inst-decroly",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-decroly",
+      "ms": 438
+    },
+    {
+      "path": "/instituciones/inst-del-profesorado-general-san-martin",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-del-profesorado-general-san-martin",
+      "ms": 937
+    },
+    {
+      "path": "/instituciones/inst-dr-carlos-pellegrini",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-dr-carlos-pellegrini",
+      "ms": 1715
+    },
+    {
+      "path": "/instituciones/inst-george-washington",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-george-washington",
+      "ms": 1761
+    },
+    {
+      "path": "/instituciones/inst-mariano-moreno",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-mariano-moreno",
+      "ms": 1754
+    },
+    {
+      "path": "/instituciones/inst-modelo-tecnico-mecanico-dental",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-modelo-tecnico-mecanico-dental",
+      "ms": 1443
+    },
+    {
+      "path": "/instituciones/inst-nicolas-avellaneda",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-nicolas-avellaneda",
+      "ms": 627
+    },
+    {
+      "path": "/instituciones/inst-privado-san-judas-tadeo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-privado-san-judas-tadeo",
+      "ms": 601
+    },
+    {
+      "path": "/instituciones/inst-sagrado-corazon-de-jesus-hnas-esclavas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-sagrado-corazon-de-jesus-hnas-esclavas",
+      "ms": 624
+    },
+    {
+      "path": "/instituciones/inst-san-miguel",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-san-miguel",
+      "ms": 676
+    },
+    {
+      "path": "/instituciones/inst-super-del-profesorado-de-educ-fisica-norte-argentino",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-super-del-profesorado-de-educ-fisica-norte-argentino",
+      "ms": 695
+    },
+    {
+      "path": "/instituciones/inst-super-del-profesorado-de-educ-fisica-norte-argentino-anexo-02-02",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-super-del-profesorado-de-educ-fisica-norte-argentino-anexo-02-02",
+      "ms": 730
+    },
+    {
+      "path": "/instituciones/inst-superior-de-cultura-religiosa-sto-toribio-de-mogrovejo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-superior-de-cultura-religiosa-sto-toribio-de-mogrovejo",
+      "ms": 698
+    },
+    {
+      "path": "/instituciones/inst-superior-de-educacion-tecnologica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-superior-de-educacion-tecnologica",
+      "ms": 627
+    },
+    {
+      "path": "/instituciones/inst-superior-de-musica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-superior-de-musica",
+      "ms": 608
+    },
+    {
+      "path": "/instituciones/inst-superior-de-psicologia-social-de-tucuman",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-superior-de-psicologia-social-de-tucuman",
+      "ms": 542
+    },
+    {
+      "path": "/instituciones/inst-tecnico-u-n-t",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-tecnico-u-n-t",
+      "ms": 626
+    },
+    {
+      "path": "/instituciones/inst-terciario-eton",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-terciario-eton",
+      "ms": 393
+    },
+    {
+      "path": "/instituciones/inst-tucumano-de-ensenanza-personalizada-i-t-e-p",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-tucumano-de-ensenanza-personalizada-i-t-e-p",
+      "ms": 513
+    },
+    {
+      "path": "/instituciones/instituto-9-de-julio",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/instituto-9-de-julio",
+      "ms": 519
+    },
+    {
+      "path": "/instituciones/instituto-de-ciencias-empresariales",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/instituto-de-ciencias-empresariales",
+      "ms": 406
+    },
+    {
+      "path": "/instituciones/instituto-de-ensenanza-superior-penitenciario-nuestra-sra-del-carmen",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/instituto-de-ensenanza-superior-penitenciario-nuestra-sra-del-carmen",
+      "ms": 635
+    },
+    {
+      "path": "/instituciones/instituto-privado-almafuerte",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/instituto-privado-almafuerte",
+      "ms": 516
+    },
+    {
+      "path": "/instituciones/instituto-provincial-de-la-administracion-publica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/instituto-provincial-de-la-administracion-publica",
+      "ms": 529
+    },
+    {
+      "path": "/instituciones/instituto-santo-domingo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/instituto-santo-domingo",
+      "ms": 561
+    },
+    {
+      "path": "/instituciones/juvenil-instituto-moderno",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/juvenil-instituto-moderno",
+      "ms": 592
+    },
+    {
+      "path": "/instituciones/semin-mayor-arquid-ntra-sra-de-las-mercedes-y-san-jose",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/semin-mayor-arquid-ntra-sra-de-las-mercedes-y-san-jose",
+      "ms": 590
+    },
+    {
+      "path": "/instituciones/sistemas-y-capacitacion-informatica-c-p-soft",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/sistemas-y-capacitacion-informatica-c-p-soft",
+      "ms": 587
+    },
+    {
+      "path": "/instituciones/inst-san-luis-gonzaga",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-san-luis-gonzaga",
+      "ms": 450
+    },
+    {
+      "path": "/instituciones/inst-vocacional-concepcion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-vocacional-concepcion",
+      "ms": 785
+    },
+    {
+      "path": "/instituciones/inst-san-vicente-de-paul",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-san-vicente-de-paul",
+      "ms": 798
+    },
+    {
+      "path": "/instituciones/colegio-instituto-inmaculada-concepcion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/colegio-instituto-inmaculada-concepcion",
+      "ms": 645
+    },
+    {
+      "path": "/instituciones/col-santa-rita",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/col-santa-rita",
+      "ms": 658
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-famailla",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-famailla",
+      "ms": 630
+    },
+    {
+      "path": "/instituciones/instituto-privado-famailla",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/instituto-privado-famailla",
+      "ms": 615
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-graneros",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-graneros",
+      "ms": 618
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-la-madrid",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-la-madrid",
+      "ms": 618
+    },
+    {
+      "path": "/instituciones/esc-normal-superior-florentino-ameghino",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/esc-normal-superior-florentino-ameghino",
+      "ms": 657
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-la-cocha",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-la-cocha",
+      "ms": 670
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-bella-vista",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-bella-vista",
+      "ms": 669
+    },
+    {
+      "path": "/instituciones/inst-san-jose",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-san-jose",
+      "ms": 673
+    },
+    {
+      "path": "/instituciones/inst-padre-manuel-ballesteros",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-padre-manuel-ballesteros",
+      "ms": 545
+    },
+    {
+      "path": "/instituciones/esc-normal-superior-tte-gral-julio-a-roca",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/esc-normal-superior-tte-gral-julio-a-roca",
+      "ms": 533
+    },
+    {
+      "path": "/instituciones/esc-superior-de-comercio-general-jose-de-san-martin",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/esc-superior-de-comercio-general-jose-de-san-martin",
+      "ms": 533
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-gral-bernabe-araoz",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-gral-bernabe-araoz",
+      "ms": 535
+    },
+    {
+      "path": "/instituciones/instituto-superior-de-arte-guaipa",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/instituto-superior-de-arte-guaipa",
+      "ms": 401
+    },
+    {
+      "path": "/instituciones/instituto-superior-san-cristobal",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/instituto-superior-san-cristobal",
+      "ms": 503
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-villa-quinteros",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-villa-quinteros",
+      "ms": 563
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-aguilares",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-aguilares",
+      "ms": 716
+    },
+    {
+      "path": "/instituciones/escuela-normal-superior-manuel-belgrano",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/escuela-normal-superior-manuel-belgrano",
+      "ms": 626
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-amaicha-del-valle",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-amaicha-del-valle",
+      "ms": 525
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-tafi-del-valle",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-tafi-del-valle",
+      "ms": 582
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-tafi-viejo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-tafi-viejo",
+      "ms": 549
+    },
+    {
+      "path": "/instituciones/instituto-de-educacion-superior-sisaiani",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/instituto-de-educacion-superior-sisaiani",
+      "ms": 509
+    },
+    {
+      "path": "/instituciones/colegio-pilar-ibanez",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/colegio-pilar-ibanez",
+      "ms": 531
+    },
+    {
+      "path": "/instituciones/inst-de-ensenanza-superior-trancas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-de-ensenanza-superior-trancas",
+      "ms": 535
+    },
+    {
+      "path": "/instituciones/inst-privado-san-joaquin",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/inst-privado-san-joaquin",
+      "ms": 578
+    },
+    {
+      "path": "/instituciones/universidad-nacional-de-tucuman-unt",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/universidad-nacional-de-tucuman-unt",
+      "ms": 1799
+    },
+    {
+      "path": "/instituciones/universidad-tecnologica-nacional-facultad-regional-tucuman-utn-frt",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/universidad-tecnologica-nacional-facultad-regional-tucuman-utn-frt",
+      "ms": 1788
+    },
+    {
+      "path": "/instituciones/universidad-del-norte-santo-tomas-de-aquino-unsta",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/universidad-del-norte-santo-tomas-de-aquino-unsta",
+      "ms": 1814
+    },
+    {
+      "path": "/instituciones/universidad-de-san-pablo-tucuman-usp-t",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/universidad-de-san-pablo-tucuman-usp-t",
+      "ms": 1778
+    },
+    {
+      "path": "/instituciones/universidad-blas-pascal-red-pascal-tucuman",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/universidad-blas-pascal-red-pascal-tucuman",
+      "ms": 458
+    },
+    {
+      "path": "/instituciones/universidad-catolica-de-salta-ucasal",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/universidad-catolica-de-salta-ucasal",
+      "ms": 653
+    },
+    {
+      "path": "/instituciones/universidad-fasta-educacion-a-distancia-tucuman",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/instituciones/universidad-fasta-educacion-a-distancia-tucuman",
+      "ms": 548
+    },
+    {
+      "path": "/concepcion/ies-concepcion/carreras/tecnicatura-administracion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/ies-concepcion/carreras/tecnicatura-administracion",
+      "ms": 536
+    },
+    {
+      "path": "/concepcion/ies-concepcion/carreras/profesorado-ingles",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/ies-concepcion/carreras/profesorado-ingles",
+      "ms": 528
+    },
+    {
+      "path": "/concepcion/ies-concepcion/carreras/profesorado-educacion-primaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/ies-concepcion/carreras/profesorado-educacion-primaria",
+      "ms": 425
+    },
+    {
+      "path": "/concepcion/instituto-santa-barbara/carreras/diagnostico-por-imagenes",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/instituto-santa-barbara/carreras/diagnostico-por-imagenes",
+      "ms": 524
+    },
+    {
+      "path": "/concepcion/instituto-santa-barbara/carreras/laboratorio-de-analisis-clinicos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/instituto-santa-barbara/carreras/laboratorio-de-analisis-clinicos",
+      "ms": 522
+    },
+    {
+      "path": "/concepcion/instituto-santa-barbara/carreras/instrumentacion-quirurgica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/instituto-santa-barbara/carreras/instrumentacion-quirurgica",
+      "ms": 516
+    },
+    {
+      "path": "/concepcion/universidad-siglo-21/carreras/abogacia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-siglo-21/carreras/abogacia",
+      "ms": 633
+    },
+    {
+      "path": "/monteros/universidad-siglo-21/carreras/abogacia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/universidad-siglo-21/carreras/abogacia",
+      "ms": 504
+    },
+    {
+      "path": "/concepcion/universidad-siglo-21/carreras/contador-publico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-siglo-21/carreras/contador-publico",
+      "ms": 483
+    },
+    {
+      "path": "/monteros/universidad-siglo-21/carreras/contador-publico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/universidad-siglo-21/carreras/contador-publico",
+      "ms": 478
+    },
+    {
+      "path": "/concepcion/universidad-siglo-21/carreras/lic-en-administracion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-siglo-21/carreras/lic-en-administracion",
+      "ms": 469
+    },
+    {
+      "path": "/monteros/universidad-siglo-21/carreras/lic-en-administracion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/universidad-siglo-21/carreras/lic-en-administracion",
+      "ms": 469
+    },
+    {
+      "path": "/concepcion/universidad-siglo-21/carreras/higiene-y-seguridad",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-siglo-21/carreras/higiene-y-seguridad",
+      "ms": 504
+    },
+    {
+      "path": "/monteros/universidad-siglo-21/carreras/higiene-y-seguridad",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/universidad-siglo-21/carreras/higiene-y-seguridad",
+      "ms": 565
+    },
+    {
+      "path": "/monteros/instituto-del-sur/carreras/marketing",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/instituto-del-sur/carreras/marketing",
+      "ms": 463
+    },
+    {
+      "path": "/monteros/instituto-del-sur/carreras/recursos-humanos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/instituto-del-sur/carreras/recursos-humanos",
+      "ms": 455
+    },
+    {
+      "path": "/monteros/instituto-del-sur/carreras/administracion-de-empresas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/instituto-del-sur/carreras/administracion-de-empresas",
+      "ms": 411
+    },
+    {
+      "path": "/monteros/instituto-san-miguel/carreras/profesorado",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/instituto-san-miguel/carreras/profesorado",
+      "ms": 342
+    },
+    {
+      "path": "/monteros/instituto-san-miguel/carreras/gestion-educativa",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/instituto-san-miguel/carreras/gestion-educativa",
+      "ms": 439
+    },
+    {
+      "path": "/monteros/instituto-san-miguel/carreras/acompanante-terapeutico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/instituto-san-miguel/carreras/acompanante-terapeutico",
+      "ms": 445
+    },
+    {
+      "path": "/aguilares/universidad-siglo-21/carreras/abogacia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/universidad-siglo-21/carreras/abogacia",
+      "ms": 466
+    },
+    {
+      "path": "/aguilares/universidad-siglo-21/carreras/contador-publico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/universidad-siglo-21/carreras/contador-publico",
+      "ms": 492
+    },
+    {
+      "path": "/aguilares/universidad-siglo-21/carreras/lic-en-administracion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/universidad-siglo-21/carreras/lic-en-administracion",
+      "ms": 522
+    },
+    {
+      "path": "/aguilares/universidad-siglo-21/carreras/higiene-y-seguridad",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/universidad-siglo-21/carreras/higiene-y-seguridad",
+      "ms": 514
+    },
+    {
+      "path": "/aguilares/instituto-santa-barbara/carreras/instrumentacion-quirurgica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/instituto-santa-barbara/carreras/instrumentacion-quirurgica",
+      "ms": 535
+    },
+    {
+      "path": "/aguilares/instituto-santa-barbara/carreras/laboratorio-de-analisis-clinicos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/instituto-santa-barbara/carreras/laboratorio-de-analisis-clinicos",
+      "ms": 662
+    },
+    {
+      "path": "/aguilares/instituto-santa-barbara/carreras/diagnostico-por-imagenes",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/instituto-santa-barbara/carreras/diagnostico-por-imagenes",
+      "ms": 588
+    },
+    {
+      "path": "/aguilares/academia-profesional-norte/carreras/diseno-grafico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/academia-profesional-norte/carreras/diseno-grafico",
+      "ms": 590
+    },
+    {
+      "path": "/aguilares/academia-profesional-norte/carreras/community-manager",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/academia-profesional-norte/carreras/community-manager",
+      "ms": 566
+    },
+    {
+      "path": "/aguilares/academia-profesional-norte/carreras/ventas-digitales",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/academia-profesional-norte/carreras/ventas-digitales",
+      "ms": 538
+    },
+    {
+      "path": "/san-miguel-de-tucuman/col-san-carlos-borromeo/carreras/profesorado-de-biologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/col-san-carlos-borromeo/carreras/profesorado-de-biologia",
+      "ms": 563
+    },
+    {
+      "path": "/san-miguel-de-tucuman/col-san-carlos-borromeo/carreras/profesorado-de-educacion-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/col-san-carlos-borromeo/carreras/profesorado-de-educacion-inicial",
+      "ms": 565
+    },
+    {
+      "path": "/san-miguel-de-tucuman/conservatorio-provincial-de-musica/carreras/profesorado-de-musica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/conservatorio-provincial-de-musica/carreras/profesorado-de-musica",
+      "ms": 559
+    },
+    {
+      "path": "/san-miguel-de-tucuman/conservatorio-provincial-de-musica/carreras/profesorado-de-musica-con-orientacion-en-canto",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/conservatorio-provincial-de-musica/carreras/profesorado-de-musica-con-orientacion-en-canto",
+      "ms": 544
+    },
+    {
+      "path": "/san-miguel-de-tucuman/conservatorio-provincial-de-musica/carreras/profesorado-de-musica-con-orientacion-en-educacion-musical",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/conservatorio-provincial-de-musica/carreras/profesorado-de-musica-con-orientacion-en-educacion-musical",
+      "ms": 475
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-de-biologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-de-biologia",
+      "ms": 478
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-de-educacion-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-de-educacion-inicial",
+      "ms": 488
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-de-educacion-nivel-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-de-educacion-nivel-inicial",
+      "ms": 466
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-educacion-primaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-educacion-primaria",
+      "ms": 462
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-de-educacion-primaria-egb",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-de-educacion-primaria-egb",
+      "ms": 464
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-de-geografia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-de-geografia",
+      "ms": 447
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-de-portugues",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-normal-superior-en-lenguas-vivas-juan-bautista-alberdi/carreras/profesorado-de-portugues",
+      "ms": 467
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-y-liceo-vocacional-sarmiento/carreras/profesorado-de-educacion-nivel-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-y-liceo-vocacional-sarmiento/carreras/profesorado-de-educacion-nivel-inicial",
+      "ms": 441
+    },
+    {
+      "path": "/san-miguel-de-tucuman/esc-y-liceo-vocacional-sarmiento/carreras/profesorado-de-educacion-primaria-egb",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/esc-y-liceo-vocacional-sarmiento/carreras/profesorado-de-educacion-primaria-egb",
+      "ms": 465
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-lola-mora/carreras/profesorado-de-economia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-lola-mora/carreras/profesorado-de-economia",
+      "ms": 506
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-lola-mora/carreras/profesorado-de-frances",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-lola-mora/carreras/profesorado-de-frances",
+      "ms": 479
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-lola-mora/carreras/profesorado-de-idioma-frances",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-lola-mora/carreras/profesorado-de-idioma-frances",
+      "ms": 398
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-lola-mora/carreras/profesorado-ingles",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-lola-mora/carreras/profesorado-ingles",
+      "ms": 472
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-lola-mora/carreras/profesorado-de-matematica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-lola-mora/carreras/profesorado-de-matematica",
+      "ms": 450
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-educacion-especial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-educacion-especial",
+      "ms": 463
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual",
+      "ms": 555
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-educacion-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-educacion-inicial",
+      "ms": 469
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-educacion-nivel-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-educacion-nivel-inicial",
+      "ms": 470
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-fisica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-fisica",
+      "ms": 491
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-historia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-historia",
+      "ms": 402
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-lengua",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-lengua",
+      "ms": 482
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-lengua-y-literatura",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-lengua-y-literatura",
+      "ms": 475
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-matematica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-de-ensenanza-superior-prof-manuel-marchetti/carreras/profesorado-de-matematica",
+      "ms": 437
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-del-profesorado-general-san-martin/carreras/profesorado-de-economia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-del-profesorado-general-san-martin/carreras/profesorado-de-economia",
+      "ms": 535
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-del-profesorado-general-san-martin/carreras/profesorado-de-lengua-y-literatura",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-del-profesorado-general-san-martin/carreras/profesorado-de-lengua-y-literatura",
+      "ms": 441
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-dr-carlos-pellegrini/carreras/profesorado-de-educacion-fisica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-dr-carlos-pellegrini/carreras/profesorado-de-educacion-fisica",
+      "ms": 431
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-dr-carlos-pellegrini/carreras/profesorado-de-psicologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-dr-carlos-pellegrini/carreras/profesorado-de-psicologia",
+      "ms": 432
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-mariano-moreno/carreras/profesorado-de-ciencia-politica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-mariano-moreno/carreras/profesorado-de-ciencia-politica",
+      "ms": 392
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-san-miguel/carreras/profesorado-de-geografia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-san-miguel/carreras/profesorado-de-geografia",
+      "ms": 429
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-san-miguel/carreras/profesorado-ingles",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-san-miguel/carreras/profesorado-ingles",
+      "ms": 422
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-san-miguel/carreras/profesorado-de-quimica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-san-miguel/carreras/profesorado-de-quimica",
+      "ms": 453
+    },
+    {
+      "path": "/san-miguel-de-tucuman/inst-superior-de-cultura-religiosa-sto-toribio-de-mogrovejo/carreras/profesorado-de-ciencias-sagradas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/inst-superior-de-cultura-religiosa-sto-toribio-de-mogrovejo/carreras/profesorado-de-ciencias-sagradas",
+      "ms": 391
+    },
+    {
+      "path": "/san-miguel-de-tucuman/instituto-9-de-julio/carreras/profesorado-educacion-primaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/instituto-9-de-julio/carreras/profesorado-educacion-primaria",
+      "ms": 437
+    },
+    {
+      "path": "/san-miguel-de-tucuman/instituto-9-de-julio/carreras/profesorado-de-educacion-tecnologica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/instituto-9-de-julio/carreras/profesorado-de-educacion-tecnologica",
+      "ms": 448
+    },
+    {
+      "path": "/san-miguel-de-tucuman/instituto-9-de-julio/carreras/profesorado-de-historia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/instituto-9-de-julio/carreras/profesorado-de-historia",
+      "ms": 435
+    },
+    {
+      "path": "/san-miguel-de-tucuman/juvenil-instituto-moderno/carreras/profesorado-de-educacion-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/juvenil-instituto-moderno/carreras/profesorado-de-educacion-inicial",
+      "ms": 435
+    },
+    {
+      "path": "/san-miguel-de-tucuman/juvenil-instituto-moderno/carreras/profesorado-ingles",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/juvenil-instituto-moderno/carreras/profesorado-ingles",
+      "ms": 458
+    },
+    {
+      "path": "/san-miguel-de-tucuman/sistemas-y-capacitacion-informatica-c-p-soft/carreras/profesorado-de-informatica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/sistemas-y-capacitacion-informatica-c-p-soft/carreras/profesorado-de-informatica",
+      "ms": 537
+    },
+    {
+      "path": "/concepcion/conservatorio-provincial-de-musica/carreras/profesorado-de-musica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/conservatorio-provincial-de-musica/carreras/profesorado-de-musica",
+      "ms": 449
+    },
+    {
+      "path": "/concepcion/conservatorio-provincial-de-musica/carreras/profesorado-de-musica-con-orientacion-en-canto",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/conservatorio-provincial-de-musica/carreras/profesorado-de-musica-con-orientacion-en-canto",
+      "ms": 443
+    },
+    {
+      "path": "/concepcion/conservatorio-provincial-de-musica/carreras/profesorado-de-musica-con-orientacion-en-educacion-musical",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/conservatorio-provincial-de-musica/carreras/profesorado-de-musica-con-orientacion-en-educacion-musical",
+      "ms": 486
+    },
+    {
+      "path": "/concepcion/ies-concepcion/carreras/tecnico-superior-en-computacion-y-redes",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/ies-concepcion/carreras/tecnico-superior-en-computacion-y-redes",
+      "ms": 447
+    },
+    {
+      "path": "/concepcion/ies-concepcion/carreras/tecnico-superior-en-bioenergia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/ies-concepcion/carreras/tecnico-superior-en-bioenergia",
+      "ms": 583
+    },
+    {
+      "path": "/concepcion/ies-concepcion/carreras/trayecto-de-formacion-profesional-mecanica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/ies-concepcion/carreras/trayecto-de-formacion-profesional-mecanica",
+      "ms": 579
+    },
+    {
+      "path": "/concepcion/instituto-santa-barbara/carreras/tecnicatura-en-laboratorio-de-analisis-clinicos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/instituto-santa-barbara/carreras/tecnicatura-en-laboratorio-de-analisis-clinicos",
+      "ms": 538
+    },
+    {
+      "path": "/concepcion/instituto-santa-barbara/carreras/radiologia-e-imagenologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/instituto-santa-barbara/carreras/radiologia-e-imagenologia",
+      "ms": 595
+    },
+    {
+      "path": "/alderetes/inst-san-vicente-de-paul/carreras/tecnicatura-superior-en-comercializacion-y-ventas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/alderetes/inst-san-vicente-de-paul/carreras/tecnicatura-superior-en-comercializacion-y-ventas",
+      "ms": 435
+    },
+    {
+      "path": "/alderetes/inst-san-vicente-de-paul/carreras/tecnicatura-superior-en-enfermeria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/alderetes/inst-san-vicente-de-paul/carreras/tecnicatura-superior-en-enfermeria",
+      "ms": 448
+    },
+    {
+      "path": "/alderetes/inst-san-vicente-de-paul/carreras/tecnicatura-superior-en-farmacia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/alderetes/inst-san-vicente-de-paul/carreras/tecnicatura-superior-en-farmacia",
+      "ms": 438
+    },
+    {
+      "path": "/banda-del-rio-sali/col-santa-rita/carreras/profesorado-educacion-primaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/banda-del-rio-sali/col-santa-rita/carreras/profesorado-educacion-primaria",
+      "ms": 451
+    },
+    {
+      "path": "/famailla/inst-de-ensenanza-superior-famailla/carreras/profesorado-de-economia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/famailla/inst-de-ensenanza-superior-famailla/carreras/profesorado-de-economia",
+      "ms": 482
+    },
+    {
+      "path": "/famailla/inst-de-ensenanza-superior-famailla/carreras/profesorado-de-educacion-especial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/famailla/inst-de-ensenanza-superior-famailla/carreras/profesorado-de-educacion-especial",
+      "ms": 480
+    },
+    {
+      "path": "/famailla/inst-de-ensenanza-superior-famailla/carreras/profesorado-de-educacion-especial-con-orientacion-en-sordos-e-hipoacusicos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/famailla/inst-de-ensenanza-superior-famailla/carreras/profesorado-de-educacion-especial-con-orientacion-en-sordos-e-hipoacusicos",
+      "ms": 465
+    },
+    {
+      "path": "/famailla/inst-de-ensenanza-superior-famailla/carreras/profesorado-educacion-primaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/famailla/inst-de-ensenanza-superior-famailla/carreras/profesorado-educacion-primaria",
+      "ms": 517
+    },
+    {
+      "path": "/famailla/inst-de-ensenanza-superior-famailla/carreras/profesorado-de-educacion-primaria-egb",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/famailla/inst-de-ensenanza-superior-famailla/carreras/profesorado-de-educacion-primaria-egb",
+      "ms": 1656
+    },
+    {
+      "path": "/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino/carreras/profesorado-de-educacion-nivel-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino/carreras/profesorado-de-educacion-nivel-inicial",
+      "ms": 1647
+    },
+    {
+      "path": "/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino/carreras/profesorado-educacion-primaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino/carreras/profesorado-educacion-primaria",
+      "ms": 1680
+    },
+    {
+      "path": "/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino/carreras/profesorado-de-educacion-primaria-egb",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino/carreras/profesorado-de-educacion-primaria-egb",
+      "ms": 1656
+    },
+    {
+      "path": "/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino/carreras/profesorado-de-fisica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino/carreras/profesorado-de-fisica",
+      "ms": 2865
+    },
+    {
+      "path": "/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino/carreras/profesorado-de-lengua-y-literatura",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino/carreras/profesorado-de-lengua-y-literatura",
+      "ms": 3174
+    },
+    {
+      "path": "/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino/carreras/profesorado-de-tecnologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/juan-bautista-alberdi/esc-normal-superior-florentino-ameghino/carreras/profesorado-de-tecnologia",
+      "ms": 3951
+    },
+    {
+      "path": "/la-cocha/inst-de-ensenanza-superior-la-cocha/carreras/profesorado-de-historia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/la-cocha/inst-de-ensenanza-superior-la-cocha/carreras/profesorado-de-historia",
+      "ms": 3942
+    },
+    {
+      "path": "/bella-vista/inst-de-ensenanza-superior-bella-vista/carreras/profesorado-de-lengua-y-literatura",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/bella-vista/inst-de-ensenanza-superior-bella-vista/carreras/profesorado-de-lengua-y-literatura",
+      "ms": 1474
+    },
+    {
+      "path": "/bella-vista/inst-de-ensenanza-superior-bella-vista/carreras/profesorado-de-matematica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/bella-vista/inst-de-ensenanza-superior-bella-vista/carreras/profesorado-de-matematica",
+      "ms": 1303
+    },
+    {
+      "path": "/lules/inst-padre-manuel-ballesteros/carreras/profesorado-educacion-primaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/lules/inst-padre-manuel-ballesteros/carreras/profesorado-educacion-primaria",
+      "ms": 529
+    },
+    {
+      "path": "/lules/inst-padre-manuel-ballesteros/carreras/profesorado-de-educacion-primaria-egb",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/lules/inst-padre-manuel-ballesteros/carreras/profesorado-de-educacion-primaria-egb",
+      "ms": 659
+    },
+    {
+      "path": "/monteros/esc-normal-superior-tte-gral-julio-a-roca/carreras/profesorado-de-educacion-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/esc-normal-superior-tte-gral-julio-a-roca/carreras/profesorado-de-educacion-inicial",
+      "ms": 663
+    },
+    {
+      "path": "/monteros/esc-normal-superior-tte-gral-julio-a-roca/carreras/profesorado-de-educacion-nivel-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/esc-normal-superior-tte-gral-julio-a-roca/carreras/profesorado-de-educacion-nivel-inicial",
+      "ms": 644
+    },
+    {
+      "path": "/monteros/esc-normal-superior-tte-gral-julio-a-roca/carreras/profesorado-educacion-primaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/esc-normal-superior-tte-gral-julio-a-roca/carreras/profesorado-educacion-primaria",
+      "ms": 647
+    },
+    {
+      "path": "/monteros/esc-normal-superior-tte-gral-julio-a-roca/carreras/profesorado-de-educacion-primaria-egb",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/esc-normal-superior-tte-gral-julio-a-roca/carreras/profesorado-de-educacion-primaria-egb",
+      "ms": 512
+    },
+    {
+      "path": "/monteros/esc-normal-superior-tte-gral-julio-a-roca/carreras/profesorado-de-lengua-y-literatura",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/esc-normal-superior-tte-gral-julio-a-roca/carreras/profesorado-de-lengua-y-literatura",
+      "ms": 503
+    },
+    {
+      "path": "/monteros/esc-superior-de-comercio-general-jose-de-san-martin/carreras/profesorado-de-biologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/esc-superior-de-comercio-general-jose-de-san-martin/carreras/profesorado-de-biologia",
+      "ms": 483
+    },
+    {
+      "path": "/monteros/esc-superior-de-comercio-general-jose-de-san-martin/carreras/profesorado-de-economia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/esc-superior-de-comercio-general-jose-de-san-martin/carreras/profesorado-de-economia",
+      "ms": 484
+    },
+    {
+      "path": "/monteros/esc-superior-de-comercio-general-jose-de-san-martin/carreras/profesorado-ingles",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/esc-superior-de-comercio-general-jose-de-san-martin/carreras/profesorado-ingles",
+      "ms": 493
+    },
+    {
+      "path": "/villa-quinteros/inst-de-ensenanza-superior-villa-quinteros/carreras/profesorado-de-educacion-especial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/villa-quinteros/inst-de-ensenanza-superior-villa-quinteros/carreras/profesorado-de-educacion-especial",
+      "ms": 486
+    },
+    {
+      "path": "/villa-quinteros/inst-de-ensenanza-superior-villa-quinteros/carreras/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/villa-quinteros/inst-de-ensenanza-superior-villa-quinteros/carreras/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual",
+      "ms": 495
+    },
+    {
+      "path": "/villa-quinteros/inst-de-ensenanza-superior-villa-quinteros/carreras/profesorado-de-educacion-primaria-egb",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/villa-quinteros/inst-de-ensenanza-superior-villa-quinteros/carreras/profesorado-de-educacion-primaria-egb",
+      "ms": 474
+    },
+    {
+      "path": "/villa-quinteros/inst-de-ensenanza-superior-villa-quinteros/carreras/profesorado-de-lengua-y-literatura",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/villa-quinteros/inst-de-ensenanza-superior-villa-quinteros/carreras/profesorado-de-lengua-y-literatura",
+      "ms": 443
+    },
+    {
+      "path": "/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-de-educacion-especial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-de-educacion-especial",
+      "ms": 443
+    },
+    {
+      "path": "/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual",
+      "ms": 443
+    },
+    {
+      "path": "/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-de-educacion-fisica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-de-educacion-fisica",
+      "ms": 547
+    },
+    {
+      "path": "/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-de-educacion-nivel-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-de-educacion-nivel-inicial",
+      "ms": 496
+    },
+    {
+      "path": "/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-educacion-primaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-educacion-primaria",
+      "ms": 498
+    },
+    {
+      "path": "/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-de-educacion-primaria-egb",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-de-educacion-primaria-egb",
+      "ms": 524
+    },
+    {
+      "path": "/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-ingles",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-ingles",
+      "ms": 426
+    },
+    {
+      "path": "/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-de-matematica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/aguilares/inst-de-ensenanza-superior-aguilares/carreras/profesorado-de-matematica",
+      "ms": 531
+    },
+    {
+      "path": "/simoca/escuela-normal-superior-manuel-belgrano/carreras/profesorado-de-biologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/simoca/escuela-normal-superior-manuel-belgrano/carreras/profesorado-de-biologia",
+      "ms": 528
+    },
+    {
+      "path": "/simoca/escuela-normal-superior-manuel-belgrano/carreras/profesorado-de-educacion-nivel-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/simoca/escuela-normal-superior-manuel-belgrano/carreras/profesorado-de-educacion-nivel-inicial",
+      "ms": 523
+    },
+    {
+      "path": "/simoca/escuela-normal-superior-manuel-belgrano/carreras/profesorado-educacion-primaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/simoca/escuela-normal-superior-manuel-belgrano/carreras/profesorado-educacion-primaria",
+      "ms": 635
+    },
+    {
+      "path": "/simoca/escuela-normal-superior-manuel-belgrano/carreras/profesorado-de-educacion-primaria-egb",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/simoca/escuela-normal-superior-manuel-belgrano/carreras/profesorado-de-educacion-primaria-egb",
+      "ms": 501
+    },
+    {
+      "path": "/simoca/escuela-normal-superior-manuel-belgrano/carreras/profesorado-de-historia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/simoca/escuela-normal-superior-manuel-belgrano/carreras/profesorado-de-historia",
+      "ms": 508
+    },
+    {
+      "path": "/tafi-viejo/inst-de-ensenanza-superior-tafi-viejo/carreras/profesorado-de-educacion-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/tafi-viejo/inst-de-ensenanza-superior-tafi-viejo/carreras/profesorado-de-educacion-inicial",
+      "ms": 486
+    },
+    {
+      "path": "/tafi-viejo/inst-de-ensenanza-superior-tafi-viejo/carreras/profesorado-de-educacion-nivel-inicial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/tafi-viejo/inst-de-ensenanza-superior-tafi-viejo/carreras/profesorado-de-educacion-nivel-inicial",
+      "ms": 499
+    },
+    {
+      "path": "/tafi-viejo/inst-de-ensenanza-superior-tafi-viejo/carreras/profesorado-educacion-primaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/tafi-viejo/inst-de-ensenanza-superior-tafi-viejo/carreras/profesorado-educacion-primaria",
+      "ms": 515
+    },
+    {
+      "path": "/tafi-viejo/inst-de-ensenanza-superior-tafi-viejo/carreras/profesorado-de-educacion-primaria-egb",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/tafi-viejo/inst-de-ensenanza-superior-tafi-viejo/carreras/profesorado-de-educacion-primaria-egb",
+      "ms": 515
+    },
+    {
+      "path": "/tafi-viejo/inst-de-ensenanza-superior-tafi-viejo/carreras/profesorado-de-fisica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/tafi-viejo/inst-de-ensenanza-superior-tafi-viejo/carreras/profesorado-de-fisica",
+      "ms": 544
+    },
+    {
+      "path": "/tafi-viejo/instituto-de-educacion-superior-sisaiani/carreras/profesorado-de-danza-con-orientacion-en-danzas-folkloricas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/tafi-viejo/instituto-de-educacion-superior-sisaiani/carreras/profesorado-de-danza-con-orientacion-en-danzas-folkloricas",
+      "ms": 577
+    },
+    {
+      "path": "/villa-trancas/inst-privado-san-joaquin/carreras/profesorado-educacion-primaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/villa-trancas/inst-privado-san-joaquin/carreras/profesorado-educacion-primaria",
+      "ms": 449
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/contador-publico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/contador-publico",
+      "ms": 547
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/contador-publico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/contador-publico",
+      "ms": 533
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/contador-publico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/contador-publico",
+      "ms": 495
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-marketing",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-marketing",
+      "ms": 492
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-recursos-humanos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-recursos-humanos",
+      "ms": 499
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-recursos-humanos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-recursos-humanos",
+      "ms": 490
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/notariado",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/notariado",
+      "ms": 359
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/notariado",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/notariado",
+      "ms": 455
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/locucion-nacional",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/locucion-nacional",
+      "ms": 446
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-comunicacion-social",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-comunicacion-social",
+      "ms": 433
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/ingenieria-en-informatica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/ingenieria-en-informatica",
+      "ms": 461
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/ingenieria-en-informatica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/ingenieria-en-informatica",
+      "ms": 559
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/tecnicatura-universitaria-en-higiene-y-seguridad-laboral",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/tecnicatura-universitaria-en-higiene-y-seguridad-laboral",
+      "ms": 460
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-diseno-grafico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-diseno-grafico",
+      "ms": 453
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-higiene-y-seguridad-laboral",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-higiene-y-seguridad-laboral",
+      "ms": 431
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/medicina",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/medicina",
+      "ms": 324
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-psicologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-psicologia",
+      "ms": 442
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-psicologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-psicologia",
+      "ms": 441
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-gastronomia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-gastronomia",
+      "ms": 420
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-diagnostico-por-imagenes",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-diagnostico-por-imagenes",
+      "ms": 508
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-en-ciencias-economicas-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-en-ciencias-economicas-ccc",
+      "ms": 390
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-en-ciencias-economicas-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-en-ciencias-economicas-ccc",
+      "ms": 394
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-en-ciencias-politicas-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-en-ciencias-politicas-ccc",
+      "ms": 436
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-en-ciencias-politicas-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-en-ciencias-politicas-ccc",
+      "ms": 427
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-en-educacion-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-en-educacion-ccc",
+      "ms": 437
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-en-educacion-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-en-educacion-ccc",
+      "ms": 429
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-administracion-de-empresas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-administracion-de-empresas",
+      "ms": 442
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-administracion-de-empresas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-administracion-de-empresas",
+      "ms": 502
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-administracion-de-empresas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-administracion-de-empresas",
+      "ms": 507
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-management-turistico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-management-turistico",
+      "ms": 520
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-comunicacion-digital",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-comunicacion-digital",
+      "ms": 510
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-ciencias-sociales",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-ciencias-sociales",
+      "ms": 558
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-kinesiologia-y-fisiatria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-kinesiologia-y-fisiatria",
+      "ms": 549
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/bioingenieria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/bioingenieria",
+      "ms": 593
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/tecnicatura-universitaria-en-desarrollo-y-calidad-de-software",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/tecnicatura-universitaria-en-desarrollo-y-calidad-de-software",
+      "ms": 605
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/tecnicatura-universitaria-en-desarrollo-y-calidad-de-software",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/tecnicatura-universitaria-en-desarrollo-y-calidad-de-software",
+      "ms": 553
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-ingles-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-ingles-ccc",
+      "ms": 548
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-ingles-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-ingles-ccc",
+      "ms": 541
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-en-derecho-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-en-derecho-ccc",
+      "ms": 486
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-turismo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-turismo",
+      "ms": 459
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/abogacia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/abogacia",
+      "ms": 555
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/abogacia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/abogacia",
+      "ms": 423
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/procuracion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/procuracion",
+      "ms": 417
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/procuracion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/procuracion",
+      "ms": 369
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-ciencias-politicas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-ciencias-politicas",
+      "ms": 435
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/ingenieria-industrial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/ingenieria-industrial",
+      "ms": 434
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/ingenieria-industrial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/ingenieria-industrial",
+      "ms": 479
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/ingenieria-en-inteligencia-artificial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/ingenieria-en-inteligencia-artificial",
+      "ms": 433
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-diseno-multimedial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-diseno-multimedial",
+      "ms": 465
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-nutricion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-nutricion",
+      "ms": 459
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-nutricion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-nutricion",
+      "ms": 429
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-terapia-ocupacional",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-terapia-ocupacional",
+      "ms": 427
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-terapia-ocupacional",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-terapia-ocupacional",
+      "ms": 457
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-de-ingles",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-de-ingles",
+      "ms": 457
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-de-ingles",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-de-ingles",
+      "ms": 464
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-de-derecho-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-de-derecho-ccc",
+      "ms": 565
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-de-derecho-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-de-derecho-ccc",
+      "ms": 437
+    },
+    {
+      "path": "/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-marketing",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/concepcion/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-marketing",
+      "ms": 441
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-teoria-y-gestion-de-las-organizaciones",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-teoria-y-gestion-de-las-organizaciones",
+      "ms": 1800
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/ingenieria-ambiental",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/ingenieria-ambiental",
+      "ms": 2829
+    },
+    {
+      "path": "/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-diseno-de-interiores",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/yerba-buena/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/licenciatura-en-diseno-de-interiores",
+      "ms": 2928
+    },
+    {
+      "path": "/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-en-ciencias-politicas-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/san-miguel-de-tucuman/universidad-del-norte-santo-tomas-de-aquino-unsta/carreras/profesorado-universitario-en-ciencias-politicas-ccc",
+      "ms": 2934
+    },
+    {
+      "path": "/monteros/centro-de-formacion-tucuman/capacitaciones/auxiliar-administrativo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/centro-de-formacion-tucuman/capacitaciones/auxiliar-administrativo",
+      "ms": 9229
+    },
+    {
+      "path": "/monteros/centro-de-formacion-tucuman/capacitaciones/secretariado",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/centro-de-formacion-tucuman/capacitaciones/secretariado",
+      "ms": 8075
+    },
+    {
+      "path": "/eventos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/eventos",
+      "ms": 14243
+    },
+    {
+      "path": "/monteros/centro-de-formacion-tucuman/capacitaciones/operador-de-pc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/monteros/centro-de-formacion-tucuman/capacitaciones/operador-de-pc",
+      "ms": 14261
+    },
+    {
+      "path": "/servicios",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios",
+      "ms": 13630
+    },
+    {
+      "path": "/eventos/encuentro-deportivo-concepcion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/eventos/encuentro-deportivo-concepcion",
+      "ms": 13543
+    },
+    {
+      "path": "/eventos/festival-cultural-aguilares",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/eventos/festival-cultural-aguilares",
+      "ms": 7214
+    },
+    {
+      "path": "/eventos/feria-municipal-monteros",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/eventos/feria-municipal-monteros",
+      "ms": 7221
+    },
+    {
+      "path": "/eventos/expo-educativa-concepcion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/eventos/expo-educativa-concepcion",
+      "ms": 764
+    },
+    {
+      "path": "/eventos/jornada-juvenil-monteros",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/eventos/jornada-juvenil-monteros",
+      "ms": 1200
+    },
+    {
+      "path": "/eventos/feria-de-emprendedores-aguilares",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/eventos/feria-de-emprendedores-aguilares",
+      "ms": 1287
+    },
+    {
+      "path": "/eventos/encuentro-comunitario-concepcion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/eventos/encuentro-comunitario-concepcion",
+      "ms": 1286
+    },
+    {
+      "path": "/servicios/redes-sociales",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/redes-sociales",
+      "ms": 2972
+    },
+    {
+      "path": "/servicios/google-ads",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/google-ads",
+      "ms": 8021
+    },
+    {
+      "path": "/servicios/meta-ads",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/meta-ads",
+      "ms": 7871
+    },
+    {
+      "path": "/servicios/expos-carreras",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/expos-carreras",
+      "ms": 5489
+    },
+    {
+      "path": "/servicios/campana-de-mail",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/campana-de-mail",
+      "ms": 7898
+    },
+    {
+      "path": "/servicios/eventos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/eventos",
+      "ms": 5736
+    },
+    {
+      "path": "/servicios/via-publica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/via-publica",
+      "ms": 5737
+    },
+    {
+      "path": "/servicios/podcast",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/podcast",
+      "ms": 5739
+    },
+    {
+      "path": "/servicios/videos-personalizados",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/videos-personalizados",
+      "ms": 5717
+    },
+    {
+      "path": "/servicios/orientacion-vocacional",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/orientacion-vocacional",
+      "ms": 704
+    },
+    {
+      "path": "/servicios/cursos-gratuitos",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/cursos-gratuitos",
+      "ms": 706
+    },
+    {
+      "path": "/servicios/convenios",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/convenios",
+      "ms": 706
+    },
+    {
+      "path": "/servicios/crm-seguimiento",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/crm-seguimiento",
+      "ms": 711
+    },
+    {
+      "path": "/servicios/cursos-docentes",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/cursos-docentes",
+      "ms": 1205
+    },
+    {
+      "path": "/servicios/oficios",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/servicios/oficios",
+      "ms": 1204
+    },
+    {
+      "path": "/carreras/agrimensura",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/agrimensura",
+      "ms": 1209
+    },
+    {
+      "path": "/carreras/arqueologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/arqueologia",
+      "ms": 1207
+    },
+    {
+      "path": "/carreras/arquitectura-y-urbanismo",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/arquitectura-y-urbanismo",
+      "ms": 1113
+    },
+    {
+      "path": "/carreras/bailarin-a-en-danza-contemporanea",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/bailarin-a-en-danza-contemporanea",
+      "ms": 1116
+    },
+    {
+      "path": "/carreras/bioquimica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/bioquimica",
+      "ms": 1111
+    },
+    {
+      "path": "/carreras/diseno-de-iluminacion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/diseno-de-iluminacion",
+      "ms": 1118
+    },
+    {
+      "path": "/carreras/diseno-de-interiores-y-equipamiento",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/diseno-de-interiores-y-equipamiento",
+      "ms": 1124
+    },
+    {
+      "path": "/carreras/enfermeria-universitaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/enfermeria-universitaria",
+      "ms": 1129
+    },
+    {
+      "path": "/carreras/escribania",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/escribania",
+      "ms": 1128
+    },
+    {
+      "path": "/carreras/farmacia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/farmacia",
+      "ms": 1135
+    },
+    {
+      "path": "/carreras/geologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/geologia",
+      "ms": 790
+    },
+    {
+      "path": "/carreras/ingenieria-agronomica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-agronomica",
+      "ms": 1012
+    },
+    {
+      "path": "/carreras/ingenieria-azucarera",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-azucarera",
+      "ms": 1016
+    },
+    {
+      "path": "/carreras/ingenieria-biomedica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-biomedica",
+      "ms": 1278
+    },
+    {
+      "path": "/carreras/ingenieria-civil",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-civil",
+      "ms": 1117
+    },
+    {
+      "path": "/carreras/ingenieria-electronica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-electronica",
+      "ms": 1121
+    },
+    {
+      "path": "/carreras/ingenieria-electrica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-electrica",
+      "ms": 1128
+    },
+    {
+      "path": "/carreras/ingenieria-en-computacion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-en-computacion",
+      "ms": 873
+    },
+    {
+      "path": "/carreras/ingenieria-geodesica-y-geofisica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-geodesica-y-geofisica",
+      "ms": 1036
+    },
+    {
+      "path": "/carreras/ingenieria-mecanica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-mecanica",
+      "ms": 1024
+    },
+    {
+      "path": "/carreras/ingenieria-quimica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-quimica",
+      "ms": 1047
+    },
+    {
+      "path": "/carreras/ingenieria-zootecnista",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/ingenieria-zootecnista",
+      "ms": 1031
+    },
+    {
+      "path": "/carreras/interprete-dramatico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/interprete-dramatico",
+      "ms": 1007
+    },
+    {
+      "path": "/carreras/licenciatura-en-administracion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-administracion",
+      "ms": 1033
+    },
+    {
+      "path": "/carreras/licenciatura-en-artes-visuales",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-artes-visuales",
+      "ms": 1049
+    },
+    {
+      "path": "/carreras/licenciatura-en-biotecnologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-biotecnologia",
+      "ms": 1300
+    },
+    {
+      "path": "/carreras/licenciatura-en-ciencias-biologicas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-ciencias-biologicas",
+      "ms": 922
+    },
+    {
+      "path": "/carreras/licenciatura-en-ciencias-de-la-comunicacion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-ciencias-de-la-comunicacion",
+      "ms": 677
+    },
+    {
+      "path": "/carreras/licenciatura-en-ciencias-del-comportamiento",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-ciencias-del-comportamiento",
+      "ms": 5982
+    },
+    {
+      "path": "/carreras/licenciatura-en-cinematografia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-cinematografia",
+      "ms": 5715
+    },
+    {
+      "path": "/carreras/licenciatura-en-danza-clasica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-danza-clasica",
+      "ms": 5364
+    },
+    {
+      "path": "/carreras/licenciatura-en-diseno-de-sonido",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-diseno-de-sonido",
+      "ms": 5357
+    },
+    {
+      "path": "/carreras/licenciatura-en-economia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-economia",
+      "ms": 1180
+    },
+    {
+      "path": "/carreras/licenciatura-en-enfermeria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-enfermeria",
+      "ms": 1182
+    },
+    {
+      "path": "/carreras/licenciatura-en-fisica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-fisica",
+      "ms": 1187
+    },
+    {
+      "path": "/carreras/licenciatura-en-fonoaudiologia-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-fonoaudiologia-ccc",
+      "ms": 1182
+    },
+    {
+      "path": "/carreras/licenciatura-en-geografia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-geografia",
+      "ms": 898
+    },
+    {
+      "path": "/carreras/licenciatura-en-gestion-cultural",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-gestion-cultural",
+      "ms": 917
+    },
+    {
+      "path": "/carreras/licenciatura-en-gestion-educativa-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-gestion-educativa-ccc",
+      "ms": 942
+    },
+    {
+      "path": "/carreras/licenciatura-en-historia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-historia",
+      "ms": 944
+    },
+    {
+      "path": "/carreras/licenciatura-en-historia-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-historia-ccc",
+      "ms": 925
+    },
+    {
+      "path": "/carreras/licenciatura-en-informatica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-informatica",
+      "ms": 908
+    },
+    {
+      "path": "/carreras/licenciatura-en-logistica-y-gestion-del-transporte",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-logistica-y-gestion-del-transporte",
+      "ms": 1726
+    },
+    {
+      "path": "/carreras/licenciatura-en-lutheria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-lutheria",
+      "ms": 2231
+    },
+    {
+      "path": "/carreras/licenciatura-en-matematica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-matematica",
+      "ms": 2010
+    },
+    {
+      "path": "/carreras/licenciatura-en-medios-audiovisuales",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-medios-audiovisuales",
+      "ms": 2325
+    },
+    {
+      "path": "/carreras/licenciatura-en-medios-audiovisuales-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-medios-audiovisuales-ccc",
+      "ms": 1540
+    },
+    {
+      "path": "/carreras/licenciatura-en-musica-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-musica-ccc",
+      "ms": 1327
+    },
+    {
+      "path": "/carreras/licenciatura-en-quimica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-quimica",
+      "ms": 1282
+    },
+    {
+      "path": "/carreras/licenciatura-en-seguridad-publica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-seguridad-publica",
+      "ms": 1260
+    },
+    {
+      "path": "/carreras/licenciatura-en-seguridad-y-proteccion-ciudadana-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-seguridad-y-proteccion-ciudadana-ccc",
+      "ms": 1224
+    },
+    {
+      "path": "/carreras/licenciatura-en-teatro",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-teatro",
+      "ms": 1198
+    },
+    {
+      "path": "/carreras/licenciatura-en-trabajo-social",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-trabajo-social",
+      "ms": 1086
+    },
+    {
+      "path": "/carreras/licenciatura-en-trabajo-social-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/licenciatura-en-trabajo-social-ccc",
+      "ms": 1112
+    },
+    {
+      "path": "/carreras/medicina-veterinaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/medicina-veterinaria",
+      "ms": 1107
+    },
+    {
+      "path": "/carreras/odontologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/odontologia",
+      "ms": 1155
+    },
+    {
+      "path": "/carreras/profesorado-en-artes-plasticas-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-artes-plasticas-ccc",
+      "ms": 1312
+    },
+    {
+      "path": "/carreras/profesorado-en-artes-visuales",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-artes-visuales",
+      "ms": 1492
+    },
+    {
+      "path": "/carreras/profesorado-en-ciencias-biologicas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-ciencias-biologicas",
+      "ms": 1501
+    },
+    {
+      "path": "/carreras/profesorado-en-ciencias-economicas-ccc",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-ciencias-economicas-ccc",
+      "ms": 1541
+    },
+    {
+      "path": "/carreras/profesorado-en-danza-contemporanea",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-danza-contemporanea",
+      "ms": 3761
+    },
+    {
+      "path": "/carreras/profesorado-en-geografia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-geografia",
+      "ms": 3369
+    },
+    {
+      "path": "/carreras/profesorado-en-historia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-historia",
+      "ms": 3759
+    },
+    {
+      "path": "/carreras/profesorado-en-matematica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-matematica",
+      "ms": 3790
+    },
+    {
+      "path": "/carreras/profesorado-en-musica-orientacion-direccion-coral",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-musica-orientacion-direccion-coral",
+      "ms": 1284
+    },
+    {
+      "path": "/carreras/profesorado-en-musica-orientacion-educacion-musical",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-musica-orientacion-educacion-musical",
+      "ms": 1642
+    },
+    {
+      "path": "/carreras/profesorado-en-musica-orientacion-instrumento",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-musica-orientacion-instrumento",
+      "ms": 1613
+    },
+    {
+      "path": "/carreras/profesorado-en-quimica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-en-quimica",
+      "ms": 1560
+    },
+    {
+      "path": "/carreras/profesorado-universitario-en-teatro",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-universitario-en-teatro",
+      "ms": 1599
+    },
+    {
+      "path": "/carreras/profesorado-licenciatura-en-ciencias-de-la-educacion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-licenciatura-en-ciencias-de-la-educacion",
+      "ms": 1558
+    },
+    {
+      "path": "/carreras/profesorado-licenciatura-en-educacion-fisica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-licenciatura-en-educacion-fisica",
+      "ms": 1525
+    },
+    {
+      "path": "/carreras/profesorado-licenciatura-en-filosofia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-licenciatura-en-filosofia",
+      "ms": 1643
+    },
+    {
+      "path": "/carreras/profesorado-licenciatura-en-frances",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-licenciatura-en-frances",
+      "ms": 1973
+    },
+    {
+      "path": "/carreras/profesorado-licenciatura-en-ingles",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-licenciatura-en-ingles",
+      "ms": 1594
+    },
+    {
+      "path": "/carreras/profesorado-licenciatura-en-letras",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/profesorado-licenciatura-en-letras",
+      "ms": 1689
+    },
+    {
+      "path": "/carreras/programador-universitario",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/programador-universitario",
+      "ms": 1719
+    },
+    {
+      "path": "/carreras/psicologia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/psicologia",
+      "ms": 1296
+    },
+    {
+      "path": "/carreras/tecnicatura-en-asistencia-dental",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-en-asistencia-dental",
+      "ms": 1559
+    },
+    {
+      "path": "/carreras/tecnicatura-en-estadisticas-de-salud",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-en-estadisticas-de-salud",
+      "ms": 1402
+    },
+    {
+      "path": "/carreras/tecnicatura-en-gestion-universitaria",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-en-gestion-universitaria",
+      "ms": 1150
+    },
+    {
+      "path": "/carreras/tecnicatura-en-iluminacion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-en-iluminacion",
+      "ms": 1097
+    },
+    {
+      "path": "/carreras/tecnicatura-en-seguridad-y-proteccion-ciudadana",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-en-seguridad-y-proteccion-ciudadana",
+      "ms": 1064
+    },
+    {
+      "path": "/carreras/tecnicatura-laboratorista-universitaria-en-salud",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-laboratorista-universitaria-en-salud",
+      "ms": 1169
+    },
+    {
+      "path": "/carreras/tecnicatura-superior-controles-automaticos-industriales",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-superior-controles-automaticos-industriales",
+      "ms": 981
+    },
+    {
+      "path": "/carreras/tecnicatura-superior-en-diseno-industrial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-superior-en-diseno-industrial",
+      "ms": 914
+    },
+    {
+      "path": "/carreras/tecnicatura-superior-en-electricidad-industrial",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-superior-en-electricidad-industrial",
+      "ms": 818
+    },
+    {
+      "path": "/carreras/tecnicatura-univ-en-documentacion-y-museologia-arqueologica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-univ-en-documentacion-y-museologia-arqueologica",
+      "ms": 749
+    },
+    {
+      "path": "/carreras/tecnicatura-univ-en-instrumentos-de-cuerdas-pulsadas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-univ-en-instrumentos-de-cuerdas-pulsadas",
+      "ms": 723
+    },
+    {
+      "path": "/carreras/tecnicatura-univ-en-tecnologia-azucarera-e-industrias-derivadas",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-univ-en-tecnologia-azucarera-e-industrias-derivadas",
+      "ms": 710
+    },
+    {
+      "path": "/carreras/tecnicatura-universitaria-en-acompanamiento-terapeutico",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-universitaria-en-acompanamiento-terapeutico",
+      "ms": 713
+    },
+    {
+      "path": "/carreras/tecnicatura-universitaria-en-actuacion-teatral",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-universitaria-en-actuacion-teatral",
+      "ms": 773
+    },
+    {
+      "path": "/carreras/tecnicatura-universitaria-en-automatizacion-y-robotica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-universitaria-en-automatizacion-y-robotica",
+      "ms": 775
+    },
+    {
+      "path": "/carreras/tecnicatura-universitaria-en-diseno-de-indumentaria-y-textil",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-universitaria-en-diseno-de-indumentaria-y-textil",
+      "ms": 773
+    },
+    {
+      "path": "/carreras/tecnicatura-universitaria-en-fisica",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-universitaria-en-fisica",
+      "ms": 743
+    },
+    {
+      "path": "/carreras/tecnicatura-universitaria-en-fisica-ambiental",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-universitaria-en-fisica-ambiental",
+      "ms": 651
+    },
+    {
+      "path": "/carreras/tecnicatura-universitaria-en-fotografia",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-universitaria-en-fotografia",
+      "ms": 654
+    },
+    {
+      "path": "/carreras/tecnicatura-universitaria-en-medios-audiovisuales",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-universitaria-en-medios-audiovisuales",
+      "ms": 666
+    },
+    {
+      "path": "/carreras/tecnicatura-universitaria-en-protesis-dental",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-universitaria-en-protesis-dental",
+      "ms": 692
+    },
+    {
+      "path": "/carreras/tecnicatura-universitaria-en-sonorizacion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-universitaria-en-sonorizacion",
+      "ms": 532
+    },
+    {
+      "path": "/carreras/tecnicatura-universitario-en-comunicacion",
+      "status": 200,
+      "canonical": "https://guiaeducativatuc.com.ar/carreras/tecnicatura-universitario-en-comunicacion",
+      "ms": 515
+    }
+  ],
+  "failures": [],
+  "robots": "User-Agent: *\nAllow: /\nDisallow: /admin$\nDisallow: /admin/\n\nSitemap: https://guiaeducativatuc.com.ar/sitemap.xml\n"
+}

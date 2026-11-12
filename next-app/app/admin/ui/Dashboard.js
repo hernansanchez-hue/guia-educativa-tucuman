@@ -1,0 +1,12 @@
+import Link from 'next/link';
+import Icon from './Icon';
+import s from '../workspace.module.css';
+
+export default function Dashboard({metrics,activity,actor,cities=[]}){
+ const actions=[['Editar Home','/admin/home','grid'],['Editar una ciudad','/admin/ciudades','city'],['Agregar institución','/admin/instituciones/nuevo','building'],['Agregar carrera','/admin/carreras/nuevo','book'],['Crear evento','/admin/eventos/nuevo','clock'],['Subir imagen','/admin/multimedia?subir=1','plus'],['Ver sitio público','/','eye']];
+ return <><div className={s.pageHeading}><div><span className={s.eyebrow}>Hola, {actor.displayName}</span><h1>¿Qué querés hacer?</h1></div></div>
+ <section className={s.taskGrid} aria-label='Acciones de trabajo'>{actions.map(([label,href,icon])=><Link key={href} href={href} className={s.taskCard} {...(href==='/'?{target:'_blank',rel:'noopener noreferrer'}:{})}><Icon name={icon}/><strong>{label}</strong><Icon name='arrow' size={18}/></Link>)}</section>
+ <section className={s.workSection}><h2>Accesos rápidos</h2><div className={s.cityGrid}>{(cities.length?cities:[{name:'Concepción'},{name:'Monteros'},{name:'Aguilares'}]).map(city=><article key={city.name} className={s.card}><Icon name='city' size={28}/><h3>{city.name}</h3><Link className={s.secondary} href={city.id?`/admin/ciudades/${city.id}?tab=Slider%20principal`:`/admin/ciudades?q=${encodeURIComponent(city.name)}`}>Editar página <Icon name='arrow' size={16}/></Link></article>)}</div></section>
+ <section className={`${s.card} ${s.workSection}`}><h2>Cambios recientes</h2>{activity.length?activity.map(a=><div key={a.id} className={s.activity}><span><Icon name='clock'/></span><div><strong>{a.label}</strong><p>{({IMPORT:'Contenido incorporado',UPDATE_DRAFT:'Borrador guardado',PUBLISH:'Cambios publicados',CREATE:'Nuevo contenido',RESTORE:'Versión recuperada',ARCHIVE:'Contenido archivado',LOGIN:'Inicio de sesión',LOGOUT:'Cierre de sesión'})[a.action]||'Actualización del equipo'}</p></div><time>{new Date(a.created_at).toLocaleString('es-AR',{dateStyle:'short',timeStyle:'short'})}</time></div>):<p className={s.muted}>Todavía no hay cambios recientes.</p>}<Link className={s.textButton} href='/admin/historial'>Ver historial completo →</Link></section>
+ <details className={s.workSection}><summary>Resumen del contenido</summary><section className={s.metrics}>{metrics.map(m=><article key={m.label}><p>{m.label}</p><strong>{m.value}</strong></article>)}</section></details></>;
+}

@@ -20,7 +20,8 @@ const {imageConfigDefault}=require('next/dist/shared/lib/image-config');
 // Isolated React rendering does not run Next's configuration loader.
 const render=child=>renderToStaticMarkup(createElement(ImageConfigContext.Provider,{value:{...imageConfigDefault,...nextConfig.images}},child));
 function component(source){
- const built=buildSync({stdin:{contents:source,resolveDir:fileURLToPath(new URL('..',import.meta.url)),loader:'jsx'},bundle:true,write:false,platform:'node',format:'cjs',jsx:'automatic',loader:{'.js':'jsx'},external:['react','react-dom','next/*']});
+ // The Node-only SSR harness verifies markup; Next.js handles the real stylesheet.
+ const built=buildSync({stdin:{contents:source,resolveDir:fileURLToPath(new URL('..',import.meta.url)),loader:'jsx'},bundle:true,write:false,platform:'node',format:'cjs',jsx:'automatic',loader:{'.js':'jsx','.css':'empty'},external:['react','react-dom','next/*']});
  const compiled={exports:{}};
  new Function('require','module','exports',built.outputFiles[0].text)(require,compiled,compiled.exports);
  return compiled.exports;
@@ -67,7 +68,7 @@ test('F/G: all city institutions remain present, with no general career grid',()
  for(const city of cities){const html=sections(city);assert.ok(html.includes('id="allInstitutionsTitle"'));assert.ok(!html.includes('city-all-careers'));assert.ok(!html.includes('cityAllCareersTitle'));for(const institution of city.institutions)assert.ok(html.includes(`Ver institución ${institution.name.replaceAll('&','&amp;').replaceAll('"','&quot;')}`));}
 });
 test('H: institution → career relationships and all catalog totals survive the template correction',async()=>{
- assert.deepEqual({cities:catalog.cities.length,brands:catalog.brands.length,campuses:catalog.institutions.length,careerMasters:catalog.careers.length,territorialOffers:catalog.offerings.length,generalOffers:catalog.brands.reduce((n,b)=>n+(b.generalOffers?.length||0),0)},{cities:27,brands:93,campuses:125,careerMasters:195,territorialOffers:198,generalOffers:128});
+ assert.deepEqual({cities:catalog.cities.length,brands:catalog.brands.length,campuses:catalog.institutions.length,careerMasters:catalog.careers.length,territorialOffers:catalog.offerings.length,generalOffers:catalog.brands.reduce((n,b)=>n+(b.generalOffers?.length||0),0)},{cities:27,brands:93,campuses:125,careerMasters:197,territorialOffers:200,generalOffers:128});
  for(const slug of ['ies-concepcion','instituto-santa-barbara'])assert.ok(institutionPageFromCatalog(catalog,'concepcion',slug).institution.careers.length>0);
 });
 
@@ -88,4 +89,14 @@ test('I: Expo and closing blocks are shared; explicit visibility and custom bann
  assert.equal(resolveCityBanner(city).title,city.heroTitle);assert.equal(resolveCityBanner(city).image,city.heroImage);
  assert.equal(showCityOrientation({...city,orientationVisible:false},orientationContent),false);
  assert.equal(showCityOrientation(city,{...orientationContent,visible:false}),false);
+});
+
+test('J: every city renders exactly one real agenda CTA after orientation/expo and before institutions',()=>{
+ for(const city of cities){
+  const html=sections(city);
+  assert.equal((html.match(/id="cityEventsTitle"/g)||[]).length,1,city.slug);
+  assert.ok(html.includes('href="/eventos">Explorar eventos'),city.slug);
+  assert.ok(html.indexOf('id="cityExpoTitle"')<html.indexOf('id="cityEventsTitle"'),city.slug);
+  assert.ok(html.indexOf('id="cityEventsTitle"')<html.indexOf('id="instituciones"'),city.slug);
+ }
 });

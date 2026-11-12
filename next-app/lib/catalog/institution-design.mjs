@@ -9,7 +9,7 @@ export function institutionDesignPage(catalog,page){
  const academic=offers.map(o=>{
   const master=catalog.careers.find(c=>c.id===o.careerId);
   const previous=summaries.find(c=>canonical(c.id)===o.careerId)||{};
-  return {...previous,id:master.id,slug:master.slug,name:previous.name||master.name,description:previous.description||master.description,
+  return {...previous,id:master.id,slug:master.slug,name:o.controlCareer?.name||previous.name||master.name,description:o.controlCareer?.description??(previous.description||master.description),
    offeringId:o.id,duration:o.duration,modality:o.modality,image:o.image,badge:o.badge,
    ...(o.featured!==undefined?{featured:o.featured}:{}),routePath:`/${institution.citySlug}/${institution.slug}/carreras/${master.slug}`};
  });

@@ -16,7 +16,7 @@ import {
 
 export const STATIC_PUBLIC_PATHS = Object.freeze([
   "/",
-  "/ciudades",
+
   "/cursos-docentes",
   "/nosotros",
   "/contacto",

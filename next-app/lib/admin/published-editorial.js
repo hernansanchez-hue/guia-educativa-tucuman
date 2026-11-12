@@ -9,16 +9,17 @@ import {notFound,permanentRedirect,redirect} from 'next/navigation';
 import {createPublicRoutePaths} from '../public-catalog/public-routes-catalog';
 import {getExtendedPublishedEntries,getExtendedCatalog} from './published-extended';
 import {extendedTrainingPage} from './extended-editorial.mjs';
-import {getVersionedPublicCatalogEntries} from '../catalog/versioned-public-catalog.mjs';
+import {controlPublishedEntries} from '../control/published';
 import {directoryCareers,directoryInstitutions} from '../catalog/directory-projections.mjs';
+import {isConfirmedEvent} from '../events/public-events.mjs';
 
 export async function getPublishedEditorialEntries() {
-  return getVersionedPublicCatalogEntries();
+  return controlPublishedEntries();
 }
 function publishedCatalog(entries){return editorialCatalog(entries,{includeLegacy:false});}
 export async function getPublishedCatalog(options) { return publishedCatalog(await getPublishedEditorialEntries(options)); }
 export async function getCitiesCatalog(){const catalog=await getPublishedCatalog();return catalog.cities.map(c=>({id:c.id,slug:c.slug,name:c.name,title:c.title,image:c.image,institutionCount:catalog.institutions.filter(i=>i.citySlug===c.slug).length,careerCount:catalog.offerings.filter(o=>o.citySlug===c.slug).length}));}
-export async function getIndexablePublicRoutePaths(){const [paths,catalog,extended,home]=await Promise.all([getPublicRoutePaths(),getPublishedCatalog(),getExtendedCatalog(['events','services','trainings','about']),getPublishedHomeEntry()]);return indexablePublicPaths(paths,catalog,extended,home.payload.seo);}
+export async function getIndexablePublicRoutePaths(){const [paths,catalog,extended,home]=await Promise.all([getPublicRoutePaths(),getPublishedCatalog(),getExtendedCatalog(['events','services','trainings','about']),getPublishedHomeEntry()]);const eventPaths=new Set(extended.events.filter(isConfirmedEvent).map(event=>`/eventos/${event.slug}`));return indexablePublicPaths(paths,catalog,extended,home.payload.seo).filter(path=>path!=='/ciudades'&&(!path.startsWith('/eventos/')||eventPaths.has(path)));}
 export async function getPublicRoutePaths(){const [c,ext]=await Promise.all([getPublishedCatalog(),getExtendedCatalog(['events','services','trainings'])]);return [...new Set([...createPublicRoutePaths({cities:c.cities,institutions:c.institutions.map(i=>({...i,city_id:i.cityId})),careers:c.careers,academicOfferings:c.offerings.map(o=>({...o,institution_id:o.institutionId,career_master_id:o.careerId})),trainingPrograms:ext.trainings,trainingOfferings:ext.trainingOfferings.map(o=>({...o,institution_id:o.institutionId,training_program_id:o.trainingProgramId}))}),'/eventos','/servicios',...ext.events.map(e=>`/eventos/${e.slug}`),...ext.services.map(s=>`/servicios/${s.slug}`),...directoryCareers(c).map(master=>`/carreras/${master.slug}`)])];}
 export async function getCityPageCatalog(slug) {const [entries,ext]=await Promise.all([getPublishedEditorialEntries(),getExtendedPublishedEntries(['trainings'])]);return cityPageFromCatalog(publishedCatalog([...entries,...ext]),slug);}
 export async function getInstitutionPageCatalog(city,inst) {const [entries,ext]=await Promise.all([getPublishedEditorialEntries(),getExtendedPublishedEntries(['trainings'])]);const catalog=publishedCatalog([...entries,...ext]);return institutionDesignPage(catalog,institutionPageFromCatalog(catalog,city,inst));}

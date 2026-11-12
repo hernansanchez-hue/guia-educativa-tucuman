@@ -1,6 +1,6 @@
 import CityPageClient from "./CityPageClient";
 import { getCityEntryCatalog } from "../../lib/public-catalog/city-entry.mjs";
-import { getCitiesCatalog, getCityPageCatalog, editorialMetadata, resolveEditorialMissing } from "../../lib/admin/published-editorial";
+import { getPublishedEditorialEntries,getCitiesCatalog, getCityPageCatalog, editorialMetadata, resolveEditorialMissing } from "../../lib/admin/published-editorial";
 import "./ciudad.css";
 import "./approved-city.css";
 
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
 export default async function CityPage({ params }) {
   const { ciudad } = await params;
   const sourceCity = await getCityPageCatalog(ciudad);
-  const city = sourceCity ? { ...sourceCity, entryCities: getCityEntryCatalog() } : null;
+  const city = sourceCity ? { ...sourceCity, entryCities: getCityEntryCatalog(await getPublishedEditorialEntries()) } : null;
 
   if (!city) await resolveEditorialMissing(`/${ciudad}`);
 

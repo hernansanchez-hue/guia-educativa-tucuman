@@ -1,0 +1,3396 @@
+{
+  "createdAt": "2026-10-14T23:30:11.154Z",
+  "entries": [
+    {
+      "key": "concepcion",
+      "payload": {
+        "data": {
+          "id": "concepcion",
+          "name": "Concepción",
+          "slug": "concepcion",
+          "title": "Instituciones de Concepción",
+          "institutionIds": [
+            "universidad-siglo-21-concepcion",
+            "instituto-santa-barbara-concepcion",
+            "ies-concepcion-concepcion"
+          ],
+          "canonicalDataNotice": "inconsistencia canónica conservada temporalmente para mantener fidelidad visual",
+          "featuredInstitutionIds": [
+            "universidad-siglo-21-concepcion",
+            "instituto-santa-barbara-concepcion",
+            "instituto-del-sur-monteros"
+          ]
+        },
+        "_kind": "city"
+      },
+      "moduleId": "cities",
+      "visibility": "published"
+    },
+    {
+      "key": "monteros",
+      "payload": {
+        "data": {
+          "id": "monteros",
+          "name": "Monteros",
+          "slug": "monteros",
+          "title": "Instituciones de Monteros",
+          "institutionIds": [
+            "universidad-siglo-21-monteros",
+            "instituto-del-sur-monteros",
+            "centro-de-formacion-tucuman-monteros",
+            "instituto-san-miguel-monteros"
+          ],
+          "featuredInstitutionIds": [
+            "universidad-siglo-21-monteros",
+            "instituto-santa-barbara-concepcion",
+            "instituto-del-sur-monteros"
+          ]
+        },
+        "_kind": "city"
+      },
+      "moduleId": "cities",
+      "visibility": "published"
+    },
+    {
+      "key": "aguilares",
+      "payload": {
+        "data": {
+          "id": "aguilares",
+          "name": "Aguilares",
+          "slug": "aguilares",
+          "title": "Instituciones de Aguilares",
+          "institutionIds": [
+            "universidad-siglo-21-aguilares",
+            "instituto-santa-barbara-aguilares",
+            "academia-profesional-norte-aguilares"
+          ],
+          "canonicalDataNotice": "slider/fallback canónico preservado: incluye Instituto del Sur de Monteros",
+          "featuredInstitutionIds": [
+            "universidad-siglo-21-aguilares",
+            "instituto-santa-barbara-aguilares",
+            "instituto-del-sur-monteros"
+          ]
+        },
+        "_kind": "city"
+      },
+      "moduleId": "cities",
+      "visibility": "published"
+    },
+    {
+      "key": "marca/ies-concepcion",
+      "payload": {
+        "data": {
+          "id": "ies-concepcion",
+          "logo": "IES",
+          "name": "IES Concepción",
+          "slug": "ies-concepcion",
+          "slogan": "Educación pública, gratuita y de calidad para todos.",
+          "description": "Educación pública, gratuita y de calidad para todos."
+        },
+        "_kind": "brand"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "sede/instituto-santa-barbara-concepcion",
+      "payload": {
+        "data": {
+          "id": "instituto-santa-barbara-concepcion",
+          "plan": "Premium",
+          "slug": "instituto-santa-barbara",
+          "type": "Terciario Privado",
+          "image": "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80",
+          "media": "Video institucional",
+          "cities": [
+            "Concepción",
+            "Aguilares"
+          ],
+          "cityId": "concepcion",
+          "address": "Belgrano 810, Aguilares",
+          "brandId": "instituto-santa-barbara",
+          "gallery": [
+            "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80"
+          ],
+          "citySlug": "concepcion",
+          "whatsapp": "3865 55 1188",
+          "presentation": {
+            "brand": {
+              "id": "instituto-santa-barbara",
+              "logo": "ISB",
+              "name": "Instituto Santa Bárbara",
+              "slug": "instituto-santa-barbara",
+              "slogan": "Formación técnica para integrarte rápido al mundo laboral.",
+              "description": "Formación terciaria con valores, prácticas y salida laboral."
+            },
+            "careers": {
+              "diagnostico-por-imagenes": {
+                "name": "Diagnóstico por Imágenes",
+                "description": "Formación en tecnología aplicada a estudios médicos."
+              },
+              "instrumentacion-quirurgica": {
+                "name": "Instrumentación Quirúrgica",
+                "description": "Capacitación para asistir procedimientos en ámbitos de salud."
+              },
+              "laboratorio-de-analisis-clinicos": {
+                "name": "Laboratorio de Análisis Clínicos",
+                "description": "Técnicas de laboratorio, muestras y protocolos de calidad."
+              }
+            },
+            "offerings": {
+              "instituto-santa-barbara-concepcion-diagnostico-por-imagenes": {
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "instituto-santa-barbara-concepcion-instrumentacion-quirurgica": {
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "instituto-santa-barbara-concepcion-laboratorio-de-analisis-clinicos": {
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              }
+            },
+            "cityCareers": [
+              {
+                "id": "instrumentacion-quirurgica",
+                "name": "Instrumentación Quirúrgica",
+                "slug": "instrumentacion-quirurgica",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Capacitación para asistir procedimientos en ámbitos de salud."
+              },
+              {
+                "id": "laboratorio-de-analisis-clinicos",
+                "name": "Laboratorio de Análisis Clínicos",
+                "slug": "laboratorio-de-analisis-clinicos",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Técnicas de laboratorio, muestras y protocolos de calidad."
+              },
+              {
+                "id": "diagnostico-por-imagenes",
+                "name": "Diagnóstico por Imágenes",
+                "slug": "diagnostico-por-imagenes",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Formación en tecnología aplicada a estudios médicos."
+              }
+            ],
+            "institutionCareers": [
+              {
+                "id": "instrumentacion-quirurgica",
+                "name": "Instrumentación Quirúrgica",
+                "slug": "instrumentacion-quirurgica",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/concepcion/instituto-santa-barbara/carreras/instrumentacion-quirurgica",
+                "description": "Capacitación para asistir procedimientos en ámbitos de salud.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "laboratorio-de-analisis-clinicos",
+                "name": "Laboratorio de Análisis Clínicos",
+                "slug": "laboratorio-de-analisis-clinicos",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/concepcion/instituto-santa-barbara/carreras/laboratorio-de-analisis-clinicos",
+                "description": "Técnicas de laboratorio, muestras y protocolos de calidad.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "diagnostico-por-imagenes",
+                "name": "Diagnóstico por Imágenes",
+                "slug": "diagnostico-por-imagenes",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/concepcion/instituto-santa-barbara/carreras/diagnostico-por-imagenes",
+                "description": "Formación en tecnología aplicada a estudios médicos.",
+                "nationalValidity": "Sí"
+              }
+            ]
+          },
+          "canonicalDataNotice": "inconsistencia canónica conservada temporalmente para mantener fidelidad con la demo"
+        },
+        "_kind": "institution"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "sede/universidad-siglo-21-aguilares",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-aguilares",
+          "plan": "Premium",
+          "slug": "universidad-siglo-21",
+          "type": "Privada",
+          "image": "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=80",
+          "media": "Video institucional",
+          "cities": [
+            "Concepción",
+            "Monteros",
+            "Aguilares"
+          ],
+          "cityId": "aguilares",
+          "address": "San Martín 124, Concepción",
+          "brandId": "universidad-siglo-21",
+          "gallery": [
+            "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80"
+          ],
+          "citySlug": "aguilares",
+          "whatsapp": "3865 41 2020",
+          "presentation": {
+            "brand": {
+              "id": "universidad-siglo-21",
+              "logo": "US21",
+              "name": "Universidad Siglo 21",
+              "slug": "universidad-siglo-21",
+              "slogan": "Estudiá con flexibilidad y proyectá tu carrera desde Tucumán.",
+              "description": "Educación innovadora, profesional y conectada con el mundo."
+            },
+            "careers": {
+              "abogacia": {
+                "name": "Abogacía",
+                "description": "Formación jurídica con modalidad flexible y acompañamiento tutorial."
+              },
+              "contador-publico": {
+                "name": "Contador Público",
+                "description": "Herramientas contables, impositivas y financieras para empresas."
+              },
+              "higiene-y-seguridad": {
+                "name": "Higiene y Seguridad",
+                "description": "Prevención, normativa y seguridad aplicada al trabajo."
+              },
+              "lic-en-administracion": {
+                "name": "Lic. en Administración",
+                "description": "Gestión, liderazgo y estrategia para organizaciones actuales."
+              }
+            },
+            "offerings": {
+              "universidad-siglo-21-aguilares-abogacia": {
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "universidad-siglo-21-aguilares-contador-publico": {
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "universidad-siglo-21-aguilares-higiene-y-seguridad": {
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "universidad-siglo-21-aguilares-lic-en-administracion": {
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              }
+            },
+            "cityCareers": [
+              {
+                "id": "abogacia",
+                "name": "Abogacía",
+                "slug": "abogacia",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Formación jurídica con modalidad flexible y acompañamiento tutorial."
+              },
+              {
+                "id": "contador-publico",
+                "name": "Contador Público",
+                "slug": "contador-publico",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Herramientas contables, impositivas y financieras para empresas."
+              },
+              {
+                "id": "licenciatura-en-administracion",
+                "name": "Lic. en Administración",
+                "slug": "licenciatura-en-administracion",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Gestión, liderazgo y estrategia para organizaciones actuales."
+              },
+              {
+                "id": "higiene-y-seguridad",
+                "name": "Higiene y Seguridad",
+                "slug": "higiene-y-seguridad",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Prevención, normativa y seguridad aplicada al trabajo."
+              }
+            ],
+            "institutionCareers": [
+              {
+                "id": "abogacia",
+                "name": "Abogacía",
+                "slug": "abogacia",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/aguilares/universidad-siglo-21/carreras/abogacia",
+                "description": "Formación jurídica con modalidad flexible y acompañamiento tutorial.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "contador-publico",
+                "name": "Contador Público",
+                "slug": "contador-publico",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/aguilares/universidad-siglo-21/carreras/contador-publico",
+                "description": "Herramientas contables, impositivas y financieras para empresas.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "licenciatura-en-administracion",
+                "name": "Lic. en Administración",
+                "slug": "licenciatura-en-administracion",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/aguilares/universidad-siglo-21/carreras/lic-en-administracion",
+                "description": "Gestión, liderazgo y estrategia para organizaciones actuales.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "higiene-y-seguridad",
+                "name": "Higiene y Seguridad",
+                "slug": "higiene-y-seguridad",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/aguilares/universidad-siglo-21/carreras/higiene-y-seguridad",
+                "description": "Prevención, normativa y seguridad aplicada al trabajo.",
+                "nationalValidity": "Sí"
+              }
+            ]
+          }
+        },
+        "_kind": "institution"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/ies-concepcion-concepcion-tecnicatura-administracion",
+      "payload": {
+        "data": {
+          "id": "ies-concepcion-concepcion-tecnicatura-administracion",
+          "badge": "Nueva carrera",
+          "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+          "order": 2,
+          "degree": "Tecnicatura en Administración",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "tecnicatura-administracion",
+          "citySlug": "concepcion",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "ies-concepcion-concepcion",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "sede/academia-profesional-norte-aguilares",
+      "payload": {
+        "data": {
+          "id": "academia-profesional-norte-aguilares",
+          "plan": "Básico",
+          "slug": "academia-profesional-norte",
+          "type": "Academia",
+          "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+          "media": "Video de alumnos",
+          "cities": [
+            "Aguilares"
+          ],
+          "cityId": "aguilares",
+          "address": "Moreno 575, Aguilares",
+          "brandId": "academia-profesional-norte",
+          "gallery": [
+            "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80"
+          ],
+          "citySlug": "aguilares",
+          "whatsapp": "3865 60 7711",
+          "presentation": {
+            "brand": {
+              "id": "academia-profesional-norte",
+              "logo": "APN",
+              "name": "Academia Profesional Norte",
+              "slug": "academia-profesional-norte",
+              "slogan": "Capacitaciones digitales para empezar a trabajar.",
+              "description": "Cursos prácticos de diseño, redes sociales, ventas y herramientas digitales."
+            },
+            "careers": {
+              "diseno-grafico": {
+                "name": "Diseño Gráfico",
+                "description": "Piezas visuales, identidad y herramientas de diseño."
+              },
+              "ventas-digitales": {
+                "name": "Ventas Digitales",
+                "description": "Embudo comercial, atención online y cierre de ventas."
+              },
+              "community-manager": {
+                "name": "Community Manager",
+                "description": "Planificación de contenido, redes y métricas."
+              }
+            },
+            "offerings": {
+              "academia-profesional-norte-aguilares-diseno-grafico": {
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "academia-profesional-norte-aguilares-ventas-digitales": {
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "academia-profesional-norte-aguilares-community-manager": {
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              }
+            },
+            "cityCareers": [
+              {
+                "id": "diseno-grafico",
+                "name": "Diseño Gráfico",
+                "slug": "diseno-grafico",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Piezas visuales, identidad y herramientas de diseño."
+              },
+              {
+                "id": "community-manager",
+                "name": "Community Manager",
+                "slug": "community-manager",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Planificación de contenido, redes y métricas."
+              },
+              {
+                "id": "ventas-digitales",
+                "name": "Ventas Digitales",
+                "slug": "ventas-digitales",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Embudo comercial, atención online y cierre de ventas."
+              }
+            ],
+            "institutionCareers": [
+              {
+                "id": "diseno-grafico",
+                "name": "Diseño Gráfico",
+                "slug": "diseno-grafico",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/aguilares/academia-profesional-norte/carreras/diseno-grafico",
+                "description": "Piezas visuales, identidad y herramientas de diseño.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "community-manager",
+                "name": "Community Manager",
+                "slug": "community-manager",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/aguilares/academia-profesional-norte/carreras/community-manager",
+                "description": "Planificación de contenido, redes y métricas.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "ventas-digitales",
+                "name": "Ventas Digitales",
+                "slug": "ventas-digitales",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/aguilares/academia-profesional-norte/carreras/ventas-digitales",
+                "description": "Embudo comercial, atención online y cierre de ventas.",
+                "nationalValidity": "Sí"
+              }
+            ]
+          }
+        },
+        "_kind": "institution"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "marca/universidad-siglo-21",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21",
+          "logo": "US21",
+          "name": "Universidad Siglo 21",
+          "slug": "universidad-siglo-21",
+          "slogan": "Estudiá con flexibilidad y proyectá tu carrera desde Tucumán.",
+          "description": "Educación innovadora, profesional y conectada con el mundo."
+        },
+        "_kind": "brand"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "marca/instituto-santa-barbara",
+      "payload": {
+        "data": {
+          "id": "instituto-santa-barbara",
+          "logo": "ISB",
+          "name": "Instituto Santa Bárbara",
+          "slug": "instituto-santa-barbara",
+          "slogan": "Formación técnica para integrarte rápido al mundo laboral.",
+          "description": "Formación terciaria con valores, prácticas y salida laboral."
+        },
+        "_kind": "brand"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "marca/academia-profesional-norte",
+      "payload": {
+        "data": {
+          "id": "academia-profesional-norte",
+          "logo": "APN",
+          "name": "Academia Profesional Norte",
+          "slug": "academia-profesional-norte",
+          "slogan": "Capacitaciones digitales para empezar a trabajar.",
+          "description": "Cursos prácticos de diseño, redes sociales, ventas y herramientas digitales."
+        },
+        "_kind": "brand"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "marca/instituto-del-sur",
+      "payload": {
+        "data": {
+          "id": "instituto-del-sur",
+          "logo": "IDS",
+          "name": "Instituto del Sur",
+          "slug": "instituto-del-sur",
+          "slogan": "Tecnicaturas orientadas a una salida laboral concreta.",
+          "description": "Formación técnica y profesional en áreas comerciales, administrativas y digitales."
+        },
+        "_kind": "brand"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "marca/centro-de-formacion-tucuman",
+      "payload": {
+        "data": {
+          "id": "centro-de-formacion-tucuman",
+          "logo": "CFT",
+          "name": "Centro de Formación Tucumán",
+          "slug": "centro-de-formacion-tucuman",
+          "slogan": "Cursos cortos para fortalecer tu perfil laboral.",
+          "description": "Capacitaciones prácticas para jóvenes y adultos que buscan ampliar oportunidades."
+        },
+        "_kind": "brand"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "marca/instituto-san-miguel",
+      "payload": {
+        "data": {
+          "id": "instituto-san-miguel",
+          "logo": "ISM",
+          "name": "Instituto San Miguel",
+          "slug": "instituto-san-miguel",
+          "slogan": "Educación cercana para acompañar vocaciones de servicio.",
+          "description": "Propuestas presenciales y a distancia vinculadas a educación, salud y comunidad."
+        },
+        "_kind": "brand"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "sede/universidad-siglo-21-concepcion",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-concepcion",
+          "plan": "Premium",
+          "slug": "universidad-siglo-21",
+          "type": "Privada",
+          "image": "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=80",
+          "media": "Video institucional",
+          "cities": [
+            "Concepción",
+            "Monteros",
+            "Aguilares"
+          ],
+          "cityId": "concepcion",
+          "address": "San Martín 124, Concepción",
+          "brandId": "universidad-siglo-21",
+          "gallery": [
+            "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80"
+          ],
+          "citySlug": "concepcion",
+          "whatsapp": "3865 41 2020",
+          "presentation": {
+            "brand": {
+              "id": "universidad-siglo-21",
+              "logo": "US21",
+              "name": "Universidad Siglo 21",
+              "slug": "universidad-siglo-21",
+              "slogan": "Estudiá con flexibilidad y proyectá tu carrera desde Tucumán.",
+              "description": "Educación innovadora, profesional y conectada con el mundo."
+            },
+            "careers": {
+              "abogacia": {
+                "name": "Abogacía",
+                "description": "Formación jurídica con modalidad flexible y acompañamiento tutorial."
+              },
+              "contador-publico": {
+                "name": "Contador Público",
+                "description": "Herramientas contables, impositivas y financieras para empresas."
+              },
+              "higiene-y-seguridad": {
+                "name": "Higiene y Seguridad",
+                "description": "Prevención, normativa y seguridad aplicada al trabajo."
+              },
+              "lic-en-administracion": {
+                "name": "Lic. en Administración",
+                "description": "Gestión, liderazgo y estrategia para organizaciones actuales."
+              }
+            },
+            "offerings": {
+              "universidad-siglo-21-concepcion-abogacia": {
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "universidad-siglo-21-concepcion-contador-publico": {
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "universidad-siglo-21-concepcion-higiene-y-seguridad": {
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "universidad-siglo-21-concepcion-lic-en-administracion": {
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              }
+            },
+            "cityCareers": [
+              {
+                "id": "abogacia",
+                "name": "Abogacía",
+                "slug": "abogacia",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Formación jurídica con modalidad flexible y acompañamiento tutorial."
+              },
+              {
+                "id": "contador-publico",
+                "name": "Contador Público",
+                "slug": "contador-publico",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Herramientas contables, impositivas y financieras para empresas."
+              },
+              {
+                "id": "licenciatura-en-administracion",
+                "name": "Lic. en Administración",
+                "slug": "licenciatura-en-administracion",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Gestión, liderazgo y estrategia para organizaciones actuales."
+              },
+              {
+                "id": "higiene-y-seguridad",
+                "name": "Higiene y Seguridad",
+                "slug": "higiene-y-seguridad",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Prevención, normativa y seguridad aplicada al trabajo."
+              }
+            ],
+            "institutionCareers": [
+              {
+                "id": "abogacia",
+                "name": "Abogacía",
+                "slug": "abogacia",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/concepcion/universidad-siglo-21/carreras/abogacia",
+                "description": "Formación jurídica con modalidad flexible y acompañamiento tutorial.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "contador-publico",
+                "name": "Contador Público",
+                "slug": "contador-publico",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/concepcion/universidad-siglo-21/carreras/contador-publico",
+                "description": "Herramientas contables, impositivas y financieras para empresas.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "licenciatura-en-administracion",
+                "name": "Lic. en Administración",
+                "slug": "licenciatura-en-administracion",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/concepcion/universidad-siglo-21/carreras/lic-en-administracion",
+                "description": "Gestión, liderazgo y estrategia para organizaciones actuales.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "higiene-y-seguridad",
+                "name": "Higiene y Seguridad",
+                "slug": "higiene-y-seguridad",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/concepcion/universidad-siglo-21/carreras/higiene-y-seguridad",
+                "description": "Prevención, normativa y seguridad aplicada al trabajo.",
+                "nationalValidity": "Sí"
+              }
+            ]
+          }
+        },
+        "_kind": "institution"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/profesorado-ingles",
+      "payload": {
+        "data": {
+          "id": "profesorado-ingles",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Profesorado de Inglés",
+          "slug": "profesorado-ingles",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Formación pedagógica y práctica del idioma.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/tecnicatura-administracion",
+      "payload": {
+        "data": {
+          "id": "tecnicatura-administracion",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Tecnicatura en Administración",
+          "slug": "tecnicatura-administracion",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Gestión administrativa para organizaciones públicas y privadas.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/profesorado-educacion-primaria",
+      "payload": {
+        "data": {
+          "id": "profesorado-educacion-primaria",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Profesorado de Educación Primaria",
+          "slug": "profesorado-educacion-primaria",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Formación docente para nivel primario.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/diagnostico-por-imagenes",
+      "payload": {
+        "data": {
+          "id": "diagnostico-por-imagenes",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Diagnóstico por Imágenes",
+          "slug": "diagnostico-por-imagenes",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Formación en tecnología aplicada a estudios médicos.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/laboratorio-de-analisis-clinicos",
+      "payload": {
+        "data": {
+          "id": "laboratorio-de-analisis-clinicos",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Laboratorio de Análisis Clínicos",
+          "slug": "laboratorio-de-analisis-clinicos",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Técnicas de laboratorio, muestras y protocolos de calidad.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/instrumentacion-quirurgica",
+      "payload": {
+        "data": {
+          "id": "instrumentacion-quirurgica",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Instrumentación Quirúrgica",
+          "slug": "instrumentacion-quirurgica",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Capacitación para asistir procedimientos en ámbitos de salud.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "sede/universidad-siglo-21-monteros",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-monteros",
+          "plan": "Premium",
+          "slug": "universidad-siglo-21",
+          "type": "Privada",
+          "image": "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=80",
+          "media": "Video institucional",
+          "cities": [
+            "Concepción",
+            "Monteros",
+            "Aguilares"
+          ],
+          "cityId": "monteros",
+          "address": "San Martín 124, Concepción",
+          "brandId": "universidad-siglo-21",
+          "gallery": [
+            "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80"
+          ],
+          "citySlug": "monteros",
+          "whatsapp": "3865 41 2020",
+          "presentation": {
+            "brand": {
+              "id": "universidad-siglo-21",
+              "logo": "US21",
+              "name": "Universidad Siglo 21",
+              "slug": "universidad-siglo-21",
+              "slogan": "Estudiá con flexibilidad y proyectá tu carrera desde Tucumán.",
+              "description": "Educación innovadora, profesional y conectada con el mundo."
+            },
+            "careers": {
+              "abogacia": {
+                "name": "Abogacía",
+                "description": "Formación jurídica con modalidad flexible y acompañamiento tutorial."
+              },
+              "contador-publico": {
+                "name": "Contador Público",
+                "description": "Herramientas contables, impositivas y financieras para empresas."
+              },
+              "higiene-y-seguridad": {
+                "name": "Higiene y Seguridad",
+                "description": "Prevención, normativa y seguridad aplicada al trabajo."
+              },
+              "lic-en-administracion": {
+                "name": "Lic. en Administración",
+                "description": "Gestión, liderazgo y estrategia para organizaciones actuales."
+              }
+            },
+            "offerings": {
+              "universidad-siglo-21-monteros-abogacia": {
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "universidad-siglo-21-monteros-contador-publico": {
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "universidad-siglo-21-monteros-higiene-y-seguridad": {
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "universidad-siglo-21-monteros-lic-en-administracion": {
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              }
+            },
+            "cityCareers": [
+              {
+                "id": "abogacia",
+                "name": "Abogacía",
+                "slug": "abogacia",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Formación jurídica con modalidad flexible y acompañamiento tutorial."
+              },
+              {
+                "id": "contador-publico",
+                "name": "Contador Público",
+                "slug": "contador-publico",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Herramientas contables, impositivas y financieras para empresas."
+              },
+              {
+                "id": "licenciatura-en-administracion",
+                "name": "Lic. en Administración",
+                "slug": "licenciatura-en-administracion",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Gestión, liderazgo y estrategia para organizaciones actuales."
+              },
+              {
+                "id": "higiene-y-seguridad",
+                "name": "Higiene y Seguridad",
+                "slug": "higiene-y-seguridad",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Prevención, normativa y seguridad aplicada al trabajo."
+              }
+            ],
+            "institutionCareers": [
+              {
+                "id": "abogacia",
+                "name": "Abogacía",
+                "slug": "abogacia",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/monteros/universidad-siglo-21/carreras/abogacia",
+                "description": "Formación jurídica con modalidad flexible y acompañamiento tutorial.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "contador-publico",
+                "name": "Contador Público",
+                "slug": "contador-publico",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/monteros/universidad-siglo-21/carreras/contador-publico",
+                "description": "Herramientas contables, impositivas y financieras para empresas.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "licenciatura-en-administracion",
+                "name": "Lic. en Administración",
+                "slug": "licenciatura-en-administracion",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/monteros/universidad-siglo-21/carreras/lic-en-administracion",
+                "description": "Gestión, liderazgo y estrategia para organizaciones actuales.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "higiene-y-seguridad",
+                "name": "Higiene y Seguridad",
+                "slug": "higiene-y-seguridad",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/monteros/universidad-siglo-21/carreras/higiene-y-seguridad",
+                "description": "Prevención, normativa y seguridad aplicada al trabajo.",
+                "nationalValidity": "Sí"
+              }
+            ]
+          }
+        },
+        "_kind": "institution"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/abogacia",
+      "payload": {
+        "data": {
+          "id": "abogacia",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Abogacía",
+          "slug": "abogacia",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Formación jurídica con modalidad flexible y acompañamiento tutorial.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/contador-publico",
+      "payload": {
+        "data": {
+          "id": "contador-publico",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Contador Público",
+          "slug": "contador-publico",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Herramientas contables, impositivas y financieras para empresas.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "sede/instituto-santa-barbara-aguilares",
+      "payload": {
+        "data": {
+          "id": "instituto-santa-barbara-aguilares",
+          "plan": "Premium",
+          "slug": "instituto-santa-barbara",
+          "type": "Terciario Privado",
+          "image": "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80",
+          "media": "Video institucional",
+          "cities": [
+            "Concepción",
+            "Aguilares"
+          ],
+          "cityId": "aguilares",
+          "address": "Belgrano 810, Aguilares",
+          "brandId": "instituto-santa-barbara",
+          "gallery": [
+            "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80"
+          ],
+          "citySlug": "aguilares",
+          "whatsapp": "3865 55 1188",
+          "presentation": {
+            "brand": {
+              "id": "instituto-santa-barbara",
+              "logo": "ISB",
+              "name": "Instituto Santa Bárbara",
+              "slug": "instituto-santa-barbara",
+              "slogan": "Formación técnica para integrarte rápido al mundo laboral.",
+              "description": "Formación terciaria con valores, prácticas y salida laboral."
+            },
+            "careers": {
+              "diagnostico-por-imagenes": {
+                "name": "Diagnóstico por Imágenes",
+                "description": "Formación en tecnología aplicada a estudios médicos."
+              },
+              "instrumentacion-quirurgica": {
+                "name": "Instrumentación Quirúrgica",
+                "description": "Capacitación para asistir procedimientos en ámbitos de salud."
+              },
+              "laboratorio-de-analisis-clinicos": {
+                "name": "Laboratorio de Análisis Clínicos",
+                "description": "Técnicas de laboratorio, muestras y protocolos de calidad."
+              }
+            },
+            "offerings": {
+              "instituto-santa-barbara-aguilares-diagnostico-por-imagenes": {
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "instituto-santa-barbara-aguilares-instrumentacion-quirurgica": {
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "instituto-santa-barbara-aguilares-laboratorio-de-analisis-clinicos": {
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              }
+            },
+            "cityCareers": [
+              {
+                "id": "instrumentacion-quirurgica",
+                "name": "Instrumentación Quirúrgica",
+                "slug": "instrumentacion-quirurgica",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Capacitación para asistir procedimientos en ámbitos de salud."
+              },
+              {
+                "id": "laboratorio-de-analisis-clinicos",
+                "name": "Laboratorio de Análisis Clínicos",
+                "slug": "laboratorio-de-analisis-clinicos",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Técnicas de laboratorio, muestras y protocolos de calidad."
+              },
+              {
+                "id": "diagnostico-por-imagenes",
+                "name": "Diagnóstico por Imágenes",
+                "slug": "diagnostico-por-imagenes",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Formación en tecnología aplicada a estudios médicos."
+              }
+            ],
+            "institutionCareers": [
+              {
+                "id": "instrumentacion-quirurgica",
+                "name": "Instrumentación Quirúrgica",
+                "slug": "instrumentacion-quirurgica",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/aguilares/instituto-santa-barbara/carreras/instrumentacion-quirurgica",
+                "description": "Capacitación para asistir procedimientos en ámbitos de salud.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "laboratorio-de-analisis-clinicos",
+                "name": "Laboratorio de Análisis Clínicos",
+                "slug": "laboratorio-de-analisis-clinicos",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/aguilares/instituto-santa-barbara/carreras/laboratorio-de-analisis-clinicos",
+                "description": "Técnicas de laboratorio, muestras y protocolos de calidad.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "diagnostico-por-imagenes",
+                "name": "Diagnóstico por Imágenes",
+                "slug": "diagnostico-por-imagenes",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/aguilares/instituto-santa-barbara/carreras/diagnostico-por-imagenes",
+                "description": "Formación en tecnología aplicada a estudios médicos.",
+                "nationalValidity": "Sí"
+              }
+            ]
+          }
+        },
+        "_kind": "institution"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/lic-en-administracion",
+      "payload": {
+        "data": {
+          "id": "lic-en-administracion",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Lic. en Administración",
+          "slug": "lic-en-administracion",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Gestión, liderazgo y estrategia para organizaciones actuales.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/higiene-y-seguridad",
+      "payload": {
+        "data": {
+          "id": "higiene-y-seguridad",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Higiene y Seguridad",
+          "slug": "higiene-y-seguridad",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Prevención, normativa y seguridad aplicada al trabajo.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/marketing",
+      "payload": {
+        "data": {
+          "id": "marketing",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Marketing",
+          "slug": "marketing",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Planificación comercial, comunicación y campañas digitales.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/recursos-humanos",
+      "payload": {
+        "data": {
+          "id": "recursos-humanos",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Recursos Humanos",
+          "slug": "recursos-humanos",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Selección, capacitación y gestión de equipos.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "sede/instituto-del-sur-monteros",
+      "payload": {
+        "data": {
+          "id": "instituto-del-sur-monteros",
+          "plan": "Profesional",
+          "slug": "instituto-del-sur",
+          "type": "Terciario",
+          "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+          "media": "Video de carreras",
+          "cities": [
+            "Monteros"
+          ],
+          "cityId": "monteros",
+          "address": "Av. Mitre 420, Concepción",
+          "brandId": "instituto-del-sur",
+          "gallery": [
+            "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80"
+          ],
+          "citySlug": "monteros",
+          "whatsapp": "3865 44 8712",
+          "presentation": {
+            "brand": {
+              "id": "instituto-del-sur",
+              "logo": "IDS",
+              "name": "Instituto del Sur",
+              "slug": "instituto-del-sur",
+              "slogan": "Tecnicaturas orientadas a una salida laboral concreta.",
+              "description": "Formación técnica y profesional en áreas comerciales, administrativas y digitales."
+            },
+            "careers": {
+              "marketing": {
+                "name": "Marketing",
+                "description": "Planificación comercial, comunicación y campañas digitales."
+              },
+              "recursos-humanos": {
+                "name": "Recursos Humanos",
+                "description": "Selección, capacitación y gestión de equipos."
+              },
+              "administracion-de-empresas": {
+                "name": "Administración de Empresas",
+                "description": "Organización, procesos y gestión operativa."
+              }
+            },
+            "offerings": {
+              "instituto-del-sur-monteros-marketing": {
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "instituto-del-sur-monteros-recursos-humanos": {
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "instituto-del-sur-monteros-administracion-de-empresas": {
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              }
+            },
+            "cityCareers": [
+              {
+                "id": "marketing",
+                "name": "Marketing",
+                "slug": "marketing",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Planificación comercial, comunicación y campañas digitales."
+              },
+              {
+                "id": "recursos-humanos",
+                "name": "Recursos Humanos",
+                "slug": "recursos-humanos",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Selección, capacitación y gestión de equipos."
+              },
+              {
+                "id": "administracion-de-empresas",
+                "name": "Administración de Empresas",
+                "slug": "administracion-de-empresas",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Organización, procesos y gestión operativa."
+              }
+            ],
+            "institutionCareers": [
+              {
+                "id": "marketing",
+                "name": "Marketing",
+                "slug": "marketing",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/monteros/instituto-del-sur/carreras/marketing",
+                "description": "Planificación comercial, comunicación y campañas digitales.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "recursos-humanos",
+                "name": "Recursos Humanos",
+                "slug": "recursos-humanos",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/monteros/instituto-del-sur/carreras/recursos-humanos",
+                "description": "Selección, capacitación y gestión de equipos.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "administracion-de-empresas",
+                "name": "Administración de Empresas",
+                "slug": "administracion-de-empresas",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/monteros/instituto-del-sur/carreras/administracion-de-empresas",
+                "description": "Organización, procesos y gestión operativa.",
+                "nationalValidity": "Sí"
+              }
+            ]
+          }
+        },
+        "_kind": "institution"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/administracion-de-empresas",
+      "payload": {
+        "data": {
+          "id": "administracion-de-empresas",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Administración de Empresas",
+          "slug": "administracion-de-empresas",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Organización, procesos y gestión operativa.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/profesorado",
+      "payload": {
+        "data": {
+          "id": "profesorado",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Profesorado",
+          "slug": "profesorado",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Formación pedagógica con prácticas y acompañamiento.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/gestion-educativa",
+      "payload": {
+        "data": {
+          "id": "gestion-educativa",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Gestión Educativa",
+          "slug": "gestion-educativa",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Herramientas para coordinar proyectos institucionales.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/acompanante-terapeutico",
+      "payload": {
+        "data": {
+          "id": "acompanante-terapeutico",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Acompañante Terapéutico",
+          "slug": "acompanante-terapeutico",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Intervención, apoyo y seguimiento en contextos de cuidado.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "sede/centro-de-formacion-tucuman-monteros",
+      "payload": {
+        "data": {
+          "id": "centro-de-formacion-tucuman-monteros",
+          "plan": "Básico",
+          "slug": "centro-de-formacion-tucuman",
+          "type": "Capacitación",
+          "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+          "media": "Imagen superior",
+          "cities": [
+            "Monteros"
+          ],
+          "cityId": "monteros",
+          "address": "Rivadavia 295, Monteros",
+          "brandId": "centro-de-formacion-tucuman",
+          "gallery": [
+            "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80"
+          ],
+          "citySlug": "monteros",
+          "whatsapp": "3863 40 2100",
+          "presentation": {
+            "brand": {
+              "id": "centro-de-formacion-tucuman",
+              "logo": "CFT",
+              "name": "Centro de Formación Tucumán",
+              "slug": "centro-de-formacion-tucuman",
+              "slogan": "Cursos cortos para fortalecer tu perfil laboral.",
+              "description": "Capacitaciones prácticas para jóvenes y adultos que buscan ampliar oportunidades."
+            },
+            "careers": {},
+            "offerings": {},
+            "cityCareers": [
+              {
+                "id": "auxiliar-administrativo",
+                "name": "Auxiliar Administrativo",
+                "slug": "auxiliar-administrativo",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Tareas de oficina, atención y documentación comercial."
+              },
+              {
+                "id": "secretariado",
+                "name": "Secretariado",
+                "slug": "secretariado",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Organización, comunicación y soporte administrativo."
+              },
+              {
+                "id": "operador-de-pc",
+                "name": "Operador de PC",
+                "slug": "operador-de-pc",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Herramientas digitales esenciales para el trabajo."
+              }
+            ],
+            "institutionCareers": [
+              {
+                "id": "auxiliar-administrativo",
+                "name": "Auxiliar Administrativo",
+                "slug": "auxiliar-administrativo",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/monteros/centro-de-formacion-tucuman/capacitaciones/auxiliar-administrativo",
+                "description": "Tareas de oficina, atención y documentación comercial.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "secretariado",
+                "name": "Secretariado",
+                "slug": "secretariado",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/monteros/centro-de-formacion-tucuman/capacitaciones/secretariado",
+                "description": "Organización, comunicación y soporte administrativo.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "operador-de-pc",
+                "name": "Operador de PC",
+                "slug": "operador-de-pc",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/monteros/centro-de-formacion-tucuman/capacitaciones/operador-de-pc",
+                "description": "Herramientas digitales esenciales para el trabajo.",
+                "nationalValidity": "Sí"
+              }
+            ]
+          }
+        },
+        "_kind": "institution"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/diseno-grafico",
+      "payload": {
+        "data": {
+          "id": "diseno-grafico",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Diseño Gráfico",
+          "slug": "diseno-grafico",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Piezas visuales, identidad y herramientas de diseño.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "sede/instituto-san-miguel-monteros",
+      "payload": {
+        "data": {
+          "id": "instituto-san-miguel-monteros",
+          "plan": "Profesional",
+          "slug": "instituto-san-miguel",
+          "type": "Instituto",
+          "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+          "media": "Imagen superior",
+          "cities": [
+            "Monteros"
+          ],
+          "cityId": "monteros",
+          "address": "Laprida 660, Monteros",
+          "brandId": "instituto-san-miguel",
+          "gallery": [
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80"
+          ],
+          "citySlug": "monteros",
+          "whatsapp": "3863 47 6400",
+          "presentation": {
+            "brand": {
+              "id": "instituto-san-miguel",
+              "logo": "ISM",
+              "name": "Instituto San Miguel",
+              "slug": "instituto-san-miguel",
+              "slogan": "Educación cercana para acompañar vocaciones de servicio.",
+              "description": "Propuestas presenciales y a distancia vinculadas a educación, salud y comunidad."
+            },
+            "careers": {
+              "profesorado": {
+                "name": "Profesorado",
+                "description": "Formación pedagógica con prácticas y acompañamiento."
+              },
+              "gestion-educativa": {
+                "name": "Gestión Educativa",
+                "description": "Herramientas para coordinar proyectos institucionales."
+              },
+              "acompanante-terapeutico": {
+                "name": "Acompañante Terapéutico",
+                "description": "Intervención, apoyo y seguimiento en contextos de cuidado."
+              }
+            },
+            "offerings": {
+              "instituto-san-miguel-monteros-profesorado": {
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "instituto-san-miguel-monteros-gestion-educativa": {
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "instituto-san-miguel-monteros-acompanante-terapeutico": {
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              }
+            },
+            "cityCareers": [
+              {
+                "id": "profesorado",
+                "name": "Profesorado",
+                "slug": "profesorado",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Formación pedagógica con prácticas y acompañamiento."
+              },
+              {
+                "id": "gestion-educativa",
+                "name": "Gestión Educativa",
+                "slug": "gestion-educativa",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Herramientas para coordinar proyectos institucionales."
+              },
+              {
+                "id": "acompanante-terapeutico",
+                "name": "Acompañante Terapéutico",
+                "slug": "acompanante-terapeutico",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Intervención, apoyo y seguimiento en contextos de cuidado."
+              }
+            ],
+            "institutionCareers": [
+              {
+                "id": "profesorado",
+                "name": "Profesorado",
+                "slug": "profesorado",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/monteros/instituto-san-miguel/carreras/profesorado",
+                "description": "Formación pedagógica con prácticas y acompañamiento.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "gestion-educativa",
+                "name": "Gestión Educativa",
+                "slug": "gestion-educativa",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/monteros/instituto-san-miguel/carreras/gestion-educativa",
+                "description": "Herramientas para coordinar proyectos institucionales.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "acompanante-terapeutico",
+                "name": "Acompañante Terapéutico",
+                "slug": "acompanante-terapeutico",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/monteros/instituto-san-miguel/carreras/acompanante-terapeutico",
+                "description": "Intervención, apoyo y seguimiento en contextos de cuidado.",
+                "nationalValidity": "Sí"
+              }
+            ]
+          }
+        },
+        "_kind": "institution"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/community-manager",
+      "payload": {
+        "data": {
+          "id": "community-manager",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Community Manager",
+          "slug": "community-manager",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Planificación de contenido, redes y métricas.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "carrera/ventas-digitales",
+      "payload": {
+        "data": {
+          "id": "ventas-digitales",
+          "faq": [
+            {
+              "answer": "Consultá con la institución para conocer las próximas fechas.",
+              "question": "¿Cuándo comienzan las inscripciones?"
+            },
+            {
+              "answer": "Podés utilizar WhatsApp o el formulario de esta página.",
+              "question": "¿Cómo solicito más información?"
+            }
+          ],
+          "name": "Ventas Digitales",
+          "slug": "ventas-digitales",
+          "studyPlan": [
+            "Primer año",
+            "Segundo año",
+            "Tercer año"
+          ],
+          "workField": "Ámbitos públicos y privados relacionados con la formación profesional.",
+          "description": "Embudo comercial, atención online y cierre de ventas.",
+          "requirements": [
+            "DNI",
+            "Título secundario",
+            "Formulario de inscripción"
+          ],
+          "graduateProfile": "Profesional preparado para aplicar conocimientos y desarrollarse en su área."
+        },
+        "_kind": "career"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/ies-concepcion-concepcion-profesorado-ingles",
+      "payload": {
+        "data": {
+          "id": "ies-concepcion-concepcion-profesorado-ingles",
+          "badge": "Próximo ingreso",
+          "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+          "order": 3,
+          "degree": "Profesorado de Inglés",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "profesorado-ingles",
+          "citySlug": "concepcion",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "ies-concepcion-concepcion",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/ies-concepcion-concepcion-profesorado-educacion-primaria",
+      "payload": {
+        "data": {
+          "id": "ies-concepcion-concepcion-profesorado-educacion-primaria",
+          "badge": "Inscripciones abiertas",
+          "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+          "order": 1,
+          "degree": "Profesorado de Educación Primaria",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "profesorado-educacion-primaria",
+          "citySlug": "concepcion",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "ies-concepcion-concepcion",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "sede/ies-concepcion-concepcion",
+      "payload": {
+        "data": {
+          "id": "ies-concepcion-concepcion",
+          "plan": "Básico",
+          "slug": "ies-concepcion",
+          "type": "Público",
+          "image": "https://images.unsplash.com/photo-1568792923760-d70635a89fdc?auto=format&fit=crop&w=1200&q=80",
+          "media": "Imagen superior",
+          "cities": [
+            "Concepción"
+          ],
+          "cityId": "concepcion",
+          "address": "España 320, Concepción",
+          "brandId": "ies-concepcion",
+          "gallery": [
+            "https://images.unsplash.com/photo-1568792923760-d70635a89fdc?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80"
+          ],
+          "citySlug": "concepcion",
+          "whatsapp": "3865 50 3300",
+          "presentation": {
+            "brand": {
+              "id": "ies-concepcion",
+              "logo": "IES",
+              "name": "IES Concepción",
+              "slug": "ies-concepcion",
+              "slogan": "Educación pública, gratuita y de calidad para todos.",
+              "description": "Educación pública, gratuita y de calidad para todos."
+            },
+            "careers": {
+              "profesorado-ingles": {
+                "name": "Profesorado de Inglés",
+                "description": "Formación pedagógica y práctica del idioma."
+              },
+              "tecnicatura-administracion": {
+                "name": "Tecnicatura en Administración",
+                "description": "Gestión administrativa para organizaciones públicas y privadas."
+              },
+              "profesorado-educacion-primaria": {
+                "name": "Profesorado de Educación Primaria",
+                "description": "Formación docente para nivel primario."
+              }
+            },
+            "offerings": {
+              "ies-concepcion-concepcion-profesorado-ingles": {
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "ies-concepcion-concepcion-tecnicatura-administracion": {
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              },
+              "ies-concepcion-concepcion-profesorado-educacion-primaria": {
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "nationalValidity": "Sí"
+              }
+            },
+            "cityCareers": [
+              {
+                "id": "profesorado-educacion-primaria",
+                "name": "Profesorado de Educación Primaria",
+                "slug": "profesorado-educacion-primaria",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Formación docente para nivel primario."
+              },
+              {
+                "id": "tecnicatura-administracion",
+                "name": "Tecnicatura en Administración",
+                "slug": "tecnicatura-administracion",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Gestión administrativa para organizaciones públicas y privadas."
+              },
+              {
+                "id": "profesorado-ingles",
+                "name": "Profesorado de Inglés",
+                "slug": "profesorado-ingles",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+                "duration": "3 años",
+                "modality": "Presencial",
+                "description": "Formación pedagógica y práctica del idioma."
+              }
+            ],
+            "institutionCareers": [
+              {
+                "id": "profesorado-educacion-primaria",
+                "name": "Profesorado de Educación Primaria",
+                "slug": "profesorado-educacion-primaria",
+                "badge": "Inscripciones abiertas",
+                "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/concepcion/ies-concepcion/carreras/profesorado-educacion-primaria",
+                "description": "Formación docente para nivel primario.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "tecnicatura-administracion",
+                "name": "Tecnicatura en Administración",
+                "slug": "tecnicatura-administracion",
+                "badge": "Nueva carrera",
+                "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/concepcion/ies-concepcion/carreras/tecnicatura-administracion",
+                "description": "Gestión administrativa para organizaciones públicas y privadas.",
+                "nationalValidity": "Sí"
+              },
+              {
+                "id": "profesorado-ingles",
+                "name": "Profesorado de Inglés",
+                "slug": "profesorado-ingles",
+                "badge": "Próximo ingreso",
+                "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+                "video": null,
+                "duration": "3 años",
+                "modality": "Presencial",
+                "routePath": "/concepcion/ies-concepcion/carreras/profesorado-ingles",
+                "description": "Formación pedagógica y práctica del idioma.",
+                "nationalValidity": "Sí"
+              }
+            ]
+          }
+        },
+        "_kind": "institution"
+      },
+      "moduleId": "institutions",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/instituto-santa-barbara-concepcion-diagnostico-por-imagenes",
+      "payload": {
+        "data": {
+          "id": "instituto-santa-barbara-concepcion-diagnostico-por-imagenes",
+          "badge": "Próximo ingreso",
+          "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+          "order": 3,
+          "degree": "Diagnóstico por Imágenes",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "diagnostico-por-imagenes",
+          "citySlug": "concepcion",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "instituto-santa-barbara-concepcion",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/instituto-santa-barbara-concepcion-laboratorio-de-analisis-clinicos",
+      "payload": {
+        "data": {
+          "id": "instituto-santa-barbara-concepcion-laboratorio-de-analisis-clinicos",
+          "badge": "Nueva carrera",
+          "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+          "order": 2,
+          "degree": "Laboratorio de Análisis Clínicos",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "laboratorio-de-analisis-clinicos",
+          "citySlug": "concepcion",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "instituto-santa-barbara-concepcion",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/instituto-santa-barbara-concepcion-instrumentacion-quirurgica",
+      "payload": {
+        "data": {
+          "id": "instituto-santa-barbara-concepcion-instrumentacion-quirurgica",
+          "badge": "Inscripciones abiertas",
+          "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+          "order": 1,
+          "degree": "Instrumentación Quirúrgica",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "instrumentacion-quirurgica",
+          "citySlug": "concepcion",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "instituto-santa-barbara-concepcion",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/universidad-siglo-21-concepcion-abogacia",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-concepcion-abogacia",
+          "badge": "Inscripciones abiertas",
+          "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+          "order": 1,
+          "degree": "Abogacía",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "abogacia",
+          "citySlug": "concepcion",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "universidad-siglo-21-concepcion",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/universidad-siglo-21-monteros-abogacia",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-monteros-abogacia",
+          "badge": "Inscripciones abiertas",
+          "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+          "order": 1,
+          "degree": "Abogacía",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "abogacia",
+          "citySlug": "monteros",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "universidad-siglo-21-monteros",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/universidad-siglo-21-concepcion-contador-publico",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-concepcion-contador-publico",
+          "badge": "Nueva carrera",
+          "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+          "order": 2,
+          "degree": "Contador Público",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "contador-publico",
+          "citySlug": "concepcion",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "universidad-siglo-21-concepcion",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/universidad-siglo-21-monteros-contador-publico",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-monteros-contador-publico",
+          "badge": "Nueva carrera",
+          "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+          "order": 2,
+          "degree": "Contador Público",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "contador-publico",
+          "citySlug": "monteros",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "universidad-siglo-21-monteros",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/universidad-siglo-21-concepcion-lic-en-administracion",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-concepcion-lic-en-administracion",
+          "badge": "Próximo ingreso",
+          "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+          "order": 3,
+          "degree": "Lic. en Administración",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "lic-en-administracion",
+          "citySlug": "concepcion",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "universidad-siglo-21-concepcion",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/universidad-siglo-21-monteros-lic-en-administracion",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-monteros-lic-en-administracion",
+          "badge": "Próximo ingreso",
+          "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+          "order": 3,
+          "degree": "Lic. en Administración",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "lic-en-administracion",
+          "citySlug": "monteros",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "universidad-siglo-21-monteros",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/universidad-siglo-21-concepcion-higiene-y-seguridad",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-concepcion-higiene-y-seguridad",
+          "badge": "Inscripciones abiertas",
+          "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+          "order": 4,
+          "degree": "Higiene y Seguridad",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "higiene-y-seguridad",
+          "citySlug": "concepcion",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "universidad-siglo-21-concepcion",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/universidad-siglo-21-monteros-higiene-y-seguridad",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-monteros-higiene-y-seguridad",
+          "badge": "Inscripciones abiertas",
+          "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+          "order": 4,
+          "degree": "Higiene y Seguridad",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "higiene-y-seguridad",
+          "citySlug": "monteros",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "universidad-siglo-21-monteros",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/instituto-del-sur-monteros-marketing",
+      "payload": {
+        "data": {
+          "id": "instituto-del-sur-monteros-marketing",
+          "badge": "Inscripciones abiertas",
+          "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+          "order": 1,
+          "degree": "Marketing",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "marketing",
+          "citySlug": "monteros",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "instituto-del-sur-monteros",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/instituto-del-sur-monteros-recursos-humanos",
+      "payload": {
+        "data": {
+          "id": "instituto-del-sur-monteros-recursos-humanos",
+          "badge": "Nueva carrera",
+          "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+          "order": 2,
+          "degree": "Recursos Humanos",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "recursos-humanos",
+          "citySlug": "monteros",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "instituto-del-sur-monteros",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/instituto-del-sur-monteros-administracion-de-empresas",
+      "payload": {
+        "data": {
+          "id": "instituto-del-sur-monteros-administracion-de-empresas",
+          "badge": "Próximo ingreso",
+          "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+          "order": 3,
+          "degree": "Administración de Empresas",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "administracion-de-empresas",
+          "citySlug": "monteros",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "instituto-del-sur-monteros",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/instituto-san-miguel-monteros-profesorado",
+      "payload": {
+        "data": {
+          "id": "instituto-san-miguel-monteros-profesorado",
+          "badge": "Inscripciones abiertas",
+          "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+          "order": 1,
+          "degree": "Profesorado",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "profesorado",
+          "citySlug": "monteros",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "instituto-san-miguel-monteros",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/instituto-san-miguel-monteros-gestion-educativa",
+      "payload": {
+        "data": {
+          "id": "instituto-san-miguel-monteros-gestion-educativa",
+          "badge": "Nueva carrera",
+          "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+          "order": 2,
+          "degree": "Gestión Educativa",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "gestion-educativa",
+          "citySlug": "monteros",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "instituto-san-miguel-monteros",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/instituto-san-miguel-monteros-acompanante-terapeutico",
+      "payload": {
+        "data": {
+          "id": "instituto-san-miguel-monteros-acompanante-terapeutico",
+          "badge": "Próximo ingreso",
+          "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+          "order": 3,
+          "degree": "Acompañante Terapéutico",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "acompanante-terapeutico",
+          "citySlug": "monteros",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "instituto-san-miguel-monteros",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/universidad-siglo-21-aguilares-abogacia",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-aguilares-abogacia",
+          "badge": "Inscripciones abiertas",
+          "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+          "order": 1,
+          "degree": "Abogacía",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "abogacia",
+          "citySlug": "aguilares",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "universidad-siglo-21-aguilares",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/universidad-siglo-21-aguilares-contador-publico",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-aguilares-contador-publico",
+          "badge": "Nueva carrera",
+          "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+          "order": 2,
+          "degree": "Contador Público",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "contador-publico",
+          "citySlug": "aguilares",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "universidad-siglo-21-aguilares",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/universidad-siglo-21-aguilares-lic-en-administracion",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-aguilares-lic-en-administracion",
+          "badge": "Próximo ingreso",
+          "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+          "order": 3,
+          "degree": "Lic. en Administración",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "lic-en-administracion",
+          "citySlug": "aguilares",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "universidad-siglo-21-aguilares",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/universidad-siglo-21-aguilares-higiene-y-seguridad",
+      "payload": {
+        "data": {
+          "id": "universidad-siglo-21-aguilares-higiene-y-seguridad",
+          "badge": "Inscripciones abiertas",
+          "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+          "order": 4,
+          "degree": "Higiene y Seguridad",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "higiene-y-seguridad",
+          "citySlug": "aguilares",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "universidad-siglo-21-aguilares",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/instituto-santa-barbara-aguilares-instrumentacion-quirurgica",
+      "payload": {
+        "data": {
+          "id": "instituto-santa-barbara-aguilares-instrumentacion-quirurgica",
+          "badge": "Inscripciones abiertas",
+          "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+          "order": 1,
+          "degree": "Instrumentación Quirúrgica",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "instrumentacion-quirurgica",
+          "citySlug": "aguilares",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "instituto-santa-barbara-aguilares",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/instituto-santa-barbara-aguilares-laboratorio-de-analisis-clinicos",
+      "payload": {
+        "data": {
+          "id": "instituto-santa-barbara-aguilares-laboratorio-de-analisis-clinicos",
+          "badge": "Nueva carrera",
+          "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+          "order": 2,
+          "degree": "Laboratorio de Análisis Clínicos",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "laboratorio-de-analisis-clinicos",
+          "citySlug": "aguilares",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "instituto-santa-barbara-aguilares",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/instituto-santa-barbara-aguilares-diagnostico-por-imagenes",
+      "payload": {
+        "data": {
+          "id": "instituto-santa-barbara-aguilares-diagnostico-por-imagenes",
+          "badge": "Próximo ingreso",
+          "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+          "order": 3,
+          "degree": "Diagnóstico por Imágenes",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "diagnostico-por-imagenes",
+          "citySlug": "aguilares",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "instituto-santa-barbara-aguilares",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/academia-profesional-norte-aguilares-diseno-grafico",
+      "payload": {
+        "data": {
+          "id": "academia-profesional-norte-aguilares-diseno-grafico",
+          "badge": "Inscripciones abiertas",
+          "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+          "order": 1,
+          "campus": "Moreno 575, Aguilares",
+          "degree": "Diseño Gráfico",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "diseno-grafico",
+          "citySlug": "aguilares",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "academia-profesional-norte-aguilares",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/academia-profesional-norte-aguilares-community-manager",
+      "payload": {
+        "data": {
+          "id": "academia-profesional-norte-aguilares-community-manager",
+          "badge": "Nueva carrera",
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+          "order": 2,
+          "campus": "Moreno 575, Aguilares",
+          "degree": "Community Manager",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "community-manager",
+          "citySlug": "aguilares",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "academia-profesional-norte-aguilares",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    },
+    {
+      "key": "oferta/academia-profesional-norte-aguilares-ventas-digitales",
+      "payload": {
+        "data": {
+          "id": "academia-profesional-norte-aguilares-ventas-digitales",
+          "badge": "Próximo ingreso",
+          "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+          "order": 3,
+          "campus": "Moreno 575, Aguilares",
+          "degree": "Ventas Digitales",
+          "shifts": "Consultar",
+          "visible": true,
+          "careerId": "ventas-digitales",
+          "citySlug": "aguilares",
+          "duration": "3 años",
+          "modality": "Presencial",
+          "formEnabled": true,
+          "institutionId": "academia-profesional-norte-aguilares",
+          "nationalValidity": "Sí"
+        },
+        "_kind": "offering"
+      },
+      "moduleId": "careers",
+      "visibility": "published"
+    }
+  ],
+  "counts": {
+    "cities": 3,
+    "institutions": 10,
+    "careers": 19,
+    "offerings": 30
+  },
+  "premium": {
+    "institutions": [
+      {
+        "id": "instituto-santa-barbara-concepcion",
+        "slug": "instituto-santa-barbara",
+        "citySlug": "concepcion",
+        "plan": "Premium"
+      },
+      {
+        "id": "universidad-siglo-21-aguilares",
+        "slug": "universidad-siglo-21",
+        "citySlug": "aguilares",
+        "plan": "Premium"
+      },
+      {
+        "id": "universidad-siglo-21-concepcion",
+        "slug": "universidad-siglo-21",
+        "citySlug": "concepcion",
+        "plan": "Premium"
+      },
+      {
+        "id": "universidad-siglo-21-monteros",
+        "slug": "universidad-siglo-21",
+        "citySlug": "monteros",
+        "plan": "Premium"
+      },
+      {
+        "id": "instituto-santa-barbara-aguilares",
+        "slug": "instituto-santa-barbara",
+        "citySlug": "aguilares",
+        "plan": "Premium"
+      }
+    ],
+    "offers": [
+      {
+        "id": "instituto-santa-barbara-concepcion-diagnostico-por-imagenes",
+        "institutionId": "instituto-santa-barbara-concepcion",
+        "careerId": "diagnostico-por-imagenes"
+      },
+      {
+        "id": "instituto-santa-barbara-concepcion-laboratorio-de-analisis-clinicos",
+        "institutionId": "instituto-santa-barbara-concepcion",
+        "careerId": "laboratorio-de-analisis-clinicos"
+      },
+      {
+        "id": "instituto-santa-barbara-concepcion-instrumentacion-quirurgica",
+        "institutionId": "instituto-santa-barbara-concepcion",
+        "careerId": "instrumentacion-quirurgica"
+      },
+      {
+        "id": "universidad-siglo-21-concepcion-abogacia",
+        "institutionId": "universidad-siglo-21-concepcion",
+        "careerId": "abogacia"
+      },
+      {
+        "id": "universidad-siglo-21-monteros-abogacia",
+        "institutionId": "universidad-siglo-21-monteros",
+        "careerId": "abogacia"
+      },
+      {
+        "id": "universidad-siglo-21-concepcion-contador-publico",
+        "institutionId": "universidad-siglo-21-concepcion",
+        "careerId": "contador-publico"
+      },
+      {
+        "id": "universidad-siglo-21-monteros-contador-publico",
+        "institutionId": "universidad-siglo-21-monteros",
+        "careerId": "contador-publico"
+      },
+      {
+        "id": "universidad-siglo-21-concepcion-lic-en-administracion",
+        "institutionId": "universidad-siglo-21-concepcion",
+        "careerId": "lic-en-administracion"
+      },
+      {
+        "id": "universidad-siglo-21-monteros-lic-en-administracion",
+        "institutionId": "universidad-siglo-21-monteros",
+        "careerId": "lic-en-administracion"
+      },
+      {
+        "id": "universidad-siglo-21-concepcion-higiene-y-seguridad",
+        "institutionId": "universidad-siglo-21-concepcion",
+        "careerId": "higiene-y-seguridad"
+      },
+      {
+        "id": "universidad-siglo-21-monteros-higiene-y-seguridad",
+        "institutionId": "universidad-siglo-21-monteros",
+        "careerId": "higiene-y-seguridad"
+      },
+      {
+        "id": "universidad-siglo-21-aguilares-abogacia",
+        "institutionId": "universidad-siglo-21-aguilares",
+        "careerId": "abogacia"
+      },
+      {
+        "id": "universidad-siglo-21-aguilares-contador-publico",
+        "institutionId": "universidad-siglo-21-aguilares",
+        "careerId": "contador-publico"
+      },
+      {
+        "id": "universidad-siglo-21-aguilares-lic-en-administracion",
+        "institutionId": "universidad-siglo-21-aguilares",
+        "careerId": "lic-en-administracion"
+      },
+      {
+        "id": "universidad-siglo-21-aguilares-higiene-y-seguridad",
+        "institutionId": "universidad-siglo-21-aguilares",
+        "careerId": "higiene-y-seguridad"
+      },
+      {
+        "id": "instituto-santa-barbara-aguilares-instrumentacion-quirurgica",
+        "institutionId": "instituto-santa-barbara-aguilares",
+        "careerId": "instrumentacion-quirurgica"
+      },
+      {
+        "id": "instituto-santa-barbara-aguilares-laboratorio-de-analisis-clinicos",
+        "institutionId": "instituto-santa-barbara-aguilares",
+        "careerId": "laboratorio-de-analisis-clinicos"
+      },
+      {
+        "id": "instituto-santa-barbara-aguilares-diagnostico-por-imagenes",
+        "institutionId": "instituto-santa-barbara-aguilares",
+        "careerId": "diagnostico-por-imagenes"
+      }
+    ],
+    "cityFeatured": [
+      {
+        "city": "concepcion",
+        "institutions": [
+          "universidad-siglo-21-concepcion",
+          "instituto-santa-barbara-concepcion"
+        ],
+        "slides": [
+          {
+            "institutionId": "universidad-siglo-21-concepcion",
+            "careerId": "abogacia"
+          },
+          {
+            "institutionId": "universidad-siglo-21-concepcion",
+            "careerId": "contador-publico"
+          },
+          {
+            "institutionId": "universidad-siglo-21-concepcion",
+            "careerId": "licenciatura-en-administracion"
+          },
+          {
+            "institutionId": "universidad-siglo-21-concepcion",
+            "careerId": "higiene-y-seguridad"
+          },
+          {
+            "institutionId": "instituto-santa-barbara-concepcion",
+            "careerId": "instrumentacion-quirurgica"
+          }
+        ]
+      },
+      {
+        "city": "monteros",
+        "institutions": [
+          "universidad-siglo-21-monteros",
+          "instituto-del-sur-monteros"
+        ],
+        "slides": [
+          {
+            "institutionId": "universidad-siglo-21-monteros",
+            "careerId": "abogacia"
+          },
+          {
+            "institutionId": "universidad-siglo-21-monteros",
+            "careerId": "contador-publico"
+          },
+          {
+            "institutionId": "universidad-siglo-21-monteros",
+            "careerId": "licenciatura-en-administracion"
+          },
+          {
+            "institutionId": "universidad-siglo-21-monteros",
+            "careerId": "higiene-y-seguridad"
+          },
+          {
+            "institutionId": "instituto-del-sur-monteros",
+            "careerId": "marketing"
+          }
+        ]
+      },
+      {
+        "city": "aguilares",
+        "institutions": [
+          "universidad-siglo-21-aguilares",
+          "instituto-santa-barbara-aguilares"
+        ],
+        "slides": [
+          {
+            "institutionId": "universidad-siglo-21-aguilares",
+            "careerId": "abogacia"
+          },
+          {
+            "institutionId": "universidad-siglo-21-aguilares",
+            "careerId": "contador-publico"
+          },
+          {
+            "institutionId": "universidad-siglo-21-aguilares",
+            "careerId": "licenciatura-en-administracion"
+          },
+          {
+            "institutionId": "universidad-siglo-21-aguilares",
+            "careerId": "higiene-y-seguridad"
+          },
+          {
+            "institutionId": "instituto-santa-barbara-aguilares",
+            "careerId": "instrumentacion-quirurgica"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -169,12 +169,10 @@ export const institutions = [
     plan: "Premium",
     slogan: "Formación técnica para integrarte rápido al mundo laboral.",
     description: "Formación terciaria con valores, prácticas y salida laboral.",
-    address: "Belgrano 810, Aguilares",
+    address: "Nasif Estéfano 175, Concepción, Tucumán",
     whatsapp: "3865 55 1188",
     image: imageBank.santa,
     media: "Video institucional",
-    canonicalDataNotice:
-      "inconsistencia canónica conservada temporalmente para mantener fidelidad con la demo",
     gallery: [
       imageBank.santa,
       imageBank.students,

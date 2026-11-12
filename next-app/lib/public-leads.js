@@ -1,3 +1,5 @@
+import {trackConfirmedSubmission} from './analytics/public-tracking.mjs';
+
 export function savePublicLead(lead) {
   try {
     const storedLeads = localStorage.getItem("guiaEducativaLeads");
@@ -23,5 +25,6 @@ export async function submitPublicInquiry(inquiry) {
   });
   const result = await response.json();
   if (!response.ok || !result.ok || !result.receiptId) throw new Error(result.message || 'No se confirmó la recepción');
+  trackConfirmedSubmission('academic', result.receiptId);
   return result.receiptId;
 }

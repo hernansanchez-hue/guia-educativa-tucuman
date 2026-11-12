@@ -73,14 +73,15 @@ function createSupabaseFixture() {
   };
 }
 
-test("the versioned public route catalog has 546 unique canonical URLs", () => {
+test("the versioned public route catalog has 549 URLs after retiring the city directory", () => {
   const paths = getVersionedPublicRoutePaths();
 
-  assert.equal(paths.length, 546);
+  assert.equal(paths.length, 549);
+  assert.equal(paths.includes("/ciudades"), false);
   assert.equal(new Set(paths).size, paths.length);
   assert.deepEqual(paths.slice(0, STATIC_PUBLIC_PATHS.length), STATIC_PUBLIC_PATHS);
   for(const path of ["/aguilares","/concepcion","/monteros","/san-miguel-de-tucuman","/famailla","/burruyacu"])assert.ok(paths.includes(path));
-  assert.equal(paths.filter((path) => /^\/[a-z].*\/[a-z].*\/carreras\//.test(path)).length, 195);
+  assert.equal(paths.filter((path) => /^\/[a-z].*\/[a-z].*\/carreras\//.test(path)).length, 197);
   assert.equal(paths.filter((path) => path.includes("/capacitaciones/")).length, 3);
 });
 

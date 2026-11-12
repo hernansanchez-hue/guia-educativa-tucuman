@@ -1,0 +1,10 @@
+"use client";
+import {useRef,useState} from 'react';
+import EditorField from './EditorField';
+import s from '../workspace.module.css';
+export default function CollectionField({field,value=[],onChange,onFocus,catalog,root}){
+ const [open,setOpen]=useState(0),dragged=useRef(null);
+ function move(index,target){if(target<0||target>=value.length)return;const rows=[...value],item=rows.splice(index,1)[0];rows.splice(target,0,item);onChange(rows);setOpen(target);}
+ function add(){const item={id:crypto.randomUUID()};for(const f of field.itemFields)item[f.path]=f.type==='checkbox'?true:f.type.endsWith('list')?[]:'';onChange([...value,item]);setOpen(value.length);}
+ return <div id={`field-${field.path}`}>{value.map((item,index)=><div key={item.id||index} className={s.historyItem} onDragOver={e=>e.preventDefault()} onDrop={e=>{e.preventDefault();if(dragged.current!=null)move(dragged.current,index);dragged.current=null;}}><div className={s.arrayRow}><button type='button' draggable onDragStart={()=>{dragged.current=index;}} onDragEnd={()=>{dragged.current=null;}} aria-label={`Arrastrar ${item.name||item.label||`fila ${index+1}`}`}>≡</button><button type='button' className={s.textButton} aria-expanded={open===index} onClick={()=>{setOpen(open===index?-1:index);onFocus(`${field.path}.${index}`);}}>{item.name||item.label||`Fila ${index+1}`}</button><button type='button' aria-label={`Subir fila ${index+1}`} onClick={()=>move(index,index-1)}>↑</button><button type='button' aria-label={`Bajar fila ${index+1}`} onClick={()=>move(index,index+1)}>↓</button><button type='button' aria-label={`Quitar fila ${index+1}`} onClick={()=>{onChange(value.filter((_,i)=>i!==index));setOpen(-1);}}>×</button></div>{open===index?<div>{field.itemFields.map(f=><EditorField key={f.path} field={{...f,path:`${field.path}.${index}.${f.path}`}} value={item[f.path]} catalog={catalog} root={root} onFocus={onFocus} onChange={v=>onChange(value.map((item,n)=>n===index?{...item,[f.path]:v}:item))}/>)}</div>:null}</div>)}<button type='button' className={s.secondary} onClick={add}>Agregar fila</button></div>;
+}

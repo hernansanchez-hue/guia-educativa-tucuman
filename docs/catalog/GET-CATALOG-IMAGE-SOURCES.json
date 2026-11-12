@@ -1,0 +1,191 @@
+[
+  {
+    "family": "institution-neutral",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-5fcdaaf9-7999-432b-8b52-529ccc21496b.png",
+    "output": "/assets/catalog/institution-neutral.webp",
+    "scene": "a modest bright university reading room, wooden study tables, shelves of ordinary books in background, a few chairs, soft daylight from windows",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "education",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-e8b75541-81c3-490d-962f-75b67ebe1c37.png",
+    "output": "/assets/catalog/education.webp",
+    "scene": "an ordinary empty teacher-training classroom with a chalkboard without readable writing, a few colorful teaching materials neatly placed on a desk, natural morning light",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "clinical",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-31df08fa-bbc9-416b-9e8e-a77e73b31970.png",
+    "output": "/assets/catalog/clinical.webp",
+    "scene": "a clean modest clinical skills training room, empty examination bed, stethoscope and basic nursing instruments on a trolley, no patients, realistic medical equipment",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "science",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-6ec54133-83b8-460e-a2cf-98db647adf1e.png",
+    "output": "/assets/catalog/science.webp",
+    "scene": "a realistic university science laboratory, glass test tubes and microscope on a clean bench, no hazardous activity, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "technology",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-3193279e-59c8-4c05-8dec-24a559ce5cc7.png",
+    "output": "/assets/catalog/technology.webp",
+    "scene": "a modest computing laboratory, monitors displaying abstract blurred software interfaces with no readable text, circuit boards and networking components, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "languages",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-22e65cd2-257e-4c0f-822b-f58f85e10a65.png",
+    "output": "/assets/catalog/languages.webp",
+    "scene": "language education reading room with bilingual dictionaries opened away from camera, headphones and language-learning flashcards with no readable letters, modest library setting",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "physical",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-8f3bd04e-8eba-434e-84c9-ccf7eee5c4fc.png",
+    "output": "/assets/catalog/physical.webp",
+    "scene": "a tidy school gymnasium with a running track visible through windows, sports cones, a few balls and training mats, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "music",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-b6c90ba9-0a20-4868-b806-5356afd902a0.png",
+    "output": "/assets/catalog/music.webp",
+    "scene": "an ordinary music conservatory practice room with a piano, acoustic guitar and cello on proper stands, natural window light, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "arts",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-1f94fe29-af69-40b8-91c7-e38746c70544.png",
+    "output": "/assets/catalog/arts.webp",
+    "scene": "a modest visual and performing arts teaching studio with drawing easel, blank canvas, fabric samples and a small theatre stage in background, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "law",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-9b0e2559-5825-46d7-8563-de561218e45a.png",
+    "output": "/assets/catalog/law.webp",
+    "scene": "a sober law library study desk with bound legal volumes facing away, wooden gavel and plain files, no readable text, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "economics",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-029ab8d8-24a0-4a4e-8408-b5d6dd5aa0ca.png",
+    "output": "/assets/catalog/economics.webp",
+    "scene": "a professional accounting education workspace with calculator, printed charts without readable text, ledger and analytical documents, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "agriculture",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-2e49c2db-8a42-44b5-b3fd-d05a511d6580.png",
+    "output": "/assets/catalog/agriculture.webp",
+    "scene": "an agricultural university teaching greenhouse with ordinary crop seedlings, soil sample containers and irrigation equipment, natural light, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "industry",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-20513dcf-c292-4509-92d6-4518fda3ed92.png",
+    "output": "/assets/catalog/industry.webp",
+    "scene": "a realistic technical training workshop with industrial electrical control panel, mechanical components and safety helmet, tidy and safe, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "hospitality",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-ffa77d4f-5fb8-42fb-9194-f6d761844bdf.png",
+    "output": "/assets/catalog/hospitality.webp",
+    "scene": "a professional gastronomy and hospitality teaching kitchen with clean stainless worktops, cookware and neatly arranged basic ingredients, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "community",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-94583eec-dee7-427e-9b5f-d7ad6e98b014.png",
+    "output": "/assets/catalog/community.webp",
+    "scene": "a university social-sciences study area with archival photographs and historical maps blurred and unreadable on a research table, bookshelves, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "architecture",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-df36e1df-af69-4762-93c7-fd44c53d1649.png",
+    "output": "/assets/catalog/architecture.webp",
+    "scene": "an architecture university studio with a plausible small neutral cardboard building model, drafting instruments and rolled plans without readable writing, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "radiology",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-6604feb3-7b66-470a-b4bf-d5aefe53f3f1.png",
+    "output": "/assets/catalog/radiology.webp",
+    "scene": "a realistic radiography teaching room with modern X-ray imaging machine and plain diagnostic monitor with no readable interface, no patients",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "dentistry",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-ac0816a7-3788-4961-8b28-eb0aab0ff7d6.png",
+    "output": "/assets/catalog/dentistry.webp",
+    "scene": "a clean dentistry training laboratory with dental articulator, teaching tooth models and examination instruments, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "surgery",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-b6c06ccd-93e0-4030-825d-50cf19222cf3.png",
+    "output": "/assets/catalog/surgery.webp",
+    "scene": "a realistic surgical instrumentation training room with neatly ordered sterile forceps and scissors on a stainless tray in foreground, blurred operating table behind, no people or body parts",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "counseling",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-79d6b6ef-c975-425e-9d82-a4d14a6a4864.png",
+    "output": "/assets/catalog/counseling.webp",
+    "scene": "a calm psychology and social support teaching consultation room, two simple comfortable chairs facing each other, a small table, soft daylight, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  },
+  {
+    "family": "mathematics",
+    "sourcePath": "C:\\Users\\cesar\\.codex\\generated_images\\019fb113-3399-7862-ba8d-41e4e6b5f0cd\\exec-0fedd533-7a18-4ec9-946a-63dc57fcfb30.png",
+    "output": "/assets/catalog/mathematics.webp",
+    "scene": "a university mathematics and physics teaching classroom with simple geometric solids and a pendulum apparatus on a table, a blurred chalkboard with abstract geometric figures and no readable writing, no people",
+    "promptConstraints": "photorealistic-natural; landscape 3:2; authentic understated educational photography; natural light; no people, branding, logos, readable text, watermark, invented institution or futuristic styling",
+    "method": "built-in image_gen",
+    "editorialIllustration": true
+  }
+]

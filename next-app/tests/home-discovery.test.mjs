@@ -22,7 +22,7 @@ test('all cities expose every public career detail and institution, never only P
  assert.equal(institutions,125);
  // Three modality pairs share the existing canonical career detail; retain that projection.
  assert.equal(offers,new Set(catalog.offerings.map(o=>`${o.institutionId}/${o.careerId}`)).size);
- assert.equal(catalog.offerings.length,198);
+ assert.equal(catalog.offerings.length,200);
 });
 test('search normalizes accents and case, keeps city scope and handles empty/no matches',()=>{
  assert.equal(normalizeSearch(' CONCEPCIÓN '),'concepcion');

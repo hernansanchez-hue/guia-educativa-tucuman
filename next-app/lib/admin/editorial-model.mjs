@@ -43,7 +43,7 @@ export function editorialCatalog(entries = [],{includeLegacy=true}={}) {
     const city = cityRows.find(c => c.id === (i.cityId || i.citySlug)); const brand = brandRows.find(b => b.id === i.brandId);
     const originalBrand=i.presentation?.brand||(includeLegacy?originalBrands.get(i.brandId):null);
     const preservedOverrides=Object.fromEntries(Object.entries(i.brandOverrides||{}).filter(([key])=>brand&&brand[key]===originalBrand?.[key]));
-    return city && city.visible !== false && brand ? [{ ...i, ...Object.fromEntries(sharedFields.filter(k => brand[k] !== undefined).map(k => [k, brand[k]])), ...preservedOverrides, ...(i.campusName?{name:i.campusName}:{}), citySlug: city.slug }] : [];
+    return city && city.visible !== false && brand ? [{ ...i, ...Object.fromEntries(sharedFields.filter(k => brand[k] !== undefined).map(k => [k, brand[k]])), ...preservedOverrides, ...i.controlVenue, ...(i.campusName?{name:i.campusName}:{}), citySlug: city.slug }] : [];
   });
   const offerRows = byKind("offering").flatMap(o => {
     const inst = instRows.find(i => i.id === o.institutionId); const master = masterRows.find(c => c.id === o.careerId);
@@ -57,7 +57,7 @@ function summaryFor(catalog, inst, o, original) {
   const summary = original ? structuredClone(original) : { id: master.id, slug: master.slug, name: master.name, description: master.description, image: o.image, badge: o.badge, duration: o.duration, modality: o.modality };
   for (const k of ["name", "description"]) if (!original || master[k] !== originalMaster?.[k]) summary[k] = master[k];
   for (const k of ["image", "badge", "duration", "modality", "nationalValidity", "video", "startLabel", "isNew", "featured", "premium"]) if ((!original && o[k]!==undefined) || JSON.stringify(o[k]) !== JSON.stringify(originalOffering?.[k])) summary[k] = o[k];
-  return { ...summary, routePath: `/${inst.citySlug}/${inst.slug}/carreras/${master.slug}` };
+  return { ...summary, ...(o.controlCareer?.name?{name:o.controlCareer.name}:{}), ...(o.controlCareer?.description!==undefined?{description:o.controlCareer.description}:{}), routePath: `/${inst.citySlug}/${inst.slug}/carreras/${master.slug}` };
 }
 export function composeInstitution(catalog, id, context = "institution") {
   const inst = catalog.institutions.find(i => i.id === id); if (!inst) return null;
@@ -80,7 +80,7 @@ export function cityPageFromCatalog(catalog, slug) {
   const current = catalog.institutions.filter(i => i.citySlug === slug);
   const order = c.institutionIds || []; current.sort((a,b) => (order.indexOf(a.id)<0 ? 999 : order.indexOf(a.id)) - (order.indexOf(b.id)<0 ? 999 : order.indexOf(b.id)));
   const rows = current.map(i => composeInstitution(catalog, i.id, "city"));
-  return { ...c, institutions: rows, featuredInstitutions: rows.filter(i => isPremiumInstitution(i,c)&&((c.featuredInstitutionIds || []).includes(i.id)||i.featured===true)) };
+  return { ...c, institutions: rows, featuredInstitutions: Array.isArray(c.controlPlacements) ? c.controlPlacements.filter(p=>p.active).flatMap(p=>{const i=rows.find(r=>r.id===p.id);return i?[{...i,...(p.displayName?.trim()?{name:p.displayName.trim()}:{}),...(p.image?{image:p.image}:{}),...(p.description?{description:p.description}:{})}]:[];}) : rows.filter(i => isPremiumInstitution(i,c)&&((c.featuredInstitutionIds || []).includes(i.id)||i.featured===true)) };
 }
 export function institutionPageFromCatalog(catalog, citySlug, slug) {
   const city = catalog.cities.find(c => c.slug === citySlug); const inst = catalog.institutions.find(i => i.citySlug === citySlug && i.slug === slug);
@@ -89,8 +89,9 @@ export function institutionPageFromCatalog(catalog, citySlug, slug) {
 export function careerPageFromCatalog(catalog, citySlug, slug, careerSlug) {
   const page = institutionPageFromCatalog(catalog, citySlug, slug); if (!page) return null;
   const career = catalog.careers.find(c => c.slug === (careerSlug === "licenciatura-en-administracion" ? "lic-en-administracion" : careerSlug));
-  const offering = catalog.offerings.find(o => o.institutionId === page.institution.id && o.careerId === career?.id);
-  return career && offering ? { ...page, career, offering } : null;
+  const variants = catalog.offerings.filter(o => o.institutionId === page.institution.id && o.careerId === career?.id);
+  const offering = variants.find(o=>page.institution.featuredCareerIds?.includes(o.id)) || variants[0];
+  return career && offering ? { ...page, career:offering.controlCareer?{...career,...offering.controlCareer}:career, offering } : null;
 }
 export function trainingPageFromCatalog(catalog,citySlug,slug,programSlug){
  const city=catalog.cities.find(c=>c.slug===citySlug),inst=catalog.institutions.find(i=>i.citySlug===citySlug&&i.slug===slug),legacy=institutions.find(i=>i.id===inst?.id);if(!city||!inst||!legacy)return null;

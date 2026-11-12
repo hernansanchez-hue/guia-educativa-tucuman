@@ -1,0 +1,18 @@
+footer button.get-analytics-preferences {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: left;
+  white-space: normal;
+  cursor: pointer;
+}
+footer button.get-analytics-preferences:hover { text-decoration: underline; }
+footer button.get-analytics-preferences:focus-visible { outline: 3px solid #b38218; outline-offset: 3px; }

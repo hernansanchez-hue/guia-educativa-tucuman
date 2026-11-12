@@ -1,0 +1,5 @@
+import {listMedia,updateMediaAlt,deleteMedia,mediaUsage} from '../../../../lib/admin/media-service';
+function trusted(request){return request.headers.get('origin')===process.env.GET_ADMIN_ORIGIN;}
+export async function GET(request){const id=new URL(request.url).searchParams.get('uso');return Response.json(id?await mediaUsage(id):await listMedia(),{headers:{'Cache-Control':'private, no-store'}});}
+export async function PATCH(request){if(!trusted(request))return new Response(null,{status:403});const input=await request.json();if(typeof input.id!=='string'||typeof input.alt!=='string'||input.alt.length>500)return new Response(null,{status:400});try{return Response.json(await updateMediaAlt(input.id,input.alt));}catch(e){return Response.json({message:e.message},{status:400});}}
+export async function DELETE(request){if(!trusted(request))return new Response(null,{status:403});const input=await request.json();if(typeof input.id!=='string')return new Response(null,{status:400});try{await deleteMedia(input.id);return Response.json({ok:true});}catch(e){return Response.json({message:e.message},{status:400});}}

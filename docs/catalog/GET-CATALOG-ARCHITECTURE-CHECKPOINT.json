@@ -1,0 +1,25 @@
+{
+  "reason": "Corrección de presentación solicitada: ciudad → instituciones → carreras dentro de cada institución",
+  "before": {
+    "cities": 27,
+    "brands": 93,
+    "campuses": 125,
+    "careerMasters": 195,
+    "territorialOffers": 198,
+    "generalOffers": 128
+  },
+  "dataDeletionAuthorized": false,
+  "presentationChange": "Eliminar únicamente la grilla general Todas las carreras de las homes de ciudad",
+  "globalCareerDirectoryPreserved": true,
+  "seoAndSitemapPreserved": true,
+  "after": {
+    "cities": 27,
+    "brands": 93,
+    "campuses": 125,
+    "careerMasters": 195,
+    "territorialOffers": 198,
+    "generalOffers": 128
+  },
+  "countsPreserved": true,
+  "validation": "PASS"
+}

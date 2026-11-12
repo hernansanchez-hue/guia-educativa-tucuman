@@ -1,17 +1,10 @@
-"use client";
-import { useEffect } from "react";
-import { usePathname } from "next/navigation";
-import Script from "next/script";
-import { isAdminPath } from "../../lib/admin/auth-contract.mjs";
+import PublicAnalyticsClient from './PublicAnalyticsClient';
+import {getIndexablePublicRoutePaths} from '../../lib/admin/published-editorial';
 
-export default function PublicAnalytics() {
-  const pathname = usePathname();
-  const admin = isAdminPath(pathname);
-  useEffect(() => { window["ga-disable-G-KY9E5NG5V2"] = admin; }, [admin]);
-  if (admin) return null;
-  return <><Script src="https://www.googletagmanager.com/gtag/js?id=G-KY9E5NG5V2" strategy="afterInteractive" />
-    <Script id="google-analytics" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || [];
-function gtag(){if(location.pathname === '/admin' || location.pathname.startsWith('/admin/')) return; dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-KY9E5NG5V2');`}</Script></>;
+export default async function PublicAnalytics() {
+  // Non-secret deployment gate: check Enhanced Measurement is disabled in GA
+  // before enabling manual events. This never overrides the visitor's consent.
+  const configured = process.env.GET_GA_MANUAL_MEASUREMENT_CONFIRMED === 'true';
+  const paths = configured ? await getIndexablePublicRoutePaths() : [];
+  return <PublicAnalyticsClient configured={configured} publicPaths={paths} />;
 }

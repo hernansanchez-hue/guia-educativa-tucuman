@@ -2,23 +2,31 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {publicIntegrationCatalog, validateIntegrationMap} from '../lib/integration/catalog-map.mjs';
 import {resolvePublicInquiry} from '../lib/integration/public-inquiry.mjs';
+import {INQUIRY_PRIVACY_VERSION} from '../lib/privacy/inquiry-consent.mjs';
 
 const catalog = publicIntegrationCatalog();
 const institution = catalog.institutions.find(row => catalog.offerings.some(offering => offering.institutionId === row.id));
 const offering = catalog.offerings.find(row => row.institutionId === institution.id);
-const input = {institutionId:institution.id, offeringId:offering.id, name:'Persona de Prueba', phone:'3811234567', email:'persona@example.test', query:''};
+const input = {institutionId:institution.id, offeringId:offering.id, name:'Persona de Prueba', phone:'3811234567', email:'persona@example.test', query:'', privacyConsent:true, privacyVersion:INQUIRY_PRIVACY_VERSION};
 const venueId = '11111111-1111-4111-8111-111111111111';
 const programId = '22222222-2222-4222-8222-222222222222';
 const mapping = {venues:{[institution.id]:{institutionId:venueId}}, offerings:{[offering.id]:{institutionId:venueId,programId}}};
 
 test('catálogo versionado conserva las cantidades aprobadas', () => {
-  assert.deepEqual(validateIntegrationMap({},catalog).counts,{cities:27,venues:125,careers:195,offerings:198});
+  assert.deepEqual(validateIntegrationMap({},catalog).counts,{cities:27,venues:125,careers:197,offerings:200});
 });
 test('resuelve sede y programa únicamente desde el servidor', () => {
   const result=resolvePublicInquiry({...input, management_scope:'institution'},mapping,catalog);
   assert.equal(result.value.institutionId,venueId);
   assert.equal(result.value.programId,programId);
   assert.equal('management_scope' in result.value,false);
+  assert.equal('privacyConsent' in result.value,false);
+  assert.equal('privacyVersion' in result.value,false);
+});
+test('no deriva consultas sin consentimiento explícito y versión vigente', () => {
+  for (const value of [{privacyConsent:false},{privacyConsent:'true'},{privacyConsent:undefined},{privacyVersion:'DRAFT-001'},{privacyVersion:undefined}]) {
+    assert.equal(resolvePublicInquiry({...input,...value},mapping,catalog).status,400);
+  }
 });
 test('rechaza sede inexistente, deshabilitada, carrera ajena y mapeo incompleto', () => {
   assert.equal(resolvePublicInquiry({...input,institutionId:'no-existe'},mapping,catalog).status,404);

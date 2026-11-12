@@ -1,4 +1,6 @@
-import { getTrainingPageCatalog,resolveEditorialMissing,editorialMetadata } from "../../../../../lib/admin/published-editorial";
+import {redirect} from 'next/navigation';
+import {hasFeaturedCareerProfile} from '../../../../../lib/catalog/profile-presentation.mjs';
+import { getTrainingPageCatalog,getInstitutionPageCatalog,resolveEditorialMissing,editorialMetadata } from "../../../../../lib/admin/published-editorial";
 import TrainingPageClient from "./TrainingPageClient";
 import "../../../ciudad.css";
 import "../../institucion.css";
@@ -33,5 +35,7 @@ export default async function TrainingPage({ params }) {
   const { ciudad, institucion, capacitacion } = await params;
   const page = await getTrainingPageCatalog(ciudad, institucion, capacitacion);
   if (!page) await resolveEditorialMissing(`/${ciudad}/${institucion}/capacitaciones/${capacitacion}`);
+  const profile = await getInstitutionPageCatalog(ciudad, institucion);
+  if (!profile || !hasFeaturedCareerProfile(profile.institution, page.program)) redirect(`/${ciudad}/${institucion}#carreras`);
   return <TrainingPageClient {...page} />;
 }

@@ -4,8 +4,11 @@ import {resolveSupabaseConfiguration} from './environment.mjs';
 import {EXTENDED_MODULES,extendedCatalog,validateExtendedPayload,seedExtendedEntries} from './extended-editorial.mjs';
 import {editorialMetadata} from './published-editorial';
 import {SITE_NAME,SITE_DESCRIPTION} from '../seo/public-metadata';
+import {controlStore,controlMode,hasLocalContent} from '../control/store';
+import {project} from '../control/domain.mjs';
+import {namespaceExtended,publicExtendedEntries,isExtendedRecord} from '../control/extended.mjs';
 
-export async function getExtendedPublishedEntries(modules=EXTENDED_MODULES,{fresh=false}={}){
+export async function getLegacyExtendedPublishedEntries(modules=EXTENDED_MODULES,{fresh=false}={}){
  const {url,key}=resolveSupabaseConfiguration(process.env);
  if(!url||!key)return seedExtendedEntries().filter(e=>modules.includes(e.moduleId));
  return (await Promise.all(modules.map(async module=>{
@@ -14,6 +17,12 @@ export async function getExtendedPublishedEntries(modules=EXTENDED_MODULES,{fres
   if(!response.ok)throw new Error(`No se pudo consultar el módulo publicado: ${module}.`);
   const entries=await response.json();for(const e of entries)if(e.payload)validateExtendedPayload(e.payload);return entries;
  }))).flat();
+}
+export async function getExtendedPublishedEntries(modules=EXTENDED_MODULES,options){
+ const base=await getLegacyExtendedPublishedEntries(modules,options);
+ if(!modules.some(m=>['events','services'].includes(m))||controlMode()==='off'||(controlMode()==='local'&&!hasLocalContent()))return base;
+ const records=(await (await controlStore()).published()).filter(isExtendedRecord);
+ return publicExtendedEntries(project(namespaceExtended(base),records).filter(e=>modules.includes(e.moduleId)));
 }
 export async function getExtendedCatalog(modules=EXTENDED_MODULES,options){const {url,key}=resolveSupabaseConfiguration(process.env);return extendedCatalog(await getExtendedPublishedEntries(modules,options),{includeLegacy:!(url&&key)});}
 export async function getPublishedSiteContent(){const [c,config]=await Promise.all([getExtendedCatalog(['navigation','footer','orientation']),getSiteConfiguration()]);return {navigation:c.navigation,footer:c.footer,orientation:c.orientation,design:config.design};}

@@ -1,8 +1,7 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import PublicImage from './PublicImage';
 import { useRouter } from "next/navigation";
 import { departmentAction } from "../../lib/public-catalog/home-map-interaction";
 import { HOME_CONTENT, homeTitleStyle } from '../../lib/admin/home-editorial.mjs';
@@ -46,6 +45,7 @@ function plural(count, singular, pluralValue) {
 
 export default function HomeMapClient({ catalog, content = HOME_CONTENT }) {
   const router = useRouter();
+  const videoRef = useRef(null);
   const [features, setFeatures] = useState([]);
   const [mapError, setMapError] = useState(false);
   const [hovered, setHovered] = useState(null);
@@ -73,6 +73,17 @@ export default function HomeMapClient({ catalog, content = HOME_CONTENT }) {
     return () => controller.abort();
   }, []);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const update = () => {
+      if (document.hidden) video.pause();
+      else video.play().catch(() => {});
+    };
+    document.addEventListener('visibilitychange', update);
+    return () => document.removeEventListener('visibilitychange', update);
+  }, [content.video, content.videoVisible]);
+
   function select(shape, fromKeyboard = false) {
     setSelected(shape.id);
     setHovered(null);
@@ -89,13 +100,13 @@ export default function HomeMapClient({ catalog, content = HOME_CONTENT }) {
 
   return (
     <main className="home-map-hero">
-      {content.videoVisible && <video key={content.video} className="home-map-video" autoPlay muted loop playsInline preload="auto" aria-hidden="true">
+      {content.videoVisible && <video ref={videoRef} key={content.video} className="home-map-video" autoPlay muted loop playsInline preload="auto" aria-hidden="true">
         <source src={content.video} type="video/mp4" />
       </video>}
       <div className="home-map-backdrop" aria-hidden="true" style={content.cmsDesign?.overlay ? {background:`linear-gradient(100deg, rgba(7, 21, 47, ${content.cmsDesign.overlay}), rgba(7, 21, 47, ${Math.max(.5,content.cmsDesign.overlay-.16)}))`} : undefined} />
       <div className="home-map-content">
         <header className="home-map-brand">
-          <img className="home-map-hero-logo" src={content.logo} alt={content.logoAlt} style={content.cmsDesign?.logoSize ? {width:`min(100%, ${content.cmsDesign.logoSize}px)`} : undefined} />
+          <PublicImage className="home-map-hero-logo" src={content.logo} alt={content.logoAlt} width={4501} height={4500} sizes={content.cmsDesign?.logoSize ? `${content.cmsDesign.logoSize}px` : '(max-width: 600px) 160px, 210px'} loading="eager" style={content.cmsDesign?.logoSize ? {width:`min(100%, ${content.cmsDesign.logoSize}px)`} : undefined} />
         </header>
 
         <h1 style={homeTitleStyle(content.cmsDesign)}>{content.titleBefore} <span>{content.titleHighlight}</span> {content.titleAfter}</h1>

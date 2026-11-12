@@ -2,8 +2,8 @@ import { editorialCatalog } from '../admin/editorial-model.mjs';
 import { getVersionedPublicCatalogEntries } from '../catalog/versioned-public-catalog.mjs';
 
 // Project the same published source used by /[ciudad]; send only destinations to the browser.
-export function getCityEntryCatalog() {
-  const catalog = editorialCatalog(getVersionedPublicCatalogEntries(), { includeLegacy: false });
+export function getCityEntryCatalog(entries = getVersionedPublicCatalogEntries()) {
+  const catalog = editorialCatalog(entries, { includeLegacy: false });
   const citiesWithInstitutions = new Set(catalog.institutions.map(institution => institution.citySlug));
   const order = new Intl.Collator('es', { sensitivity: 'base' });
 

@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import {usePublicEditorial} from './PublicEditorialContext';
 import {designVariables} from '../../lib/admin/final-model.mjs';
-import SeoAuroraBackground from "./SeoAuroraBackground";
+
 import { isAdminPath } from "../../lib/admin/auth-contract.mjs";
 
 const BACKGROUND_LINES = [
@@ -33,14 +33,15 @@ export default function PublicSiteBackground({ children, previewPath }) {
   const enabled=Object.keys(variables).length>0;
   const attributes=enabled?{style:variables,'data-cms-design':'true','data-cms-font':Boolean(design.font)||undefined,'data-cms-body-size':Boolean(design.bodySize)||undefined,'data-cms-heading-size':Boolean(design.headingSize)||undefined,'data-cms-button':Boolean(variables['--cms-button-padding'])||undefined,'data-cms-spacing':Boolean(variables['--cms-block-gap'])||undefined}:{};
 
-  if (isAdminPath(pathname)) return children;
+  if (isAdminPath(pathname) || /^\/administrador(?:\/|$)/.test(pathname)) return children;
 
   if (pathname === "/") {
     return <div className="public-site-root">{children}</div>;
   }
 
-  if (pathname === "/carreras" || pathname.startsWith("/carreras/") || pathname === "/instituciones" || pathname.startsWith("/instituciones/")) {
-    return <SeoAuroraBackground attributes={attributes}>{children}</SeoAuroraBackground>;
+  // The eight approved templates own a single interactive network canvas.
+  if (/^\/(?:instituciones|carreras|eventos)(?:\/|$)/.test(pathname) || pathname === "/contacto" || pathname === "/privacidad" || pathname === "/servicios/redes-sociales") {
+    return <div {...attributes}>{children}</div>;
   }
 
   return (
@@ -63,7 +64,7 @@ export default function PublicSiteBackground({ children, previewPath }) {
               "--line-dash": line.dash,
               "--line-delay": line.delay,
               "--line-duration": line.duration,
-              "--line-opacity": Math.min(line.opacity * 2.3, 0.7),
+              "--line-opacity": line.opacity,
               "--line-width": line.width,
             }}
           />

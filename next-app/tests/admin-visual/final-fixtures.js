@@ -1,0 +1,6 @@
+import {SETTINGS_DEFAULTS} from '../../lib/admin/final-model.mjs';
+import {documents} from './fixtures';
+export const globalFixtures=Object.fromEntries(['design','settings'].map(module=>[module,{module,document:{id:'00000000-0000-4000-8000-000000099999',moduleId:module,entityKey:'main',revision:1,state:'published',updatedAt:'2026-10-13T15:00:00Z',draft:{data:module==='design'?{}:{...SETTINGS_DEFAULTS}},versions:[],publishedVersion:1}}]));
+export const finalRows=documents.filter(d=>['city','institution','offering','event','service','training-offering'].includes(d.draft._kind)).slice(0,25).map(d=>({id:d.id,module_id:d.moduleId,entity_key:d.entityKey,state:d.state,revision:d.revision,published_version:d.publishedVersion,draft:d.draft}));
+export const historyRows=documents.slice(0,25).map(d=>({id:d.id,entity_id:d.id,action:'IMPORT',actor_name:'Importación · fixture de prueba',entity_type:d.moduleId,entity_name:d.draft.data.name||d.entityKey,published_version:1,created_at:d.updatedAt,state:d.state}));
+export const userRows=[{id:'00000000-0000-4000-8000-000000000001',display_name:'Persona de prueba · solo harness',email:'fixture@invalid.test',role:'SUPERADMIN',status:'active',confirmed:true,created_at:'2026-10-13T15:00:00Z',last_login_at:null}];

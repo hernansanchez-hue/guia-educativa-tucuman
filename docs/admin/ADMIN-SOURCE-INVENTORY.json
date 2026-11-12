@@ -1,0 +1,3629 @@
+{
+  "schemaVersion": 1,
+  "scope": "Read-only filesystem inventory. Literal references and local sample data; computed resources may require manual review.",
+  "framework": {
+    "next": "16.2.12",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "logo": {
+    "logo": "/assets/get-city-footer-logo.png",
+    "sourceComponent": "app/components/PublicFooter.js",
+    "name": "Administrador GET"
+  },
+  "modules": [
+    {
+      "id": "home",
+      "label": "Home",
+      "group": "pages",
+      "routes": [
+        "/"
+      ],
+      "sources": [
+        "app/components/HomeMapClient.js",
+        "lib/public-catalog/home-map-catalog.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "cities",
+      "label": "Ciudades",
+      "group": "pages",
+      "routes": [
+        "/ciudades",
+        "/[ciudad]"
+      ],
+      "sources": [
+        "app/data/institutions.js",
+        "lib/public-catalog/city-page-catalog.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "institutions",
+      "label": "Instituciones",
+      "group": "pages",
+      "routes": [
+        "/instituciones",
+        "/instituciones/[slug]",
+        "/[ciudad]/[institucion]"
+      ],
+      "sources": [
+        "app/data/institutions.js",
+        "lib/public-catalog/institution-page-catalog.js",
+        "lib/public-catalog/institutions-catalog.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "careers",
+      "label": "Carreras",
+      "group": "pages",
+      "routes": [
+        "/carreras",
+        "/carreras/[slug]",
+        "/[ciudad]/[institucion]/carreras/[carrera]"
+      ],
+      "sources": [
+        "app/data/careers.js",
+        "app/data/offerings.js",
+        "lib/public-catalog/career-page-catalog.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "trainings",
+      "label": "Capacitaciones",
+      "group": "pages",
+      "routes": [
+        "/[ciudad]/[institucion]/capacitaciones/[capacitacion]"
+      ],
+      "sources": [
+        "app/data/trainingPrograms.js",
+        "app/data/trainingOfferings.js",
+        "lib/public-catalog/training-page-catalog.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "teacher-courses",
+      "label": "Cursos docentes",
+      "group": "pages",
+      "routes": [
+        "/cursos-docentes"
+      ],
+      "sources": [
+        "app/data/teacherCourses.js",
+        "lib/public-catalog/teacher-courses-catalog.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "events",
+      "label": "Eventos",
+      "group": "pages",
+      "routes": [
+        "/eventos",
+        "/eventos/[slug]"
+      ],
+      "sources": [
+        "app/data/events.js",
+        "app/eventos/page.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "services",
+      "label": "Servicios",
+      "group": "pages",
+      "routes": [
+        "/servicios",
+        "/servicios/[slug]",
+        "/servicios/redes-sociales"
+      ],
+      "sources": [
+        "app/data/services.js",
+        "app/components/ServiceHero.js",
+        "app/servicios/redes-sociales/page.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "orientation",
+      "label": "Orientación Vocacional",
+      "group": "pages",
+      "routes": [],
+      "sources": [
+        "app/[ciudad]/CityInstitutionSections.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "about",
+      "label": "Nosotros",
+      "group": "pages",
+      "routes": [
+        "/nosotros"
+      ],
+      "sources": [
+        "app/nosotros/page.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "contact",
+      "label": "Contacto comercial",
+      "group": "pages",
+      "routes": [
+        "/contacto"
+      ],
+      "sources": [
+        "app/contacto/page.js",
+        "app/contacto/ContactForm.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "banners",
+      "label": "Banners",
+      "group": "content",
+      "routes": [],
+      "sources": [
+        "app/components/ServiceHero.js",
+        "app/[ciudad]/CityPageClient.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "media",
+      "label": "Multimedia",
+      "group": "content",
+      "routes": [],
+      "sources": [
+        "public/assets"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "navigation",
+      "label": "Menús",
+      "group": "content",
+      "routes": [],
+      "sources": [
+        "app/components/PublicHeader.js",
+        "app/components/PublicFloatingHeader.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "group": "content",
+      "routes": [],
+      "sources": [
+        "app/components/PublicFooter.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "design",
+      "label": "Diseño",
+      "group": "configuration",
+      "routes": [],
+      "sources": [
+        "app/globals.css"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "seo",
+      "label": "SEO",
+      "group": "configuration",
+      "routes": [],
+      "sources": [
+        "lib/seo/public-metadata.js",
+        "app/sitemap.js",
+        "app/robots.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "forms",
+      "label": "Formularios",
+      "group": "configuration",
+      "routes": [],
+      "sources": [
+        "lib/public-leads.js",
+        "app/contacto/ContactForm.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": true
+    },
+    {
+      "id": "legal",
+      "label": "Legal",
+      "group": "configuration",
+      "routes": [],
+      "sources": [
+        "lib/legal-config.js"
+      ],
+      "implementationStatus": "planned",
+      "requiresLegalReview": true
+    },
+    {
+      "id": "users",
+      "label": "Usuarios",
+      "group": "system",
+      "routes": [],
+      "sources": [],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "history",
+      "label": "Historial",
+      "group": "system",
+      "routes": [],
+      "sources": [],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    },
+    {
+      "id": "settings",
+      "label": "Configuración",
+      "group": "system",
+      "routes": [],
+      "sources": [],
+      "implementationStatus": "planned",
+      "requiresLegalReview": false
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "/[ciudad]/[institucion]/capacitaciones/[capacitacion]",
+      "file": "app/[ciudad]/[institucion]/capacitaciones/[capacitacion]/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/[institucion]/capacitaciones/[capacitacion]/TrainingPageClient.js",
+        "app/[ciudad]/[institucion]/capacitaciones/[capacitacion]/page.js",
+        "app/[ciudad]/[institucion]/carreras/[carrera]/carrera.css",
+        "app/[ciudad]/[institucion]/institucion.css",
+        "app/[ciudad]/ciudad.css",
+        "app/components/PublicFloatingHeader.js",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/data/institutions.js",
+        "app/data/trainingOfferings.js",
+        "app/data/trainingPrograms.js",
+        "lib/public-catalog/supabase-public-catalog.js",
+        "lib/public-catalog/training-page-catalog.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "hasMetadata": true,
+      "hasStaticParams": true,
+      "dynamicParams": "default",
+      "revalidate": "60"
+    },
+    {
+      "pattern": "/[ciudad]/[institucion]/carreras/[carrera]",
+      "file": "app/[ciudad]/[institucion]/carreras/[carrera]/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/[institucion]/carreras/[carrera]/CareerPageClient.js",
+        "app/[ciudad]/[institucion]/carreras/[carrera]/carrera.css",
+        "app/[ciudad]/[institucion]/carreras/[carrera]/page.js",
+        "app/[ciudad]/[institucion]/institucion.css",
+        "app/[ciudad]/ciudad.css",
+        "app/components/PublicFloatingHeader.js",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/data/careers.js",
+        "app/data/institutions.js",
+        "app/data/offerings.js",
+        "lib/public-catalog/career-page-catalog.js",
+        "lib/public-catalog/supabase-public-catalog.js",
+        "lib/public-leads.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "hasMetadata": true,
+      "hasStaticParams": true,
+      "dynamicParams": "default",
+      "revalidate": "60"
+    },
+    {
+      "pattern": "/[ciudad]/[institucion]",
+      "file": "app/[ciudad]/[institucion]/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/[institucion]/InstitutionPageClient.js",
+        "app/[ciudad]/[institucion]/institucion.css",
+        "app/[ciudad]/[institucion]/page.js",
+        "app/[ciudad]/ciudad.css",
+        "app/components/PublicFloatingHeader.js",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/data/institutions.js",
+        "app/data/offerings.js",
+        "app/data/trainingOfferings.js",
+        "lib/public-catalog/institution-offerings-catalog.js",
+        "lib/public-catalog/institution-page-catalog.js",
+        "lib/public-catalog/supabase-public-catalog.js",
+        "lib/public-leads.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "hasMetadata": true,
+      "hasStaticParams": true,
+      "dynamicParams": "default",
+      "revalidate": "60"
+    },
+    {
+      "pattern": "/[ciudad]",
+      "file": "app/[ciudad]/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/CityFeaturedCareers.js",
+        "app/[ciudad]/CityInstitutionSections.js",
+        "app/[ciudad]/CityPageClient.js",
+        "app/[ciudad]/ciudad.css",
+        "app/[ciudad]/page.js",
+        "app/components/PublicFloatingHeader.js",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/data/institutions.js",
+        "lib/public-catalog/city-page-catalog.js",
+        "lib/public-catalog/supabase-public-catalog.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "hasMetadata": true,
+      "hasStaticParams": true,
+      "dynamicParams": "default",
+      "revalidate": "60"
+    },
+    {
+      "pattern": "/carreras/[slug]",
+      "file": "app/carreras/[slug]/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/ciudad.css",
+        "app/carreras/[slug]/page.js",
+        "app/carreras/carreras.css",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/data/careers.js",
+        "app/data/institutions.js",
+        "app/data/offerings.js",
+        "lib/public-catalog/careers-catalog.js",
+        "lib/public-catalog/supabase-public-catalog.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "hasMetadata": true,
+      "hasStaticParams": true,
+      "dynamicParams": "default",
+      "revalidate": "60"
+    },
+    {
+      "pattern": "/carreras",
+      "file": "app/carreras/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/ciudad.css",
+        "app/carreras/carreras.css",
+        "app/carreras/page.js",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/data/careers.js",
+        "app/data/institutions.js",
+        "app/data/offerings.js",
+        "lib/public-catalog/careers-catalog.js",
+        "lib/public-catalog/supabase-public-catalog.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "hasMetadata": true,
+      "hasStaticParams": false,
+      "dynamicParams": "default",
+      "revalidate": "60"
+    },
+    {
+      "pattern": "/ciudades",
+      "file": "app/ciudades/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/ciudad.css",
+        "app/ciudades/page.js",
+        "app/components/CitySelector.js",
+        "app/components/HomeClient.js",
+        "app/components/PublicFloatingHeader.js",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/data/institutions.js",
+        "app/home.css",
+        "lib/public-catalog/cities-catalog.js",
+        "lib/public-catalog/supabase-public-catalog.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "hasMetadata": true,
+      "hasStaticParams": false,
+      "dynamicParams": "default",
+      "revalidate": "60"
+    },
+    {
+      "pattern": "/contacto",
+      "file": "app/contacto/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/ciudad.css",
+        "app/components/PublicFloatingHeader.js",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/contacto/ContactForm.js",
+        "app/contacto/contacto.css",
+        "app/contacto/page.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "hasMetadata": true,
+      "hasStaticParams": false,
+      "dynamicParams": "default",
+      "revalidate": null
+    },
+    {
+      "pattern": "/cursos-docentes",
+      "file": "app/cursos-docentes/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/ciudad.css",
+        "app/components/PublicFloatingHeader.js",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/cursos-docentes/CoursesClient.js",
+        "app/cursos-docentes/course-filters.js",
+        "app/cursos-docentes/cursos-docentes.css",
+        "app/cursos-docentes/page.js",
+        "app/data/teacherCourses.js",
+        "app/nosotros/AboutRevealClient.js",
+        "lib/public-catalog/teacher-courses-catalog.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "hasMetadata": true,
+      "hasStaticParams": false,
+      "dynamicParams": "default",
+      "revalidate": "60"
+    },
+    {
+      "pattern": "/eventos/[slug]",
+      "file": "app/eventos/[slug]/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/ciudad.css",
+        "app/components/PublicFloatingHeader.js",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/data/events.js",
+        "app/eventos/[slug]/page.js",
+        "app/eventos/eventos.css"
+      ],
+      "hasMetadata": false,
+      "hasStaticParams": true,
+      "dynamicParams": "default",
+      "revalidate": null
+    },
+    {
+      "pattern": "/eventos",
+      "file": "app/eventos/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/ciudad.css",
+        "app/components/PublicFloatingHeader.js",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/data/events.js",
+        "app/eventos/eventos.css",
+        "app/eventos/page.js"
+      ],
+      "hasMetadata": false,
+      "hasStaticParams": false,
+      "dynamicParams": "default",
+      "revalidate": null
+    },
+    {
+      "pattern": "/instituciones/[slug]",
+      "file": "app/instituciones/[slug]/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/ciudad.css",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/data/institutions.js",
+        "app/data/offerings.js",
+        "app/instituciones/[slug]/page.js",
+        "app/instituciones/instituciones.css",
+        "lib/public-catalog/institutions-catalog.js",
+        "lib/public-catalog/supabase-public-catalog.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "hasMetadata": true,
+      "hasStaticParams": true,
+      "dynamicParams": "default",
+      "revalidate": "60"
+    },
+    {
+      "pattern": "/instituciones",
+      "file": "app/instituciones/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/ciudad.css",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/data/institutions.js",
+        "app/data/offerings.js",
+        "app/instituciones/InstitutionsIndexClient.js",
+        "app/instituciones/instituciones.css",
+        "app/instituciones/page.js",
+        "lib/public-catalog/institutions-catalog.js",
+        "lib/public-catalog/supabase-public-catalog.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "hasMetadata": true,
+      "hasStaticParams": false,
+      "dynamicParams": "default",
+      "revalidate": "60"
+    },
+    {
+      "pattern": "/nosotros",
+      "file": "app/nosotros/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/ciudad.css",
+        "app/components/PublicFloatingHeader.js",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/nosotros/AboutHomeButton.js",
+        "app/nosotros/AboutRevealClient.js",
+        "app/nosotros/nosotros-refinement.css",
+        "app/nosotros/nosotros.css",
+        "app/nosotros/page.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "hasMetadata": true,
+      "hasStaticParams": false,
+      "dynamicParams": "default",
+      "revalidate": null
+    },
+    {
+      "pattern": "/",
+      "file": "app/page.js",
+      "dependencyClosure": [
+        "app/components/HomeMapClient.js",
+        "app/data/careers.js",
+        "app/data/institutions.js",
+        "app/data/offerings.js",
+        "app/home-map.css",
+        "app/page.js",
+        "lib/public-catalog/home-map-catalog.js",
+        "lib/public-catalog/home-map-interaction.js",
+        "lib/public-catalog/supabase-public-catalog.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "hasMetadata": true,
+      "hasStaticParams": false,
+      "dynamicParams": "default",
+      "revalidate": "60"
+    },
+    {
+      "pattern": "/servicios/[slug]",
+      "file": "app/servicios/[slug]/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/ciudad.css",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/components/ServiceHero.js",
+        "app/data/services.js",
+        "app/servicios/[slug]/page.js",
+        "app/servicios/servicios.css"
+      ],
+      "hasMetadata": false,
+      "hasStaticParams": true,
+      "dynamicParams": "default",
+      "revalidate": null
+    },
+    {
+      "pattern": "/servicios",
+      "file": "app/servicios/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/ciudad.css",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/components/ServiceHero.js",
+        "app/data/services.js",
+        "app/servicios/page.js",
+        "app/servicios/servicios.css"
+      ],
+      "hasMetadata": false,
+      "hasStaticParams": false,
+      "dynamicParams": "default",
+      "revalidate": null
+    },
+    {
+      "pattern": "/servicios/redes-sociales",
+      "file": "app/servicios/redes-sociales/page.js",
+      "dependencyClosure": [
+        "app/[ciudad]/ciudad.css",
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/components/ServiceHero.js",
+        "app/servicios/redes-sociales/page.js",
+        "app/servicios/servicios.css"
+      ],
+      "hasMetadata": false,
+      "hasStaticParams": false,
+      "dynamicParams": "default",
+      "revalidate": null
+    }
+  ],
+  "literalPublicPaths": [
+    "/",
+    "/aguilares",
+    "/aguilares/academia-profesional-norte",
+    "/aguilares/academia-profesional-norte/carreras/community-manager",
+    "/aguilares/academia-profesional-norte/carreras/diseno-grafico",
+    "/aguilares/academia-profesional-norte/carreras/ventas-digitales",
+    "/aguilares/instituto-santa-barbara",
+    "/aguilares/instituto-santa-barbara/carreras/diagnostico-por-imagenes",
+    "/aguilares/instituto-santa-barbara/carreras/instrumentacion-quirurgica",
+    "/aguilares/instituto-santa-barbara/carreras/laboratorio-de-analisis-clinicos",
+    "/aguilares/universidad-siglo-21",
+    "/aguilares/universidad-siglo-21/carreras/abogacia",
+    "/aguilares/universidad-siglo-21/carreras/contador-publico",
+    "/aguilares/universidad-siglo-21/carreras/higiene-y-seguridad",
+    "/aguilares/universidad-siglo-21/carreras/lic-en-administracion",
+    "/carreras",
+    "/carreras/abogacia",
+    "/carreras/acompanante-terapeutico",
+    "/carreras/administracion-de-empresas",
+    "/carreras/community-manager",
+    "/carreras/contador-publico",
+    "/carreras/diagnostico-por-imagenes",
+    "/carreras/diseno-grafico",
+    "/carreras/gestion-educativa",
+    "/carreras/higiene-y-seguridad",
+    "/carreras/instrumentacion-quirurgica",
+    "/carreras/laboratorio-de-analisis-clinicos",
+    "/carreras/lic-en-administracion",
+    "/carreras/marketing",
+    "/carreras/profesorado",
+    "/carreras/profesorado-educacion-primaria",
+    "/carreras/profesorado-ingles",
+    "/carreras/recursos-humanos",
+    "/carreras/tecnicatura-administracion",
+    "/carreras/ventas-digitales",
+    "/ciudades",
+    "/concepcion",
+    "/concepcion/ies-concepcion",
+    "/concepcion/ies-concepcion/carreras/profesorado-educacion-primaria",
+    "/concepcion/ies-concepcion/carreras/profesorado-ingles",
+    "/concepcion/ies-concepcion/carreras/tecnicatura-administracion",
+    "/concepcion/instituto-santa-barbara",
+    "/concepcion/instituto-santa-barbara/carreras/diagnostico-por-imagenes",
+    "/concepcion/instituto-santa-barbara/carreras/instrumentacion-quirurgica",
+    "/concepcion/instituto-santa-barbara/carreras/laboratorio-de-analisis-clinicos",
+    "/concepcion/universidad-siglo-21",
+    "/concepcion/universidad-siglo-21/carreras/abogacia",
+    "/concepcion/universidad-siglo-21/carreras/contador-publico",
+    "/concepcion/universidad-siglo-21/carreras/higiene-y-seguridad",
+    "/concepcion/universidad-siglo-21/carreras/lic-en-administracion",
+    "/contacto",
+    "/cursos-docentes",
+    "/eventos",
+    "/eventos/encuentro-comunitario-concepcion",
+    "/eventos/encuentro-deportivo-concepcion",
+    "/eventos/expo-educativa-concepcion",
+    "/eventos/feria-de-emprendedores-aguilares",
+    "/eventos/feria-municipal-monteros",
+    "/eventos/festival-cultural-aguilares",
+    "/eventos/jornada-juvenil-monteros",
+    "/instituciones",
+    "/instituciones/academia-profesional-norte",
+    "/instituciones/centro-de-formacion-tucuman",
+    "/instituciones/ies-concepcion",
+    "/instituciones/instituto-del-sur",
+    "/instituciones/instituto-san-miguel",
+    "/instituciones/instituto-santa-barbara",
+    "/instituciones/universidad-siglo-21",
+    "/monteros",
+    "/monteros/centro-de-formacion-tucuman",
+    "/monteros/centro-de-formacion-tucuman/capacitaciones/auxiliar-administrativo",
+    "/monteros/centro-de-formacion-tucuman/capacitaciones/operador-de-pc",
+    "/monteros/centro-de-formacion-tucuman/capacitaciones/secretariado",
+    "/monteros/instituto-del-sur",
+    "/monteros/instituto-del-sur/carreras/administracion-de-empresas",
+    "/monteros/instituto-del-sur/carreras/marketing",
+    "/monteros/instituto-del-sur/carreras/recursos-humanos",
+    "/monteros/instituto-san-miguel",
+    "/monteros/instituto-san-miguel/carreras/acompanante-terapeutico",
+    "/monteros/instituto-san-miguel/carreras/gestion-educativa",
+    "/monteros/instituto-san-miguel/carreras/profesorado",
+    "/monteros/universidad-siglo-21",
+    "/monteros/universidad-siglo-21/carreras/abogacia",
+    "/monteros/universidad-siglo-21/carreras/contador-publico",
+    "/monteros/universidad-siglo-21/carreras/higiene-y-seguridad",
+    "/monteros/universidad-siglo-21/carreras/lic-en-administracion",
+    "/nosotros",
+    "/servicios",
+    "/servicios/campana-de-mail",
+    "/servicios/convenios",
+    "/servicios/crm-seguimiento",
+    "/servicios/cursos-docentes",
+    "/servicios/cursos-gratuitos",
+    "/servicios/eventos",
+    "/servicios/expos-carreras",
+    "/servicios/google-ads",
+    "/servicios/meta-ads",
+    "/servicios/oficios",
+    "/servicios/orientacion-vocacional",
+    "/servicios/podcast",
+    "/servicios/redes-sociales",
+    "/servicios/via-publica",
+    "/servicios/videos-personalizados"
+  ],
+  "entityInventory": {
+    "cities": {
+      "count": 3,
+      "fields": [
+        "canonicalDataNotice",
+        "featuredInstitutionIds",
+        "institutionIds",
+        "name",
+        "slug",
+        "title"
+      ],
+      "identities": [
+        {
+          "id": null,
+          "slug": "concepcion",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "monteros",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "aguilares",
+          "citySlug": null
+        }
+      ]
+    },
+    "institutions": {
+      "count": 10,
+      "fields": [
+        "address",
+        "canonicalDataNotice",
+        "careers",
+        "cities",
+        "citySlug",
+        "description",
+        "gallery",
+        "id",
+        "image",
+        "logo",
+        "media",
+        "name",
+        "plan",
+        "slogan",
+        "slug",
+        "type",
+        "whatsapp"
+      ],
+      "identities": [
+        {
+          "id": "universidad-siglo-21-concepcion",
+          "slug": "universidad-siglo-21",
+          "citySlug": "concepcion"
+        },
+        {
+          "id": "universidad-siglo-21-monteros",
+          "slug": "universidad-siglo-21",
+          "citySlug": "monteros"
+        },
+        {
+          "id": "instituto-santa-barbara-concepcion",
+          "slug": "instituto-santa-barbara",
+          "citySlug": "concepcion"
+        },
+        {
+          "id": "universidad-siglo-21-aguilares",
+          "slug": "universidad-siglo-21",
+          "citySlug": "aguilares"
+        },
+        {
+          "id": "instituto-santa-barbara-aguilares",
+          "slug": "instituto-santa-barbara",
+          "citySlug": "aguilares"
+        },
+        {
+          "id": "academia-profesional-norte-aguilares",
+          "slug": "academia-profesional-norte",
+          "citySlug": "aguilares"
+        },
+        {
+          "id": "instituto-del-sur-monteros",
+          "slug": "instituto-del-sur",
+          "citySlug": "monteros"
+        },
+        {
+          "id": "centro-de-formacion-tucuman-monteros",
+          "slug": "centro-de-formacion-tucuman",
+          "citySlug": "monteros"
+        },
+        {
+          "id": "instituto-san-miguel-monteros",
+          "slug": "instituto-san-miguel",
+          "citySlug": "monteros"
+        },
+        {
+          "id": "ies-concepcion-concepcion",
+          "slug": "ies-concepcion",
+          "citySlug": "concepcion"
+        }
+      ]
+    },
+    "careers": {
+      "count": 19,
+      "fields": [
+        "description",
+        "faq",
+        "graduateProfile",
+        "id",
+        "name",
+        "requirements",
+        "slug",
+        "studyPlan",
+        "workField"
+      ],
+      "identities": [
+        {
+          "id": "profesorado-ingles",
+          "slug": "profesorado-ingles",
+          "citySlug": null
+        },
+        {
+          "id": "tecnicatura-administracion",
+          "slug": "tecnicatura-administracion",
+          "citySlug": null
+        },
+        {
+          "id": "profesorado-educacion-primaria",
+          "slug": "profesorado-educacion-primaria",
+          "citySlug": null
+        },
+        {
+          "id": "diagnostico-por-imagenes",
+          "slug": "diagnostico-por-imagenes",
+          "citySlug": null
+        },
+        {
+          "id": "laboratorio-de-analisis-clinicos",
+          "slug": "laboratorio-de-analisis-clinicos",
+          "citySlug": null
+        },
+        {
+          "id": "instrumentacion-quirurgica",
+          "slug": "instrumentacion-quirurgica",
+          "citySlug": null
+        },
+        {
+          "id": "abogacia",
+          "slug": "abogacia",
+          "citySlug": null
+        },
+        {
+          "id": "contador-publico",
+          "slug": "contador-publico",
+          "citySlug": null
+        },
+        {
+          "id": "lic-en-administracion",
+          "slug": "lic-en-administracion",
+          "citySlug": null
+        },
+        {
+          "id": "higiene-y-seguridad",
+          "slug": "higiene-y-seguridad",
+          "citySlug": null
+        },
+        {
+          "id": "marketing",
+          "slug": "marketing",
+          "citySlug": null
+        },
+        {
+          "id": "recursos-humanos",
+          "slug": "recursos-humanos",
+          "citySlug": null
+        },
+        {
+          "id": "administracion-de-empresas",
+          "slug": "administracion-de-empresas",
+          "citySlug": null
+        },
+        {
+          "id": "profesorado",
+          "slug": "profesorado",
+          "citySlug": null
+        },
+        {
+          "id": "gestion-educativa",
+          "slug": "gestion-educativa",
+          "citySlug": null
+        },
+        {
+          "id": "acompanante-terapeutico",
+          "slug": "acompanante-terapeutico",
+          "citySlug": null
+        },
+        {
+          "id": "diseno-grafico",
+          "slug": "diseno-grafico",
+          "citySlug": null
+        },
+        {
+          "id": "community-manager",
+          "slug": "community-manager",
+          "citySlug": null
+        },
+        {
+          "id": "ventas-digitales",
+          "slug": "ventas-digitales",
+          "citySlug": null
+        }
+      ]
+    },
+    "offerings": {
+      "count": 30,
+      "fields": [
+        "badge",
+        "campus",
+        "careerId",
+        "citySlug",
+        "degree",
+        "duration",
+        "formEnabled",
+        "id",
+        "image",
+        "institutionId",
+        "modality",
+        "nationalValidity",
+        "order",
+        "shifts",
+        "visible"
+      ],
+      "identities": [
+        {
+          "id": "ies-concepcion-concepcion-profesorado-ingles",
+          "slug": null,
+          "citySlug": "concepcion"
+        },
+        {
+          "id": "ies-concepcion-concepcion-tecnicatura-administracion",
+          "slug": null,
+          "citySlug": "concepcion"
+        },
+        {
+          "id": "ies-concepcion-concepcion-profesorado-educacion-primaria",
+          "slug": null,
+          "citySlug": "concepcion"
+        },
+        {
+          "id": "instituto-santa-barbara-concepcion-diagnostico-por-imagenes",
+          "slug": null,
+          "citySlug": "concepcion"
+        },
+        {
+          "id": "instituto-santa-barbara-concepcion-laboratorio-de-analisis-clinicos",
+          "slug": null,
+          "citySlug": "concepcion"
+        },
+        {
+          "id": "instituto-santa-barbara-concepcion-instrumentacion-quirurgica",
+          "slug": null,
+          "citySlug": "concepcion"
+        },
+        {
+          "id": "universidad-siglo-21-concepcion-abogacia",
+          "slug": null,
+          "citySlug": "concepcion"
+        },
+        {
+          "id": "universidad-siglo-21-monteros-abogacia",
+          "slug": null,
+          "citySlug": "monteros"
+        },
+        {
+          "id": "universidad-siglo-21-concepcion-contador-publico",
+          "slug": null,
+          "citySlug": "concepcion"
+        },
+        {
+          "id": "universidad-siglo-21-monteros-contador-publico",
+          "slug": null,
+          "citySlug": "monteros"
+        },
+        {
+          "id": "universidad-siglo-21-concepcion-lic-en-administracion",
+          "slug": null,
+          "citySlug": "concepcion"
+        },
+        {
+          "id": "universidad-siglo-21-monteros-lic-en-administracion",
+          "slug": null,
+          "citySlug": "monteros"
+        },
+        {
+          "id": "universidad-siglo-21-concepcion-higiene-y-seguridad",
+          "slug": null,
+          "citySlug": "concepcion"
+        },
+        {
+          "id": "universidad-siglo-21-monteros-higiene-y-seguridad",
+          "slug": null,
+          "citySlug": "monteros"
+        },
+        {
+          "id": "instituto-del-sur-monteros-marketing",
+          "slug": null,
+          "citySlug": "monteros"
+        },
+        {
+          "id": "instituto-del-sur-monteros-recursos-humanos",
+          "slug": null,
+          "citySlug": "monteros"
+        },
+        {
+          "id": "instituto-del-sur-monteros-administracion-de-empresas",
+          "slug": null,
+          "citySlug": "monteros"
+        },
+        {
+          "id": "instituto-san-miguel-monteros-profesorado",
+          "slug": null,
+          "citySlug": "monteros"
+        },
+        {
+          "id": "instituto-san-miguel-monteros-gestion-educativa",
+          "slug": null,
+          "citySlug": "monteros"
+        },
+        {
+          "id": "instituto-san-miguel-monteros-acompanante-terapeutico",
+          "slug": null,
+          "citySlug": "monteros"
+        },
+        {
+          "id": "universidad-siglo-21-aguilares-abogacia",
+          "slug": null,
+          "citySlug": "aguilares"
+        },
+        {
+          "id": "universidad-siglo-21-aguilares-contador-publico",
+          "slug": null,
+          "citySlug": "aguilares"
+        },
+        {
+          "id": "universidad-siglo-21-aguilares-lic-en-administracion",
+          "slug": null,
+          "citySlug": "aguilares"
+        },
+        {
+          "id": "universidad-siglo-21-aguilares-higiene-y-seguridad",
+          "slug": null,
+          "citySlug": "aguilares"
+        },
+        {
+          "id": "instituto-santa-barbara-aguilares-instrumentacion-quirurgica",
+          "slug": null,
+          "citySlug": "aguilares"
+        },
+        {
+          "id": "instituto-santa-barbara-aguilares-laboratorio-de-analisis-clinicos",
+          "slug": null,
+          "citySlug": "aguilares"
+        },
+        {
+          "id": "instituto-santa-barbara-aguilares-diagnostico-por-imagenes",
+          "slug": null,
+          "citySlug": "aguilares"
+        },
+        {
+          "id": "academia-profesional-norte-aguilares-diseno-grafico",
+          "slug": null,
+          "citySlug": "aguilares"
+        },
+        {
+          "id": "academia-profesional-norte-aguilares-community-manager",
+          "slug": null,
+          "citySlug": "aguilares"
+        },
+        {
+          "id": "academia-profesional-norte-aguilares-ventas-digitales",
+          "slug": null,
+          "citySlug": "aguilares"
+        }
+      ]
+    },
+    "trainingPrograms": {
+      "count": 3,
+      "fields": [
+        "contents",
+        "description",
+        "faq",
+        "id",
+        "name",
+        "profile",
+        "requirements",
+        "slug",
+        "status",
+        "workField"
+      ],
+      "identities": [
+        {
+          "id": "auxiliar-administrativo",
+          "slug": "auxiliar-administrativo",
+          "citySlug": null
+        },
+        {
+          "id": "secretariado",
+          "slug": "secretariado",
+          "citySlug": null
+        },
+        {
+          "id": "operador-de-pc",
+          "slug": "operador-de-pc",
+          "citySlug": null
+        }
+      ]
+    },
+    "trainingOfferings": {
+      "count": 3,
+      "fields": [
+        "badge",
+        "campus",
+        "certification",
+        "citySlug",
+        "duration",
+        "formEnabled",
+        "id",
+        "image",
+        "institutionId",
+        "modality",
+        "nationalValidity",
+        "order",
+        "publicationStatus",
+        "shifts",
+        "trainingProgramId",
+        "visible"
+      ],
+      "identities": [
+        {
+          "id": "centro-de-formacion-tucuman-monteros-auxiliar-administrativo",
+          "slug": null,
+          "citySlug": "monteros"
+        },
+        {
+          "id": "centro-de-formacion-tucuman-monteros-secretariado",
+          "slug": null,
+          "citySlug": "monteros"
+        },
+        {
+          "id": "centro-de-formacion-tucuman-monteros-operador-de-pc",
+          "slug": null,
+          "citySlug": "monteros"
+        }
+      ]
+    },
+    "teacherCourses": {
+      "count": 10,
+      "fields": [
+        "badge",
+        "city",
+        "featured",
+        "id",
+        "image",
+        "institution",
+        "modality",
+        "name",
+        "order",
+        "score",
+        "slug",
+        "start",
+        "status",
+        "urgency",
+        "weeks"
+      ],
+      "identities": [
+        {
+          "id": "inteligencia-artificial-aplicada-al-aula",
+          "slug": "inteligencia-artificial-aplicada-al-aula",
+          "citySlug": null
+        },
+        {
+          "id": "evaluacion-formativa-y-nuevas-estrategias",
+          "slug": "evaluacion-formativa-y-nuevas-estrategias",
+          "citySlug": null
+        },
+        {
+          "id": "herramientas-digitales-para-docentes",
+          "slug": "herramientas-digitales-para-docentes",
+          "citySlug": null
+        },
+        {
+          "id": "educacion-emocional-y-convivencia-escolar",
+          "slug": "educacion-emocional-y-convivencia-escolar",
+          "citySlug": null
+        },
+        {
+          "id": "diseno-de-proyectos-interdisciplinarios",
+          "slug": "diseno-de-proyectos-interdisciplinarios",
+          "citySlug": null
+        },
+        {
+          "id": "inclusion-educativa-y-trayectorias-escolares",
+          "slug": "inclusion-educativa-y-trayectorias-escolares",
+          "citySlug": null
+        },
+        {
+          "id": "alfabetizacion-inicial-enfoques-actuales",
+          "slug": "alfabetizacion-inicial-enfoques-actuales",
+          "citySlug": null
+        },
+        {
+          "id": "gamificacion-y-aprendizaje-basado-en-retos",
+          "slug": "gamificacion-y-aprendizaje-basado-en-retos",
+          "citySlug": null
+        },
+        {
+          "id": "gestion-institucional-y-liderazgo-pedagogico",
+          "slug": "gestion-institucional-y-liderazgo-pedagogico",
+          "citySlug": null
+        },
+        {
+          "id": "estrategias-para-la-ensenanza-de-matematica",
+          "slug": "estrategias-para-la-ensenanza-de-matematica",
+          "citySlug": null
+        }
+      ]
+    },
+    "events": {
+      "count": 7,
+      "fields": [
+        "category",
+        "city",
+        "date",
+        "description",
+        "gallery",
+        "id",
+        "image",
+        "institutions",
+        "location",
+        "name",
+        "slug",
+        "status"
+      ],
+      "identities": [
+        {
+          "id": "event-01",
+          "slug": "encuentro-deportivo-concepcion",
+          "citySlug": null
+        },
+        {
+          "id": "event-02",
+          "slug": "feria-municipal-monteros",
+          "citySlug": null
+        },
+        {
+          "id": "event-03",
+          "slug": "festival-cultural-aguilares",
+          "citySlug": null
+        },
+        {
+          "id": "event-04",
+          "slug": "expo-educativa-concepcion",
+          "citySlug": null
+        },
+        {
+          "id": "event-05",
+          "slug": "jornada-juvenil-monteros",
+          "citySlug": null
+        },
+        {
+          "id": "event-06",
+          "slug": "feria-de-emprendedores-aguilares",
+          "citySlug": null
+        },
+        {
+          "id": "event-07",
+          "slug": "encuentro-comunitario-concepcion",
+          "citySlug": null
+        }
+      ]
+    },
+    "services": {
+      "count": 15,
+      "fields": [
+        "description",
+        "name",
+        "slug"
+      ],
+      "identities": [
+        {
+          "id": null,
+          "slug": "redes-sociales",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "google-ads",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "meta-ads",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "campana-de-mail",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "expos-carreras",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "eventos",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "via-publica",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "podcast",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "videos-personalizados",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "orientacion-vocacional",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "cursos-gratuitos",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "convenios",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "crm-seguimiento",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "cursos-docentes",
+          "citySlug": null
+        },
+        {
+          "id": null,
+          "slug": "oficios",
+          "citySlug": null
+        }
+      ]
+    },
+    "servicePlans": {
+      "count": 3,
+      "fields": [
+        "description",
+        "id",
+        "includes",
+        "name",
+        "priceLabel"
+      ],
+      "identities": [
+        {
+          "id": "plan-1",
+          "slug": null,
+          "citySlug": null
+        },
+        {
+          "id": "plan-2",
+          "slug": null,
+          "citySlug": null
+        },
+        {
+          "id": "plan-3",
+          "slug": null,
+          "citySlug": null
+        }
+      ]
+    }
+  },
+  "files": [
+    {
+      "file": "app/[ciudad]/CityFeaturedCareers.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "react"
+      ],
+      "dependencies": [],
+      "exports": [
+        "CityFeaturedCareers"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/[ciudad]/CityInstitutionSections.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "react",
+        "next/link"
+      ],
+      "dependencies": [],
+      "exports": [
+        "CityInstitutionSections"
+      ],
+      "inlineCollections": [],
+      "resources": [
+        "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1100&q=84",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=84"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/[ciudad]/CityPageClient.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "react",
+        "next/navigation",
+        "../components/PublicFooter",
+        "../components/PublicFloatingHeader",
+        "./CityFeaturedCareers",
+        "./CityInstitutionSections"
+      ],
+      "dependencies": [
+        "app/components/PublicFooter.js",
+        "app/components/PublicFloatingHeader.js",
+        "app/[ciudad]/CityFeaturedCareers.js",
+        "app/[ciudad]/CityInstitutionSections.js"
+      ],
+      "exports": [
+        "CityPageClient"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/[ciudad]/[institucion]/InstitutionPageClient.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "react",
+        "next/navigation",
+        "../../components/PublicFooter",
+        "../../components/PublicFloatingHeader",
+        "../../../lib/public-leads"
+      ],
+      "dependencies": [
+        "app/components/PublicFooter.js",
+        "app/components/PublicFloatingHeader.js",
+        "lib/public-leads.js"
+      ],
+      "exports": [
+        "InstitutionPageClient"
+      ],
+      "inlineCollections": [
+        "galleryItems",
+        "locationQuery"
+      ],
+      "resources": [
+        "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "https://wa.me/${whatsappNumber}?text=${encodeURIComponent(",
+        "https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(locationQuery)}",
+        "https://www.google.com/maps?q=${encodeURIComponent(locationQuery)}&output=embed"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/[ciudad]/[institucion]/capacitaciones/[capacitacion]/TrainingPageClient.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "react",
+        "next/navigation",
+        "../../../../components/PublicFooter",
+        "../../../../components/PublicFloatingHeader"
+      ],
+      "dependencies": [
+        "app/components/PublicFooter.js",
+        "app/components/PublicFloatingHeader.js"
+      ],
+      "exports": [
+        "TrainingPageClient"
+      ],
+      "inlineCollections": [
+        "FIELD_CHIPS",
+        "facts"
+      ],
+      "resources": [
+        "https://wa.me/${number}?text=${encodeURIComponent("
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/[ciudad]/[institucion]/capacitaciones/[capacitacion]/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "next/navigation",
+        "../../../../../lib/public-catalog/training-page-catalog",
+        "../../../../../lib/seo/public-metadata",
+        "./TrainingPageClient",
+        "../../../ciudad.css",
+        "../../institucion.css",
+        "../../carreras/[carrera]/carrera.css"
+      ],
+      "dependencies": [
+        "lib/public-catalog/training-page-catalog.js",
+        "lib/seo/public-metadata.js",
+        "app/[ciudad]/[institucion]/capacitaciones/[capacitacion]/TrainingPageClient.js",
+        "app/[ciudad]/ciudad.css",
+        "app/[ciudad]/[institucion]/institucion.css",
+        "app/[ciudad]/[institucion]/carreras/[carrera]/carrera.css"
+      ],
+      "exports": [
+        "revalidate",
+        "generateStaticParams",
+        "generateMetadata",
+        "TrainingPage"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": "60",
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": true
+    },
+    {
+      "file": "app/[ciudad]/[institucion]/carreras/[carrera]/CareerPageClient.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "react",
+        "../../../../components/PublicFooter",
+        "../../../../components/PublicFloatingHeader",
+        "../../../../../lib/public-leads"
+      ],
+      "dependencies": [
+        "app/components/PublicFooter.js",
+        "app/components/PublicFloatingHeader.js",
+        "lib/public-leads.js"
+      ],
+      "exports": [
+        "CareerPageClient"
+      ],
+      "inlineCollections": [
+        "FIELD_CHIPS"
+      ],
+      "resources": [
+        "https://wa.me/${internationalNumber}?text=${encodeURIComponent("
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/[ciudad]/[institucion]/carreras/[carrera]/carrera.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/[ciudad]/[institucion]/carreras/[carrera]/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "next/navigation",
+        "../../../../../lib/public-catalog/career-page-catalog",
+        "../../../../../lib/seo/public-metadata",
+        "./CareerPageClient",
+        "../../../ciudad.css",
+        "../../institucion.css",
+        "./carrera.css"
+      ],
+      "dependencies": [
+        "lib/public-catalog/career-page-catalog.js",
+        "lib/seo/public-metadata.js",
+        "app/[ciudad]/[institucion]/carreras/[carrera]/CareerPageClient.js",
+        "app/[ciudad]/ciudad.css",
+        "app/[ciudad]/[institucion]/institucion.css",
+        "app/[ciudad]/[institucion]/carreras/[carrera]/carrera.css"
+      ],
+      "exports": [
+        "revalidate",
+        "generateStaticParams",
+        "generateMetadata",
+        "CareerPage"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": "60",
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": true
+    },
+    {
+      "file": "app/[ciudad]/[institucion]/institucion.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/[ciudad]/[institucion]/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "next/navigation",
+        "../../../lib/public-catalog/institution-page-catalog",
+        "../../../lib/seo/public-metadata",
+        "./InstitutionPageClient",
+        "../ciudad.css",
+        "./institucion.css"
+      ],
+      "dependencies": [
+        "lib/public-catalog/institution-page-catalog.js",
+        "lib/seo/public-metadata.js",
+        "app/[ciudad]/[institucion]/InstitutionPageClient.js",
+        "app/[ciudad]/ciudad.css",
+        "app/[ciudad]/[institucion]/institucion.css"
+      ],
+      "exports": [
+        "revalidate",
+        "generateStaticParams",
+        "generateMetadata",
+        "InstitutionPage"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": "60",
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": true
+    },
+    {
+      "file": "app/[ciudad]/ciudad.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/[ciudad]/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "next/navigation",
+        "./CityPageClient",
+        "../../lib/public-catalog/city-page-catalog",
+        "../../lib/seo/public-metadata",
+        "./ciudad.css"
+      ],
+      "dependencies": [
+        "app/[ciudad]/CityPageClient.js",
+        "lib/public-catalog/city-page-catalog.js",
+        "lib/seo/public-metadata.js",
+        "app/[ciudad]/ciudad.css"
+      ],
+      "exports": [
+        "revalidate",
+        "generateStaticParams",
+        "generateMetadata",
+        "CityPage"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": "60",
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": true
+    },
+    {
+      "file": "app/carreras/[slug]/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "next/link",
+        "next/navigation",
+        "../../components/PublicFooter",
+        "../../components/PublicHeader",
+        "../../../lib/public-catalog/careers-catalog",
+        "../../../lib/seo/public-metadata",
+        "../../[ciudad]/ciudad.css",
+        "../carreras.css"
+      ],
+      "dependencies": [
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "lib/public-catalog/careers-catalog.js",
+        "lib/seo/public-metadata.js",
+        "app/[ciudad]/ciudad.css",
+        "app/carreras/carreras.css"
+      ],
+      "exports": [
+        "revalidate",
+        "generateStaticParams",
+        "generateMetadata",
+        "CareerIndexDetail"
+      ],
+      "inlineCollections": [
+        "durations"
+      ],
+      "resources": [],
+      "revalidate": "60",
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": true
+    },
+    {
+      "file": "app/carreras/carreras.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/carreras/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "next/link",
+        "../components/PublicFooter",
+        "../components/PublicHeader",
+        "../../lib/public-catalog/careers-catalog",
+        "../../lib/seo/public-metadata",
+        "../[ciudad]/ciudad.css",
+        "./carreras.css"
+      ],
+      "dependencies": [
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "lib/public-catalog/careers-catalog.js",
+        "lib/seo/public-metadata.js",
+        "app/[ciudad]/ciudad.css",
+        "app/carreras/carreras.css"
+      ],
+      "exports": [
+        "revalidate",
+        "metadata",
+        "CareersIndexPage"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": "60",
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/ciudades/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "../components/HomeClient",
+        "../home.css",
+        "../[ciudad]/ciudad.css",
+        "../../lib/public-catalog/cities-catalog",
+        "../../lib/seo/public-metadata"
+      ],
+      "dependencies": [
+        "app/components/HomeClient.js",
+        "app/home.css",
+        "app/[ciudad]/ciudad.css",
+        "lib/public-catalog/cities-catalog.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "exports": [
+        "revalidate",
+        "metadata",
+        "CitiesPage"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": "60",
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/components/CitySelector.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "react",
+        "next/navigation"
+      ],
+      "dependencies": [],
+      "exports": [
+        "CitySelector"
+      ],
+      "inlineCollections": [
+        "DEFAULT_CITIES"
+      ],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/components/HomeClient.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "react",
+        "./CitySelector",
+        "./PublicFooter",
+        "./PublicFloatingHeader"
+      ],
+      "dependencies": [
+        "app/components/CitySelector.js",
+        "app/components/PublicFooter.js",
+        "app/components/PublicFloatingHeader.js"
+      ],
+      "exports": [
+        "HomeClient"
+      ],
+      "inlineCollections": [],
+      "resources": [
+        "/assets/get-logo-hero-blanco-dorado.png",
+        "https://res.cloudinary.com/disj9fs8m/video/upload/q_auto/v1782350401/get/hero/v2l8k0maxocxnxf0yerh.mp4"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/components/HomeMapClient.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "react",
+        "next/navigation",
+        "../../lib/public-catalog/home-map-interaction"
+      ],
+      "dependencies": [
+        "lib/public-catalog/home-map-interaction.js"
+      ],
+      "exports": [
+        "HomeMapClient"
+      ],
+      "inlineCollections": [],
+      "resources": [
+        "/assets/get-logo-hero-white.png",
+        "/assets/tucuman-departamentos.geojson",
+        "https://res.cloudinary.com/disj9fs8m/video/upload/q_auto/v1782350401/get/hero/v2l8k0maxocxnxf0yerh.mp4"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/components/PublicFloatingHeader.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "./PublicHeader",
+        "./PublicHeaderFrame"
+      ],
+      "dependencies": [
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js"
+      ],
+      "exports": [
+        "PublicFloatingHeader"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/components/PublicFooter.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "next/navigation"
+      ],
+      "dependencies": [],
+      "exports": [
+        "PublicFooter"
+      ],
+      "inlineCollections": [],
+      "resources": [
+        "/assets/get-city-footer-logo.png",
+        "https://wa.me/5493865751273",
+        "https://www.google.com/maps/search/?api=1&query=Crist%C3%B3bal%20Col%C3%B3n%20601%2C%20Concepci%C3%B3n%2C%20Tucum%C3%A1n"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/components/PublicHeader.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "react",
+        "next/navigation",
+        "./PublicHeaderFrame"
+      ],
+      "dependencies": [
+        "app/components/PublicHeaderFrame.js"
+      ],
+      "exports": [
+        "PublicHeader"
+      ],
+      "inlineCollections": [],
+      "resources": [
+        "/assets/get-city-footer-logo.png",
+        "/assets/get-logo-hero-blanco-dorado.png",
+        "/assets/get-logo-oficial.png"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/components/PublicHeaderFrame.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "react"
+      ],
+      "dependencies": [],
+      "exports": [
+        "PublicHeaderFrame"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/components/PublicSiteBackground.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "next/navigation",
+        "./SeoAuroraBackground"
+      ],
+      "dependencies": [
+        "app/components/SeoAuroraBackground.js"
+      ],
+      "exports": [
+        "PublicSiteBackground"
+      ],
+      "inlineCollections": [
+        "BACKGROUND_LINES"
+      ],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/components/SeoAuroraBackground.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "react"
+      ],
+      "dependencies": [],
+      "exports": [
+        "SeoAuroraBackground"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/components/ServiceHero.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "ServiceHero"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/components/public-footer.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/contacto/ContactForm.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "ContactForm"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/contacto/contacto.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/contacto/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "../components/PublicFooter",
+        "../components/PublicFloatingHeader",
+        "./ContactForm",
+        "../../lib/seo/public-metadata",
+        "../[ciudad]/ciudad.css",
+        "./contacto.css"
+      ],
+      "dependencies": [
+        "app/components/PublicFooter.js",
+        "app/components/PublicFloatingHeader.js",
+        "app/contacto/ContactForm.js",
+        "lib/seo/public-metadata.js",
+        "app/[ciudad]/ciudad.css",
+        "app/contacto/contacto.css"
+      ],
+      "exports": [
+        "metadata",
+        "ContactPage"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/cursos-docentes/CoursesClient.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "react",
+        "next/navigation",
+        "./course-filters.js"
+      ],
+      "dependencies": [
+        "app/cursos-docentes/course-filters.js"
+      ],
+      "exports": [
+        "CoursesClient"
+      ],
+      "inlineCollections": [],
+      "resources": [
+        "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=82",
+        "https://wa.me/5493865751273?text=${encodeURIComponent("
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/cursos-docentes/course-filters.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "normalizeCourseText",
+        "getMatchingTeacherCourses"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/cursos-docentes/cursos-docentes.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/cursos-docentes/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "../components/PublicFooter",
+        "../components/PublicFloatingHeader",
+        "../nosotros/AboutRevealClient",
+        "../../lib/public-catalog/teacher-courses-catalog.js",
+        "../../lib/seo/public-metadata",
+        "./CoursesClient",
+        "../[ciudad]/ciudad.css",
+        "./cursos-docentes.css"
+      ],
+      "dependencies": [
+        "app/components/PublicFooter.js",
+        "app/components/PublicFloatingHeader.js",
+        "app/nosotros/AboutRevealClient.js",
+        "lib/public-catalog/teacher-courses-catalog.js",
+        "lib/seo/public-metadata.js",
+        "app/cursos-docentes/CoursesClient.js",
+        "app/[ciudad]/ciudad.css",
+        "app/cursos-docentes/cursos-docentes.css"
+      ],
+      "exports": [
+        "revalidate",
+        "metadata",
+        "TeacherCoursesPage"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": "60",
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/data/careers.js",
+      "kind": "local-data",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "careers",
+        "getCareerBySlug"
+      ],
+      "inlineCollections": [
+        "careers"
+      ],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/data/events.js",
+      "kind": "local-data",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "events",
+        "eventCities",
+        "eventCategories",
+        "getEvent"
+      ],
+      "inlineCollections": [
+        "events",
+        "eventCities",
+        "eventCategories"
+      ],
+      "resources": [
+        "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1500&q=82",
+        "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1500&q=82",
+        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1500&q=82",
+        "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1500&q=82",
+        "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1500&q=82",
+        "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1500&q=82",
+        "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1500&q=82"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/data/institutions.js",
+      "kind": "local-data",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "institutions",
+        "cityPages",
+        "getCityPage",
+        "getInstitutionPage"
+      ],
+      "inlineCollections": [
+        "institutions"
+      ],
+      "resources": [
+        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1568792923760-d70635a89fdc?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/data/offerings.js",
+      "kind": "local-data",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "offerings",
+        "getOffering"
+      ],
+      "inlineCollections": [
+        "offerings"
+      ],
+      "resources": [
+        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/data/services.js",
+      "kind": "local-data",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "services",
+        "getService",
+        "servicePlans"
+      ],
+      "inlineCollections": [
+        "services",
+        "servicePlans"
+      ],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/data/teacherCourses.js",
+      "kind": "local-data",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "teacherCourses"
+      ],
+      "inlineCollections": [],
+      "resources": [
+        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/data/trainingOfferings.js",
+      "kind": "local-data",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "trainingOfferings",
+        "getTrainingOffering"
+      ],
+      "inlineCollections": [
+        "trainingOfferings"
+      ],
+      "resources": [
+        "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/data/trainingPrograms.js",
+      "kind": "local-data",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "trainingPrograms",
+        "getTrainingProgramBySlug"
+      ],
+      "inlineCollections": [
+        "trainingPrograms"
+      ],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/eventos/[slug]/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "next/link",
+        "next/navigation",
+        "../../components/PublicFloatingHeader",
+        "../../components/PublicFooter",
+        "../../data/events",
+        "../../[ciudad]/ciudad.css",
+        "../eventos.css"
+      ],
+      "dependencies": [
+        "app/components/PublicFloatingHeader.js",
+        "app/components/PublicFooter.js",
+        "app/data/events.js",
+        "app/[ciudad]/ciudad.css",
+        "app/eventos/eventos.css"
+      ],
+      "exports": [
+        "generateStaticParams",
+        "EventDetailPage"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": true
+    },
+    {
+      "file": "app/eventos/eventos.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/eventos/page.js",
+      "kind": "route",
+      "client": true,
+      "imports": [
+        "react",
+        "next/link",
+        "../components/PublicFloatingHeader",
+        "../components/PublicFooter",
+        "../data/events",
+        "../[ciudad]/ciudad.css",
+        "./eventos.css"
+      ],
+      "dependencies": [
+        "app/components/PublicFloatingHeader.js",
+        "app/components/PublicFooter.js",
+        "app/data/events.js",
+        "app/[ciudad]/ciudad.css",
+        "app/eventos/eventos.css"
+      ],
+      "exports": [
+        "EventsPage"
+      ],
+      "inlineCollections": [
+        "eventCapabilities"
+      ],
+      "resources": [
+        "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1400&q=82",
+        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=88",
+        "https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=82",
+        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=82",
+        "https://wa.me/5493865751273"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/globals.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [
+        "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap",
+        "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/home-map.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/home.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/instituciones/InstitutionsIndexClient.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "next/link",
+        "react",
+        "../components/PublicFooter",
+        "../components/PublicHeader",
+        "../[ciudad]/ciudad.css",
+        "./instituciones.css"
+      ],
+      "dependencies": [
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/[ciudad]/ciudad.css",
+        "app/instituciones/instituciones.css"
+      ],
+      "exports": [
+        "InstitutionsIndexClient"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/instituciones/[slug]/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "next/link",
+        "next/navigation",
+        "../../components/PublicFooter",
+        "../../components/PublicHeader",
+        "../../../lib/public-catalog/institutions-catalog",
+        "../../../lib/seo/public-metadata",
+        "../../[ciudad]/ciudad.css",
+        "../instituciones.css"
+      ],
+      "dependencies": [
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "lib/public-catalog/institutions-catalog.js",
+        "lib/seo/public-metadata.js",
+        "app/[ciudad]/ciudad.css",
+        "app/instituciones/instituciones.css"
+      ],
+      "exports": [
+        "revalidate",
+        "generateStaticParams",
+        "generateMetadata",
+        "InstitutionGeneral"
+      ],
+      "inlineCollections": [],
+      "resources": [
+        "https://wa.me/54${single.whatsapp.replace(/\\D/g,",
+        "https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(single.address)}"
+      ],
+      "revalidate": "60",
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": true
+    },
+    {
+      "file": "app/instituciones/instituciones.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/instituciones/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "./InstitutionsIndexClient",
+        "../../lib/public-catalog/institutions-catalog",
+        "../../lib/seo/public-metadata"
+      ],
+      "dependencies": [
+        "app/instituciones/InstitutionsIndexClient.js",
+        "lib/public-catalog/institutions-catalog.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "exports": [
+        "revalidate",
+        "metadata",
+        "InstitutionsPage"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": "60",
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/layout.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "./globals.css",
+        "./components/public-footer.css",
+        "./components/PublicSiteBackground",
+        "next/script",
+        "../lib/seo/public-metadata"
+      ],
+      "dependencies": [
+        "app/globals.css",
+        "app/components/public-footer.css",
+        "app/components/PublicSiteBackground.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "exports": [
+        "metadata",
+        "viewport",
+        "RootLayout"
+      ],
+      "inlineCollections": [],
+      "resources": [
+        "https://www.googletagmanager.com/gtag/js?id=G-KY9E5NG5V2"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/nosotros/AboutHomeButton.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "next/navigation"
+      ],
+      "dependencies": [],
+      "exports": [
+        "AboutHomeButton"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/nosotros/AboutRevealClient.js",
+      "kind": "component-or-adapter",
+      "client": true,
+      "imports": [
+        "react"
+      ],
+      "dependencies": [],
+      "exports": [
+        "AboutRevealClient"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/nosotros/nosotros-refinement.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/nosotros/nosotros.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/nosotros/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "../components/PublicFooter",
+        "../components/PublicFloatingHeader",
+        "./AboutHomeButton",
+        "./AboutRevealClient",
+        "../../lib/seo/public-metadata",
+        "../[ciudad]/ciudad.css",
+        "./nosotros.css",
+        "./nosotros-refinement.css"
+      ],
+      "dependencies": [
+        "app/components/PublicFooter.js",
+        "app/components/PublicFloatingHeader.js",
+        "app/nosotros/AboutHomeButton.js",
+        "app/nosotros/AboutRevealClient.js",
+        "lib/seo/public-metadata.js",
+        "app/[ciudad]/ciudad.css",
+        "app/nosotros/nosotros.css",
+        "app/nosotros/nosotros-refinement.css"
+      ],
+      "exports": [
+        "metadata",
+        "AboutPage"
+      ],
+      "inlineCollections": [
+        "trustedOrganizations",
+        "teamMembers"
+      ],
+      "resources": [
+        "/assets/universidad-siglo-21-logo.png",
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=720&q=80",
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=720&q=80",
+        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=720&q=80",
+        "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1000&q=82",
+        "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1800&q=85",
+        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=720&q=80",
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=720&q=80"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/not-found.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/not-found.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "next/link",
+        "./components/PublicFooter",
+        "./components/PublicFloatingHeader",
+        "./[ciudad]/ciudad.css",
+        "./not-found.css"
+      ],
+      "dependencies": [
+        "app/components/PublicFooter.js",
+        "app/components/PublicFloatingHeader.js",
+        "app/[ciudad]/ciudad.css",
+        "app/not-found.css"
+      ],
+      "exports": [
+        "NotFound"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "./components/HomeMapClient",
+        "../lib/public-catalog/home-map-catalog",
+        "../lib/seo/public-metadata",
+        "./home-map.css"
+      ],
+      "dependencies": [
+        "app/components/HomeMapClient.js",
+        "lib/public-catalog/home-map-catalog.js",
+        "lib/seo/public-metadata.js",
+        "app/home-map.css"
+      ],
+      "exports": [
+        "revalidate",
+        "metadata",
+        "Home"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": "60",
+      "dynamicParams": "default",
+      "hasMetadata": true,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/page.module.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/robots.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../lib/seo/public-metadata"
+      ],
+      "dependencies": [
+        "lib/seo/public-metadata.js"
+      ],
+      "exports": [
+        "robots"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/servicios/[slug]/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "next/link",
+        "next/navigation",
+        "../../components/PublicHeader",
+        "../../components/PublicHeaderFrame",
+        "../../components/PublicFooter",
+        "../../components/ServiceHero",
+        "../../data/services",
+        "../../[ciudad]/ciudad.css",
+        "../servicios.css"
+      ],
+      "dependencies": [
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/components/PublicFooter.js",
+        "app/components/ServiceHero.js",
+        "app/data/services.js",
+        "app/[ciudad]/ciudad.css",
+        "app/servicios/servicios.css"
+      ],
+      "exports": [
+        "generateStaticParams",
+        "Detail"
+      ],
+      "inlineCollections": [],
+      "resources": [
+        "https://wa.me/5493865751273"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": true
+    },
+    {
+      "file": "app/servicios/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "next/link",
+        "../components/PublicHeader",
+        "../components/PublicHeaderFrame",
+        "../components/PublicFooter",
+        "../components/ServiceHero",
+        "../data/services",
+        "../[ciudad]/ciudad.css",
+        "./servicios.css"
+      ],
+      "dependencies": [
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/components/PublicFooter.js",
+        "app/components/ServiceHero.js",
+        "app/data/services.js",
+        "app/[ciudad]/ciudad.css",
+        "app/servicios/servicios.css"
+      ],
+      "exports": [
+        "ServicesPage"
+      ],
+      "inlineCollections": [
+        "connectorPositions"
+      ],
+      "resources": [
+        "/assets/get-city-footer-logo.png",
+        "https://wa.me/5493865751273"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/servicios/redes-sociales/page.js",
+      "kind": "route",
+      "client": false,
+      "imports": [
+        "next/link",
+        "../../components/PublicHeader",
+        "../../components/PublicHeaderFrame",
+        "../../components/PublicFooter",
+        "../../components/ServiceHero",
+        "../../[ciudad]/ciudad.css",
+        "../servicios.css"
+      ],
+      "dependencies": [
+        "app/components/PublicHeader.js",
+        "app/components/PublicHeaderFrame.js",
+        "app/components/PublicFooter.js",
+        "app/components/ServiceHero.js",
+        "app/[ciudad]/ciudad.css",
+        "app/servicios/servicios.css"
+      ],
+      "exports": [
+        "SocialNetworksServicePage"
+      ],
+      "inlineCollections": [],
+      "resources": [
+        "https://wa.me/5493865751273"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/servicios/servicios.css",
+      "kind": "style",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "app/sitemap.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../lib/public-catalog/public-routes-catalog",
+        "../lib/seo/public-metadata"
+      ],
+      "dependencies": [
+        "lib/public-catalog/public-routes-catalog.js",
+        "lib/seo/public-metadata.js"
+      ],
+      "exports": [
+        "revalidate",
+        "sitemap"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": "60",
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/career-page-catalog.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../../app/data/careers.js",
+        "../../app/data/institutions.js",
+        "../../app/data/offerings.js",
+        "./supabase-public-catalog.js"
+      ],
+      "dependencies": [
+        "app/data/careers.js",
+        "app/data/institutions.js",
+        "app/data/offerings.js",
+        "lib/public-catalog/supabase-public-catalog.js"
+      ],
+      "exports": [
+        "getLocalCareerPageCatalog",
+        "getSupabaseCareerPageCatalog",
+        "getCareerPageCatalog"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/careers-catalog.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../../app/data/careers.js",
+        "../../app/data/institutions.js",
+        "../../app/data/offerings.js",
+        "./supabase-public-catalog.js"
+      ],
+      "dependencies": [
+        "app/data/careers.js",
+        "app/data/institutions.js",
+        "app/data/offerings.js",
+        "lib/public-catalog/supabase-public-catalog.js"
+      ],
+      "exports": [
+        "getLocalCareersCatalog",
+        "getSupabaseCareersCatalog",
+        "getCareersCatalog",
+        "getCareerCatalog"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/cities-catalog.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../../app/data/institutions.js",
+        "./supabase-public-catalog.js"
+      ],
+      "dependencies": [
+        "app/data/institutions.js",
+        "lib/public-catalog/supabase-public-catalog.js"
+      ],
+      "exports": [
+        "getLocalCitiesCatalog",
+        "adaptSupabaseCity",
+        "getSupabaseCitiesCatalog",
+        "getCitiesCatalog"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/city-page-catalog.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../../app/data/institutions.js",
+        "./supabase-public-catalog.js"
+      ],
+      "dependencies": [
+        "app/data/institutions.js",
+        "lib/public-catalog/supabase-public-catalog.js"
+      ],
+      "exports": [
+        "getLocalCityPageCatalog",
+        "getSupabaseCityPageCatalog",
+        "getCityPageCatalog"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/home-catalog.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../../app/data/institutions.js",
+        "./supabase-public-catalog.js"
+      ],
+      "dependencies": [
+        "app/data/institutions.js",
+        "lib/public-catalog/supabase-public-catalog.js"
+      ],
+      "exports": [
+        "getLocalHomeCatalog",
+        "getSupabaseHomeCatalog",
+        "getHomeCatalog"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/home-map-catalog.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../../app/data/institutions.js",
+        "../../app/data/careers.js",
+        "../../app/data/offerings.js",
+        "./supabase-public-catalog.js"
+      ],
+      "dependencies": [
+        "app/data/institutions.js",
+        "app/data/careers.js",
+        "app/data/offerings.js",
+        "lib/public-catalog/supabase-public-catalog.js"
+      ],
+      "exports": [
+        "CITY_DEPARTMENT_IDS",
+        "buildHomeMapCatalog",
+        "getLocalHomeMapCatalog",
+        "getSupabaseHomeMapCatalog",
+        "getHomeMapCatalog"
+      ],
+      "inlineCollections": [
+        "search"
+      ],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/home-map-interaction.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "departmentAction"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/institution-offerings-catalog.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../../app/data/institutions.js",
+        "../../app/data/offerings.js",
+        "../../app/data/trainingOfferings.js",
+        "./supabase-public-catalog.js"
+      ],
+      "dependencies": [
+        "app/data/institutions.js",
+        "app/data/offerings.js",
+        "app/data/trainingOfferings.js",
+        "lib/public-catalog/supabase-public-catalog.js"
+      ],
+      "exports": [
+        "adaptAcademicOffering",
+        "adaptTrainingOffering",
+        "getLocalInstitutionOfferingsCatalog",
+        "getSupabaseInstitutionOfferingsCatalog",
+        "getInstitutionOfferingsCatalog"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/institution-page-catalog.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../../app/data/institutions.js",
+        "./supabase-public-catalog.js",
+        "./institution-offerings-catalog.js"
+      ],
+      "dependencies": [
+        "app/data/institutions.js",
+        "lib/public-catalog/supabase-public-catalog.js",
+        "lib/public-catalog/institution-offerings-catalog.js"
+      ],
+      "exports": [
+        "getLocalInstitutionPageCatalog",
+        "getSupabaseInstitutionPageCatalog",
+        "getInstitutionPageCatalog"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/institutions-catalog.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../../app/data/institutions.js",
+        "../../app/data/offerings.js",
+        "./supabase-public-catalog.js"
+      ],
+      "dependencies": [
+        "app/data/institutions.js",
+        "app/data/offerings.js",
+        "lib/public-catalog/supabase-public-catalog.js"
+      ],
+      "exports": [
+        "getLocalInstitutionsCatalog",
+        "getInstitutionsCatalog",
+        "getInstitutionCatalog"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/public-routes-catalog.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../../app/data/careers.js",
+        "../../app/data/institutions.js",
+        "../../app/data/offerings.js",
+        "../../app/data/trainingOfferings.js",
+        "../../app/data/trainingPrograms.js",
+        "./supabase-public-catalog.js"
+      ],
+      "dependencies": [
+        "app/data/careers.js",
+        "app/data/institutions.js",
+        "app/data/offerings.js",
+        "app/data/trainingOfferings.js",
+        "app/data/trainingPrograms.js",
+        "lib/public-catalog/supabase-public-catalog.js"
+      ],
+      "exports": [
+        "STATIC_PUBLIC_PATHS",
+        "createPublicRoutePaths",
+        "getLocalPublicRoutePaths",
+        "getSupabasePublicRoutePaths",
+        "getPublicRoutePaths"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/supabase-public-catalog.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "getSupabaseCities",
+        "getSupabaseInstitutions",
+        "getSupabaseCareerMasters",
+        "getSupabaseAcademicOfferings",
+        "getSupabaseTrainingPrograms",
+        "getSupabaseTrainingOfferings"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/teacher-courses-catalog.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../../app/data/teacherCourses.js"
+      ],
+      "dependencies": [
+        "app/data/teacherCourses.js"
+      ],
+      "exports": [
+        "getLocalTeacherCoursesCatalog",
+        "getSupabaseTeacherCoursesCatalog",
+        "getTeacherCoursesCatalog"
+      ],
+      "inlineCollections": [
+        "TEACHER_COURSE_FIELDS"
+      ],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/public-catalog/training-page-catalog.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [
+        "../../app/data/institutions.js",
+        "../../app/data/trainingPrograms.js",
+        "../../app/data/trainingOfferings.js",
+        "./supabase-public-catalog.js"
+      ],
+      "dependencies": [
+        "app/data/institutions.js",
+        "app/data/trainingPrograms.js",
+        "app/data/trainingOfferings.js",
+        "lib/public-catalog/supabase-public-catalog.js"
+      ],
+      "exports": [
+        "getLocalTrainingPageCatalog",
+        "getSupabaseTrainingPageCatalog",
+        "getTrainingPageCatalog"
+      ],
+      "inlineCollections": [],
+      "resources": [],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    },
+    {
+      "file": "lib/seo/public-metadata.js",
+      "kind": "component-or-adapter",
+      "client": false,
+      "imports": [],
+      "dependencies": [],
+      "exports": [
+        "SITE_NAME",
+        "SITE_URL",
+        "SITE_DESCRIPTION",
+        "createPublicMetadata"
+      ],
+      "inlineCollections": [],
+      "resources": [
+        "https://guiaeducativatuc.com.ar"
+      ],
+      "revalidate": null,
+      "dynamicParams": "default",
+      "hasMetadata": false,
+      "hasStaticParams": false
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/get-city-footer-logo.png",
+      "bytes": 406477,
+      "referencedBy": [
+        "app/components/PublicFooter.js",
+        "app/components/PublicHeader.js",
+        "app/servicios/page.js"
+      ]
+    },
+    {
+      "url": "/assets/get-city-hero-logo.png",
+      "bytes": 406477,
+      "referencedBy": []
+    },
+    {
+      "url": "/assets/get-logo-city-square.png",
+      "bytes": 182088,
+      "referencedBy": []
+    },
+    {
+      "url": "/assets/get-logo-hero-blanco-dorado.png",
+      "bytes": 169771,
+      "referencedBy": [
+        "app/components/HomeClient.js",
+        "app/components/PublicHeader.js"
+      ]
+    },
+    {
+      "url": "/assets/get-logo-hero-white.png",
+      "bytes": 191536,
+      "referencedBy": [
+        "app/components/HomeMapClient.js"
+      ]
+    },
+    {
+      "url": "/assets/get-logo-oficial.png",
+      "bytes": 7296786,
+      "referencedBy": [
+        "app/components/PublicHeader.js"
+      ]
+    },
+    {
+      "url": "/assets/public-site-pattern.png",
+      "bytes": 711777,
+      "referencedBy": []
+    },
+    {
+      "url": "/assets/tucuman-departamentos.geojson",
+      "bytes": 362963,
+      "referencedBy": [
+        "app/components/HomeMapClient.js"
+      ]
+    },
+    {
+      "url": "/assets/universidad-siglo-21-logo.png",
+      "bytes": 28312,
+      "referencedBy": [
+        "app/nosotros/page.js"
+      ]
+    },
+    {
+      "url": "/file.svg",
+      "bytes": 391,
+      "referencedBy": []
+    },
+    {
+      "url": "/globe.svg",
+      "bytes": 1035,
+      "referencedBy": []
+    },
+    {
+      "url": "/next.svg",
+      "bytes": 1375,
+      "referencedBy": []
+    },
+    {
+      "url": "/vercel.svg",
+      "bytes": 128,
+      "referencedBy": []
+    },
+    {
+      "url": "/window.svg",
+      "bytes": 385,
+      "referencedBy": []
+    }
+  ],
+  "externalOrigins": [
+    "https://fonts.googleapis.com",
+    "https://guiaeducativatuc.com.ar",
+    "https://images.unsplash.com",
+    "https://media.w3.org",
+    "https://res.cloudinary.com",
+    "https://wa.me",
+    "https://www.google.com",
+    "https://www.googletagmanager.com"
+  ],
+  "migrations": [
+    "supabase/migrations/20260815103000_public_catalog_schema_v1.sql",
+    "supabase/migrations/20260815103001_public_catalog_rls_v1.sql",
+    "supabase/migrations/20260815163744_public_catalog_seed_v1.sql",
+    "supabase/migrations/20260822013952_teacher_courses_schema_rls_v1.sql",
+    "supabase/migrations/20260822013953_teacher_courses_seed_v1.sql"
+  ]
+}

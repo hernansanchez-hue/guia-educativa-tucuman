@@ -1,10 +1,21 @@
-import {getExtendedCatalog,extendedMetadata} from '../../../lib/admin/published-extended';
-import {resolveEditorialMissing} from '../../../lib/admin/published-editorial';
-import {getPublishedCatalog} from '../../../lib/admin/published-editorial';
+import {getExtendedCatalog, extendedMetadata} from '../../../lib/admin/published-extended';
+import {resolveEditorialMissing, getPublishedCatalog} from '../../../lib/admin/published-editorial';
+import {isConfirmedEvent} from '../../../lib/events/public-events.mjs';
 import EventDetailClient from '../EventDetailClient';
-import '../../[ciudad]/ciudad.css';
-import '../eventos.css';
-export const revalidate=60;
-export async function generateStaticParams(){return (await getExtendedCatalog(['events'])).events.map(e=>({slug:e.slug}));}
-export async function generateMetadata({params}){const {slug}=await params,event=(await getExtendedCatalog(['events'])).events.find(e=>e.slug===slug);return extendedMetadata('/eventos/'+slug,event);}
-export default async function EventPage({params}){const {slug}=await params,event=(await getExtendedCatalog(['events'])).events.find(e=>e.slug===slug);if(!event)await resolveEditorialMissing('/eventos/'+slug);const catalog=await getPublishedCatalog();return <EventDetailClient event={event} institutionNames={(event.institutions||[]).map(id=>catalog.institutions.find(i=>i.id===id)?.name).filter(Boolean)}/>;}
+export const revalidate = 60;
+export async function generateStaticParams() {
+  return (await getExtendedCatalog(['events'])).events.map(event => ({slug: event.slug}));
+}
+export async function generateMetadata({params}) {
+  const {slug} = await params;
+  const event = (await getExtendedCatalog(['events'])).events.find(item => item.slug === slug);
+  const metadata = extendedMetadata('/eventos/' + slug, event);
+  return isConfirmedEvent(event) ? metadata : {...metadata, robots: {index: false, follow: false}};
+}
+export default async function EventPage({params}) {
+  const {slug} = await params;
+  const event = (await getExtendedCatalog(['events'])).events.find(item => item.slug === slug);
+  if (!event) await resolveEditorialMissing('/eventos/' + slug);
+  const catalog = await getPublishedCatalog();
+  return <EventDetailClient event={event} institutionNames={(event.institutions || []).map(id => catalog.institutions.find(item => item.id === id)?.name).filter(Boolean)}/>;
+}

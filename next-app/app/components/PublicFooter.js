@@ -1,9 +1,11 @@
 "use client";
 
+import Link from 'next/link';
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import {usePublicEditorial} from "./PublicEditorialContext";
 import PublicImage from './PublicImage';
+import AnalyticsPreferencesButton from './AnalyticsPreferencesButton';
+import {publicFooterLinks} from '../../lib/public-catalog/footer-links.mjs';
 
 export default function PublicFooter({onGoHome} = {}) {
   const router = useRouter();
@@ -35,8 +37,7 @@ export default function PublicFooter({onGoHome} = {}) {
         <div className="footer-column">
           <h3 className="footer-heading">{content.exploreTitle}</h3>
           <div className="footer-link-list">
-            {content.explore.filter(item=>item.visible!==false).map((item,index)=><button type="button" key={item.id} data-edit-id={`root.data.explore.${index}`} onClick={()=>follow(item)}>{item.label}</button>)}
-            <Link href="/administrador">Acceso para instituciones</Link>
+{publicFooterLinks(content.explore).map(item=><Link key={item.id} href={item.href}>{item.label}</Link>)}
           </div>
         </div>
 
@@ -88,7 +89,7 @@ export default function PublicFooter({onGoHome} = {}) {
       </div>
 
       <div className="footer-bottom">
-        <p>{content.copyright}</p>
+        <div className="footer-legal-links"><span>{content.copyright}</span><Link className="footer-contact-link" href="/privacidad">Privacidad</Link><AnalyticsPreferencesButton/><Link prefetch={false} className="footer-contact-link" href="/administrador">Administración GET</Link></div>
         <button className="footer-contact-link" type="button" onClick={goHome}>{content.homeLabel}</button>
       </div>
     </footer>

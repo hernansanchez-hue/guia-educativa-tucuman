@@ -20,6 +20,8 @@
 }
 
 #siteFooter .footer-column { min-width: 0; }
+#siteFooter .footer-contact-link,
+#siteFooter .footer-contact-link span { min-width: 0; overflow-wrap: anywhere; }
 
 #siteFooter .footer-logo {
   display: inline-flex;
@@ -57,11 +59,11 @@
 #siteFooter .footer-link-list,
 #siteFooter .footer-contact-list {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 10px;
 }
 
-#siteFooter .footer-link-list button,
-#siteFooter .footer-link-list a,
+#siteFooter .footer-link-list :is(button,a),
 #siteFooter .footer-contact-link {
   width: max-content;
   max-width: 100%;
@@ -78,12 +80,10 @@
   transition: color 180ms ease;
 }
 
-#siteFooter .footer-link-list button:hover,
-#siteFooter .footer-link-list a:hover,
+#siteFooter .footer-link-list :is(button,a):hover,
 #siteFooter .footer-contact-link:hover { color: var(--verde); }
 
-#siteFooter .footer-link-list button:focus-visible,
-#siteFooter .footer-link-list a:focus-visible,
+#siteFooter .footer-link-list :is(button,a):focus-visible,
 #siteFooter .footer-contact-link:focus-visible,
 #siteFooter .footer-social-link:focus-visible,
 #siteFooter .footer-app-button:focus-visible,
@@ -168,13 +168,13 @@
 }
 
 #siteFooter .footer-bottom p { margin: 0; text-align: left; }
+#siteFooter .footer-legal-links { display:flex; flex-wrap:wrap; align-items:center; gap:8px 16px; min-width:0; }
 
 body.dark-theme #siteFooter { background: #0b1423; color: #dce6f4; }
 body.dark-theme #siteFooter .footer-heading,
 body.dark-theme #siteFooter .footer-social-box strong { color: #edf4ff; }
 body.dark-theme #siteFooter .footer-brand-copy,
-body.dark-theme #siteFooter .footer-link-list button,
-body.dark-theme #siteFooter .footer-link-list a,
+body.dark-theme #siteFooter .footer-link-list :is(button,a),
 body.dark-theme #siteFooter .footer-contact-link { color: #a8b6ca; }
 body.dark-theme #siteFooter .footer-social-box { border-color: #2c3a4f; background: #111c2e; }
 body.dark-theme #siteFooter .footer-social-link { border-color: #34445b; background: #0c1728; color: #c3cede; }
