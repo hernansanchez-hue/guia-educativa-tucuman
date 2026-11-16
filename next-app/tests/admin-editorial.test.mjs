@@ -5,7 +5,19 @@ import {getField,setField} from '../lib/admin/editor-fields.mjs';
 import {institutions,getCityPage} from '../app/data/institutions.js';
 import {getLocalInstitutionOfferingsCatalog} from '../lib/public-catalog/institution-offerings-catalog.js';
 const seeds=seedEditorialEntries(),find=(kind,id)=>structuredClone(seeds.find(e=>e.payload._kind===kind&&e.payload.data.id===id)),graph=(...updates)=>editorialCatalog([...seeds,...updates]);
-test('import normalizes 69 records without losing the three approved city compositions',()=>{assert.equal(seeds.length,69);const counts={};for(const row of seeds){validateEditorialPayload(row.payload);counts[row.payload._kind]=(counts[row.payload._kind]||0)+1;}assert.deepEqual(counts,{city:3,institution:10,brand:7,career:19,offering:30});for(const slug of ['concepcion','monteros','aguilares']){const page=cityPageFromCatalog(graph(),slug),old=getCityPage(slug);assert.equal(page.title,old.title);assert.deepEqual(page.institutions.map(i=>({name:i.name,image:i.image,careers:i.careers})),old.institutions.map(i=>({name:i.name,image:i.image,careers:i.careers})));}});
+test('import normalizes 69 records without losing the three approved city compositions',()=>{
+ assert.equal(seeds.length,69);const counts={};
+ for(const row of seeds){validateEditorialPayload(row.payload);counts[row.payload._kind]=(counts[row.payload._kind]||0)+1;}
+ assert.deepEqual(counts,{city:3,institution:10,brand:7,career:19,offering:30});
+ // publicHref is derived eligibility metadata, not a change to approved content.
+ const composition=i=>({name:i.name,image:i.image,careers:i.careers.map(c=>Object.fromEntries(Object.entries(c).filter(([key])=>key!=='publicHref')))});
+ for(const slug of ['concepcion','monteros','aguilares']){
+  const page=cityPageFromCatalog(graph(),slug),old=getCityPage(slug);
+  assert.equal(page.title,old.title);
+  assert.deepEqual(page.institutions.map(composition),old.institutions.map(composition));
+  for(const institution of page.institutions)for(const career of institution.careers)assert.ok(career.publicHref.startsWith(`/${slug}/${institution.slug}`));
+ }
+});
 test('every institution starts with exactly its approved public career summaries',()=>{for(const i of institutions)assert.deepEqual(institutionPageFromCatalog(graph(),i.citySlug,i.slug).institution.careers,getLocalInstitutionOfferingsCatalog(i.citySlug,i.slug));});
 test('seed merge is idempotent and hidden tombstones never fall back to old pages',()=>{assert.deepEqual(graph(),editorialCatalog([...seeds,...seeds]));const row=find('institution','universidad-siglo-21-concepcion');row.visibility='hidden';row.payload=null;assert.equal(institutionPageFromCatalog(graph(row),'concepcion','universidad-siglo-21'),null);assert.equal(careerPageFromCatalog(graph(row),'concepcion','universidad-siglo-21','abogacia'),null);});
 test('Siglo 21 phone can be previewed without modifying published input',()=>{const row=find('institution','universidad-siglo-21-concepcion'),before=graph();row.payload.data.phone='Teléfono de prueba';assert.equal(institutionPageFromCatalog(graph(row),'concepcion','universidad-siglo-21').institution.phone,'Teléfono de prueba');assert.equal(institutionPageFromCatalog(before,'concepcion','universidad-siglo-21').institution.phone,undefined);});

@@ -79,7 +79,7 @@ test('featured lists are compact and never hide or duplicate institutions beyond
   const city={...original,institutions,featuredInstitutions:institutions};
   const html=sections(city);
   assert.equal((html.match(/class="school-card"/g)||[]).length,Math.min(count,6));
-  for(const institution of institutions)assert.equal(html.split('aria-label="Ver institución '+institution.name+'"').length-1,1);
+  for(const institution of institutions)assert.equal(html.split('Ver institución '+institution.name).length-1,1);
   assert.equal(html.includes('Ver más instituciones destacadas'),count>6);
  }
 });

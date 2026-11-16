@@ -9,7 +9,7 @@ import CityFeaturedCareers from "./CityFeaturedCareers";
 import CityInstitutionSections from "./CityInstitutionSections";
 import NetworkBackground from "../components/NetworkBackground";
 import {DesignIcon as Icon,DesignDialog,moveTo} from "../components/ApprovedHomeUI";
-import {cityDiscoveryEntries,searchCityEntries,normalizeSearch} from "../../lib/public-catalog/home-discovery.mjs";
+import {cityDiscoveryEntries,searchCityEntries,normalizeSearch,institutionMatchesResults} from "../../lib/public-catalog/home-discovery.mjs";
 
 export default function CityPageClient({city}) {return <CityHome key={city.slug} city={city}/>;}
 
@@ -20,11 +20,11 @@ function CityHome({city}){
  const results=searchCityEntries(entries,query);
  const careerResults=searchCityEntries(entries,careerQuery,{careersOnly:true});
  const cities=(city.entryCities??[]).filter(c=>normalizeSearch(c.name).includes(normalizeSearch(cityQuery)));
- const filteredInstitutions=searched&&query.trim()?city.institutions.filter(i=>results.some(r=>r.href===`/${city.slug}/${i.slug}`||r.href.startsWith(`/${city.slug}/${i.slug}/`))):city.institutions;
+ const filteredInstitutions=searched&&query.trim()?city.institutions.filter(i=>institutionMatchesResults(city,i,results)):city.institutions;
  function search(e){e.preventDefault();setSearched(true);}
  const jump=id=>e=>{e.preventDefault();moveTo(id);};
  const openCareers=()=>{setCareerQuery("");setPanel("careers");};
- const resultList=(items)=><ul className="modal-list">{items.map(r=><li key={r.id}><Link href={r.href} prefetch={false}><strong>{r.name}</strong><small>{r.type}{r.institution?" · "+r.institution:""}</small></Link></li>)}</ul>;
+ const resultList=(items)=><ul className="modal-list">{items.map(r=><li key={r.id}><Link data-get-search-result href={r.href} prefetch={false}><strong>{r.name}</strong><small>{r.type}{r.institution?" · "+r.institution:""}</small></Link></li>)}</ul>;
  return <div className="get-city-approved" id="city-home-top">
   <NetworkBackground className="network"/>
   <header className="header"><Link className="brand" href="/" aria-label="GET Inicio"><Image src="/assets/approved-home/logo.png" alt="GET Guía Educativa Tucumán" width={132} height={48} priority/></Link>

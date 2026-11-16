@@ -29,7 +29,7 @@ export function InstitutionCard({city,institution}) {
       </div>
       <div className="school-bottom">
         <span>{institution.address||city.name}</span>
-        <Link href={institutionHref(city,institution)} aria-label={`Ver institución ${institution.name}`}>Explorar carreras <DesignIcon name="arrow"/></Link>
+        <Link href={institutionHref(city,institution)} aria-label={`Explorar carreras · Ver institución ${institution.name}`}>Explorar carreras <DesignIcon name="arrow"/></Link>
       </div>
     </div>
   </article>;
@@ -37,7 +37,7 @@ export function InstitutionCard({city,institution}) {
 function DirectoryEntry({city,institution}) {
   const initials=institution.name.split(/\s+/).filter(word=>!/^(de|del|la|el|y)$/i.test(word)).slice(0,2).map(word=>word[0]).join("").toUpperCase();
   const count=institution.careers?.length??0;
-  return <Link className="directory-card" href={institutionHref(city,institution)} aria-label={`Ver institución ${institution.name}`}>
+  return <Link className="directory-card" href={institutionHref(city,institution)} aria-label={`Ver institución ${institution.name} · ${count>0?`${count} ${count===1?"carrera publicada":"carreras publicadas"}`:institution.type}`}>
     <span className="directory-initial" aria-hidden="true">{initials}</span>
     <span className="directory-info"><strong>{institution.name}</strong><small>{count>0?`${count} ${count===1?"carrera publicada":"carreras publicadas"}`:institution.type}</small></span>
     <span className="directory-arrow" aria-hidden="true"><DesignIcon name="arrow"/></span>

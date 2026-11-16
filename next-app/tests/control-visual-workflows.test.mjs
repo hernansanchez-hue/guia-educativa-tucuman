@@ -32,7 +32,8 @@ test('Crear un slide que nunca estuvo en el carrusel, usar imagen subida, vista 
   assert.throws(()=>validatePatch(base[0],{slides:[{...slide,href:'https://example.org/'}]},base));
   db.write(owner,'ciudad-a','save',0,draft);assert.deepEqual(resolveCitySlides(read()),[]);
   assert.equal(resolveCitySlides(previewData(base,db.records(owner),'ciudad-a',draft,'slider',slide.id).city)[0].title,slide.title);
-  db.write(owner,'ciudad-a','publish',1);assert.equal(resolveCitySlides(read())[0].route,'/ciudad-a/v/carreras/c');
+  // Editorial placement does not enable a paid individual profile for Básico.
+  db.write(owner,'ciudad-a','publish',1);assert.equal(resolveCitySlides(read())[0].route,'/ciudad-a/v#carreras');
   assert.equal(read().institutions[0].plan,'Básico');assert.deepEqual(read().institutions[0].featuredCareerIds,[]);
   db.write(owner,'ciudad-a','save',2,{slides:[{...slide,active:false}]});db.write(owner,'ciudad-a','publish',3);assert.deepEqual(resolveCitySlides(read()),[]);
   const event=db.history(owner).filter(x=>x.operation==='publish').at(-1);

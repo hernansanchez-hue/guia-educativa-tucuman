@@ -40,6 +40,10 @@ export default async function RootLayout({ children }) {
   const siteContent=await getPublishedSiteContent();
   return (
     <html lang="es">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body>
         <PublicEditorialProvider content={siteContent}><PublicSiteBackground>{children}</PublicSiteBackground></PublicEditorialProvider>
         <PublicAnalytics />

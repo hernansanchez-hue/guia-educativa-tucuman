@@ -1,11 +1,22 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {cityDiscoveryEntries,normalizeSearch,searchCityEntries} from '../lib/public-catalog/home-discovery.mjs';
+import {cityDiscoveryEntries,normalizeSearch,searchCityEntries,institutionMatchesResults} from '../lib/public-catalog/home-discovery.mjs';
 import {editorialCatalog,cityPageFromCatalog} from '../lib/admin/editorial-model.mjs';
 import {getVersionedPublicCatalogEntries} from '../lib/catalog/versioned-public-catalog.mjs';
 import {resolveCitySlides} from '../lib/admin/city-slider.mjs';
 
 const catalog=editorialCatalog(getVersionedPublicCatalogEntries(),{includeLegacy:false});
+
+test('institution filter retains careers linked to an institutional list, without partial-slug matches',()=>{
+ const city=cityPageFromCatalog(catalog,'concepcion');
+ const results=searchCityEntries(cityDiscoveryEntries(city),'Contador');
+ assert.ok(results.some(result=>result.href.endsWith('#carreras')));
+ const matching=city.institutions.filter(institution=>institutionMatchesResults(city,institution,results));
+ assert.ok(matching.some(institution=>institution.slug==='universidad-siglo-21'));
+ assert.ok(matching.some(institution=>institution.slug.includes('unsta')));
+ assert.equal(institutionMatchesResults(city,{slug:'universidad'},results),false);
+ assert.equal(institutionMatchesResults(city,{slug:'universidad-siglo-21'},[]),false);
+});
 test('all cities expose every public career detail and institution, never only Premium',()=>{
  let institutions=0,offers=0;
  for(const record of catalog.cities){

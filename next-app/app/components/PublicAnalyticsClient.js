@@ -5,6 +5,8 @@ import Script from 'next/script';
 import Link from 'next/link';
 import {CONSENT_EVENT, SUBMISSION_EVENT, MEASUREMENT_ID, readAnalyticsConsent, storeAnalyticsConsent, initializeAnalytics, disableAnalytics, clearAnalyticsCookies, publicPath, pageContext} from '../../lib/analytics/public-tracking.mjs';
 import './public-analytics.css';
+import {isPublicMeasurementEnvironment} from '../../lib/analytics/attribution.mjs';
+import {completedSearchGate} from '../../lib/analytics/search-completions.mjs';
 
 function subscribeConsent(callback) {
   window.addEventListener(CONSENT_EVENT, callback);
@@ -16,6 +18,7 @@ const serverConsent = () => 'unset';
 const subscribeBrowser = () => () => {};
 const isTopLevel = () => window.self === window.top;
 const serverFalse = () => false;
+const isProductionLocation = () => isPublicMeasurementEnvironment(window.location);
 const isBootstrapped = () => Boolean(window.__getAnalytics);
 function subscribeRuntime(callback) {
   window.addEventListener('get:analytics-initialized', callback);
@@ -23,7 +26,7 @@ function subscribeRuntime(callback) {
 }
 const privatePath = path => /^\/(?:admin|administrador|api|_next)(?:\/|$)/i.test(path || '');
 
-export default function PublicAnalyticsClient({configured = false, publicPaths = []}) {
+export default function PublicAnalyticsClient({configured = false, publicPaths = [], publicTitles = {}}) {
   const pathname = usePathname();
   const paths = useMemo(() => new Set(publicPaths), [publicPaths]);
   const consent = useSyncExternalStore(subscribeConsent, getConsent, serverConsent);
@@ -31,10 +34,11 @@ export default function PublicAnalyticsClient({configured = false, publicPaths =
   const panel = useRef(null);
   const returnFocus = useRef(null);
   const topLevel = useSyncExternalStore(subscribeBrowser, isTopLevel, serverFalse);
+  const production = useSyncExternalStore(subscribeBrowser, isProductionLocation, serverFalse);
   const bootstrapped = useSyncExternalStore(subscribeRuntime, isBootstrapped, serverFalse);
   const [ready, setReady] = useState(false);
   const privateRoute = privatePath(pathname);
-  const allowed = configured && consent === 'granted' && topLevel && Boolean(publicPath(pathname, paths));
+  const allowed = configured && production && consent === 'granted' && topLevel && Boolean(publicPath(pathname, paths));
 
   useEffect(() => {
     // A CMS live-preview iframe must never emit public analytics.
@@ -52,35 +56,33 @@ export default function PublicAnalyticsClient({configured = false, publicPaths =
   useEffect(() => {
     if (!allowed) {disableAnalytics();return;}
     // Queue sanitized configuration and consent BEFORE loading the Google tag.
-    initializeAnalytics(window, paths);
-  }, [allowed, paths]);
+    initializeAnalytics(window, paths, publicTitles);
+  }, [allowed, paths, publicTitles]);
 
   useEffect(() => {if (ready && allowed) window.__getAnalytics?.page();}, [ready, allowed, pathname]);
 
   useEffect(() => {
     if (!ready || !allowed) return;
-    const timers = new Map();
-    const values = new WeakMap();
+    const complete = completedSearchGate(() => window.__getAnalytics?.emit('search'));
     const searchInput = target => target instanceof HTMLInputElement && (target.type === 'search' || /buscar/i.test(target.placeholder || ''));
     const search = input => {
       if (!searchInput(input)) return;
-      // Transient value for deduplication only: never sent to GA or stored.
-      const value = input.value.trim();
-      if (!value || values.get(input) === value) return;
-      values.set(input, value);
-      window.__getAnalytics?.emit('search');
+      complete(input);
     };
-    const onInput = event => {
-      if (!searchInput(event.target)) return;
-      clearTimeout(timers.get(event.target));
-      const input = event.target;
-      timers.set(input, setTimeout(() => {timers.delete(input);search(input);}, 700));
-    };
+    // A pause while typing is not a completed search. Count submit/Enter or a
+    // selected suggestion, deduplicating Enter followed by the form's submit.
+    const onKeyDown = event => {if(event.key === 'Enter' && !event.isComposing) search(event.target);};
     const onSubmit = event => {
       const input = event.target.querySelector?.('input[type="search"], input[placeholder*="Buscar"], input[placeholder*="buscar"]');
-      if (input) {clearTimeout(timers.get(input));timers.delete(input);search(input);}
+      if (input) search(input);
     };
     const onClick = event => {
+      const result = event.target.closest?.('[data-get-search-result]');
+      if (result) {
+        const scope = result.closest('[role="dialog"], .search-area, #results');
+        const input = scope?.querySelector('input[type="search"]') || (scope?.id === 'results' ? scope.parentElement.querySelector('input[type="search"]') : null);
+        if (input) search(input);
+      }
       const anchor = event.target.closest?.('a[href]');
       if (!anchor) return;
       let url;
@@ -94,14 +96,13 @@ export default function PublicAnalyticsClient({configured = false, publicPaths =
       if (event.detail?.kind === 'academic') window.__getAnalytics?.emit('generate_lead');
       if (event.detail?.kind === 'commercial') window.__getAnalytics?.emit('commercial_inquiry_received');
     };
-    document.addEventListener('input', onInput);
+    document.addEventListener('keydown', onKeyDown, true);
     document.addEventListener('submit', onSubmit, true);
     document.addEventListener('click', onClick, true);
     window.addEventListener('popstate', onPop);
     window.addEventListener(SUBMISSION_EVENT, onConfirmed);
     return () => {
-      for (const timer of timers.values()) clearTimeout(timer);
-      document.removeEventListener('input', onInput);
+      document.removeEventListener('keydown', onKeyDown, true);
       document.removeEventListener('submit', onSubmit, true);
       document.removeEventListener('click', onClick, true);
       window.removeEventListener('popstate', onPop);

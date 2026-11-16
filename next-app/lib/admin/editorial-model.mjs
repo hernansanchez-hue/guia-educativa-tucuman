@@ -9,6 +9,8 @@ import {validateSeo} from './final-model.mjs';
 import { validateDraftPayload, isValidSlug, isSafeContentLink } from "./content-document.mjs";
 import {validateCitySlides} from './city-slider.mjs';
 import {isPremiumInstitution} from '../catalog/commercial-policy.mjs';
+import {institutionDesignPage} from '../catalog/institution-design.mjs';
+import {publicCareerHref} from '../catalog/public-career-href.mjs';
 import {homeContentFromEntries,validateHomePayload} from './home-editorial.mjs';
 import {trainingSummary,EXTENDED_TYPES,EXTENDED_KINDS,extendedPageForEntry,extendedRelatedRoutes,extendedRouteMap,validateExtendedPayload} from './extended-editorial.mjs';
 
@@ -79,7 +81,13 @@ export function cityPageFromCatalog(catalog, slug) {
   const c = catalog.cities.find(c => c.slug === slug); if (!c) return null;
   const current = catalog.institutions.filter(i => i.citySlug === slug);
   const order = c.institutionIds || []; current.sort((a,b) => (order.indexOf(a.id)<0 ? 999 : order.indexOf(a.id)) - (order.indexOf(b.id)<0 ? 999 : order.indexOf(b.id)));
-  const rows = current.map(i => composeInstitution(catalog, i.id, "city"));
+  const rows = current.map(i => {
+    const summary = composeInstitution(catalog, i.id, "city");
+    // Reuse the actual profile projection, including territorial offering IDs.
+    // Editorial carousel placement must never grant an individual paid profile.
+    const profile = institutionDesignPage(catalog, {institution: composeInstitution(catalog, i.id)}).institution;
+    return {...summary, careers: summary.careers.map(career => ({...career, publicHref: publicCareerHref(c, profile, career)}))};
+  });
   return { ...c, institutions: rows, featuredInstitutions: Array.isArray(c.controlPlacements) ? c.controlPlacements.filter(p=>p.active).flatMap(p=>{const i=rows.find(r=>r.id===p.id);return i?[{...i,...(p.displayName?.trim()?{name:p.displayName.trim()}:{}),...(p.image?{image:p.image}:{}),...(p.description?{description:p.description}:{})}]:[];}) : rows.filter(i => isPremiumInstitution(i,c)&&((c.featuredInstitutionIds || []).includes(i.id)||i.featured===true)) };
 }
 export function institutionPageFromCatalog(catalog, citySlug, slug) {

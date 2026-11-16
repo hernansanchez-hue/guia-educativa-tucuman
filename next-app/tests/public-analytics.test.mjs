@@ -1,12 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {CONSENT_KEY, CONSENT_MAX_AGE, MEASUREMENT_ID, decodeConsent, publicPath, pageContext, safeEvent, initializeAnalytics, disableAnalytics, clearAnalyticsCookies, trackConfirmedSubmission} from '../lib/analytics/public-tracking.mjs';
+import {webcrypto} from 'node:crypto';
+import {CONSENT_KEY, RECEIPTS_KEY, CONSENT_MAX_AGE, MEASUREMENT_ID, decodeConsent, publicPath, pageContext, safeEvent, initializeAnalytics, disableAnalytics, clearAnalyticsCookies, trackConfirmedSubmission} from '../lib/analytics/public-tracking.mjs';
 
 const paths = new Set(['/','/concepcion','/monteros','/concepcion/universidad-siglo-21','/concepcion/universidad-siglo-21/carreras/abogacia','/carreras/abogacia','/instituciones/universidad-siglo-21','/contacto']);
 function browser(status = 'granted', pathname = '/concepcion') {
   const cookies = [];
-  const target = {location:{pathname,hostname:'guiaeducativatuc.com.ar'},localStorage:{getItem:() => JSON.stringify({version:1,status,updatedAt:Date.now()})},document:{get cookie(){return '_ga=abc; _ga_KY9E5NG5V2=def; sb-auth=secret';},set cookie(value){cookies.push(value);}},cookies};
+  const target = {location:{pathname,origin:'https://guiaeducativatuc.com.ar',search:'',hostname:'guiaeducativatuc.com.ar'},localStorage:{getItem:() => JSON.stringify({version:1,status,updatedAt:Date.now()})},document:{referrer:'',get cookie(){return '_ga=abc; _ga_KY9E5NG5V2=def; sb-auth=secret';},set cookie(value){cookies.push(value);}},cookies};
   target.self = target;target.top = target;
   return target;
 }
@@ -100,15 +101,26 @@ test('cookie withdrawal targets only GA cookies, not authentication or preferenc
   assert.ok(target.cookies.every(cookie=>cookie.includes('Max-Age=0')));
 });
 
-test('confirmed receipt triggers only one safe event with no receipt data', () => {
-  const emitted=[];global.window={dispatchEvent:event=>emitted.push(event)};
+test('confirmed receipt triggers only one safe event, also after reload, without receipt data', async () => {
+  const emitted=[],storage=new Map();
+  const target=browser();initializeAnalytics(target,paths);
+  Object.assign(target,{crypto:webcrypto,dispatchEvent:event=>emitted.push(event),sessionStorage:{getItem:key=>storage.get(key),setItem:(key,value)=>storage.set(key,value),removeItem:key=>storage.delete(key)}});
+  global.window=target;
   const previous=global.CustomEvent;
   global.CustomEvent=class {constructor(type,options){this.type=type;this.detail=options.detail;}};
   try {
-    trackConfirmedSubmission('academic','receipt-private-1');trackConfirmedSubmission('academic','receipt-private-1');
-    trackConfirmedSubmission('commercial','receipt-private-2');trackConfirmedSubmission('academic','');trackConfirmedSubmission('other','receipt-private-3');
+    await Promise.all([trackConfirmedSubmission('academic','receipt-private-1'),trackConfirmedSubmission('academic','receipt-private-1')]);
+    await trackConfirmedSubmission('commercial','receipt-private-2');await trackConfirmedSubmission('academic','');await trackConfirmedSubmission('other','receipt-private-3');
     assert.equal(emitted.length,2);assert.deepEqual(emitted[0].detail,{kind:'academic'});
     assert.equal(JSON.stringify(emitted).includes('receipt-private'),false);
+    assert.equal(storage.get(RECEIPTS_KEY).includes('receipt-private'),false);
+    const reloaded=await import('../lib/analytics/public-tracking.mjs?reload-test');
+    assert.equal(await reloaded.trackConfirmedSubmission('academic','receipt-private-1'),false);
+    assert.equal(emitted.length,2);
+    clearAnalyticsCookies(target);assert.equal(storage.has(RECEIPTS_KEY),false);
+    target.localStorage.getItem=()=>JSON.stringify({version:1,status:'denied',updatedAt:Date.now()});
+    assert.equal(await trackConfirmedSubmission('academic','receipt-private-4'),false);
+    assert.equal(storage.size,0);assert.equal(emitted.length,2);
   } finally {delete global.window;if(previous)global.CustomEvent=previous;else delete global.CustomEvent;}
 });
 

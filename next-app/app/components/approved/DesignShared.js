@@ -1,6 +1,7 @@
 "use client";
 import {useState} from 'react';
 import Link from 'next/link';
+import PublicImage from '../PublicImage';
 import {usePathname} from 'next/navigation';
 import NetworkBackground from '../NetworkBackground';
 import PublicFooter from '../PublicFooter';
@@ -22,7 +23,7 @@ export function DesignShell({kind,city,children,paid=false}){
  const [open,setOpen]=useState(false),[paused,setPaused]=useState(false);const nav=usePublicEditorial('navigation'),footer=usePublicEditorial('footer');const pathname=usePathname();
  return <><div className={`get-approved design-${kind} ${paid?'paid':'free'} ${paused?'motion-paused':''}`}>
   <NetworkBackground className="design-network" paused={paused}/><Link className="skip" href="#contenido">Ir al contenido</Link>
-  <header className="header" id="inicio"><Link className="brand" href={city?`/${city.slug}`:'/'} aria-label="GET — Inicio"><img src={nav.logo||footer.logo} alt="Guía Educativa Tucumán" width="142" height="54"/></Link>
+  <header className="header" id="inicio"><Link className="brand" href={city?`/${city.slug}`:'/'} aria-label="GET — Inicio"><PublicImage src={nav.logo||footer.logo} alt="Guía Educativa Tucumán" width={142} height={54} sizes="142px" priority/></Link>
    <nav id="approved-nav" aria-label="Navegación principal" className={open?'open':''}>{nav.items.filter(x=>x.visible!==false).map(item=><Link key={item.id} href={item.contextual&&city?`/${city.slug}`:item.href} className={pathname===item.href||(item.href==='/instituciones'&&city)?'active':undefined} aria-current={pathname===item.href?'page':undefined} onClick={()=>setOpen(false)}>{item.label}</Link>)}</nav>
    <div className="header-end">{city?<Link className="city-choice" href={`/${city.slug}`}><Icon name="pin"/>{city.name}</Link>:null}<Link className="button navy" href={nav.courseHref}>{nav.courseLabel}<Icon/></Link></div>
    <button className="menu-toggle icon-button" aria-label={open?'Cerrar menú':'Abrir menú'} aria-expanded={open} aria-controls="approved-nav" onClick={()=>setOpen(!open)}><Icon name="menu"/></button>
@@ -31,7 +32,7 @@ export function DesignShell({kind,city,children,paid=false}){
   <div className="wrap motion-control"><button className="text-button" aria-pressed={paused} onClick={()=>setPaused(!paused)}><Icon name={paused?'play':'pause'}/>{paused?'Activar movimiento':'Pausar movimiento'}</button></div>
  </div><PublicFooter/></>;
 }
-export function Logo({institution}){const src=institution.logoUrl||(institution.slug==='universidad-siglo-21'?'/assets/universidad-siglo-21-logo.png':institution.slug==='instituto-santa-barbara'?'/assets/approved/about/santa-logo.png':/^https?:|^\//.test(institution.logo||'')?institution.logo:null);return src?<img src={src} alt={institution.name} width="140" height="85"/>:<span className="logo-text">{institution.name}</span>;}
+export function Logo({institution}){const src=institution.logoUrl||(institution.slug==='universidad-siglo-21'?'/assets/universidad-siglo-21-logo.png':institution.slug==='instituto-santa-barbara'?'/assets/approved/about/santa-logo.png':/^https?:|^\//.test(institution.logo||'')?institution.logo:null);return src?<PublicImage src={src} alt={institution.name} width={140} height={85} sizes="140px"/>:<span className="logo-text">{institution.name}</span>;}
 export function EmptyPhoto({label='Fotografía de la sede pendiente'}){return <div className="empty-photo"><Icon name="building"/><span>{label}</span></div>;}
 // Never attribute stock imagery to an actual campus. Explicit CMS verification is required.
 export function campusImages(i){return (i.verifiedGallery||[]).map(x=>typeof x==='string'?x:x.url).filter(Boolean).concat(i.imageVerified===true&&i.image?[i.image]:[]);}

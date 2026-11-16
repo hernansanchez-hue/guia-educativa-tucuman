@@ -1,7 +1,7 @@
 import {isSafeContentLink} from './content-document.mjs';
 import {isPremiumCareer} from '../catalog/commercial-policy.mjs';
+import {publicCareerHref} from '../catalog/public-career-href.mjs';
 
-const canonical = {'licenciatura-en-administracion':'lic-en-administracion'};
 function safePublicLink(value){
  if(!isSafeContentLink(value))return false;
  try{return !/^\/(?:administrador|admin|api)(?:\/|$)/i.test(new URL(decodeURIComponent(value),'https://get.local').pathname);}catch{return false;}
@@ -16,7 +16,7 @@ export function automaticCitySlides(city) {
     careerId:career.id,
     institutionName:institution.name,
     institution:{name:institution.name,description:institution.description,image:institution.image,type:institution.type,route:`/${city.slug}/${institution.slug}`},
-    route:`/${city.slug}/${institution.slug}/${/capacitaci/i.test(institution.type??'')?'capacitaciones':'carreras'}/${canonical[career.slug]??career.slug}`,
+    route:publicCareerHref(city,institution,career),
   })));
 }
 
@@ -38,7 +38,7 @@ export function citySlideOptions(city) {
       id: institution.id + '-' + career.id, institutionId: institution.id, careerId: career.id,
       institutionName: institution.name, careerName: career.name, title: career.name,
       description: career.description || '', image: career.image || '',
-      href: career.routePath || `/${city.slug}/${institution.slug}/${/capacitaci/i.test(institution.type || '') ? 'capacitaciones' : 'carreras'}/${canonical[career.slug] || career.slug}`,
+      href: publicCareerHref(city,institution,career),
       ctaLabel: 'Conocer la carrera', institutionCtaLabel: 'Conocer más', active: true,
     })));
 }
@@ -49,8 +49,10 @@ export function resolveCitySlides(city) {
   return city.slides.filter(slide=>slide.active!==false).flatMap(slide=>{
     const institution=city.institutions.find(i=>i.id===slide.institutionId);
     if(!institution||institution.visible===false)return [];
-    if(slide.careerId){const career=institution.careers.find(c=>c.id===slide.careerId);if(!career||career.visible===false)return [];}
-    return [{...slide,name:slide.title,route:slide.href,
+    const career=slide.careerId?institution.careers.find(c=>c.id===slide.careerId):null;
+    if(slide.careerId&&(!career||career.visible===false))return [];
+    const route=career&&slide.href?.startsWith(`/${city.slug}/${institution.slug}/carreras/`)?publicCareerHref(city,institution,career):slide.href;
+    return [{...slide,name:slide.title,route,
       institution:{name:institution.name,description:institution.description,image:institution.image,type:institution.type,route:`/${city.slug}/${institution.slug}`}}];
   });
 }

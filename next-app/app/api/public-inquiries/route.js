@@ -1,6 +1,7 @@
 import {readFile} from 'node:fs/promises';
 import {resolvePublicInquiry} from '../../../lib/integration/public-inquiry.mjs';
 import {hasTrustedPublicOrigin} from '../../../lib/security/request-origin.mjs';
+import {readBoundedJson} from '../../../lib/security/bounded-json.mjs';
 
 export const runtime = 'nodejs';
 
@@ -10,10 +11,9 @@ export async function POST(request) {
   if (!hasTrustedPublicOrigin(request)) return reply('Origen no permitido', 403);
   const idempotencyKey = request.headers.get('Idempotency-Key');
   if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(idempotencyKey ?? '')) return reply('Identificador de solicitud inválido', 400);
-  const body = await request.text();
-  if (body.length > 8192) return reply('Solicitud demasiado grande', 413);
-  let input;
-  try { input = JSON.parse(body); } catch { return reply('JSON inválido', 400); }
+  const body = await readBoundedJson(request, 8192);
+  if (body.error) return reply(body.error, body.status);
+  const input = body.value;
   if (input?.website) return reply('Solicitud inválida', 400);
   let mapping;
   try { mapping = JSON.parse(await readFile(process.env.GET_CRM_MAPPING_PATH, 'utf8')); }

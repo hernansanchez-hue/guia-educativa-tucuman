@@ -1,9 +1,10 @@
+import {PUBLIC_ORIGIN, ATTRIBUTION_KEY, isPublicMeasurementEnvironment, consentedAttribution} from './attribution.mjs';
 export const MEASUREMENT_ID = 'G-KY9E5NG5V2';
 export const CONSENT_KEY = 'get.analytics-consent.v1';
 export const CONSENT_EVENT = 'get:analytics-consent';
 export const SUBMISSION_EVENT = 'get:confirmed-submission';
+export const RECEIPTS_KEY = 'get.analytics-receipts.v1';
 export const CONSENT_MAX_AGE = 180 * 24 * 60 * 60 * 1000;
-const PUBLIC_ORIGIN = 'https://guiaeducativatuc.com.ar';
 const RESERVED = new Set(['instituciones','carreras','eventos','servicios','nosotros','contacto','cursos-docentes','privacidad','orientacion-vocacional','ciudades']);
 const privatePath = path => /^\/(?:admin|administrador|api|_next)(?:\/|$)/i.test(path);
 const submissions = new Set();
@@ -50,19 +51,22 @@ export function pageContext(path) {
   return {page_type: parts[0] === 'eventos' ? 'events' : parts[0] === 'servicios' ? 'services' : 'public'};
 }
 
-export function safeEvent(name, path, paths) {
+export function safeEvent(name, path, paths, titles = {}) {
   const verifiedPath = publicPath(path, paths);
   if (!verifiedPath || !['page_view','view_city','view_institution','view_career','search','click_whatsapp','download_study_plan','generate_lead','commercial_inquiry_received'].includes(name)) return null;
-  // No free text, query/hash, referrer URL, title, phone, email, file URL or CRM receipt enters GA.
+  // Titles come only from the published catalog, never document.title or input.
   return {name, params: {
     page_location: PUBLIC_ORIGIN + verifiedPath,
-    page_title: 'GET · ' + pageContext(verifiedPath).page_type,
+    page_title: (titles[verifiedPath] || 'GET · ' + pageContext(verifiedPath).page_type).slice(0,300),
     page_referrer: '',
     ...Object.fromEntries(Object.entries(pageContext(verifiedPath)).map(([key, value]) => [key, value.slice(0,100)])),
   }};
 }
 
 export function clearAnalyticsCookies(target = window) {
+  try { target.sessionStorage?.removeItem(ATTRIBUTION_KEY); } catch { /* Optional storage. */ }
+  try { target.sessionStorage?.removeItem(RECEIPTS_KEY); } catch { /* Optional storage. */ }
+  submissions.clear();
   const names = target.document.cookie.split(';').map(value => value.trim().split('=')[0]).filter(name => /^_ga(?:_|$)/.test(name));
   const host = target.location.hostname;
   const domains = ['', host, '.' + host, ...host.split('.').slice(1,-1).map((_,index) => '.' + host.split('.').slice(index+1).join('.'))];
@@ -76,9 +80,9 @@ export function disableAnalytics(target = window) {
   if (target.__getAnalytics) {target.__getAnalytics.active = false;target.__getAnalytics.lastPage = null;}
 }
 
-export function initializeAnalytics(target, paths) {
+export function initializeAnalytics(target, paths, titles = {}) {
   const allowed = () => readAnalyticsConsent(target) === 'granted' && target.self === target.top
-    && Boolean(publicPath(target.location.pathname, paths));
+    && isPublicMeasurementEnvironment(target.location) && Boolean(publicPath(target.location.pathname, paths));
   if (!allowed()) {disableAnalytics(target);return null;}
   if (target.__getAnalytics) {target.__getAnalytics.active = true;target['ga-disable-' + MEASUREMENT_ID] = false;return target.__getAnalytics;}
   target.dataLayer = target.dataLayer || [];
@@ -91,28 +95,30 @@ export function initializeAnalytics(target, paths) {
   target.gtag('consent', 'default', {analytics_storage:'denied', ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied'});
   target.gtag('consent', 'update', {analytics_storage:'granted', ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied'});
   target.gtag('js', new Date());
+  const attribution = consentedAttribution(target);
   const path = publicPath(target.location.pathname, paths);
-  const config = safeEvent('page_view', path, paths)?.params || {page_location: PUBLIC_ORIGIN, page_title: 'GET', page_referrer: ''};
+  const config = safeEvent('page_view', path, paths, titles)?.params || {page_location: PUBLIC_ORIGIN, page_title: 'GET', page_referrer: ''};
   target.gtag('config', MEASUREMENT_ID, {
     ...config, send_page_view: false, allow_google_signals: false, allow_ad_personalization_signals: false,
-    ignore_referrer: true, cookie_expires: 60 * 60 * 24 * 180, cookie_update: false,
-    campaign_id:'', campaign_source:'', campaign_medium:'', campaign_name:'', campaign_term:'', campaign_content:'',
+    page_referrer: attribution.referrer, cookie_expires: 60 * 60 * 24 * 180, cookie_update: false,
+    ...attribution.campaign,
   });
   const runtime = {
-    active: true, lastPage: null,
+    active: true, lastPage: null, referrer: attribution.referrer,
     emit(name) {
       if (!runtime.active || !allowed()) return false;
-      const event = safeEvent(name, target.location.pathname, paths);
+      const event = safeEvent(name, target.location.pathname, paths, titles);
       if (!event) return false;
-      target.gtag('event', event.name, {...event.params, send_to: MEASUREMENT_ID});
+      target.gtag('event', event.name, {...event.params, page_referrer:runtime.referrer, send_to: MEASUREMENT_ID});
       return true;
     },
     page() {
       const current = publicPath(target.location.pathname, paths);
       if (!current || current === runtime.lastPage || !runtime.active || !allowed()) return;
+      if(runtime.lastPage) runtime.referrer = PUBLIC_ORIGIN + runtime.lastPage;
       runtime.lastPage = current;
-      const params = safeEvent('page_view', current, paths).params;
-      target.gtag('set', {page_location:params.page_location, page_title:params.page_title, page_referrer:''});
+      const params = safeEvent('page_view', current, paths, titles).params;
+      target.gtag('set', {page_location:params.page_location, page_title:params.page_title, page_referrer:runtime.referrer});
       runtime.emit('page_view');
       const kind = pageContext(current).page_type;
       if (['city','career','institution'].includes(kind)) runtime.emit('view_' + kind);
@@ -123,12 +129,29 @@ export function initializeAnalytics(target, paths) {
   return runtime;
 }
 
-export function trackConfirmedSubmission(kind, receiptId) {
-  if (typeof window === 'undefined' || !['academic','commercial'].includes(kind) || typeof receiptId !== 'string' || !receiptId) return;
-  const key = kind + ':' + receiptId;
-  if (submissions.has(key)) return;
-  // Receipt is used for in-memory duplicate prevention only, never as event data.
+export async function trackConfirmedSubmission(kind, receiptId) {
+  if (typeof window === 'undefined' || !['academic','commercial'].includes(kind) || typeof receiptId !== 'string' || !receiptId || receiptId.length > 200) return false;
+  const target = window;
+  const allowed = () => readAnalyticsConsent(target) === 'granted' && isPublicMeasurementEnvironment(target.location) && target.__getAnalytics?.active && !privatePath(target.location.pathname);
+  if (!allowed()) return false;
+  // Only a digest is retained in the opted-in tab, never the receipt itself.
+  // This survives a reload/replayed receipt and is removed with consent withdrawal.
+  let key;
+  try {
+    const bytes = await target.crypto.subtle.digest('SHA-256', new TextEncoder().encode(kind + ':' + receiptId));
+    key = Array.from(new Uint8Array(bytes), b => b.toString(16).padStart(2,'0')).join('');
+  } catch { return false; }
+  if (!allowed() || submissions.has(key)) return false;
+  const now = Date.now();
+  let previous = [];
+  try {
+    const stored = JSON.parse(target.sessionStorage?.getItem(RECEIPTS_KEY));
+    if (Array.isArray(stored)) previous = stored.filter(item => /^[a-f0-9]{64}$/.test(item?.key) && Number.isFinite(item.at) && item.at <= now && now-item.at < 30*60*1000).slice(-100);
+  } catch { /* Optional storage. */ }
+  if (previous.some(item => item.key === key)) return false;
   if (submissions.size >= 100) submissions.clear();
   submissions.add(key);
-  window.dispatchEvent(new CustomEvent(SUBMISSION_EVENT, {detail: {kind}}));
+  try { target.sessionStorage?.setItem(RECEIPTS_KEY, JSON.stringify([...previous.slice(-99),{key,at:now}])); } catch { /* In-memory deduplication remains available. */ }
+  target.dispatchEvent(new CustomEvent(SUBMISSION_EVENT, {detail: {kind}}));
+  return true;
 }

@@ -2,6 +2,7 @@
 
 import {useRef,useState,useId,useSyncExternalStore} from "react";
 import Link from "next/link";
+import PublicImage from '../PublicImage';
 import {usePathname,useRouter} from "next/navigation";
 import NetworkBackground from "../NetworkBackground";
 import PublicFooter from "../PublicFooter";
@@ -32,7 +33,7 @@ export default function EightDesignShell({children}) {
   <NetworkBackground className="eight-network" paused={paused}/>
   <a className="skip" href="#principal">Ir al contenido</a>
   <header className="topbar" onKeyDown={closeMenu}>
-   <Link className="logo" href="/" aria-label="GET — Inicio"><img src={navigation.logo||footer.logo} alt="Guía Educativa Tucumán" width="115" height="46"/></Link>
+   <Link className="logo" href="/" aria-label="GET — Inicio"><PublicImage src={navigation.logo||footer.logo} alt="Guía Educativa Tucumán" width={115} height={46} sizes="115px" priority/></Link>
    <nav aria-label="Principal">{links}</nav>
    <div className="tools">
     <Link className="city-link" href="/#ciudades">⌖ Tucumán</Link>
