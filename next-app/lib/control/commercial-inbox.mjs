@@ -1,5 +1,6 @@
 import {createHash, randomUUID} from 'node:crypto';
 import {validateCommercialContact} from '../integration/commercial-contact.mjs';
+import {validCommercialEvidence} from '../privacy/commercial-consent.mjs';
 
 export const CONTACT_STATUSES = Object.freeze({nueva:'Nueva',en_seguimiento:'En seguimiento',contactada:'Contactada',cerrada:'Cerrada'});
 export const INBOX_PAGE_SIZE = 20;
@@ -53,20 +54,26 @@ export async function openLocalCommercialInbox(path, {now = Date.now} = {}) {
   // Additive compatibility for a local inbox created earlier in this task. All
   // existing records came exclusively through /contacto, never a free URL field.
   if (!db.prepare('PRAGMA table_info(commercial_contacts)').all().some(column=>column.name==='source_path')) db.exec("ALTER TABLE commercial_contacts ADD COLUMN source_path TEXT NOT NULL DEFAULT '/contacto' CHECK(source_path='/contacto')");
+  // Historical rows deliberately remain NULL. Never infer past acceptance.
+  if (!db.prepare('PRAGMA table_info(commercial_contacts)').all().some(column=>column.name==='consent_evidence')) db.exec('ALTER TABLE commercial_contacts ADD COLUMN consent_evidence TEXT');
   const transact = fn => {
     db.exec('BEGIN IMMEDIATE');
     try {const result=fn();db.exec('COMMIT');return result;} catch(error) {db.exec('ROLLBACK');throw error;}
   };
   return {
     close(){db.close();},
-    receive(key,input,rateKey) {
+    receive(key,input,rateKey,evidence) {
       const payload=validateCommercialContact(input);
-      if (!uuid(key)||!payload||!/^[a-f0-9]{64}$/.test(rateKey||'')) throw Error('Consulta inválida.');
+      if (!uuid(key)||!payload||!/^[a-f0-9]{64}$/.test(rateKey||'')||!validCommercialEvidence(evidence)) throw Error('Consulta inválida.');
       return transact(() => {
         const fingerprint=contactFingerprint(payload);
-        const existing=db.prepare('SELECT id,fingerprint FROM commercial_contacts WHERE idempotency_key=?').get(key);
+        const existing=db.prepare('SELECT id,fingerprint,consent_evidence FROM commercial_contacts WHERE idempotency_key=?').get(key);
         if (existing) {
           if (existing.fingerprint !== fingerprint) return {status:409};
+          if (existing.consent_evidence) {
+            const original=JSON.parse(existing.consent_evidence);
+            if (Object.entries(evidence).some(([k,v])=>original[k]!==v)) return {status:409};
+          }
           return {status:201,receiptId:existing.id};
         }
         const time=now(), windowMs=600000;
@@ -75,7 +82,7 @@ export async function openLocalCommercialInbox(path, {now = Date.now} = {}) {
         if (rate?.count >= 5) return {status:429};
         db.prepare('INSERT INTO commercial_contact_rates VALUES(?,?,1) ON CONFLICT(rate_key) DO UPDATE SET count=count+1').run(rateKey,time);
         const id=randomUUID(),at=new Date(time).toISOString();
-        db.prepare("INSERT INTO commercial_contacts(id,idempotency_key,fingerprint,institution_name,contact_name,phone,email,plan,message,created_at,updated_at,source_path) VALUES(?,?,?,?,?,?,?,?,?,?,?,'/contacto')").run(id,key,fingerprint,payload.institutionName,payload.name,payload.phone,payload.email,payload.plan,payload.message,at,at);
+        db.prepare("INSERT INTO commercial_contacts(id,idempotency_key,fingerprint,institution_name,contact_name,phone,email,plan,message,created_at,updated_at,source_path,consent_evidence) VALUES(?,?,?,?,?,?,?,?,?,?,?,'/contacto',?)").run(id,key,fingerprint,payload.institutionName,payload.name,payload.phone,payload.email,payload.plan,payload.message,at,at,JSON.stringify({...evidence,receivedAt:at}));
         return {status:201,receiptId:id};
       });
     },
@@ -85,7 +92,7 @@ export async function openLocalCommercialInbox(path, {now = Date.now} = {}) {
       const where="(?='' OR status=?) AND (?='' OR instr(lower(institution_name||' '||contact_name||' '||email||' '||phone||' '||message),?)>0)";
       const args=[opts.status,opts.status,needle,needle];
       const total=db.prepare('SELECT count(*) AS total FROM commercial_contacts WHERE '+where).get(...args).total;
-      const rows=db.prepare('SELECT id,institution_name,contact_name,phone,email,plan,message,status,revision,created_at,updated_at,source_path FROM commercial_contacts WHERE '+where+' ORDER BY created_at DESC,id DESC LIMIT ? OFFSET ?').all(...args,opts.pageSize,opts.offset);
+      const rows=db.prepare('SELECT id,institution_name,contact_name,phone,email,plan,message,status,revision,created_at,updated_at,source_path,consent_evidence FROM commercial_contacts WHERE '+where+' ORDER BY created_at DESC,id DESC LIMIT ? OFFSET ?').all(...args,opts.pageSize,opts.offset).map(row=>({...row,consent_evidence:row.consent_evidence?JSON.parse(row.consent_evidence):null}));
       return {available:true,rows,total,...opts};
     },
     change(actor,request) {

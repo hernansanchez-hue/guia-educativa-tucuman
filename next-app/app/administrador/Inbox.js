@@ -24,6 +24,7 @@ function Contact({row,changeStatus}) {
     <header><div><h3>{row.institution_name}</h3><p>{row.contact_name}</p></div><span className={'gc-inbox-state gc-inbox-state--'+row.status}>{statuses[row.status]||'Estado no disponible'}</span></header>
     <dl><div><dt>Correo</dt><dd>{row.email}</dd></div><div><dt>Teléfono</dt><dd>{row.phone}</dd></div><div><dt>Plan consultado</dt><dd>{row.plan}</dd></div><div><dt>Recibida</dt><dd>{date(row.created_at)}</dd></div><div><dt>Origen</dt><dd>{row.source_path}</dd></div></dl>
     {row.message ? <p className="gc-inbox-message">{row.message}</p> : <p className="gc-inbox-muted">Sin mensaje adicional.</p>}
+    <p className="gc-inbox-muted">{row.consent_evidence?.accepted === true ? <>Aceptación explícita registrada · Aviso {row.consent_evidence.noticeVersion} · Política {row.consent_evidence.privacyVersion} · {date(row.consent_evidence.receivedAt)} · {row.consent_evidence.sourcePath}</> : 'Sin evidencia de consentimiento registrada: consulta anterior a esta incorporación. No se presume aceptación.'}</p>
     <form onSubmit={submit}><label htmlFor={'status-'+row.id}>Estado<select id={'status-'+row.id} value={status} onChange={event=>setStatus(event.target.value)} disabled={pending}>{Object.entries(statuses).map(([value,label])=><option value={value} key={value}>{label}</option>)}</select></label><button type="submit" disabled={pending||status===row.status}>{pending?'Guardando…':'Guardar estado'}</button></form>
     <p className="gc-inbox-feedback" role="status" aria-live="polite">{notice}</p>
   </article>;

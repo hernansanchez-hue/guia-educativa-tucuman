@@ -4,12 +4,18 @@ import {mkdtempSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 import {randomUUID} from 'node:crypto';
-import {openLocalCommercialInbox,permitCommercialInbox,contactStoreMode,inboxQuery,contactFingerprint} from '../lib/control/commercial-inbox.mjs';
+import {openLocalCommercialInbox as openStore,permitCommercialInbox,contactStoreMode,inboxQuery,contactFingerprint} from '../lib/control/commercial-inbox.mjs';
+import {commercialConsent} from '../lib/privacy/commercial-consent.mjs';
 import {handleCommercialContact,createContactGuard} from '../lib/integration/commercial-contact.mjs';
 import {INQUIRY_PRIVACY_VERSION} from '../lib/privacy/inquiry-consent.mjs';
 const actor={id:'00000000-0000-4000-a000-000000000001',active:true,role:'ADMINISTRADOR'};
 const input={institutionName:'Institución de prueba',name:'Persona de prueba',email:'test@example.invalid',phone:'3810000000',plan:'Básico',message:'Consulta aislada'};
 const rateKey='a'.repeat(64);
+const evidence=commercialConsent({privacyConsent:true,privacyVersion:INQUIRY_PRIVACY_VERSION});
+async function openLocalCommercialInbox(...args){
+  const db=await openStore(...args);
+  return {...db,receive:(key,payload,rate)=>db.receive(key,payload,rate,evidence)};
+}
 const req=(payload=input,key=randomUUID())=>new Request('http://localhost:4004/api/commercial-contact',{method:'POST',headers:{Origin:'http://localhost:4004','Content-Type':'application/json','Idempotency-Key':key},body:JSON.stringify({...payload,privacyConsent:true,privacyVersion:INQUIRY_PRIVACY_VERSION})});
 
 test('inbox permission excludes readers, anonymous, inactive and spoofed roles',()=>{

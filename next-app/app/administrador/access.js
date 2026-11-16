@@ -10,18 +10,21 @@ export async function login(_prev, form) {
     password = form.get('password');
   if (!validateEmail(email) || typeof password !== 'string' || !password || password.length > 256)
     return 'Revisá los datos de ingreso.';
+  let requiresMfa=false;
   try {
     const c = await authClient();
     if ((await c.auth.signInWithPassword({ email, password })).error)
       return 'Correo o contraseña incorrectos.';
-    if (!(await identity(true))) {
+    const session=await identity(true,{allowMfaChallenge:true});
+    if (!session) {
       await c.auth.signOut({ scope: 'local' });
       return 'La cuenta no tiene acceso activo al Centro de Control.';
     }
+    requiresMfa=session.requiresMfa;
   } catch {
     return 'No se pudo verificar el acceso. Revisá la configuración del servidor.';
   }
-  redirect('/administrador');
+  redirect(requiresMfa?'/administrador/verificar':'/administrador');
 }
 export async function logout() {
   const c = await authClient();

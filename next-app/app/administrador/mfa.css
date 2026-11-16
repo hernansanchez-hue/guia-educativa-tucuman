@@ -1,0 +1,6 @@
+.gc-mfa { min-width: 0; }
+.gc-mfa > * + * { margin-top: 1rem; }
+.gc-mfa .gc-mfa-qr { display: block; width: min(220px, 100%); height: auto; margin: 1rem auto; background: white; }
+.gc-mfa-secret { overflow-wrap: anywhere; user-select: all; font-family: monospace; }
+.gc-mfa details > p { margin-top: .75rem; }
+.gc-mfa summary { cursor: pointer; }

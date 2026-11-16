@@ -5,6 +5,7 @@ import {usePublicEditorial} from '../components/PublicEditorialContext';
 import Link from 'next/link';
 import {trackConfirmedSubmission} from '../../lib/analytics/public-tracking.mjs';
 import {INQUIRY_PRIVACY_VERSION} from '../../lib/privacy/inquiry-consent.mjs';
+import {COMMERCIAL_NOTICE} from '../../lib/privacy/commercial-consent.mjs';
 
 export default function ContactForm() {
   const footer = usePublicEditorial('footer');
@@ -66,7 +67,7 @@ export default function ContactForm() {
     <label className="full" htmlFor="contact-message">Mensaje<textarea id="contact-message" name="message" rows="4" maxLength="4000" placeholder="Mensaje"/></label>
     <label className="commercial-contact-trap" aria-hidden="true">Sitio web<input name="website" tabIndex={-1} autoComplete="off"/></label>
     <p className="form-note full">Usaremos estos datos para responder a esta consulta comercial. No incluyas información sensible.</p>
-    <label className="form-note full commercial-contact-consent"><input type="checkbox" name="privacyConsent" required/><span>Autorizo a GET a registrar y atender esta consulta en su bandeja comercial privada, según la <Link href="/privacidad" target="_blank" rel="noopener noreferrer">Política de Privacidad</Link>. No se envía automáticamente a GET Instituciones ni autoriza publicidad ajena a mi consulta.</span></label>
+    <label className="form-note full commercial-contact-consent"><input type="checkbox" name="privacyConsent" required/><span>{COMMERCIAL_NOTICE.beforeLink}<Link href="/privacidad" target="_blank" rel="noopener noreferrer">Política de Privacidad</Link>{COMMERCIAL_NOTICE.afterLink}</span></label>
     <button className="btn" type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Enviando…' : 'Enviar consulta'}</button>
     {message ? <div className={`form-note commercial-contact-status ${status === 'error' ? 'is-error' : ''}`} role={status === 'error' ? 'alert' : 'status'} tabIndex={-1} ref={statusRef}>
       <p>{message}</p>

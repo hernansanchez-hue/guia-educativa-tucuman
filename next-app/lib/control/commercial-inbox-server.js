@@ -4,6 +4,7 @@ import {join,dirname} from 'node:path';
 import {createSupabaseServiceClient} from '../supabase/service';
 import {inspectAdminEnvironment} from '../admin/environment.mjs';
 import {localPath} from './store';
+import {validCommercialEvidence} from '../privacy/commercial-consent.mjs';
 import {contactStoreMode,permitCommercialInbox,inboxQuery,validateStatusChange,openLocalCommercialInbox,contactFingerprint} from './commercial-inbox.mjs';
 
 let localInbox;
@@ -17,13 +18,14 @@ export function commercialContactPersistence() {
   const mode=contactStoreMode();
   if (mode==='off' || (mode==='supabase' && (!remoteConfigured() || !(process.env.SUPABASE_SECRET_KEY||process.env.SUPABASE_SERVICE_ROLE_KEY)))) return null;
   return {
-    async receive(key,payload,address) {
+    async receive(key,payload,address,evidence) {
+      if (!validCommercialEvidence(evidence)) return {status:400};
       // Salted daily fingerprint: no raw IP is persisted or returned.
       const salt=mode==='supabase' ? (process.env.SUPABASE_SECRET_KEY||process.env.SUPABASE_SERVICE_ROLE_KEY) : 'local-development-inbox';
       const rateKey=createHmac('sha256',salt).update(new Date().toISOString().slice(0,10)+'|'+address).digest('hex');
-      if(mode==='local')return (await local()).receive(key,payload,rateKey);
+      if(mode==='local')return (await local()).receive(key,payload,rateKey,evidence);
       const {data,error}=await createSupabaseServiceClient().rpc('get_commercial_contact_receive',{
-        p_key:key,p_fingerprint:contactFingerprint(payload),p_payload:payload,p_rate_key:rateKey,
+        p_key:key,p_fingerprint:contactFingerprint(payload),p_payload:payload,p_rate_key:rateKey,p_consent:evidence,
       });
       if (error) return {status:503};
       return data?.status===201 && typeof data.receiptId==='string' ? {status:201,receiptId:data.receiptId} : {status:[409,429].includes(data?.status)?data.status:503};

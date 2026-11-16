@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { createServerClient } from '@supabase/ssr';
 import { requireSupabaseConfiguration } from '../admin/environment.mjs';
-import { verifiedMember } from './identity.mjs';
+import { verifiedControlSession } from './identity.mjs';
 import { permit } from './domain.mjs';
 import { controlStore, controlMode } from './store';
 export const cookieOptions = {
@@ -50,18 +50,19 @@ export function origin() {
     throw Error('Falta configurar el origen seguro del Centro.');
   return url.origin;
 }
-export async function identity(bootstrap = false) {
+export async function identity(bootstrap = false, {allowMfaChallenge = false} = {}) {
   if (!(await cookies()).getAll().some((c) => /^get-control-session(?:\.\d+)?$/.test(c.name)))
     return null;
   const client = await authClient(),
     store = await controlStore();
-  const actor = await verifiedMember(client, store, bootstrap && controlMode() === 'local');
-  return actor ? { actor, store, client } : null;
+  const verified = await verifiedControlSession(client, store, {localBootstrap:bootstrap && controlMode() === 'local',allowMfaChallenge});
+  return verified ? { ...verified, store, client } : null;
 }
 export async function requireControl(op = 'read') {
   if (controlMode() === 'off') redirect('/administrador/login');
-  const s = await identity();
+  const s = await identity(false,{allowMfaChallenge:true});
   if (!s) redirect('/administrador/login');
+  if (s.requiresMfa) redirect('/administrador/verificar');
   permit(s.actor, op);
   if (
     op !== 'read' &&

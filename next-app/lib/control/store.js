@@ -38,8 +38,8 @@ function publicDb() {
   return createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
 }
 const remote = {
-  async sessionMember(client) {
-    return check(await client.rpc('get_control_me'));
+  async sessionMember(client,challengeOnly=false) {
+    return check(await client.rpc(challengeOnly?'get_control_mfa_context':'get_control_me'));
   },
   async member(id) {
     return check(

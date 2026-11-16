@@ -1,5 +1,6 @@
 import {createHmac, randomBytes} from 'node:crypto';
 import {hasInquiryConsent} from '../privacy/inquiry-consent.mjs';
+import {commercialConsent} from '../privacy/commercial-consent.mjs';
 import {hasTrustedPublicOrigin} from '../security/request-origin.mjs';
 
 const KEY_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
@@ -125,10 +126,11 @@ export async function handleCommercialContact(request, {
   const internal = ['local','supabase'].includes(env.GET_CONTACT_STORE);
   const config = internal ? null : receiverConfiguration(env);
   if (internal ? !persistence : !config) return reply(NO_DESTINATION, 503);
-  const result = await guard.once(key, payload, async () => {
+  const evidence = commercialConsent(parsed.input);
+  const result = await guard.once(key, internal ? {...payload, consent: evidence} : payload, async () => {
     try {
       if (internal) {
-        const stored = await persistence.receive(key,payload,request.headers.get('x-nf-client-connection-ip') || 'local');
+        const stored = await persistence.receive(key,payload,request.headers.get('x-nf-client-connection-ip') || 'local',evidence);
         if (stored?.status === 201 && RECEIPT_PATTERN.test(stored.receiptId ?? '')) return {status:201,receiptId:stored.receiptId};
         if (stored?.status === 409) return {status:409,message:'El identificador ya corresponde a otra consulta.'};
         if (stored?.status === 429) return {status:429,message:'Alcanzaste el límite de consultas. Intentá nuevamente en unos minutos.'};
