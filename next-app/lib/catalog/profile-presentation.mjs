@@ -1,15 +1,15 @@
 import {institutionProfileTier} from './commercial-policy.mjs';
 const canonical=id=>id==='licenciatura-en-administracion'?'lic-en-administracion':id;
 export function selectedProfileCareers(institution){
- if(institutionProfileTier(institution)!=='paid')return [];
+ if(institution.contactFeatured!==true && institutionProfileTier(institution)!=='paid')return [];
  const ids=institution.featuredCareerIds;
  const options=(institution.careers||[]).filter(c=>c.visible!==false);
  return (Array.isArray(ids)?ids.map(id=>options.find(c=>id===c.offeringId||canonical(id)===canonical(c.id))).filter(Boolean):options.filter(c=>c.featured===true)).slice(0,5);
 }
 export function hasFeaturedCareerProfile(institution,career){return selectedProfileCareers(institution).some(c=>canonical(c.id)===canonical(career.id));}
-// The published plan and the exact territorial card grant access, never editorial placement.
+// Contacto comercial: tarjeta institucional publicada + oferta territorial habilitada.
 export function allowsCareerInquiry(institution, offeringId) {
- if (typeof offeringId !== 'string' || !offeringId || institution?.plan?.trim().toLowerCase() !== 'premium' ||
+ if (typeof offeringId !== 'string' || !offeringId || institution?.contactFeatured !== true ||
      institution.visible === false || institution.formEnabled === false) return false;
  return selectedProfileCareers(institution).some(card =>
    card.offeringId === offeringId && card.formEnabled !== false);

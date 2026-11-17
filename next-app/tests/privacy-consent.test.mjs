@@ -26,7 +26,7 @@ test('consent requires a literal boolean and the exact current privacy version',
 });
 
 const compiled=transformSync(readFileSync(new URL('../app/components/approved/InquiryForm.js',import.meta.url),'utf8'),{loader:'jsx',format:'cjs',jsx:'automatic'}).code;
-function formHarness({fail=false,plan='Premium',featured=true,valid=true}={}) {
+function formHarness({fail=false,contactFeatured=true,plan='Premium',featured=true,valid=true}={}) {
   const states=[],sent=[];
   const modules={
     '../../../lib/catalog/profile-presentation.mjs':{allowsCareerInquiry},
@@ -41,7 +41,7 @@ function formHarness({fail=false,plan='Premium',featured=true,valid=true}={}) {
   new Function('require','module','exports','FormData',compiled)(name=>{
     assert.ok(Object.hasOwn(modules,name),'Unexpected dependency '+name);return modules[name];
   },compiledModule,compiledModule.exports,class {constructor(form){return form.fields;}});
-  const tree=compiledModule.exports.default({institution:{id:'example-venue',name:'Institución elegida',plan,careers:[{id:'academic',offeringId:'academic-offer',featured}]},career:{id:'academic',name:'Carrera'},offering:{id:'academic-offer'}});
+  const tree=compiledModule.exports.default({institution:{id:'example-venue',name:'Institución elegida',plan,contactFeatured,careers:[{id:'academic',offeringId:'academic-offer',featured}]},career:{id:'academic',name:'Carrera'},offering:{id:'academic-offer'}});
   const fields=new Map(Object.entries({name:'Persona de prueba',phone:'3811234567',email:'test@example.invalid',query:'Consulta de prueba',consent:'on'}));
   let resets=0;
   return {tree,states,sent,resets:()=>resets,run:()=>tree.props.onSubmit({preventDefault(){},currentTarget:{fields,reportValidity:()=>valid,reset:()=>resets++}})};
@@ -49,7 +49,7 @@ function formHarness({fail=false,plan='Premium',featured=true,valid=true}={}) {
 const visibleText=node=>Array.isArray(node)?node.map(visibleText).join(''):node&&typeof node==='object'?visibleText(node.props?.children):node==null?'':String(node);
 
 test('educational consent identifies the recipient only for eligible cards',()=>{
-  for(const plan of ['Básico','Profesional','']) assert.equal(formHarness({plan}).tree,null);
+  for(const plan of ['Básico','Profesional','']) assert.equal(formHarness({plan,contactFeatured:false}).tree,null);
   assert.equal(formHarness({featured:false}).tree,null);
   {
     const {tree}=formHarness();

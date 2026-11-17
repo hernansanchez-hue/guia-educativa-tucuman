@@ -1,7 +1,7 @@
 import Link from "next/link";
 import EightDesignShell from "../../components/approved/EightDesignShell";
 import { getInstitutionCatalog, getInstitutionsCatalog, getPublishedCatalog, resolveEditorialMissing, editorialMetadata } from "../../../lib/admin/published-editorial";
-import {institutionProfileCapabilities} from "../../../lib/catalog/commercial-policy.mjs";
+import {isPublishedContactVenue} from "../../../lib/catalog/published-contact.mjs";
 /* eslint-disable @next/next/no-img-element */
 export const revalidate = 60;
 export async function generateStaticParams(){return (await getInstitutionsCatalog()).map(({slug})=>({slug}));}
@@ -17,8 +17,8 @@ export default async function InstitutionGeneral({params}){
  const [item,all,catalog]=await Promise.all([getInstitutionCatalog(slug),getInstitutionsCatalog(),getPublishedCatalog()]);
  if(!item)await resolveEditorialMissing(`/instituciones/${slug}`);
  const related=all.filter(other=>other.slug!==item.slug).slice(0,3),single=item.venues[0];
- // General SEO pages keep each venue's own commercial capability; a brand or editorial placement never grants it.
- const directContact=venue=>institutionProfileCapabilities(catalog.institutions.find(row=>row.id===venue.id)).institutionWhatsApp;
+ // El contacto pertenece a la sede destacada, no a todas las sedes de la marca.
+ const directContact=venue=>isPublishedContactVenue(catalog,catalog.institutions.find(row=>row.id===venue.id));
  const logoImage=/^(https?:\/\/|\/)/.test(item.logo||'');
  return <EightDesignShell><main className="institutions-page institution-general">
   <nav className="institution-breadcrumb" aria-label="Ruta de navegación"><Link href="/">Inicio</Link> › <Link href="/instituciones">Instituciones</Link> › <b>{item.name}</b></nav>

@@ -1,6 +1,7 @@
 import {getPublishedCatalog} from '../../../lib/admin/published-editorial';
 import {composeInstitution} from '../../../lib/admin/editorial-model.mjs';
 import {institutionDesignPage} from '../../../lib/catalog/institution-design.mjs';
+import {withPublishedContact} from '../../../lib/catalog/published-contact.mjs';
 import {allowsCareerInquiry} from '../../../lib/catalog/profile-presentation.mjs';
 import {readFile} from 'node:fs/promises';
 import {resolvePublicInquiry} from '../../../lib/integration/public-inquiry.mjs';
@@ -24,7 +25,7 @@ export async function POST(request) {
   try {
     const catalog = await getPublishedCatalog();
     const venue = composeInstitution(catalog, input.institutionId);
-    if (!venue || !allowsCareerInquiry(institutionDesignPage(catalog, {institution:venue}).institution, input.offeringId)) return denied();
+    if (!venue || !allowsCareerInquiry(withPublishedContact(catalog, institutionDesignPage(catalog, {institution:venue})).institution, input.offeringId)) return denied();
   } catch { return reply('No se pudo verificar la disponibilidad del formulario.', 503); }
   let mapping;
   try { mapping = JSON.parse(await readFile(process.env.GET_CRM_MAPPING_PATH, 'utf8')); }

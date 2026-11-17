@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {allowsCareerInquiry,selectedProfileCareers,hasFeaturedCareerProfile,safeStudyPlanPdf} from '../lib/catalog/profile-presentation.mjs';
 import {institutionDesignPage} from '../lib/catalog/institution-design.mjs';
+import {isPublishedContactVenue,withPublishedContact} from '../lib/catalog/published-contact.mjs';
 import {getVersionedPublicCatalogEntries} from '../lib/catalog/versioned-public-catalog.mjs';
 import {editorialCatalog,institutionPageFromCatalog} from '../lib/admin/editorial-model.mjs';
 
@@ -17,6 +18,26 @@ test('only explicitly featured careers get paid cards, with a maximum of five',(
 test('PDF support rejects unsafe or missing resources',()=>{
  for(const href of ['',undefined,'javascript:alert(1)','//example.com/p.pdf','https://example.com/p.html'])assert.equal(safeStudyPlanPdf({studyPlanPdf:href}),null);
  assert.equal(safeStudyPlanPdf({studyPlanPdf:'/assets/plan.pdf'}),'/assets/plan.pdf');
+});
+
+test('el alta y baja de una tarjeta habilita sólo la sede exacta y respeta la oferta configurada',()=>{
+ const catalog=editorialCatalog(getVersionedPublicCatalogEntries(),{includeLegacy:false});
+ const page=institutionDesignPage(catalog,institutionPageFromCatalog(catalog,'concepcion','universidad-siglo-21'));
+ const city=catalog.cities.find(c=>c.slug==='concepcion');
+ const id=page.institution.id, offer='universidad-siglo-21-concepcion-abogacia';
+ const prior=JSON.stringify(page);
+ city.controlPlacements=[{id:'universidad-siglo-21-monteros',active:true}];
+ assert.equal(isPublishedContactVenue(catalog,page.institution),false);
+ assert.equal(allowsCareerInquiry(withPublishedContact(catalog,page).institution,offer),false);
+ city.controlPlacements.push({id,active:true});
+ const venue=withPublishedContact(catalog,page).institution;
+ assert.equal(venue.contactFeatured,true);
+ assert.equal(allowsCareerInquiry(venue,offer),true);
+ assert.equal(allowsCareerInquiry({...venue,formEnabled:false},offer),false);
+ assert.equal(allowsCareerInquiry(venue,'universidad-siglo-21-monteros-abogacia'),false);
+ city.controlPlacements[1].active=false;
+ assert.equal(isPublishedContactVenue(catalog,page.institution),false);
+ assert.equal(JSON.stringify(page),prior);
 });
 test('page adapter preserves all 200 territorial offerings without mutating shared catalog',()=>{
  const catalog=editorialCatalog(getVersionedPublicCatalogEntries(),{includeLegacy:false});
@@ -46,10 +67,10 @@ test('Siglo 21 Concepcion explicitly features only Abogacia and links its real p
 
 test('academic inquiry entitlement is per territorial card, not per brand, master or paid profile',()=>{
  const careers=Array.from({length:7},(_,i)=>({id:'master',offeringId:'offer-'+i,featured:true}));
- const venue={plan:'Premium',featured:true,careers,featuredCareerIds:careers.slice(1).map(c=>c.offeringId)};
+ const venue={plan:'Básico',contactFeatured:true,careers,featuredCareerIds:careers.slice(1).map(c=>c.offeringId)};
  assert.equal(allowsCareerInquiry(venue,'offer-1'),true);
  for(const id of [undefined,'','master','offer-0','offer-6','other-campus']) assert.equal(allowsCareerInquiry(venue,id),false);
- for(const plan of ['Profesional','Básico','Normal',undefined]) assert.equal(allowsCareerInquiry({...venue,plan},'offer-1'),false);
+ for(const plan of ['Profesional','Básico','Normal',undefined]) assert.equal(allowsCareerInquiry({...venue,plan,contactFeatured:false},'offer-1'),false);
  for(const patch of [{visible:false},{formEnabled:false},{featuredCareerIds:[]}]) assert.equal(allowsCareerInquiry({...venue,...patch},'offer-1'),false);
  assert.equal(allowsCareerInquiry({...venue,careers:careers.map(c=>({...c,formEnabled:false}))},'offer-1'),false);
 });
