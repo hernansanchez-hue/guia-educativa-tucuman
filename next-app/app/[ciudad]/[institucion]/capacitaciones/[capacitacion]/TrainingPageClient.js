@@ -2,25 +2,14 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 import PublicFooter from "../../../../components/PublicFooter";
 import PublicFloatingHeader from "../../../../components/PublicFloatingHeader";
 
 const FIELD_CHIPS = ["Instituciones públicas y privadas", "Organizaciones vinculadas al sector", "Ejercicio profesional y consultoría"];
 
-function readLeads() {
-  try {
-    const value = localStorage.getItem("guiaEducativaLeads");
-    return value ? JSON.parse(value) : [];
-  } catch {
-    return [];
-  }
-}
-
 export default function TrainingPageClient({ city, institution, program, offering }) {
   const router = useRouter();
-  const [formSent, setFormSent] = useState(false);
   const campus = offering.campus || institution.address;
   const whatsapp = offering.whatsapp || institution.whatsapp || "";
   const digits = whatsapp.replace(/\D/g, "");
@@ -32,29 +21,6 @@ export default function TrainingPageClient({ city, institution, program, offerin
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  function saveTrainingLead(event) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const data = new FormData(form);
-    const leads = readLeads();
-    leads.unshift({
-      date: new Date().toISOString(),
-      leadType: "training",
-      institution: institution.name,
-      institutionId: institution.id,
-      name: String(data.get("name") || "").trim(),
-      phone: String(data.get("phone") || "").trim(),
-      email: String(data.get("email") || "").trim(),
-      training: program.name,
-      trainingProgramId: program.id,
-      career: program.name,
-      shift: String(data.get("shift") || ""),
-      query: String(data.get("query") || "").trim(),
-    });
-    localStorage.setItem("guiaEducativaLeads", JSON.stringify(leads));
-    setFormSent(true);
-    form.reset();
-  }
 
   return (
     <div className="app-shell">
@@ -88,14 +54,7 @@ export default function TrainingPageClient({ city, institution, program, offerin
               <section id="trainingFaqSection" className="career-info-section"><h2>Preguntas frecuentes</h2><div>{program.faq.map((item) => <div className="career-faq-item" key={item.question}><strong>{item.question}</strong><p>{item.answer}</p></div>)}</div></section>
             </main>
             <aside className="career-contact-sidebar">
-              <section className="career-info-section career-interest-card">
-                <h2>¿Te interesa esta capacitación?</h2><p>Dejanos tus datos y la institución se contactará.</p>
-                <form className={offering.formEnabled ? "form-grid" : "form-grid hidden"} onSubmit={saveTrainingLead}>
-                  <input name="name" required placeholder="Nombre y Apellido"/><input name="phone" required placeholder="Teléfono / WhatsApp" inputMode="tel"/><input name="email" required placeholder="Email" type="email"/>
-                  <select name="shift" defaultValue=""><option value="">¿En qué turno te interesa?</option><option>Mañana</option><option>Tarde</option><option>Noche</option></select>
-                  <textarea name="query" placeholder="Escribí tu consulta (opcional)"/><a className="btn career-whatsapp" href={whatsappHref} target="_blank" rel="noopener">Hablar por WhatsApp</a><div className="career-form-divider">o completá el formulario</div><button className="btn light" type="submit">Enviar consulta</button><p className={formSent ? "" : "hidden"} style={{ color: "var(--exito)", fontWeight: 800 }}>Consulta enviada correctamente.</p>
-                </form>
-              </section>
+              {offering.formEnabled && digits && <section className="career-info-section career-interest-card"><h2>¿Te interesa esta capacitación?</h2><a className="btn career-whatsapp" href={whatsappHref} target="_blank" rel="noopener">Hablar por WhatsApp</a></section>}
               <section className="career-info-section"><h2>Información rápida</h2><div className="career-quick-info"><div className="career-quick-row"><span><small>Institución</small><strong>{institution.name}</strong></span></div><div className="career-quick-row"><span><small>Sede</small><strong>{campus}</strong></span></div><div className="career-quick-row"><span><small>Certificación</small><strong>{offering.certification}</strong></span></div><div className="career-quick-row"><span><small>Validez</small><strong>{offering.nationalValidity}</strong></span></div></div><button className="btn light" type="button" style={{ width: "100%", marginTop: 18 }} onClick={() => router.push(`/${city.slug}/${institution.slug}`)}>Ver más capacitaciones</button></section>
             </aside>
           </div>

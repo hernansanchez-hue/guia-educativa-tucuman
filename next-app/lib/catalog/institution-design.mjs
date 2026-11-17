@@ -10,7 +10,7 @@ export function institutionDesignPage(catalog,page){
   const master=catalog.careers.find(c=>c.id===o.careerId);
   const previous=summaries.find(c=>canonical(c.id)===o.careerId)||{};
   return {...previous,id:master.id,slug:master.slug,name:o.controlCareer?.name||previous.name||master.name,description:o.controlCareer?.description??(previous.description||master.description),
-   offeringId:o.id,duration:o.duration,modality:o.modality,image:o.image,badge:o.badge,
+   offeringId:o.id,formEnabled:o.formEnabled,duration:o.duration,modality:o.modality,image:o.image,badge:o.badge,
    ...(o.featured!==undefined?{featured:o.featured}:{}),routePath:`/${institution.citySlug}/${institution.slug}/carreras/${master.slug}`};
  });
  const nonAcademic=summaries.filter(c=>!offers.some(o=>o.careerId===canonical(c.id)));

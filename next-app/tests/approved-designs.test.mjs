@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {selectedProfileCareers,hasFeaturedCareerProfile,safeStudyPlanPdf} from '../lib/catalog/profile-presentation.mjs';
+import {allowsCareerInquiry,selectedProfileCareers,hasFeaturedCareerProfile,safeStudyPlanPdf} from '../lib/catalog/profile-presentation.mjs';
 import {institutionDesignPage} from '../lib/catalog/institution-design.mjs';
 import {getVersionedPublicCatalogEntries} from '../lib/catalog/versioned-public-catalog.mjs';
 import {editorialCatalog,institutionPageFromCatalog} from '../lib/admin/editorial-model.mjs';
@@ -42,4 +42,14 @@ test('Siglo 21 Concepcion explicitly features only Abogacia and links its real p
  assert.equal(hasFeaturedCareerProfile(page.institution,{id:'abogacia'}),true);
  assert.equal(hasFeaturedCareerProfile(page.institution,{id:'contador-publico'}),false);
  assert.equal(page.institution.careers.filter(c=>c.id!=='abogacia').length,3);
+});
+
+test('academic inquiry entitlement is per territorial card, not per brand, master or paid profile',()=>{
+ const careers=Array.from({length:7},(_,i)=>({id:'master',offeringId:'offer-'+i,featured:true}));
+ const venue={plan:'Premium',featured:true,careers,featuredCareerIds:careers.slice(1).map(c=>c.offeringId)};
+ assert.equal(allowsCareerInquiry(venue,'offer-1'),true);
+ for(const id of [undefined,'','master','offer-0','offer-6','other-campus']) assert.equal(allowsCareerInquiry(venue,id),false);
+ for(const plan of ['Profesional','Básico','Normal',undefined]) assert.equal(allowsCareerInquiry({...venue,plan},'offer-1'),false);
+ for(const patch of [{visible:false},{formEnabled:false},{featuredCareerIds:[]}]) assert.equal(allowsCareerInquiry({...venue,...patch},'offer-1'),false);
+ assert.equal(allowsCareerInquiry({...venue,careers:careers.map(c=>({...c,formEnabled:false}))},'offer-1'),false);
 });

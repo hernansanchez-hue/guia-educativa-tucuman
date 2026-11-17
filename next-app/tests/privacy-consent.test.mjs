@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {allowsCareerInquiry} from '../lib/catalog/profile-presentation.mjs';
 import {transformSync} from 'esbuild';
 import * as jsxRuntime from 'react/jsx-runtime';
 import {legalConfig,getMissingPrivacyConfig} from '../lib/legal-config.js';
@@ -25,9 +26,10 @@ test('consent requires a literal boolean and the exact current privacy version',
 });
 
 const compiled=transformSync(readFileSync(new URL('../app/components/approved/InquiryForm.js',import.meta.url),'utf8'),{loader:'jsx',format:'cjs',jsx:'automatic'}).code;
-function formHarness({fail=false,paid=false,valid=true}={}) {
+function formHarness({fail=false,plan='Premium',featured=true,valid=true}={}) {
   const states=[],sent=[];
   const modules={
+    '../../../lib/catalog/profile-presentation.mjs':{allowsCareerInquiry},
     react:{useState:value=>[value,next=>states.push(next)],useRef:value=>({current:value})},
     'react/jsx-runtime':jsxRuntime,
     'next/link':{default:'a',__esModule:true},
@@ -39,16 +41,18 @@ function formHarness({fail=false,paid=false,valid=true}={}) {
   new Function('require','module','exports','FormData',compiled)(name=>{
     assert.ok(Object.hasOwn(modules,name),'Unexpected dependency '+name);return modules[name];
   },compiledModule,compiledModule.exports,class {constructor(form){return form.fields;}});
-  const tree=compiledModule.exports.default({institution:{id:'example-venue',name:'Institución elegida',careers:[]},paid});
+  const tree=compiledModule.exports.default({institution:{id:'example-venue',name:'Institución elegida',plan,careers:[{id:'academic',offeringId:'academic-offer',featured}]},career:{id:'academic',name:'Carrera'},offering:{id:'academic-offer'}});
   const fields=new Map(Object.entries({name:'Persona de prueba',phone:'3811234567',email:'test@example.invalid',query:'Consulta de prueba',consent:'on'}));
   let resets=0;
   return {tree,states,sent,resets:()=>resets,run:()=>tree.props.onSubmit({preventDefault(){},currentTarget:{fields,reportValidity:()=>valid,reset:()=>resets++}})};
 }
 const visibleText=node=>Array.isArray(node)?node.map(visibleText).join(''):node&&typeof node==='object'?visibleText(node.props?.children):node==null?'':String(node);
 
-test('educational consent identifies the recipient for both paid and free profiles',()=>{
-  for(const paid of [false,true]) {
-    const {tree}=formHarness({paid});
+test('educational consent identifies the recipient only for eligible cards',()=>{
+  for(const plan of ['Básico','Profesional','']) assert.equal(formHarness({plan}).tree,null);
+  assert.equal(formHarness({featured:false}).tree,null);
+  {
+    const {tree}=formHarness();
     assert.match(visibleText(tree),/enviar mis datos a Institución elegida mediante GET Instituciones/);
     assert.match(visibleText(tree),/Política de Privacidad/);
   }
